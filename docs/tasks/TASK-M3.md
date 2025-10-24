@@ -5,18 +5,18 @@
   Owner: Copilot Agent
   Created: 2025-10-24
   Notes:
-  **Scope:** Nutzungsbasierte **Skills** (Steigerung beim Verwenden), **Items** & **Inventory** (stackbar, equip/consume), **Hotbar** (10 Slots, Keybinds 1-0), **Loot-System** (gewichtete Tabellen, Raritaeten, Mengen, ggf. verschachtelte Tabellen), **Drops** (Monster-Death-Hooks), **Tooltips** & Basis-UI, Daten-Schemas + Validierung.  
+  **Scope:** Nutzungsbasierte **Skills** (Steigerung beim Verwenden), **Items** & **Inventory** (stackbar, equip/consume), **Hotbar** (10 Slots, Keybinds 1-0), **Loot-System** (gewichtete Tabellen, Raritaeten, Mengen, ggf. verschachtelte Tabellen), **Drops** (Monster-Death-Hooks), **Tooltips** & Basis-UI, Daten-Schemas + Validierung.
   **Ziel:** Nach Abschluss von M3 besitzt FORD ein robustes, datengetriebenes Progressions- und Beutesystem. Spieler kann Items aufnehmen/ausruesten/verwenden, Skills steigen durch Nutzung, Gegner lassen loot gemaess Tabellen fallen. Alles ist **deterministisch testbar** und unabhaengig von Arcade render-logik.
-  
+
   ---
-  
+
   ## Leitplanken (M3-weit)
   - **Tests verpflichtend** fuer Kernlogik (skills, items, inv, loot, tables, validators).
   - **Determinismus**: RNG injizierbar (`random.Random(seed)`), `PYTHONHASHSEED=0`.
   - **Trennung**: `systems/*` & `util/*` **ohne Arcade**; UI/FX nur Adapter in `scenes/*`.
   - **Datengetrieben**: `data/*.json` strikt gegen Schemas validiert (IDs stabil).
   - **Performance**: 100k Loot-Rolls < **250 ms** in CI (reine Logik); Inventar-Operationen O(1) bis O(log n).
-  
+
   ---
   Subtasks:
   - [TASK-M3-01](./TASK-M3-01.md) - Daten-Schemas & Validatoren (items/skills/loot_tables)

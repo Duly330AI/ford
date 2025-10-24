@@ -7,10 +7,10 @@
   Artifacts: `game/systems/crafting.py`, `tests/systems/test_crafting_core.py`
   DependsOn: TASK-M3-02, TASK-M3-03, TASK-M4-01
   Notes:
-  Reines Logikmodul:  
-        - `CraftingStationState` (queue, active_job, progress).  
-        - `enqueue(recipe_id, count)` prueft **Inputs**, **Tools**, **Skill-Min**; Reservierung aus Inventar (atomar).  
-        - `tick(dt)` erhoeht Fortschritt, bei Abschluss: Outputs ins Inventar (oder World-Drop via Adapter), Skill-XP, Erfolg/Fail/Crit je Rezept-Regeln.  
+  Reines Logikmodul:
+        - `CraftingStationState` (queue, active_job, progress).
+        - `enqueue(recipe_id, count)` prueft **Inputs**, **Tools**, **Skill-Min**; Reservierung aus Inventar (atomar).
+        - `tick(dt)` erhoeht Fortschritt, bei Abschluss: Outputs ins Inventar (oder World-Drop via Adapter), Skill-XP, Erfolg/Fail/Crit je Rezept-Regeln.
         - **Pause-Regeln**: laeuft im Overworld-Takt; **pausiert im Combat** (Signal aus Szene, Adapter-Flag).
   Acceptance:
   - [ ] Enqueue validiert sauber & ist atomar (Rollback bei Fehler).

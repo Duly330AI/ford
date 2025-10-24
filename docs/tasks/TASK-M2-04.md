@@ -7,10 +7,10 @@
   Artifacts: `game/systems/combat.py`, `tests/systems/test_combat_core.py`
   DependsOn: TASK-M2-01, TASK-M2-02, TASK-M2-03
   Notes:
-  Reine Logik, keine Arcade:  
-        - **Intents**: `Move(tile)`, `Attack(target)`, `Shoot(target)`, `Cast(spell,target)`, `UseItem`, `Wait`.  
-        - **Kosten**: 1 **Hauptaktion** + **Schritte** (z. B. 3 Tiles) pro Zug.  
-        - **Output**: `Outcome`-Events (Hit/Miss/Crit/Block, Damage, ApplyEffect, Death, Log).  
+  Reine Logik, keine Arcade:
+        - **Intents**: `Move(tile)`, `Attack(target)`, `Shoot(target)`, `Cast(spell,target)`, `UseItem`, `Wait`.
+        - **Kosten**: 1 **Hauptaktion** + **Schritte** (z. B. 3 Tiles) pro Zug.
+        - **Output**: `Outcome`-Events (Hit/Miss/Crit/Block, Damage, ApplyEffect, Death, Log).
         - **Death Handling**: Entfernt Entity, triggert Loot-Hooks (M3 vorbereitend).
   Acceptance:
   - [ ] Eine komplette Runde sequenziell abbildbar (Spieler+3 Gegner).

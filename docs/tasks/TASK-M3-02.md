@@ -7,7 +7,7 @@
   Artifacts: `game/systems/items.py`, `data/items.json`, `tests/systems/test_items_model.py`
   DependsOn: TASK-M3-01
   Notes:
-  Item-Felder (Beispiel):  
+  Item-Felder (Beispiel):
         - `id`, `name`, `type`, `rarity` (`common/rare/epic`), `stackable`, `max_stack`, `weight`, `value`, `mods` (z. B. `+ATK`, `resist.fire`), optional: `dmg` (dice string), `damage_type`, `defense`, `use_effect` (fuer consumables).
   Acceptance:
   - [ ] Items laden & instanziieren; Standardwerte/Validierung korrekt.

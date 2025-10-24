@@ -5,7 +5,7 @@
 ## 📜 Maintenance Guidelines
 
 - New tasks: Add directly to the appropriate chunk and link here under “Active Tasks.”
-- Completed tasks: Set to `Status: Done` and move to the bottom “Completed Tasks” section. 
+- Completed tasks: Set to `Status: Done` and move to the bottom “Completed Tasks” section.
 - Numbering: Sequential; do not fill gaps—IDs remain stable.
 - Consistency: Make changes to titles or descriptions in the chunk, not here.
 
@@ -24,22 +24,6 @@
 
 ## Move done tasks to the bottom of the list only if all subtasks are done.
 
-- Task Template (copy-paste for new tasks):
-
-
-```
-- [ ] ID: TASK-###
-                  Title: Short descriptive title
-                  Status: Proposed / In Progress / Blocked / Done
-                  Created: YYYY-MM-DD
-                  Milestone: Mx – Milestone Name
-                  Commit: <git-sha-if-applicable>
-                  Notes: Detailed description, context, and any relevant links.
-                  Artifacts: List of affected files or modules.
-                  - [ ] Subtask or checklist item 1
-                  - [ ] Subtask or checklist item 2
-
-```
 ## Completed Tasks
 
 
@@ -64,6 +48,17 @@ Active tasks (quick links):
 - [TASK-BONUS-1 — Visual polish (vignette, scanlines, crit popups)](./tasks/TASK-BONUS-1.md)
 
 Completed tasks:
+
+- [D] ID: TASK-DOC-AUDIT
+                  Title: Documentation audit & recommendations
+                  Status: Done
+                  Created: 2025-10-24
+                  Milestone: DOC - Quality Improvements
+                  Commit: -
+                  Notes: Reviewed docs/tasks/ inventory; captured findings and follow-up suggestions in Codex summary.
+                  Artifacts: docs/tasks/*
+                  - [D] Inventory existing TASK docs
+                  - [D] Document findings & suggestions
 
 - See individual task files and Git history for completed work.
 

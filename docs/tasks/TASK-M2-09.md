@@ -7,9 +7,9 @@
   Artifacts: `game/systems/ai_combat.py`, `tests/systems/test_ai_combat.py`
   DependsOn: TASK-M2-04, TASK-M2-08
   Notes:
-  Einfache turn-basierte Entscheidung:  
-        - **Melee**: gehe zu Melee-Range, `Attack`; nutze `Guard`, wenn HP niedrig.  
-        - **Ranged**: halte Abstand (kitedistance), `Shoot`; reposition wenn zu nah.  
+  Einfache turn-basierte Entscheidung:
+        - **Melee**: gehe zu Melee-Range, `Attack`; nutze `Guard`, wenn HP niedrig.
+        - **Ranged**: halte Abstand (kitedistance), `Shoot`; reposition wenn zu nah.
         - **Caster**: `Cast` (Stun/DoT) nach Prioritaet; Mana-Verwaltung; fallback `Attack`.
   Acceptance:
   - [ ] Entscheidungen liefern gueltige Intents (Reichweite/LOS geprueft).

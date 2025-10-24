@@ -5,18 +5,18 @@
   Owner: Copilot Agent
   Created: 2025-10-24
   Notes:
-  **Scope:** Sammelbare **Nodes** (Erz, Baeume, Kraeuter) mit Respawn, **Berufe** (mining, woodcutting, alchemy, smithing) inkl. Skill-Hooks & Boni, **Crafting an Stationen** (Forge, Alchemy Table) mit Rezept-JSON, Queue & Produktionszeit, **Tool-Checks**, UI fuer Stationen & Fortschritt, Audio-Hooks.  
+  **Scope:** Sammelbare **Nodes** (Erz, Baeume, Kraeuter) mit Respawn, **Berufe** (mining, woodcutting, alchemy, smithing) inkl. Skill-Hooks & Boni, **Crafting an Stationen** (Forge, Alchemy Table) mit Rezept-JSON, Queue & Produktionszeit, **Tool-Checks**, UI fuer Stationen & Fortschritt, Audio-Hooks.
   **Ziel:** Spieler kann Ressourcen sammeln -> verarbeiten -> Items craften. Alles ist **datengetrieben**, deterministisch testbar (Kernlogik ohne Arcade) und integriert sich in M2 (Combat) + M3 (Items/Inventory/Skills/Loot).
-  
+
   ---
-  
+
   ## Leitplanken (M4-weit)
   - **Tests verpflichtend** fuer Kernlogik (spawn, respawn, gather, tools, crafting, queue, recipes).
   - **Determinismus**: injizierbarer RNG (`random.Random(seed)`); `PYTHONHASHSEED=0`.
   - **Trennung**: `systems/*`, `util/*` **ohne Arcade** (reine Logik). Szenen/FX via duenne Adapter.
   - **Datengetrieben**: `data/recipes.json`, `data/nodes.json`, optional `data/stations.json` strikt validiert.
   - **Performance**: 2 000 Nodes tick/respawn-Check < **1 ms** reine Logik (CI-Richtwert).
-  
+
   ---
   Subtasks:
   - [TASK-M4-01](./TASK-M4-01.md) - Rezept- & Node-Schemas + Validatoren

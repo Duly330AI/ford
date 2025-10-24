@@ -5,18 +5,18 @@
   Owner: Copilot Agent
   Created: 2025-10-24
   Notes:
-  **Scope:** Gegner-Archetypen (Melee/Ranged/Caster) mit Overworld-FSM (idle/patrol/chase/attack), Uebergang in **rundenbasierten** Kampfmodus, Initiativ-/Zuglogik, Wuerfelsystem (Treffer/Verteidigung/Krit/Block), Status-Effekte, Schaden/Resistenzen, Projektile (logisch), Trefferfeedback (Particles/Shake via Adapter), Basis-KI fuer Zugauswahl.  
+  **Scope:** Gegner-Archetypen (Melee/Ranged/Caster) mit Overworld-FSM (idle/patrol/chase/attack), Uebergang in **rundenbasierten** Kampfmodus, Initiativ-/Zuglogik, Wuerfelsystem (Treffer/Verteidigung/Krit/Block), Status-Effekte, Schaden/Resistenzen, Projektile (logisch), Trefferfeedback (Particles/Shake via Adapter), Basis-KI fuer Zugauswahl.
   **Ziel:** Stabiler rundenbasierter Kampf gegen 3 Grundgegner, deterministisch testbar, klar getrennte Logik (ohne Arcade) vs. Praesentation (Scene/Arcade). M1 (Bewegung/Licht) bleibt unveraendert nutzbar.
-  
+
   ---
-  
+
   ## Leitplanken (M2-weit)
   - **Tests verpflichtend** fuer Kernlogik (dice, initiative, combat, effects, AI, path, LOS).
   - **Determinismus**: injizierbarer RNG (`random.Random(seed)`); `PYTHONHASHSEED=0`.
   - **Trennung**: `systems/*`, `util/*` **ohne Arcade**. Rendering/FX nur in `scenes/*`/`entities/*`.
   - **Datengetrieben**: Gegner/Regeln/Resistenzen aus `data/*.json` mit Validierung.
   - **Performance**: 1 vollstaendige Runde (Spieler + 3 Gegner) < **2 ms** reine Logik  in CI.
-  
+
   ---
   Subtasks:
   - [TASK-M2-01](./TASK-M2-01.md) - Wuerfelsystem (d20/dX, Advantage/Disadvantage, Tabellen)

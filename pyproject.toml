@@ -2,7 +2,7 @@
 name = "ford"
 version = "0.1.0"
 description = "Single-player 2D dungeon crawler (prototype)"
-authors = ["<your-name> <you@example.com>"]
+authors = ["Duly330AI"]
 license = "MIT"
 
 [tool.poetry.dependencies]

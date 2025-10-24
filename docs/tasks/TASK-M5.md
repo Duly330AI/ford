@@ -5,18 +5,18 @@
   Owner: Copilot Agent
   Created: 2025-10-24
   Notes:
-  **Scope:** Persistentes Speicher-/Ladesystem mit Versionierung & Migration, Save-Slots (manual/auto/quick), atomaren Writes, Integritaets-Checks und Wiederherstellung bei Korruption. Inklusive Autosave, QuickSave/Load-Adapter, Slot-UI und optionale Thumbnails.  
+  **Scope:** Persistentes Speicher-/Ladesystem mit Versionierung & Migration, Save-Slots (manual/auto/quick), atomaren Writes, Integritaets-Checks und Wiederherstellung bei Korruption. Inklusive Autosave, QuickSave/Load-Adapter, Slot-UI und optionale Thumbnails.
   **Ziel:** Vollstaendig deterministisches Save/Load, robust (<50 ms typische Saves), validiert & dokumentiert. Alle Kernsysteme (Combat, Loot, Crafting, Nodes, Skills) werden ueber Contract & Validator abgebildet.
-  
+
   ---
-  
+
   ## Leitplanken (M5-weit)
   - **Tests verpflichtend**: Unit + Integration + Korruption + Migration + Performance.
   - **Determinismus**: RNG-Streams & Timekeeper-State werden persistiert; `PYTHONHASHSEED=0`.
   - **Atomare Saves**: tmp -> rename() -> fsync; Manifest/Slots konsistent halten.
   - **Backward-Kompatibilitaet**: Versionierung + Migrationen (vN -> vN+1) mit Tests.
   - **Keine Arcade-Abhaengigkeit** in Serializer/Validator; UI nur ueber Adapter.
-  
+
   ---
   Subtasks:
   - [TASK-M5-01](./TASK-M5-01.md) - Save-Schema-Definition & Validatoren (v1)

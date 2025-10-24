@@ -7,9 +7,9 @@
   Artifacts: `game/systems/stats.py`, `data/combat_rules.json`, `tests/systems/test_stats.py`
   DependsOn: TASK-M2-01
   Notes:
-  Datengetriebene Formeln:  
-        - **To-Hit** Standard: `d20 + ATK >= 10 + DEF` (konfigurierbar).  
-        - **Crit**: Basis 5% (nat20) + Mod; **Block/Parry**: DEF-basierter Wurf.  
+  Datengetriebene Formeln:
+        - **To-Hit** Standard: `d20 + ATK >= 10 + DEF` (konfigurierbar).
+        - **Crit**: Basis 5% (nat20) + Mod; **Block/Parry**: DEF-basierter Wurf.
         - **Damage**: `(weapon dice + mods) * (1 - resist[type])`, min 1.
   Acceptance:
   - [ ] Regeln aus `data/combat_rules.json` ladbar/pruefbar.

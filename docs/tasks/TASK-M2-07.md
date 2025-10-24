@@ -7,9 +7,9 @@
   Artifacts: `game/entities/enemy.py`, `data/monsters.json`, `tests/entities/test_enemy_data.py`
   DependsOn: TASK-M2-02
   Notes:
-  Drei Archetypen:  
-        - **Melee**: hoher ATK/HP, Nahkampfreichweite 1, Faehigkeit "Guard".  
-        - **Ranged**: mittlerer ATK, Reichweite 6-8 Tiles, Faehigkeit "Kitedistance".  
+  Drei Archetypen:
+        - **Melee**: hoher ATK/HP, Nahkampfreichweite 1, Faehigkeit "Guard".
+        - **Ranged**: mittlerer ATK, Reichweite 6-8 Tiles, Faehigkeit "Kitedistance".
         - **Caster**: niedriger ATK, Zauber (DoT/Stun), Mana/Kosten.
   Acceptance:
   - [ ] Daten validieren gegen Schema (Stats, Resistenzen, Skills).
