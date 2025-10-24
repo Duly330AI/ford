@@ -8,11 +8,11 @@
   - `game/systems/skills.py`
   - `data/loot_tables.json`, `data/items.json`, `data/skills.json`
   Acceptance:
-  - [ ] Skills gain XP on usage and persist
-  - [ ] Loot tables produce drops according to weights
-  - [ ] Inventory + Hotbar (10 slots) with UI tooltips
+  - Skills gain XP on usage and persist
+  - Loot tables produce drops according to weights
+  - Inventory + Hotbar (10 slots) with UI tooltips
 
   Subtasks:
-  - [ ] Create `data/items.json` schema and sample items
-  - [ ] Implement skill XP curve and cap (e.g., 100)
-  - [ ] Implement inventory data model + hotbar UI
+  - Create `data/items.json` schema and sample items
+  - Implement skill XP curve and cap (e.g., 100)
+  - Implement inventory data model + hotbar UI

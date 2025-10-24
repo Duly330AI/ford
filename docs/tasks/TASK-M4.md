@@ -8,10 +8,10 @@
   - `data/recipes.json`
   - `game/systems/crafting.py`
   Acceptance:
-  - [ ] Nodes spawn with respawn timers and drop expected materials
-  - [ ] Crafting UI for Forge / Alchemy Table that consumes inputs and time
+  - Nodes spawn with respawn timers and drop expected materials
+  - Crafting UI for Forge / Alchemy Table that consumes inputs and time
 
   Subtasks:
-  - [ ] Define `data/recipes.json` schema and sample recipes
-  - [ ] Implement node interactions and toolchecks
-  - [ ] Crafting station UI + workflow (queue/timers)
+  - Define `data/recipes.json` schema and sample recipes
+  - Implement node interactions and toolchecks
+  - Crafting station UI + workflow (queue/timers)

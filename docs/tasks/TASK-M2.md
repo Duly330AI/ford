@@ -8,11 +8,11 @@
   - `game/entities/enemy.py`
   - `game/ecs/ai.py` or `game/systems/ai.py`
   Acceptance:
-  - [ ] Three enemy archetypes (Melee, Ranged, Caster) with simple FSM states (idle/patrol/chase/attack)
-  - [ ] Combat resolves hit/damage with particles and optional screen shake
-  - [ ] Basic projectile entity for Ranged
+  - Three enemy archetypes (Melee, Ranged, Caster) with simple FSM states (idle/patrol/chase/attack)
+  - Combat resolves hit/damage with particles and optional screen shake
+  - Basic projectile entity for Ranged
 
   Subtasks:
-  - [ ] Define enemy data entries in `data/monsters.json` (hp, speed, ai type, drops)
-  - [ ] Implement FSM and simple pathing (grid-based or vector)
-  - [ ] Implement hit/damage event + particle effect
+  - Define enemy data entries in `data/monsters.json` (hp, speed, ai type, drops)
+  - Implement FSM and simple pathing (grid-based or vector)
+  - Implement hit/damage event + particle effect

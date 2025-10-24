@@ -7,9 +7,9 @@
   Artifacts:
   - `game/systems/save_load.py`
   Acceptance:
-  - [ ] Save file written and loaded with deterministic seed restoration
-  - [ ] Backwards-compatible small-versioning in save format
+  - Save file written and loaded with deterministic seed restoration
+  - Backwards-compatible small-versioning in save format
 
   Subtasks:
-  - [ ] Implement JSON-based save format and load routine
-  - [ ] Add quick-save / auto-save hooks
+  - Implement JSON-based save format and load routine
+  - Add quick-save / auto-save hooks
