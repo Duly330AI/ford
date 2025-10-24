@@ -1,0 +1,5 @@
+[
+  {"id": "swords", "cap": 100, "xp_curve": "linear"},
+  {"id": "archery", "cap": 100, "xp_curve": "linear"},
+  {"id": "sorcery", "cap": 100, "xp_curve": "linear"}
+]

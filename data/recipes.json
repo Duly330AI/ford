@@ -1,0 +1,11 @@
+[
+  {
+    "id": "iron_sword",
+    "inputs": [{"item_id": "iron_ore", "qty": 4}, {"item_id": "wood_log", "qty": 1}],
+    "tool": "forge",
+    "station": "forge",
+    "output": {"item_id": "short_sword", "qty": 1},
+    "time": 30,
+    "min_skill": {"smithing": 5}
+  }
+]

@@ -1,0 +1,5 @@
+[
+  {"id": "goblin", "hp": 10, "speed": 1.2, "ai": "melee", "drops": ["wood_log"]},
+  {"id": "skeleton", "hp": 12, "speed": 0.9, "ai": "ranged", "drops": ["iron_ore"]},
+  {"id": "cultist", "hp": 8, "speed": 1.0, "ai": "caster", "drops": []}
+]

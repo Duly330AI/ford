@@ -1,0 +1,14 @@
+# Engine & graphics
+arcade>=3.0.0
+
+# Data & validation
+pydantic>=2.7
+
+# Imaging (loading/scaling sprites, icons)
+Pillow>=10.0
+
+# Optional but useful (RNG-heavy systems sometimes benefit)
+numpy>=1.26
+
+# Serialization (optional; nice for fast save files)
+msgpack>=1.0.5

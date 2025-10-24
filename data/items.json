@@ -1,0 +1,5 @@
+[
+  {"id": "iron_ore", "name": "Iron Ore", "type": "material", "stack": 99, "rarity": "common"},
+  {"id": "wood_log", "name": "Wood Log", "type": "material", "stack": 99, "rarity": "common"},
+  {"id": "short_sword", "name": "Short Sword", "type": "weapon", "stack": 1, "dmg": 6, "rarity": "common"}
+]

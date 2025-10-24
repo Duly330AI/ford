@@ -1,0 +1,13 @@
+-r requirements.txt
+
+# Testing
+pytest>=8.2
+pytest-cov>=4.1
+hypothesis>=6.100
+
+# Lint/format (matches our VS Code setup)
+ruff>=0.5.0
+black>=24.8.0
+
+# Optional static typing (if you want stricter checks)
+mypy>=1.10

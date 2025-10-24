@@ -1,0 +1,18 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+  - repo: local
+    hooks:
+      - id: forbid-task-without-id
+        name: forbid task lines without ID
+        entry: |
+          bash -c 'if grep -R "^- \[ \] " docs | grep -v "ID: TASK-"; then echo "Task ohne ID gefunden"; exit 1; fi'
+        language: system
+      - id: forbid-todo-in-index
+        name: forbid detailed tasks in index
+        entry: |
+          bash -c 'if grep -n "^- \[ \] ID:" docs/task.md; then echo "Details gehören in tasks/*.md, nicht in task.md"; exit 1; fi'
+        language: system
