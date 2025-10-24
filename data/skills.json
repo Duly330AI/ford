@@ -1,5 +1,398 @@
 [
-  {"id": "swords", "cap": 100, "xp_curve": "linear"},
-  {"id": "archery", "cap": 100, "xp_curve": "linear"},
-  {"id": "sorcery", "cap": 100, "xp_curve": "linear"}
+  {
+    "id": "swords",
+    "cap": 100,
+    "xp_curve": "linear",
+    "stats": {
+      "str": 0.55,
+      "dex": 0.35,
+      "int": 0.05,
+      "stam": 0.05
+    }
+  },
+  {
+    "id": "archery",
+    "cap": 100,
+    "xp_curve": "linear",
+    "stats": {
+      "str": 0.2,
+      "dex": 0.55,
+      "int": 0.1,
+      "stam": 0.15
+    }
+  },
+  {
+    "id": "sorcery",
+    "cap": 100,
+    "xp_curve": "linear",
+    "stats": {
+      "str": 0.05,
+      "dex": 0.05,
+      "int": 0.85,
+      "stam": 0.05
+    }
+  },
+  {
+    "id": "fencing",
+    "cap": 100,
+    "xp_curve": "linear",
+    "stats": {
+      "str": 0.25,
+      "dex": 0.6,
+      "int": 0.05,
+      "stam": 0.1
+    }
+  },
+  {
+    "id": "macefighting",
+    "cap": 100,
+    "xp_curve": "linear",
+    "stats": {
+      "str": 0.6,
+      "dex": 0.25,
+      "int": 0.05,
+      "stam": 0.1
+    }
+  },
+  {
+    "id": "wrestling",
+    "cap": 100,
+    "xp_curve": "linear",
+    "stats": {
+      "str": 0.45,
+      "dex": 0.35,
+      "int": 0.05,
+      "stam": 0.15
+    }
+  },
+  {
+    "id": "tactics",
+    "cap": 100,
+    "xp_curve": "linear",
+    "stats": {
+      "str": 0.35,
+      "dex": 0.35,
+      "int": 0.25,
+      "stam": 0.05
+    }
+  },
+  {
+    "id": "anatomy",
+    "cap": 100,
+    "xp_curve": "linear",
+    "stats": {
+      "str": 0.1,
+      "dex": 0.2,
+      "int": 0.65,
+      "stam": 0.05
+    }
+  },
+  {
+    "id": "parrying",
+    "cap": 100,
+    "xp_curve": "linear",
+    "stats": {
+      "str": 0.5,
+      "dex": 0.25,
+      "int": 0.05,
+      "stam": 0.2
+    }
+  },
+  {
+    "id": "healing",
+    "cap": 100,
+    "xp_curve": "linear",
+    "stats": {
+      "str": 0.1,
+      "dex": 0.2,
+      "int": 0.6,
+      "stam": 0.1
+    }
+  },
+  {
+    "id": "resisting_spells",
+    "cap": 100,
+    "xp_curve": "linear",
+    "stats": {
+      "str": 0.2,
+      "dex": 0.2,
+      "int": 0.5,
+      "stam": 0.1
+    }
+  },
+  {
+    "id": "evaluating_intelligence",
+    "cap": 100,
+    "xp_curve": "linear",
+    "stats": {
+      "str": 0.05,
+      "dex": 0.05,
+      "int": 0.85,
+      "stam": 0.05
+    }
+  },
+  {
+    "id": "meditation",
+    "cap": 100,
+    "xp_curve": "linear",
+    "stats": {
+      "str": 0.0,
+      "dex": 0.1,
+      "int": 0.8,
+      "stam": 0.1
+    }
+  },
+  {
+    "id": "necromancy",
+    "cap": 100,
+    "xp_curve": "linear",
+    "stats": {
+      "str": 0.05,
+      "dex": 0.1,
+      "int": 0.8,
+      "stam": 0.05
+    }
+  },
+  {
+    "id": "spirit_speak",
+    "cap": 100,
+    "xp_curve": "linear",
+    "stats": {
+      "str": 0.05,
+      "dex": 0.1,
+      "int": 0.75,
+      "stam": 0.1
+    }
+  },
+  {
+    "id": "chivalry",
+    "cap": 100,
+    "xp_curve": "linear",
+    "stats": {
+      "str": 0.25,
+      "dex": 0.2,
+      "int": 0.45,
+      "stam": 0.1
+    }
+  },
+  {
+    "id": "poisoning",
+    "cap": 100,
+    "xp_curve": "linear",
+    "stats": {
+      "str": 0.05,
+      "dex": 0.5,
+      "int": 0.35,
+      "stam": 0.1
+    }
+  },
+  {
+    "id": "hiding",
+    "cap": 100,
+    "xp_curve": "linear",
+    "stats": {
+      "str": 0.05,
+      "dex": 0.7,
+      "int": 0.2,
+      "stam": 0.05
+    }
+  },
+  {
+    "id": "stealth",
+    "cap": 100,
+    "xp_curve": "linear",
+    "stats": {
+      "str": 0.05,
+      "dex": 0.75,
+      "int": 0.15,
+      "stam": 0.05
+    }
+  },
+  {
+    "id": "stealing",
+    "cap": 100,
+    "xp_curve": "linear",
+    "stats": {
+      "str": 0.05,
+      "dex": 0.7,
+      "int": 0.2,
+      "stam": 0.05
+    }
+  },
+  {
+    "id": "lockpicking",
+    "cap": 100,
+    "xp_curve": "linear",
+    "stats": {
+      "str": 0.05,
+      "dex": 0.45,
+      "int": 0.45,
+      "stam": 0.05
+    }
+  },
+  {
+    "id": "detect_hidden",
+    "cap": 100,
+    "xp_curve": "linear",
+    "stats": {
+      "str": 0.05,
+      "dex": 0.4,
+      "int": 0.5,
+      "stam": 0.05
+    }
+  },
+  {
+    "id": "tracking",
+    "cap": 100,
+    "xp_curve": "linear",
+    "stats": {
+      "str": 0.1,
+      "dex": 0.6,
+      "int": 0.2,
+      "stam": 0.1
+    }
+  },
+  {
+    "id": "animal_taming",
+    "cap": 100,
+    "xp_curve": "linear",
+    "stats": {
+      "str": 0.1,
+      "dex": 0.3,
+      "int": 0.5,
+      "stam": 0.1
+    }
+  },
+  {
+    "id": "animal_lore",
+    "cap": 100,
+    "xp_curve": "linear",
+    "stats": {
+      "str": 0.05,
+      "dex": 0.25,
+      "int": 0.6,
+      "stam": 0.1
+    }
+  },
+  {
+    "id": "veterinary",
+    "cap": 100,
+    "xp_curve": "linear",
+    "stats": {
+      "str": 0.1,
+      "dex": 0.2,
+      "int": 0.6,
+      "stam": 0.1
+    }
+  },
+  {
+    "id": "mining",
+    "cap": 100,
+    "xp_curve": "linear",
+    "stats": {
+      "str": 0.6,
+      "dex": 0.2,
+      "int": 0.1,
+      "stam": 0.1
+    }
+  },
+  {
+    "id": "lumberjacking",
+    "cap": 100,
+    "xp_curve": "linear",
+    "stats": {
+      "str": 0.55,
+      "dex": 0.3,
+      "int": 0.05,
+      "stam": 0.1
+    }
+  },
+  {
+    "id": "blacksmithy",
+    "cap": 100,
+    "xp_curve": "linear",
+    "stats": {
+      "str": 0.65,
+      "dex": 0.2,
+      "int": 0.05,
+      "stam": 0.1
+    }
+  },
+  {
+    "id": "carpentry",
+    "cap": 100,
+    "xp_curve": "linear",
+    "stats": {
+      "str": 0.25,
+      "dex": 0.45,
+      "int": 0.25,
+      "stam": 0.05
+    }
+  },
+  {
+    "id": "bowcraft_fletching",
+    "cap": 100,
+    "xp_curve": "linear",
+    "stats": {
+      "str": 0.15,
+      "dex": 0.55,
+      "int": 0.25,
+      "stam": 0.05
+    }
+  },
+  {
+    "id": "tailoring",
+    "cap": 100,
+    "xp_curve": "linear",
+    "stats": {
+      "str": 0.1,
+      "dex": 0.5,
+      "int": 0.35,
+      "stam": 0.05
+    }
+  },
+  {
+    "id": "tinkering",
+    "cap": 100,
+    "xp_curve": "linear",
+    "stats": {
+      "str": 0.15,
+      "dex": 0.35,
+      "int": 0.45,
+      "stam": 0.05
+    }
+  },
+  {
+    "id": "alchemy",
+    "cap": 100,
+    "xp_curve": "linear",
+    "stats": {
+      "str": 0.05,
+      "dex": 0.15,
+      "int": 0.75,
+      "stam": 0.05
+    }
+  },
+  {
+    "id": "cooking",
+    "cap": 100,
+    "xp_curve": "linear",
+    "stats": {
+      "str": 0.1,
+      "dex": 0.35,
+      "int": 0.45,
+      "stam": 0.1
+    }
+  },
+  {
+    "id": "fishing",
+    "cap": 100,
+    "xp_curve": "linear",
+    "stats": {
+      "str": 0.2,
+      "dex": 0.5,
+      "int": 0.2,
+      "stam": 0.1
+    }
+  }
 ]

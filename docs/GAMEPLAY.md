@@ -51,40 +51,155 @@
 
 ---
 
-## 4) Attribute & Ressourcen
+4) Attribute & Ressourcen (UO-Style)
 
-- **HP** – Lebenspunkte (0 → Tod/Reload)  
-- **Mana** – Zauberkosten (nur Caster/Spells)  
-- **Stamina** – Overworld-Dodge-Roll & ggf. Sprint (keine Subpixelgeschwindigkeit)  
-- **ATK/DEF** – Angriffs-/Verteidigungswert (Formeln datengetrieben)  
-- **Resistenzen** – pro Schadenstyp `0.0..1.0` (clamped)
+HP – Lebenspunkte.
+Formel (Default): HP = 30 + STR * 1.5 (datengetrieben).
 
-**Stats entstehen aus**: Basiswerte + Ausrüstung + Effekte + Skill-Boni + (später) Tränke/Mods.
+Mana – Zauberkosten.
+Formel: Mana = 0 + INT * 1.5.
 
----
+Stamina – Ausdauerressource; beeinflusst Initiative/Tempo, Movement und Erholung.
+Formel: STAM_pool = 10 + STAM (STAM ist Attribut, nicht nur Pool).
 
-## 5) Kampf (Rundenbasiert)
+ATK/DEF – Angriffs-/Verteidigungswert (abgeleitet aus Skill + Attributen + Gear).
+Vorschlag:
 
-### 5.1 Einstieg & Rundenablauf
-- **Engagement**: Wenn ein Gegner den Spieler **sieht** (Radius+LOS), wechselt das Spiel in den **Kampfmodus**.
-- **Initiative**: pro Beteiligtem (Spieler + Gegner) gewürfelt → Zugreihenfolge pro Runde.
-- **Aktionen pro Zug**:  
-  - **1 Hauptaktion** (Attack / Shoot / Cast / UseItem)  
-  - **Bewegung**: bis **3 Tiles** (Standard)  
-  - **Warten**: freiwillig, um Position/Initiative zu halten
-- **Rundenwechsel**: Nach letztem Actor beginnt Runde `+1`. Effekte ticken am konfigurierten Zeitpunkt (Start/Ende).
+ATK_melee = weapon_skill + floor(DEX/5) + gear_atk + buffs
 
-> **Overworld-Dodge** ist **kein** Kampfmanöver. Im Kampf existiert ggf. eine **„Dodge“-Aktion** (kurze iFrames/evade-Bonus), siehe `combat_rules.json`.
+DEF_melee = max(parrying, defender_weapon_skill) + floor(DEX/5) + shield_def + buffs
 
-### 5.2 Würfel & Formeln (Default)
-- **Trefferwurf**: `d20 + ATK >= 10 + DEF`  
-- **Crit**: Basis **5%** (nat20), Multiplier **1.5×** (oder in `combat_rules.json`)  
-- **Block/Parry**: optionaler Verteidigungswurf → reduziert Schaden (z. B. **−50%**)  
-- **Schaden**: `weapon dice + mods`, dann `*(1 - resist[type])`, **min. 1**  
-- **Reichweiten**: Melee **1**, Ranged **6**, Caster **5** Tiles  
-- **Munition** (Bogen): `arrows` werden verbraucht; Verhalten ohne Pfeile konfigurierbar (`fail` vs. `fallback_melee`)
+Resistenzen – pro Schadenstyp 0.0..1.0 (clamped).
+Empfohlene Typen: slash | pierce | blunt | fire | cold | poison | energy.
 
-> Alle Werte sind **datengetrieben** (`data/combat_rules.json`) und können balanciert werden.
+Stats entstehen aus: Basiswerte + Ausrüstung + Effekte + Skill-Boni + (später) Tränke/Mods.
+
+Stat-Affinitäten der Skills (STR/DEX/INT/STAM)
+
+Jeder Skill hat Gewichte auf STR/DEX/INT/STAM (z. B. swords stark STR/DEX, magery stark INT). Bei Skill-Nutzung können zugehörige Attribute langsam steigen (0.1-Schritte, harte Caps optional), z. B.:
+
+Chance auf Stat-Gain bei Skill-Gain (klein, getrennt konfigurierbar).
+
+Tages-Softcap (z. B. 2.0 Punkte pro Attribut), um Power-Grinding zu dämpfen.
+
+Skill-Gains (UO-Feeling, 0.1-Schritte)
+
+Inkrement: immer +0.1 pro erfolgreichem Gain.
+
+Gain-Check bei JEDEM Skill-Use (egal ob Erfolg/Fail), aber höchste Gain-Wahrscheinlichkeit, wenn die Aktion weder trivial noch unmöglich ist (Sweet-Spot).
+
+Empfohlene Gain-Chance:
+
+p_success = Treffer/Erfolgs-Wahrscheinlichkeit der Aktion (aus deinen Treffer-/Cast-Formeln).
+
+sweet = 0.6 - abs(p_success - 0.5) → max bei ~50% Erfolg.
+
+slowdown = 1 - (skill/cap)^2 → starkes Abflachen ab ~70+.
+
+anti_macro (0..1): Strafe, wenn exakt die gleiche Aktion/Entität/Position wiederholt wird (z. B. 0.2 bei hartem Repeat).
+
+Gain-Wkeit: P(gain) = clamp( base * sweet * slowdown * anti_macro, min_gain, max_gain )
+Default: base=0.25, min_gain=0.01, max_gain=0.20.
+
+Skill-Total-Cap optional (z. B. 700.0). Bei Erreichen muss ein anderer Skill droppen (Auto-Lock/Down-Flag).
+
+5) Kampf (Rundenbasiert, UO-Trefferlogik)
+5.1 Einstieg & Rundenablauf
+
+Engagement: Gegner sieht Spieler (Radius + LOS) → Kampfmodus.
+
+Initiative (DEX/STAM-getrieben):
+Pro Kampfrunde: initiative_roll = d100 + DEX*0.8 + STAM*0.2 + weapon_ready_bonus.
+Ties: höhere DEX, sonst random.
+
+Aktionen pro Zug:
+
+1 Hauptaktion (Attack / Shoot / Cast / UseItem)
+
+Bewegung: Basis 3 Tiles + DEX-Bonus (s. unten)
+
+Warten: Position/Initiative halten.
+
+Rundenwechsel: Nach letztem Actor beginnt Runde +1. Effekte ticken am konfigurierten Zeitpunkt (Start/Ende).
+
+Overworld-Dodge bleibt außerhalb des Kampfes. Optional gibt es im Kampf eine „Dodge“-Aktion (kurze iFrames/evade-Bonus) – konfigurierbar in combat_rules.json.
+
+5.2 UO-Treffer, Parry & Schaden
+Trefferchance (UO-Gefühl – oft verfehlt bei ~60 Wrestling)
+
+Statt d20 verwenden wir eine Skill-vs-Skill-Formel (50% bei gleich guten Kämpfern):
+
+att_skill = relevanter Angriffs-Skill (z. B. swords/fencing/macefighting, unarmed: wrestling)
+def_skill = max(defender.parrying, defender.relevanter_Abwehrskill)   # z. B. wrestling oder gleiche Waffengattung
+ATK = att_skill + floor(DEX/5) + gear_atk + buffs
+DEF = def_skill + floor(DEX/5) + shield_def + buffs
+
+# Baseline 50/50 bei gleichen Werten, leicht durch ATK/DEF verschiebbar
+HitChance = clamp( 0.02,
+                   0.50 + (att_skill - def_skill)/200 + (ATK - DEF)/200,
+                   0.98 )
+
+
+Ergebnis: Selbst bei ~60 vs ~60 liegst du um 50% → spürbar viele Misses, genau wie gewünscht.
+
+Parry/Block
+
+Parry-Check vor Schaden:
+ParryChance = clamp(0.0, shield_base + Parrying/200 + DEX/400, shield_cap)
+Erfolg ⇒ Schaden reduziert (z. B. −50%) oder 0 bei perfektem Block (konfigurierbar).
+
+Schaden
+base = weapon_base_dmg
+str_bonus = floor(STR/10)
+mult = 1 + 0.003*Tactics + 0.002*Anatomy               # datengetrieben
+final = max(1, floor( (base + str_bonus) * mult * (1 - resist[type]) ))
+
+
+Ranged zieht Munition; ohne Pfeile → Verhalten (fail | fallback_melee) einstellbar.
+
+Crits
+
+Aus per Default (UO hat keine normalen Crits). Optional „Lucky Blow“ (z. B. 2% für 1.25×).
+
+5.3 DEX & Geschwindigkeit im Rundenkampf
+
+Ohne Echtzeit-Swingtimer bilden wir Tempo über Cooldown-Runden und Bewegungsbonus ab:
+
+Bewegung pro Zug:
+move_tiles = 3 + floor(DEX / 40) (DEX 0/40/80/100 ⇒ 3/4/5/5 Tiles)
+
+Waffen-Erholung (Swing-Cooldown in Runden):
+Jede Waffe hat base_delay (z. B. Dagger 0, Longsword 1, Halberd 2, Heavy Xbow 3).
+Nach einem Attack erhält der Actor:
+
+recovery_rounds = clamp(0, base_delay - floor(DEX/40), max_recovery)
+
+
+Solange recovery > 0, ist Attack gesperrt (du kannst aber Move/UseItem/Cast).
+→ Leichte Waffen + hohe DEX = jede Runde angreifen; schwere Waffen fühlen sich träge an.
+
+Bögen/Armbrüste (Reload):
+reload_rounds = bow_base_reload - floor(DEX/50) (min 0). Heavy Xbow z. B. Basis 2.
+
+Zauberzeit (optional):
+Spells haben cast_rounds; INT/meditation können sie um 1 reduzieren (min 0).
+
+5.4 Ranges & Sonstiges
+
+Reichweiten: Melee 1, Ranged 6, Caster 5 Tiles.
+
+Dodge-Aktion (optional): 1 Tile reposition, +evade% bis Zugende.
+
+Datengetrieben: Alle Konstanten in data/combat_rules.json.
+
+5.5 Skill-/Stat-Progression (praktisch)
+
+Skill-Use → Erfolgswurf (Treffer, Parry, Cast, Kochen etc.) → berechne p_success.
+
+Gain-Roll (0.1 Schritt) mit Sweet-Spot, Slowdown & Anti-Macro (siehe oben).
+
+Stat-Gain: Wenn Skill gained, separater kleiner Wurf auf die zugehörigen Stats (aus Skill-Affinitäten).
+Beispiel: P(stat_gain_STR) = 0.05 * stats_affinity.STR, Cap/Tag in progression_rules.
 
 ### 5.3 Status-Effekte (Auszug)
 - **Bleed** (DoT phys), **Poison** (DoT poison): ticken pro Runde  
@@ -113,18 +228,18 @@ Effekte definieren **apply/tick/expire** in `data/effects.json`. Stacking-Regeln
 
 ## 7) Skills & Progression (usage-based)
 
-**Skills**: `swords, archery, sorcery, lockpicking, mining, woodcutting, alchemy, smithing, healing`  
+**Skills**: `swords, archery, magery, lockpicking, mining, woodcutting, alchemy, smithing, healing`  
 - **Anstieg durch Nutzung**:  
-  - Treffer mit Schwert → `swords` XP  
-  - Bogen → `archery` XP (mit Pfeilverbrauch)  
-  - Zauber → `sorcery` XP  
-  - Trank nutzen → `healing` XP  
-  - Abbau/Ernte → `mining/woodcutting` XP  
-  - Crafting → `smithing/alchemy` XP
+  - Treffer mit Schwert → `swords` chance auf 0.1 Skill-Gain  
+  - Bogen → `archery` chance auf 0.1 Skill-Gain   (mit Pfeilverbrauch)  
+  - Zauber → `magery` chance auf 0.1 Skill-Gain    
+  - Trank nutzen → `healing` chance auf 0.1 Skill-Gain    
+  - Abbau/Ernte → `mining/woodcutting` chance auf 0.1 Skill-Gain  
+  - Crafting → `smithing/alchemy` chance auf 0.1 Skill-Gain
 - **Cap**: standard **100** (datengetrieben).  
-- **Boni**: je Skill (z. B. `+ATK pro 10 swords-Level`, `archery: +Crit`, `alchemy: Potency+`).
+- **Boni**: je Skill (z. B. `+1% Trefferchance pro 0.1 swords-Skill`, `archery: +Crit`, `+1% Trefferchance pro 0.1 archery Skill`, `alchemy: Potency+`).
 
-XP-Kurven in `data/skills.json` (z. B. polynomial `a * level^p` oder Tabellen).
+Skill-Gain-Kurven in `data/skills.json` (z. B. polynomial `a * level^p` oder Tabellen).
 
 ---
 
@@ -147,7 +262,7 @@ Parameter in `data/nodes.json` + Balancing in `data/balance.json`.
 - **Rezepte** in `data/recipes.json` (Inputs → Outputs, `time_sec`, Skill-Min, Tool-Anforderung, Erfolg/Crit, Fail-Returns)  
 - **Queue** pro Station, Jobs laufen in Overworld-Zeit (im Combat **pausiert**)  
 - **Ergebnis**: ins Inventar (oder World-Drop bei Platzmangel)  
-- **Skill-Hooks**: `smithing/alchemy` geben XP & Boni (Crit-Chance, Output+)
+- **Skill-Hooks**: `smithing/alchemy` Boni (Crit-Chance, Output+)
 
 Optional: **Rezept-Freischaltung** über Drops/Scrolls.
 
@@ -186,7 +301,7 @@ Optional: **Rezept-Freischaltung** über Drops/Scrolls.
 ## 12) Gegner
 
 **Archetypen** in `data/monsters.json`:  
-- **Melee** (HP/ATK hoch, kurze Reichweite)  
+- **Melee** (HP/ATK hoch, kurze Reichweite, +1% Trefferchance pro 0.1 Wrestling Skill)  
 - **Ranged** (Abstand halten, Projektile)  
 - **Caster** (Spells, Mana, DoT/CC)  
 Felder: `hp, atk, def, speed, resist, drop_table_id, spells?, projectile?`

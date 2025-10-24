@@ -1,4 +1,4 @@
-# FORD — Single-player 2D Dungeon Crawler (prototype)
+# FORD — Single-player 2D Ultima Online Roguelike Dungeon Crawler mit Systemen (prototype)
 
 Short: Prototype in Python + arcade. This repo is a scaffold and uses Poetry for package management.
 
