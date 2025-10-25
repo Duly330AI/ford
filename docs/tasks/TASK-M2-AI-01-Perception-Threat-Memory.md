@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M2-AI-01
+- [ ] ID: TASK-M2-AI-01-Perception-Threat-Memory
   Title: Perception & Threat Memory System
   Status: Proposed
   Priority: P0

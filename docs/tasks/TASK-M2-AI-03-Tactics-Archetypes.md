@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M2-AI-03
+- [ ] ID: TASK-M2-AI-03-Tactics-Archetypes
   Title: Tactics & Behavior Archetypes Integration
   Status: Proposed
   Priority: P0

@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M2-AI-04
+- [ ] ID: TASK-M2-AI-04-Faction-Diplomacy
   Title: Faction System & AI-vs-AI Diplomacy
   Status: Proposed
   Priority: P0

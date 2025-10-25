@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M2-AI-07
+- [ ] ID: TASK-M2-AI-07-Combat-Multi-Faction
   Title: AI-vs-AI Combat & Multi-Faction Encounters
   Status: Proposed
   Priority: P1

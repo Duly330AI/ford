@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M2-AI-02
+- [ ] ID: TASK-M2-AI-02-Utility-Scoring
   Title: Utility-AI Scoring Engine (Target & Action Selection)
   Status: Proposed
   Priority: P0

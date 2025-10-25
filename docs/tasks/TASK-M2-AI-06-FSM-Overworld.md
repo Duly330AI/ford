@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M2-AI-06
+- [ ] ID: TASK-M2-AI-06-FSM-Overworld
   Title: Overworld AI State Machine (idle-patrol-chase-engage-leash)
   Status: Proposed
   Priority: P1
