@@ -40,6 +40,7 @@ FORD uses context-based input to prevent conflicts and provide intuitive control
 | **Rebind** | Rebinding keys | **Exclusive** | Captures all input |
 
 **Context Switching:**
+
 - Contexts stack (UI > Combat > Overworld)
 - Higher priority contexts block lower ones
 - ESC typically pops the top context

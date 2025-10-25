@@ -52,6 +52,7 @@ This document defines the First Time User Experience (FTUE) for FORD, covering t
 ### **Screen: New Character**
 
 **UI Elements:**
+
 - Character preview (placeholder sprite)
 - Name input field
 - Starting template selector
@@ -80,6 +81,7 @@ This document defines the First Time User Experience (FTUE) for FORD, covering t
 ```
 
 **Design Note:**
+
 - **Presets are ENCOURAGED** for new players (bold text, "Recommended")
 - **Custom is VISIBLE** but not pushed (for veterans/second playthroughs)
 - **No gender/race choice** (keep it simple, pixel art flexibility)
@@ -103,6 +105,7 @@ This document defines the First Time User Experience (FTUE) for FORD, covering t
 ### **Fade In: Abbey Infirmary**
 
 **Scene:**
+
 - Player lies in bed (sprite sitting up animation)
 - NPC "Brother Alaric" (herbalist) stands nearby
 - Soft lighting, peaceful interior
@@ -137,6 +140,7 @@ Brother Alaric: "Explore the courtyard. Speak with Sister Elena when you're read
 ### **Scene: Abbey Courtyard**
 
 **Layout:**
+
 - Open courtyard with stone tiles
 - 3-4 NPCs (passive, ambient)
 - Interactive objects: barrel, chest, sign
@@ -204,11 +208,13 @@ Sister Elena: "Follow the path east. I'll pray for your safety."
 ### **Tutorial Combat: Skeleton Guardian**
 
 **Scene:**
+
 - Small clearing near crypt entrance
 - 1 Skeleton (low HP, weak attack)
 - Clear terrain, no obstacles
 
 **Skeleton Stats (Easy Mode):**
+
 - HP: 30 (player likely has 50-80)
 - Attack: 4-6 damage
 - Swords: 20 (low hit chance)
@@ -232,10 +238,12 @@ Sister Elena: "Follow the path east. I'll pray for your safety."
 ```
 
 **Player Actions:**
+
 - Moves 2 tiles toward skeleton
 - Attacks skeleton (auto-targets)
 
 **Combat Log:**
+
 ```
 > You move closer to the Skeleton.
 > You attack the Skeleton for 8 damage! (Skeleton HP: 30 → 22)

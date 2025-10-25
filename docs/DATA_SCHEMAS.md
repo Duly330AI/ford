@@ -686,6 +686,7 @@ for spell in spells:
 ```
 
 **Example:**
+
 ```json
 // spell fireball references reagents
 "reagents": {

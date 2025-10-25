@@ -34,7 +34,7 @@ Black Pearl • Bloodmoss • Garlic • Ginseng • Mandrake Root • Nightshad
   "cost": { "mana": 8, "reagents": { "Black Pearl": 1, "Sulfurous Ash": 1 } },
   "cast_rounds": 1,
   "range_tiles": 5,
-  "effects": [{ "type": "damage", "element": "fire", "dice": "2d6+INT*0.2" }],
+  "effects": [{ "type": "damage", "element": "fire", "base": 18, "variance_pct": 0.2, "scaling": { "INT": 0.15 } }],
   "fizzle": { "base": 0.15, "magery_factor": -0.001 },
   "resist_check": { "type": "resist_spells", "scale": 200 },
   "ai_tags": ["nuke"]

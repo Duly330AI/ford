@@ -99,7 +99,11 @@ Scene erzeugt Intent(en)
    ▼
 systems/combat.resolve_intent(state, intent, rng)
    │
-   ├─ nutzt: stats, effects, dice, los, damage, ammo, skills hooks
+   **Combat** (rundenbasiert):
+   ├─ Intent (Move/Attack/Shoot/Cast/UseItem/Wait)
+   ├─ nutzt: stats, effects, los, damage, ammo, skills hooks
+   ├─ liefert: Outcomes (Hit/Miss/Crit/Block/Damage/ApplyEffect/Death/Drop/Msg)
+   └─ Adapter (Partikel, Audio, Hit-Stop)
    │
    ▼
 Outcome Events (Hit, Miss, Crit, Block, Damage, ApplyEffect, Death, Drop, Log)
@@ -151,9 +155,8 @@ rng2 = RngStream.import_state(state)
 
 | Modul                   | Zweck                                  | Importiert                                            |
 | ----------------------- | -------------------------------------- | ----------------------------------------------------- |
-| `systems/combat.py`     | Intents→Outcomes, Rundenablauf         | stats, dice, effects, los, damage, ammo, skills hooks |
+| `systems/combat.py`     | Intents→Outcomes, Rundenablauf         | stats, effects, los, damage, ammo, skills hooks |
 | `systems/initiative.py` | Reihenfolge (DEX, Ties, Rundenwechsel) | rng                                                   |
-| `systems/dice.py`       | `NdM±K`, Advantage/Disadvantage        | —                                                     |
 | `systems/stats.py`      | ATK/DEF/CRIT/EVA/RES Formeln           | data                                                  |
 | `systems/effects.py`    | Buff/Debuff/DoT/CC Ticks/Stacks        | data                                                  |
 | `systems/loot.py`       | Gewichtet/Nested Tabellen              | data, rng                                             |
@@ -336,7 +339,7 @@ class Inventory:
 
 ## 21) Testpyramide & Headless-Strategie
 
-* **Unit (breit):** dice, stats, combat, effects, loot, inv, equip, skills, crafting, nodes, save.
+* **Unit (breit):** stats, combat, effects, loot, inv, equip, skills, crafting, nodes, save.
 * **Property:** BSP-Konnektivität, Loot-Gewichte, Kollisions-Fuzz.
 * **Integration:** Player vs. Trio (M2), Kampf→Drop→Pickup→Equip/Use (M3), Erz→Ingot→Sword→Equip (M4), Save/Load-Roundtrip (M5).
 * **Smoke (UI/Scenes):** reine Import/Init-Tests, **skip** ohne GL (`ARCADE_HEADLESS=1`).
@@ -378,10 +381,9 @@ class Inventory:
 ```
 Scene: click auf Gegner → Intent.Shoot(target)
 → systems/los.check(...)
-→ dice d20 + ATK vs. 10 + DEF
-→ on hit: damage = weapon dice * (1 - resist[type])
-→ outcomes: [ConsumeAmmo, Hit/Crit, Damage, Log]
-→ Scene: spawn projectile anim, emit particles, play sfx
+→ hit_chance = base + (atk_skill - def_skill)/skill_scale + (ATK - DEF)/atkdef_scale
+→ roll random(0-1) vs hit_chance
+→ on hit: damage = weapon_base_dmg * (1 + str_bonus + tactics + anatomy) * (1 - resist[type])
 ```
 
 **Gather → Craft**
@@ -397,3 +399,33 @@ Scene: Interact(E) → begin_gather(node)
 ---
 
 **Status:** Dieses Dokument ist die **verbindliche Referenz**. Änderungen an Architekturregeln erfolgen über PRs mit Review; breaking Änderungen erfordern Updates in `TOOLING.md`, `data.md` und relevanten Tasks (`tasks/*`).
+
+
+## ARCHITECTURE – UO Addendum — UO Addendum
+
+# ARCHITECTURE – UO Addendum
+
+
+## Datenfluss (Skills) — UO Addendum
+
+## Datenfluss (Skills)
+1. **Event**: `onSkillUse(skillId, context)` ermittelt `p_success` (z. B. HitChance).
+2. **Lookup**: `skills.json[skillId].xp_curve` → `progression_rules.json.curves[curveName]`.
+3. **Formel**: `progression_rules.json.skill` + Kurvenprofil bestimmen `P(gain)` (Chance auf **+0.1**).
+4. **Stat-Gains**: bei Skill-Gain Roll auf STR/DEX/INT/STAM gemäß `skills.json[skillId].stats` und `progression_rules.json.stats`.
+5. **Caps**: `progression_rules.json.caps` (per Skill, total, per Stat).
+
+
+## Datenfluss (Kampf) — UO Addendum
+
+## Datenfluss (Kampf)
+- **combat_rules.json** versorgt das Kampfsystem: `hit_chance`, `parry`, `damage`, `movement`, `recovery`, `initiative`, `dodge`.
+- Optional kann jede Waffe einen `base_delay` tragen; sonst greift die Map in `combat_rules.recovery.weapon_base_delay`.
+
+
+## Engagement & Zeit — UO Addendum
+
+## Engagement & Zeit
+- **Encounter-Bubble** (R=12 Tiles), alle Gegner mit LOS joinen; neue Gegner treten am Rundenbeginn bei.
+- **Rundenzeit**: 1 Runde = 3 s. Crafting läuft auf Rundenzeit weiter (Outputs markiert), Node-Respawn pausiert (Default).
+- **Escape**: LOS-frei + Distanz ≥ *leash_break* (10 Tiles) über 1 volle Runde → Overworld.

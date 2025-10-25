@@ -52,7 +52,7 @@ hit_chance = base + (atk_skill - def_skill) / skill_scale + (atk_stat - def_stat
 hit_chance = clamp(hit_chance, min, max)
 ```
 
-### **Parameters** (from `combat_rules.json`):
+### **Parameters** (from `combat_rules.json`)
 
 | Parameter | Value | Description |
 |-----------|-------|-------------|
@@ -274,14 +274,14 @@ recovery_turns = 2 - floor(60 / 40)
 ### **Formula:**
 
 ```python
-initiative = d100 + (DEX * dex_weight) + (STAM * stam_weight) + weapon_ready_bonus
+initiative = random(1-100) + (DEX * dex_weight) + (STAM * stam_weight) + weapon_ready_bonus
 ```
 
 ### **Parameters:**
 
 | Parameter | Value | Description |
 |-----------|-------|-------------|
-| `dice` | d100 | Roll 1-100 |
+| `random(1-100)` | Roll 1-100 | Random integer between 1 and 100 |
 | `dex_weight` | 0.8 | DEX contribution weight |
 | `stam_weight` | 0.2 | Stamina contribution weight |
 | `weapon_ready_bonus` | Varies | Bonus based on weapon category |
@@ -298,7 +298,7 @@ initiative = d100 + (DEX * dex_weight) + (STAM * stam_weight) + weapon_ready_bon
 
 **Scenario:** Initiative roll
 
-- **Roll:** 65 (d100)
+- **Roll:** 65 (random 1-100)
 - **DEX:** 70
 - **STAM:** 80
 - **Weapon:** Long Sword (Medium, +0)
@@ -360,6 +360,7 @@ reload_turns = 2 - floor(60 / 50)
 ```
 
 **Future Implementation:**
+
 - 2% base crit chance
 - 1.25× damage multiplier
 - Affected by Anatomy skill and weapon quality
@@ -371,6 +372,7 @@ reload_turns = 2 - floor(60 / 50)
 ### **Full Combat Turn Walkthrough:**
 
 **Actors:**
+
 - **Knight:** HP 100, STR 70, DEX 50, Swords 60, Tactics 50, Anatomy 40
 - **Orc:** HP 80, STR 60, DEX 40, Swords 30, Parrying 20 (shield)
 
@@ -381,8 +383,8 @@ reload_turns = 2 - floor(60 / 50)
 **STEP 1: Initiative**
 
 ```python
-Knight: d100(75) + (50 * 0.8) + (80 * 0.2) + 0 = 131
-Orc:    d100(45) + (40 * 0.8) + (60 * 0.2) + 0 = 89
+Knight: random(1-100) → 75 + (50 * 0.8) + (80 * 0.2) + 0 = 131
+Orc:    random(1-100) → 45 + (40 * 0.8) + (60 * 0.2) + 0 = 89
 
 Turn Order: Knight → Orc
 ```
