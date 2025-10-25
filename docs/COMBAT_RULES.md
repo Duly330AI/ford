@@ -417,11 +417,114 @@ duration_turns = 1  # Bonus lasts until end of current turn
 }
 ```
 
-**Future Implementation:**
+### **Parameters:**
 
-- 2% base crit chance
-- 1.25× damage multiplier
-- Affected by Anatomy skill and weapon quality
+| Parameter | Value | Description |
+|-----------|-------|-------------|
+| `enabled` | false | Critical hits disabled for MVP |
+| `chance` | 0.02 | Base crit chance (2%) when enabled |
+| `mult` | 1.25 | Damage multiplier on crit (125%) |
+
+### **Future Implementation (Post-MVP):**
+
+**Base Mechanics:**
+
+- **Base Crit Chance:** 2%
+- **Crit Multiplier:** 1.25× total damage
+- **Visual/Audio:** Special effect + sound on crit
+
+**Skill Modifiers:**
+
+- **Anatomy Skill:** +0.02% crit chance per point (max +2% at 100 skill)
+- **Tactics Skill:** +0.01% crit chance per point (max +1% at 100 skill)
+- **Total Max Crit:** 5% (2% base + 2% Anatomy + 1% Tactics)
+
+**Weapon Quality:**
+
+- **Exceptional:** +1% crit chance
+- **Legendary:** +2% crit chance
+
+**Example Calculation (Future):**
+
+```python
+# High-skilled warrior with exceptional weapon
+base_crit = 0.02
+anatomy_bonus = 80 * 0.0002  # = 0.016 (1.6%)
+tactics_bonus = 70 * 0.0001  # = 0.007 (0.7%)
+weapon_bonus = 0.01  # Exceptional
+
+total_crit_chance = base_crit + anatomy_bonus + tactics_bonus + weapon_bonus
+                  = 0.02 + 0.016 + 0.007 + 0.01
+                  = 0.053  # 5.3% crit chance
+```
+
+---
+
+## 🏹 **Ranged Combat - Advanced**
+
+### **Ammunition System:**
+
+**Ammunition Types:**
+
+- **Arrows:** Used by bows (Short Bow, Long Bow)
+- **Bolts:** Used by crossbows (Crossbow, Heavy Crossbow)
+
+**Mechanics:**
+
+- **1 ammo consumed per shot**
+- **No ammo = Cannot attack**
+- **Fallback behavior** (configurable):
+  - `fail`: Cannot shoot, turn wasted
+  - `fallback_melee`: Use equipped melee weapon (if any)
+
+### **Reload Mechanics (Detailed):**
+
+**Reload Turn Requirements:**
+
+```python
+reload_turns = weapon_base_reload - floor(DEX / dex_reload_step)
+reload_turns = max(reload_turns, 0)
+```
+
+**Reload Turn Table:**
+
+| Weapon | Base Reload | DEX 0 | DEX 50 | DEX 100 |
+|--------|-------------|-------|--------|---------|
+| Short Bow | 1 | 1 turn | 0 turns | 0 turns |
+| Long Bow | 1 | 1 turn | 0 turns | 0 turns |
+| Crossbow | 2 | 2 turns | 1 turn | 0 turns |
+| Heavy Crossbow | 3 | 3 turns | 2 turns | 1 turn |
+
+**State Machine:**
+
+1. **Ready** → Fire (consumes ammo) → **Reloading**
+2. **Reloading** → Wait N turns → **Ready**
+3. If **no ammo**: Cannot transition to Ready
+
+### **Range & Accuracy:**
+
+**Standard Ranges:**
+
+- **Melee:** 1 tile
+- **Ranged (Bow/Crossbow):** 6 tiles
+- **Magic:** 5 tiles (varies by spell)
+
+**Future Range Modifiers (Post-MVP):**
+
+- **Point-Blank (1-2 tiles):** +10% hit chance
+- **Optimal (3-5 tiles):** No modifier
+- **Long Range (6+ tiles):** -10% hit chance per tile beyond 6
+
+### **Movement Penalties:**
+
+**Current (MVP):**
+
+- No movement penalty for ranged attacks
+
+**Future:**
+
+- **Moved this turn:** -15% hit chance
+- **Stationary (didn't move):** +5% hit chance
 
 ---
 
