@@ -18,3 +18,9 @@
   Tests:
   - [ ] `tests/integration/test_usables_workflow.py::test_lock_to_loot_flow` (seeded).
   - [ ] `tests/integration/test_usables_workflow.py::test_trap_detect_disarm_flow` (seeded).
+  References:
+  - docs/ARCHITECTURE.md
+  - docs/CONVENTIONS.md
+  - docs/DUNGEON_GENERATOR.md
+  - docs/ITEMIZATION_DESIGN.md
+  - docs/QUEST_SYSTEM.md

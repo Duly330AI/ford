@@ -20,3 +20,7 @@
   - [ ] State transition tests covering idle to patrol to chase to engage loops.
   - [ ] Leash regression tests verifying return behavior and cooldown timers.
   - [ ] Encounter bubble tests ensuring LOS and faction hostility drive enlistment.
+  References:
+  - docs/ARCHITECTURE.md
+  - docs/COMBAT_RULES.md
+  - docs/CONVENTIONS.md

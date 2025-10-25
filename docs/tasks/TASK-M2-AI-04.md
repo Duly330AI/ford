@@ -20,3 +20,7 @@
   - [ ] Relation lookup tests covering representative combinations across the 12 by 12 matrix.
   - [ ] AI-versus-AI engagement tests where Orc and Undead actors enter combat automatically.
   - [ ] Call-for-help regression tests ensuring ally enlistment follows radius and bias rules.
+  References:
+  - docs/ARCHITECTURE.md
+  - docs/COMBAT_RULES.md
+  - docs/CONVENTIONS.md

@@ -34,3 +34,10 @@
 - docs/TODO/DUNGEON_GENERATOR_TD.md
 - docs/WORLD_BIBLE.md
 - docs/ARCHITECTURE.md
+  References:
+  - docs/ARCHITECTURE.md
+  - docs/COMBAT_RULES.md
+  - docs/CONVENTIONS.md
+  - docs/DUNGEON_GENERATOR.md
+  - docs/ITEMIZATION_DESIGN.md
+  - docs/QUEST_SYSTEM.md

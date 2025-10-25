@@ -20,3 +20,7 @@
   - [ ] Deterministic scoring tests comparing computed weights against known fixtures.
   - [ ] E-greedy randomness tests verifying exploration frequency with fixed seeds.
   - [ ] Scenario regression tests ensuring consistent target and action ordering for archived battle states.
+  References:
+  - docs/ARCHITECTURE.md
+  - docs/COMBAT_RULES.md
+  - docs/CONVENTIONS.md

@@ -19,3 +19,11 @@
   Tests:
   - [ ] tests/ui/test_ui_system.py::test_data_binding_smoke
   - [ ] tests/ui/test_ui_system.py::test_layout_profile_roundtrip
+  References:
+  - docs/ARCHITECTURE.md
+  - docs/COMBAT_RULES.md
+  - docs/CONVENTIONS.md
+  - docs/INPUT_AND_REBIND.md
+  - docs/ITEMIZATION_DESIGN.md
+  - docs/LOCALIZATION.md
+  - docs/QUEST_SYSTEM.md

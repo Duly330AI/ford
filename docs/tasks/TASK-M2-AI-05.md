@@ -19,3 +19,6 @@
   - [ ] CRUD tests confirming default values, typed updates, and optional key handling.
   - [ ] Threat map update tests verifying decay and insertion order with seeded data.
   - [ ] Line-of-sight snapshot tests ensuring perception writes propagate correctly.
+  References:
+  - docs/ARCHITECTURE.md
+  - docs/CONVENTIONS.md

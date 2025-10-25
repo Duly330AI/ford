@@ -20,3 +20,7 @@
   - [ ] Archetype tactic fixtures validating melee, ranged, caster, guardian, brute, scout, and boss flows.
   - [ ] Kiting and flee behavior tests covering distance thresholds and stamina edges.
   - [ ] Guard and call-for-help regression tests verifying ally selection and signal emission.
+  References:
+  - docs/ARCHITECTURE.md
+  - docs/CONVENTIONS.md
+  - docs/INPUT_AND_REBIND.md

@@ -20,3 +20,8 @@
   - [ ] AI-versus-AI unit tests (for example Orc versus Undead) validating hostility checks and victory resolution.
   - [ ] Seeded three-way integration tests covering Player, Orc, and Undead factions.
   - [ ] Loot attribution tests ensuring AI kills drop loot into world containers retrievable by the player.
+  References:
+  - docs/ARCHITECTURE.md
+  - docs/COMBAT_RULES.md
+  - docs/CONVENTIONS.md
+  - docs/ITEMIZATION_DESIGN.md

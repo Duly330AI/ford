@@ -20,3 +20,7 @@
   - [ ] LOS unit tests covering straight, diagonal, and obstructed paths.
   - [ ] Threat decay tests exercising multiple seeds and ensuring monotonic decay toward zero.
   - [ ] Multi-target prioritization tests asserting deterministic ordering with shared vision snapshots.
+  References:
+  - docs/ARCHITECTURE.md
+  - docs/COMBAT_RULES.md
+  - docs/CONVENTIONS.md

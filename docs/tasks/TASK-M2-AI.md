@@ -18,3 +18,7 @@
   Tests:
   - [ ] `tests/integration/test_ai_system.py::test_single_faction_encounter` (seeded utility pipeline smoke).
   - [ ] `tests/integration/test_ai_system.py::test_multi_faction_battle` (seeded three-faction scenario).
+  References:
+  - docs/ARCHITECTURE.md
+  - docs/COMBAT_RULES.md
+  - docs/CONVENTIONS.md

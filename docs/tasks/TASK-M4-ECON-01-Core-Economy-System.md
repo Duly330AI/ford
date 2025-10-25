@@ -15,7 +15,7 @@
   - [ ] Tests: Deterministic Behavior, Seeded RNG.
   - [ ] Doku: Economy-Rules-File, Tuning-Workflow.
   Tests:
-  - [ ] **Price-Calculation-Test**: Base * Rarity-Factor * Quality-Mod * Vendor-Modifier korrekt.
+  - [ ] **Price-Calculation-Test**: Base *Rarity-Factor* Quality-Mod * Vendor-Modifier korrekt.
   - [ ] **Transaction-Atomicity-Test**: Inventory & Gold zusammen adjustten, oder Rollback.
   - [ ] **Determinismus-Test**: gleicher Seed → identische Prices.
   References:
