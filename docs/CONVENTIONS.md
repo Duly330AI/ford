@@ -43,6 +43,7 @@ This document defines naming conventions, coding standards, and data format rule
 **Rule:** Display names are stored in **localization files** (`i18n/en.json`, `i18n/de.json`), not in data files.
 
 **Data files reference IDs only:**
+
 ```json
 {
   "id": "reagent_bloodmoss",
@@ -52,6 +53,7 @@ This document defines naming conventions, coding standards, and data format rule
 ```
 
 **Localization provides display names:**
+
 ```json
 {
   "items": {
@@ -260,12 +262,14 @@ Hierarchical dot-notation: `category.subcategory.item.field`
 ### **Breaking Changes (Oct 25, 2025)**
 
 **Phase 1 Migration:**
+
 1. ✅ `data/skills.json`: `sorcery` → `magery`
 2. ✅ `data/spells.json`: Reagent display names → IDs
 3. ✅ `data/schemas/*.json`: `display_name` → `name`
 4. ✅ All docs: Updated to use canonical names
 
 **Future Phase 3:**
+
 - Move `name` fields to `i18n/` files
 - Remove display text from data files
 - Update validation to enforce i18n-only

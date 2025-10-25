@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-import json, sys, os
+import json
+import os
+import sys
+
 
 def flatten(d, prefix=""):
     for k, v in d.items():
@@ -8,6 +11,7 @@ def flatten(d, prefix=""):
             yield from flatten(v, key)
         else:
             yield key
+
 
 def main():
     # Get project root (go up 2 levels from scripts/i18n/)
@@ -33,5 +37,7 @@ def main():
     if failed:
         sys.exit(1)
     print("[OK] i18n keys match base.")
+
+
 if __name__ == "__main__":
     main()

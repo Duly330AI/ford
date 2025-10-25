@@ -17,16 +17,16 @@ RARITY_BASE_VALUES = {
 
 # Type multipliers (some types are worth more/less)
 TYPE_MULTIPLIERS = {
-    "weapon": 3.0,       # Weapons more valuable
-    "armor": 2.5,        # Armor valuable
-    "shield": 2.0,       # Shields decent
-    "reagent": 1.0,      # Base price
-    "consumable": 1.5,   # Potions/food
-    "material": 0.5,     # Raw materials cheaper
-    "tool": 1.2,         # Tools moderate
-    "ammo": 0.3,         # Ammo cheap (stackable)
-    "currency": 1.0,     # Gold is gold
-    "misc": 1.0,         # Default
+    "weapon": 3.0,  # Weapons more valuable
+    "armor": 2.5,  # Armor valuable
+    "shield": 2.0,  # Shields decent
+    "reagent": 1.0,  # Base price
+    "consumable": 1.5,  # Potions/food
+    "material": 0.5,  # Raw materials cheaper
+    "tool": 1.2,  # Tools moderate
+    "ammo": 0.3,  # Ammo cheap (stackable)
+    "currency": 1.0,  # Gold is gold
+    "misc": 1.0,  # Default
 }
 
 
@@ -48,24 +48,26 @@ def migrate_items(items_path: Path) -> tuple[int, int]:
     Returns:
         (items_modified, total_items)
     """
-    with open(items_path, 'r', encoding='utf-8') as f:
+    with open(items_path, "r", encoding="utf-8") as f:
         items = json.load(f)
 
     items_modified = 0
 
     for item in items:
-        item_id = item.get('id', '???')
+        item_id = item.get("id", "???")
 
-        if 'base_value' not in item:
+        if "base_value" not in item:
             base_value = calculate_base_value(item)
-            item['base_value'] = base_value
+            item["base_value"] = base_value
             items_modified += 1
-            print(f"  {item_id}: base_value = {base_value} (rarity={item.get('rarity')}, type={item.get('type')})")
+            print(
+                f"  {item_id}: base_value = {base_value} (rarity={item.get('rarity')}, type={item.get('type')})"
+            )
         else:
             print(f"  {item_id}: already has base_value = {item['base_value']}")
 
     # Write back
-    with open(items_path, 'w', encoding='utf-8') as f:
+    with open(items_path, "w", encoding="utf-8") as f:
         json.dump(items, f, indent=2, ensure_ascii=False)
 
     return items_modified, len(items)
@@ -73,7 +75,7 @@ def migrate_items(items_path: Path) -> tuple[int, int]:
 
 def main():
     project_root = Path(__file__).parent.parent
-    items_path = project_root / 'data' / 'items.json'
+    items_path = project_root / "data" / "items.json"
 
     if not items_path.exists():
         print(f"ERROR: {items_path} not found")
@@ -82,13 +84,14 @@ def main():
     print(f"🔄 Adding base_value to items in {items_path}...")
     items_modified, total_items = migrate_items(items_path)
 
-    print(f"\n✅ Migration complete!")
+    print("\n✅ Migration complete!")
     print(f"   Items modified: {items_modified}")
     print(f"   Total items: {total_items}")
 
     return 0
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     import sys
+
     sys.exit(main())

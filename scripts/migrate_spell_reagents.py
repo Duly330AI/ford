@@ -19,6 +19,7 @@ REAGENT_MAPPING = {
     "Spider's Silk": "reagent_spiders_silk",
 }
 
+
 def migrate_spells(spells_path: Path) -> tuple[int, int]:
     """
     Migrate reagent names to IDs in spells.json
@@ -26,16 +27,16 @@ def migrate_spells(spells_path: Path) -> tuple[int, int]:
     Returns:
         (spells_modified, reagents_changed)
     """
-    with open(spells_path, 'r', encoding='utf-8') as f:
+    with open(spells_path, "r", encoding="utf-8") as f:
         spells = json.load(f)
 
     spells_modified = 0
     reagents_changed = 0
 
     for spell in spells:
-        spell_id = spell.get('id', '???')
-        cost = spell.get('cost', {})
-        reagents = cost.get('reagents', {})
+        spell_id = spell.get("id", "???")
+        cost = spell.get("cost", {})
+        reagents = cost.get("reagents", {})
 
         if not reagents or not isinstance(reagents, dict):
             continue
@@ -57,18 +58,19 @@ def migrate_spells(spells_path: Path) -> tuple[int, int]:
                 print(f"  WARNING: {spell_id}: Unknown reagent '{reagent_name}'")
 
         if spell_changed:
-            cost['reagents'] = new_reagents
+            cost["reagents"] = new_reagents
             spells_modified += 1
 
     # Write back
-    with open(spells_path, 'w', encoding='utf-8') as f:
+    with open(spells_path, "w", encoding="utf-8") as f:
         json.dump(spells, f, indent=2, ensure_ascii=False)
 
     return spells_modified, reagents_changed
 
+
 def main():
     project_root = Path(__file__).parent.parent
-    spells_path = project_root / 'data' / 'spells.json'
+    spells_path = project_root / "data" / "spells.json"
 
     if not spells_path.exists():
         print(f"ERROR: {spells_path} not found")
@@ -77,12 +79,14 @@ def main():
     print(f"🔄 Migrating reagents in {spells_path}...")
     spells_modified, reagents_changed = migrate_spells(spells_path)
 
-    print(f"\n✅ Migration complete!")
+    print("\n✅ Migration complete!")
     print(f"   Spells modified: {spells_modified}")
     print(f"   Reagents changed: {reagents_changed}")
 
     return 0
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     import sys
+
     sys.exit(main())
