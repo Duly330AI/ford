@@ -1,36 +1,25 @@
-# TASK-M7-FTUE-01: Character Creation Screen
-
-**Milestone:** M7 - First Time User Experience
-**Priority:** P1 (Medium)
-**Estimated Effort:** 4-5d
-**Dependencies:** TASK-M6-UI-01, TASK-M3-06, TASK-M3-02
-
-## Objectives
-
-- Implement character creation UI featuring preset templates and custom stat/skill allocation per TUTORIAL_FTUE.md.
-- Integrate with player entity initialization storing chosen template, stat distribution, and starting gear.
-- Provide validation, preview, and confirmation flows including localization-ready copy.
-- Support skip option for returning players while preserving unlock flags for FTUE progression.
-- Add UI tests covering template selection, custom allocation, and validation errors.
-
-## Acceptance Criteria
-
-- Screen supports 5 presets plus custom mode with accurate stat/skill previews and restrictions.
-- Selected configuration persists through game startup and is compatible with save/load schema.
-- Skip tutorial option updates tutorial manager flags and bypasses scripted intro when selected.
-- Tests verify template data integrity and ensure custom allocation respects point limits.
-- Accessibility considerations (keyboard navigation, controller support) addressed.
-
-## Implementation Notes
-
-- Store template data in JSON (e.g., `data/tutorial/templates.json`) to stay data-driven.
-- Reuse existing UI components (panels, list widgets) for consistency with rest of M6 UI.
-- Expose events for tutorial manager to hook into (on_template_selected, on_character_confirmed).
-- Coordinate with localization task to replace inline text with keys once i18n ready.
-
-## Related Documents
-
-- docs/TUTORIAL_FTUE.md
-- docs/CONVENTIONS.md
-- docs/QUEST_SYSTEM.md
-- docs/ARCHITECTURE.md
+- [ ] ID: TASK-M7-FTUE-01
+  Title: Character Creation Screen (Presets, Custom Allocation)
+  Status: Proposed
+  Priority: P1
+  Owner: Codex Agent
+  Created: 2025-10-26
+  Artifacts: `game/views/char_creation.py`, `data/tutorial/templates.json`, `tests/views/test_char_creation.py`
+  DependsOn: TASK-M6-UI-01, TASK-M3-06, TASK-M3-02
+  Notes:
+  Implementiere Char-Creation-UI: 5 Presets + Custom-Mode mit Stat/Skill-Allocation per TUTORIAL_FTUE.md. Template-Data JSON-driven. Validation, Preview, Confirmation Flows. Localization-Ready. Skip-Option für Returning Players, Tutorial-Flags updated. Reuse bestehende UI-Components. Events für Tutorial-Manager (on_template_selected, on_character_confirmed). Keyboard-Navigation & Controller-Support.
+  Acceptance:
+  - [ ] 5 Presets + Custom-Mode, Accurate Stat/Skill Previews, Restrictions enforced.
+  - [ ] Selected Config persistiert durch Game-Startup, Save/Load kompatibel.
+  - [ ] Skip-Option updates Tutorial-Manager, bypasst Scripted-Intro.
+  - [ ] Tests: Template-Integrity, Custom-Allocation respects Point-Limits.
+  - [ ] Accessibility: Keyboard, Controller Support.
+  Tests:
+  - [ ] **Template-Selection-Test**: 5 Presets callable & accurate.
+  - [ ] **Custom-Allocation-Test**: Point-Limits respected.
+  - [ ] **Validation-Test**: Invalid Configs → Errors.
+  - [ ] **Persistence-Test**: Config persists nach Selection.
+  References:
+  - docs/TUTORIAL_FTUE.md
+  - docs/CONVENTIONS.md
+  - docs/ARCHITECTURE.md

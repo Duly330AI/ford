@@ -1,36 +1,25 @@
-# TASK-M1-INPUT-02: Controls JSON Schema & Loader
-
-**Milestone:** M1 - Prozeduraler Dungeon, Spielerbewegung & Licht
-**Priority:** P1 (Medium)
-**Estimated Effort:** 3d
-**Dependencies:** TASK-M1-10, TASK-M1-INPUT-01-Context-Input-Manager
-
-## Objectives
-
-- Define `config/controls.json` structure covering contexts, actions, primary/secondary bindings, chords, repeat settings, and gamepad mappings.
-- Create schema `config/schemas/controls.schema.json` enforcing key formats, modifier rules, and conflict validation metadata.
-- Implement loader to validate configuration, apply defaults, and expose runtime data to input manager.
-- Provide migration tooling/template to regenerate default controls file and document customization steps.
-- Add tests verifying schema catches invalid bindings (duplicate primary, reserved chords, bad modifier combos).
-
-## Acceptance Criteria
-
-- Controls config validates at startup; descriptive errors logged for misconfigurations.
-- Loader merges user overrides with defaults while preserving deterministic ordering for comparisons.
-- Data consumed by context manager and rebinding UI without requiring hardcoded key lists.
-- Tests include positive fixture and negative scenarios covering keyboard and gamepad entries.
-- Documentation updated with control schema reference and instructions for modders.
-
-## Implementation Notes
-
-- Support platform differences (e.g., Mac vs Windows key names) via normalized identifiers.
-- Provide versioning field to allow future migrations and compatibility checks.
-- Keep loader deterministic to ensure consistent diffs when saving user customizations.
-- Integrate with settings/save system to persist user bindings separately from defaults.
-
-## Related Documents
-
-- docs/INPUT_AND_REBIND.md
-- docs/CONVENTIONS.md
-- docs/TODO/INPUT_AND_REBIND_TD.md
-- docs/ARCHITECTURE.md
+- [ ] ID: TASK-M1-INPUT-02
+  Title: Controls JSON Schema & Loader
+  Status: Proposed
+  Priority: P1
+  Owner: Codex Agent
+  Created: 2025-10-26
+  Artifacts: `config/controls.json`, `config/schemas/controls.schema.json`, `game/data_loader/controls.py`, `tests/data/test_controls.py`
+  DependsOn: TASK-M1-10, TASK-M1-INPUT-01
+  Notes:
+  Definiere `config/controls.json`: Contexts, Actions, Primary/Secondary Bindings, Chords, Repeat-Settings, Gamepad-Mappings. Schema `config/schemas/controls.schema.json` enforced Key-Formats, Modifier-Rules, Conflict-Metadata. Loader validiert, appliziert Defaults, exponiert Runtime-Data zu Input-Manager. Migration-Tooling & Templates. Platform-Diffs (Mac vs Windows) via normalized IDs. Versioning für Future-Migrations. User-Bindings persistent getrennt von Defaults.
+  Acceptance:
+  - [ ] Controls-Config validiert bei Startup, descriptive Errors für Misconfigs.
+  - [ ] Loader merged User-Overrides mit Defaults, deterministische Ordering für Comparisons.
+  - [ ] Data consumed von Context-Manager & Rebinding-UI ohne Hardcoded-Key-Lists.
+  - [ ] Tests: Positive Fixture, Negative Scenarios (Keyboard, Gamepad).
+  - [ ] Doku: Control-Schema Reference, Modding-Instructions.
+  Tests:
+  - [ ] **Schema-Validation-Test**: Ungültige Bindings → Errors (Duplicate Primary, Reserved Chords).
+  - [ ] **Loader-Test**: User-Overrides merged korrekt mit Defaults.
+  - [ ] **Gamepad-Test**: Gamepad-Mappings validiert & loaded.
+  - [ ] **Determinismus-Test**: gleicher Seed → identische Ordering.
+  References:
+  - docs/INPUT_AND_REBIND.md
+  - docs/CONVENTIONS.md
+  - docs/ARCHITECTURE.md

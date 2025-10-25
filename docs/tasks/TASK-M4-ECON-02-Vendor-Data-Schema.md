@@ -1,36 +1,24 @@
-# TASK-M4-ECON-02: Vendor Data Schema & Loader
-
-**Milestone:** M4 - Nodes, Berufe & Crafting
-**Priority:** P0 (High)
-**Estimated Effort:** 3d
-**Dependencies:** TASK-M3-01, TASK-M4-ECON-01-Core-Economy-System
-
-## Objectives
-
-- Define vendor configuration structure under `data/vendors/*.json` including inventory ranges, restock cadence, modifiers, biome affinities.
-- Add schema `data/schemas/vendor.schema.json` enforcing item references, numeric bounds, and optional requirements (reputation, milestones).
-- Implement loader module providing lookup APIs (per biome, per vendor) and validation at startup.
-- Integrate with economy system to deliver vendor metadata for pricing, restocking, and UI display.
-- Create tests verifying schema rejection of invalid vendors (unknown items, overlapping ranges, bad modifiers).
-
-## Acceptance Criteria
-
-- Vendor definitions validate successfully with descriptive errors for missing or incorrect fields.
-- Loader caches vendor records for efficient queries and surfaces convenience methods (e.g. `list_vendors_for_biome`).
-- Economy system reads vendor modifiers, inventory definitions, and restock timers exclusively through loader API.
-- Tests include fixtures for multi-biome vendors, specialty shops, and vendor-specific price modifiers.
-- Documentation or sample vendor JSON added to guide designers.
-
-## Implementation Notes
-
-- Support localization keys for display names rather than inline strings per CONVENTIONS.
-- Provide optional sections for gold sinks (repair/travel) to be consumed by other systems.
-- Consider deriving default spreads/stock from economy rules file to reduce duplication.
-- Align vendor IDs with WORLD_BIBLE factions/locations for future quest integration.
-
-## Related Documents
-
-- docs/ECONOMY_AND_VENDORS.md
-- docs/CONVENTIONS.md
-- docs/TODO/ECONOMY_AND_VENDORS_TD.md
-- docs/WORLD_BIBLE.md
+- [ ] ID: TASK-M4-ECON-02
+  Title: Vendor Data Schema & Loader
+  Status: Proposed
+  Priority: P0
+  Owner: Codex Agent
+  Created: 2025-10-26
+  Artifacts: `data/vendors/*.json`, `data/schemas/vendor.schema.json`, `game/data_loader/vendors.py`, `tests/data/test_vendors.py`
+  DependsOn: TASK-M3-01, TASK-M4-ECON-01
+  Notes:
+  Definiere `data/vendors/*.json`: Inventory-Ranges, Restock-Cadence, Modifiers, Biom-Affinitäten. Schema `data/schemas/vendor.schema.json` enforced Item-Refs, Numeric-Bounds, Optional-Requirements (Reputation, Milestones). Loader API: Lookup pro Biom/Vendor, Validation bei Startup. Localization-Keys für Display-Names (CONVENTIONS). Vendor-IDs aligned mit WORLD_BIBLE für Quest-Integration.
+  Acceptance:
+  - [ ] Vendor-Defs validieren, Fehler descriptive für Missing/Incorrect Fields.
+  - [ ] Loader cached Records, convenient Methods (list_vendors_for_biome, etc).
+  - [ ] Economy-System liest Vendor-Modifiers, Inventory-Defs, Restock-Timers via Loader-API.
+  - [ ] Tests: Multi-Biom-Vendors, Specialty-Shops, Vendor-Modifiers.
+  - [ ] Doku/Sample-JSON für Designer.
+  Tests:
+  - [ ] **Schema-Validation-Test**: Invalid Vendors → Errors.
+  - [ ] **Item-Reference-Test**: Item-IDs existieren in items.json.
+  - [ ] **Biom-Affinity-Test**: Vendor-Biom-Refs valid.
+  References:
+  - docs/ECONOMY_AND_VENDORS.md
+  - docs/CONVENTIONS.md
+  - docs/WORLD_BIBLE.md

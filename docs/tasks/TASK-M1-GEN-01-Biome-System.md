@@ -1,36 +1,25 @@
-# TASK-M1-GEN-01: Biome System Foundation
-
-**Milestone:** M1 - Prozeduraler Dungeon, Spielerbewegung & Licht
-**Priority:** P0 (Critical)
-**Estimated Effort:** 5-6d
-**Dependencies:** TASK-M1-01, TASK-M1-11, TASK-M2-07
-
-## Objectives
-
-- Define data-driven biome configs under `data/biomes/*.json` capturing tileset, factions, loot tables, reagents, ambient settings.
-- Create JSON schema `data/schemas/biome.schema.json` validating required fields, cross-file references, and optional overrides.
-- Implement `game/systems/biome_manager.py` to load, validate, and provide biome context to dungeon generator and encounter systems.
-- Integrate biome selection into BSP generator initialization, including seed persistence and metadata export.
-- Provide API for querying biome attributes (tileset, faction weights, ambience) for use in scenes/UI/debug tools.
-
-## Acceptance Criteria
-
-- Dungeon generation accepts biome ID and applies biome-specific tileset + ambient metadata deterministically per seed.
-- Schema validation fails fast on missing fields, invalid references (loot tables, factions), or naming violations.
-- Biome manager exposes data for spawning (faction weights) and audio/lighting (ambient tags) without coupling to scenes.
-- Tests cover loading sample biome definitions, invalid configs, and integration with generator seeding.
-- Generated dungeon metadata persists biome ID for save/load and analytics.
-
-## Implementation Notes
-
-- Ensure biome manager remains pure systems-layer logic; provide bridging adapters for scene-specific usage as needed.
-- Support inheritance or composition for shared defaults (e.g. base crypt biome) via schema patterns or loader logic.
-- Coordinate with encounter/threat spawner task to align faction lists and loot biases.
-- Update generator CLI/tooling (if any) to accept biome parameter and emit helpful errors.
-
-## Related Documents
-
-- docs/DUNGEON_GENERATOR.md
-- docs/WORLD_BIBLE.md
-- docs/CONVENTIONS.md
-- docs/TODO/DUNGEON_GENERATOR_TD.md
+- [ ] ID: TASK-M1-GEN-01
+  Title: Biome System Foundation
+  Status: Proposed
+  Priority: P0
+  Owner: Codex Agent
+  Created: 2025-10-26
+  Artifacts: `game/systems/biome_manager.py`, `data/schemas/biome.schema.json`, `data/biomes/*.json`, `tests/systems/test_biome_manager.py`
+  DependsOn: TASK-M1-01, TASK-M1-11, TASK-M2-07
+  Notes:
+  Implementiere `BiomeManager` zur Verwaltung datengestützter Biom-Konfigurationen. Jedes Biom definiert: Tileset-ID, Fraktions-Gewichte, Loot-Tabellen, Reagenzien-Vorkommen, Ambiente (Musik, Beleuchtung). Biome werden bei Dungeon-Generierung ausgewählt (seed-deterministisch) und beeinflussen BSP-Output, Gegner-Spawning und Umwelteigenschaften. JSON-Schema validiert Struktur und Cross-File-Referenzen. Manager bleibt testbar (keine Arcade-Deps).
+  Acceptance:
+  - [ ] `BiomeManager.load()` parsed `data/biomes/*.json`, validiert gegen Schema, gibt strukturierte Daten zurück.
+  - [ ] Biom-Auswahl und Tileset-Anwendung sind deterministisch pro Seed.
+  - [ ] Schema-Fehler (fehlende Felder, ungültige Refs) werden früh geworfen mit aussagekräftigen Meldungen.
+  - [ ] API verfügbar: `get_biome()`, `get_tileset()`, `get_faction_weights()`, `get_ambient_tags()`.
+  - [ ] Dungeon-Metadaten (Biom-ID) persistieren über Save/Load.
+  Tests:
+  - [ ] **Load-Test**: Sample-Biom-Defs laden, validieren, abfragen.
+  - [ ] **Schema-Validation**: Ungültige Configs → Fehler mit Zeile/Feld.
+  - [ ] **Integration-Test**: Biom + BSP-Generator erzeugen konsistente Dungeons pro Seed.
+  - [ ] **Determinismus-Test**: gleicher Seed + Biom → identische Tileset-Anwendung.
+  References:
+  - docs/DUNGEON_GENERATOR.md
+  - docs/WORLD_BIBLE.md
+  - docs/CONVENTIONS.md

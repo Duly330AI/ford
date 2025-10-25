@@ -1,36 +1,25 @@
-# TASK-M4-QUEST-02: Quest Data Schema & Loader
-
-**Milestone:** M4 - Nodes, Berufe & Crafting
-**Priority:** P0 (High)
-**Estimated Effort:** 3-4d
-**Dependencies:** TASK-M3-01, TASK-M4-QUEST-01-Core-Quest-Engine
-
-## Objectives
-
-- Define quest data structure under `data/quests/*.json` capturing requirements, objectives, rewards, hooks, and localization keys.
-- Create schema `data/schemas/quest.schema.json` ensuring field validation, objective types, references (items, mobs, locations).
-- Implement loader module to validate, normalize, and supply quest definitions to quest engine.
-- Provide tooling/tests detecting duplicate IDs, invalid hook combinations, and missing localization keys.
-- Document workflow for adding new quests including recommended directory structure and naming.
-
-## Acceptance Criteria
-
-- Quest files validate during startup; schema errors pinpoint offending fields/paths.
-- Loader exposes iteration and retrieval APIs (by ID, by giver NPC, by biome) supporting gameplay queries.
-- Objective references verified against existing data (items, mobs, tiles), preventing runtime mismatches.
-- Tests include positive fixtures and multiple negative cases (bad reward type, invalid objective count, missing hook target).
-- Documentation updated to include sample quest JSON aligned with localization conventions.
-
-## Implementation Notes
-
-- Support modular quest packages (tutorial, factions) by allowing subdirectories under `data/quests/` with shared schema.
-- Provide optional metadata fields for prerequisites (reputation, quest chains) to support future expansions.
-- Integrate schema validation with existing tooling to run in CI/pre-commit.
-- Expose helper to map quest localization keys for use in UI/tut overlay tasks.
-
-## Related Documents
-
-- docs/QUEST_SYSTEM.md
-- docs/LOCALIZATION.md
-- docs/CONVENTIONS.md
-- docs/TODO/QUEST_SYSTEM_TD.md
+- [ ] ID: TASK-M4-QUEST-02
+  Title: Quest Data Schema & Loader
+  Status: Proposed
+  Priority: P0
+  Owner: Codex Agent
+  Created: 2025-10-26
+  Artifacts: `data/quests/*.json`, `data/schemas/quest.schema.json`, `game/data_loader/quests.py`, `tests/data/test_quests.py`
+  DependsOn: TASK-M3-01, TASK-M4-QUEST-01
+  Notes:
+  Definiere `data/quests/*.json`: Requirements, Objectives, Rewards, Hooks, Localization-Keys. Schema `data/schemas/quest.schema.json` validiert Felder, Objective-Types, Refs (Items, Mobs, Locations). Loader validiert, normalizediert, supplies Quest-Defs. Modular Quest-Packages (Tutorial, Factions) via Subdirs. Duplicate-ID-Detection, Invalid-Hook-Validation, Missing-Localization-Key-Detection. Metadata für Prerequisites (Reputation, Quest-Chains) Future-Ready.
+  Acceptance:
+  - [ ] Quest-Files validieren bei Startup, Schema-Errors pinpoint Offending-Fields.
+  - [ ] Loader exponiert Iteration & Retrieval-APIs (by ID, by NPC, by Biom).
+  - [ ] Objective-Refs verified gegen Items/Mobs/Tiles, no Runtime-Mismatches.
+  - [ ] Tests: Positive Fixtures + Negatives (Bad Reward, Invalid Objective-Count, Missing Hook).
+  - [ ] Doku: Sample-Quest-JSON, Localization-Conventions.
+  Tests:
+  - [ ] **Schema-Validation-Test**: Invalid Quests → Errors.
+  - [ ] **Objective-Reference-Test**: Objective-Refs exist in Data.
+  - [ ] **Reward-Type-Test**: Reward-Types valid.
+  - [ ] **Loader-API-Test**: By-ID, By-NPC, By-Biom Retrieval works.
+  References:
+  - docs/QUEST_SYSTEM.md
+  - docs/LOCALIZATION.md
+  - docs/CONVENTIONS.md

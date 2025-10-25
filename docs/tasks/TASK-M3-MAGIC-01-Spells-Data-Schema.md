@@ -1,36 +1,25 @@
-# TASK-M3-MAGIC-01: Spells Data Schema & Loader
-
-**Milestone:** M3 - Skills, Loot & Inventory/Hotbar
-**Priority:** P0 (Critical)
-**Estimated Effort:** 3-4d
-**Dependencies:** TASK-M3-01, TASK-M2-MAGIC-01-Core-Magic-System
-
-## Objectives
-
-- Define `data/spells.json` structure covering cost, circles, effects, fizzle, resist, and AI tags per MAGIC_SYSTEM.md.
-- Author JSON Schema at `data/schemas/spells.schema.json` enforcing IDs, numeric bounds, and nested object rules.
-- Implement loader/validator module (e.g. `game/data_loader/spells.py`) that validates at startup and exposes typed records.
-- Add schema-driven tests ensuring invalid definitions (bad IDs, missing costs, circle mismatch) raise descriptive errors.
-- Document data-driven parameters that link to `combat_rules.json` (e.g. fizzle clamp, resist scales).
-
-## Acceptance Criteria
-
-- `data/spells.json` validated against `spells.schema.json` during preflight; failure aborts game start.
-- Loader provides deterministic ordering and caches parsed spell definitions for combat/magic systems.
-- Schema enforces reagent IDs that exist in `data/items/*.json` and skill references from `data/skills.json`.
-- Test suite includes positive fixture and multiple negative fixtures (missing mana cost, invalid circle, duplicate ID).
-- Documentation updated (README or data docs) to show how to extend spells via JSON without code changes.
-
-## Implementation Notes
-
-- Structure schema to allow extensibility (future scrolls, channel times) via `additionalProperties: false` on known objects.
-- Reuse existing validation utilities from TASK-M3-01 for schema registration and CLI tooling.
-- Provide helper that returns spells grouped by circle for UI/skill progression usage.
-- Coordinate with combat rules by exposing references for formula parameters (fizzle base, magery factor).
-
-## Related Documents
-
-- docs/MAGIC_SYSTEM.md
-- docs/CONVENTIONS.md
-- docs/ARCHITECTURE.md
-- docs/TODO/MAGIC_SYSTEM_TD.md
+- [ ] ID: TASK-M3-MAGIC-01
+  Title: Spells Data Schema & Loader
+  Status: Proposed
+  Priority: P0
+  Owner: Codex Agent
+  Created: 2025-10-26
+  Artifacts: `data/spells.json`, `data/schemas/spells.schema.json`, `game/data_loader/spells.py`, `tests/data/test_spells.py`
+  DependsOn: TASK-M3-01, TASK-M2-MAGIC-01
+  Notes:
+  Definiere `data/spells.json` Struktur: Cost, Circles, Effects, Fizzle, Resist, AI-Tags per MAGIC_SYSTEM.md. JSON-Schema `data/schemas/spells.schema.json` für ID, Numeric-Bounds, Nested-Objects. Loader `game/data_loader/spells.py` validiert bei Startup, exposes typed Records. Schema-driven Tests. Link zu `combat_rules.json` Parametern (Fizzle-Clamp, Resist-Scales) dokumentiert.
+  Acceptance:
+  - [ ] `data/spells.json` validiert gegen Schema bei Preflight, Fehler bricht Game-Start ab.
+  - [ ] Loader bietet deterministische Ordering, cached Spell-Definitions für Combat/Magic.
+  - [ ] Schema enforced Reagent-IDs aus `data/items.json`, Skill-Refs aus `data/skills.json`.
+  - [ ] Tests: Positive Fixture, Negative Fixtures (fehlende Costs, invalid Circle, Duplicate ID).
+  - [ ] Doku: Wie neue Spells via JSON ohne Code-Changes hinzufügen.
+  Tests:
+  - [ ] **Schema-Validation-Test**: Ungültige Defs → descriptive Errors.
+  - [ ] **Reagent-Reference-Test**: Reagent-IDs existieren in items.json.
+  - [ ] **Skill-Reference-Test**: Skill-IDs existieren in skills.json.
+  - [ ] **Circle-Bounds-Test**: Circle 1-8, numeric Bounds korrekt.
+  References:
+  - docs/MAGIC_SYSTEM.md
+  - docs/CONVENTIONS.md
+  - docs/ARCHITECTURE.md

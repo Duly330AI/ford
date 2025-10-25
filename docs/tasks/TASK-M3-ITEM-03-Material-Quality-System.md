@@ -1,36 +1,25 @@
-# TASK-M3-ITEM-03: Material & Quality System
-
-**Milestone:** M3 - Skills, Loot & Inventory/Hotbar
-**Priority:** P0 (High)
-**Estimated Effort:** 4-5d
-**Dependencies:** TASK-M3-02, TASK-M4-02, TASK-M3-ITEM-01-Affix-Generator
-
-## Objectives
-
-- Implement material tiers (iron, bronze, verite, valorite, etc.) and quality states (worn, fine, masterwork) as data-driven modifiers.
-- Extend item model to reference material/quality IDs and apply corresponding stat adjustments at runtime.
-- Add data definitions (`data/materials.json`, `data/quality.json`) with schemas validating modifier ranges and compatibility.
-- Integrate materials/quality into crafting outputs, loot generation, and economy pricing hooks.
-- Provide tests covering modifier stacking, crafting transitions (repair/upgrade), and data validation.
-
-## Acceptance Criteria
-
-- Items reflect correct base stats adjusted by material + quality data without hardcoded constants.
-- Crafting and loot pipelines can request specific materials/qualities and receive deterministic results.
-- Economy pricing consumes quality modifiers from data files to adjust sell/buy values automatically.
-- Tests validate that applying multiple modifiers respects clamping rules and remains deterministic under seeded RNG.
-- Documentation added detailing material/quality data format and integration points.
-
-## Implementation Notes
-
-- Use composable modifier pipeline to avoid duplicating stat adjustment logic across systems.
-- Ensure save/load persists material and quality attributes, maintaining backward compatibility with existing items.
-- Provide developer tooling (e.g. debug print) to inspect final stats for generated items.
-- Coordinate with crafting tasks to surface new requirements or UI updates.
-
-## Related Documents
-
-- docs/ITEMIZATION_DESIGN.md
-- docs/ECONOMY_AND_VENDORS.md
-- docs/CONVENTIONS.md
-- data/combat_rules.json
+- [ ] ID: TASK-M3-ITEM-03
+  Title: Material & Quality System (Modifier Pipeline)
+  Status: Proposed
+  Priority: P0
+  Owner: Codex Agent
+  Created: 2025-10-26
+  Artifacts: `data/materials.json`, `data/quality.json`, `data/schemas/materials.schema.json`, `data/schemas/quality.schema.json`, `game/systems/material_quality.py`, `tests/systems/test_materials.py`
+  DependsOn: TASK-M3-02, TASK-M4-02, TASK-M3-ITEM-01
+  Notes:
+  Implementiere Material-Tiers (Iron, Bronze, Verite, Valorite) & Quality-States (Worn, Fine, Masterwork) als Data-driven Modifiers. Extend Item-Model: Material/Quality-IDs referenzieren, Stat-Adjustments runtime applizieren. Data: `data/materials.json`, `data/quality.json` mit Schemas. Composable Modifier-Pipeline (no Duplication). Integrate: Crafting-Outputs, Loot-Generation, Economy-Pricing. Clamping-Rules respektiert. Save/Load persistent. Backward-Compat mit bestehenden Items.
+  Acceptance:
+  - [ ] Items reflect correct Base-Stats adjustiert von Material + Quality Data, keine Hardcodes.
+  - [ ] Crafting & Loot-Pipelines können Specific Materials/Qualities request, Deterministic Results.
+  - [ ] Economy-Pricing consumiert Quality-Modifiers from Data, Auto-Adjust Sell/Buy Values.
+  - [ ] Tests: Modifier-Stacking, Crafting-Transitions (Repair/Upgrade), Data-Validation, Clamping.
+  - [ ] Doku: Material/Quality Format, Integration-Points.
+  Tests:
+  - [ ] **Modifier-Pipeline-Test**: Material + Quality Modifiers stacked korrekt.
+  - [ ] **Crafting-Transition-Test**: Repair/Upgrade appliziert Modifiers korrekt.
+  - [ ] **Save-Load-Test**: Material & Quality Attrs persistent.
+  - [ ] **Determinismus-Test**: gleicher Seed → identische Modified Stats.
+  References:
+  - docs/ITEMIZATION_DESIGN.md
+  - docs/ECONOMY_AND_VENDORS.md
+  - docs/CONVENTIONS.md

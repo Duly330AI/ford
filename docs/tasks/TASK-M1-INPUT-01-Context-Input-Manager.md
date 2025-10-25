@@ -1,36 +1,25 @@
-# TASK-M1-INPUT-01: Context Input Manager
-
-**Milestone:** M1 - Prozeduraler Dungeon, Spielerbewegung & Licht
-**Priority:** P1 (Medium)
-**Estimated Effort:** 4-5d
-**Dependencies:** TASK-M1-10, TASK-M6-UI-01
-
-## Objectives
-
-- Implement context stack manager handling UI > Combat > Overworld > Rebind priorities per INPUT_AND_REBIND.md.
-- Normalize input events from Arcade into context-aware action dispatch without direct scene coupling.
-- Provide APIs to push/pop contexts, query active context, and register callbacks with conflict resolution.
-- Integrate with existing input bindings to ensure backward compatibility for MVP controls.
-- Add tests covering context transitions, priority enforcement, and edge cases (nested UI, rebind mode).
-
-## Acceptance Criteria
-
-- Input events routed to highest-priority active context; lower contexts do not receive events when blocked.
-- Context manager exposes deterministic stack operations and safe re-entrancy for UI sequences.
-- Existing movement/combat input flows remain operational through compatibility shim.
-- Tests simulate state transitions verifying correct callbacks triggered or suppressed.
-- Developer documentation updated explaining new APIs and migration path for scene input handlers.
-
-## Implementation Notes
-
-- Keep manager within `game/input/` namespace; avoid Arcade imports in systems.
-- Provide diagnostic logging toggles for debugging context stack behavior.
-- Support temporary contexts with auto-pop semantics (e.g., modal dialogs) via helper utilities.
-- Coordinate with rebinding UI task to ensure context transitions when entering listening mode.
-
-## Related Documents
-
-- docs/INPUT_AND_REBIND.md
-- docs/ARCHITECTURE.md
-- docs/CONVENTIONS.md
-- docs/TODO/INPUT_AND_REBIND_TD.md
+- [ ] ID: TASK-M1-INPUT-01
+  Title: Context Input Manager (Context Stack, Priority Routing)
+  Status: Proposed
+  Priority: P1
+  Owner: Codex Agent
+  Created: 2025-10-26
+  Artifacts: `game/input/context_manager.py`, `tests/input/test_context_manager.py`
+  DependsOn: TASK-M1-10, TASK-M6-UI-01
+  Notes:
+  Implementiere Context-Stack-Manager: UI > Combat > Overworld > Rebind Prioritäten. Input-Events normalisiert von Arcade, context-aware Action-Dispatch ohne Scene-Coupling. APIs: Push/Pop Contexts, Query Active Context, Register Callbacks mit Conflict-Resolution. Backward-Compat für MVP. Diagnostic Logging für Debug.
+  Acceptance:
+  - [ ] Input-Events routed zu höchst-priorität Context, Lower-Contexts blockiert wenn Higher aktiv.
+  - [ ] Context-Manager exponiert deterministische Stack-Operations, Safe Reentrancy.
+  - [ ] Bestehende Movement/Combat-Input Flows operational via Compat-Shim.
+  - [ ] Tests: Context-Transitions, Priority-Enforcement, Edge-Cases (Nested UI, Rebind).
+  - [ ] Doku updated: APIs & Migration-Path für Scene-Input-Handler.
+  Tests:
+  - [ ] **Context-Priority-Test**: Higher Context blockiert Lower Events.
+  - [ ] **Stack-Operations-Test**: Push/Pop/Query funktionieren deterministisch.
+  - [ ] **Compat-Shim-Test**: Alte Input-Flows noch operational.
+  - [ ] **Nested-UI-Test**: Mehrere Contexts gleichzeitig, korrektes Blocking.
+  References:
+  - docs/INPUT_AND_REBIND.md
+  - docs/ARCHITECTURE.md
+  - docs/CONVENTIONS.md

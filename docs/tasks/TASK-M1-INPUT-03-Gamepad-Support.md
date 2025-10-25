@@ -1,36 +1,25 @@
-# TASK-M1-INPUT-03: Gamepad Support
-
-**Milestone:** M1 - Prozeduraler Dungeon, Spielerbewegung & Licht
-**Priority:** P1 (Medium)
-**Estimated Effort:** 4d
-**Dependencies:** TASK-M1-INPUT-01-Context-Input-Manager, TASK-M1-INPUT-02-Controls-JSON-Schema
-
-## Objectives
-
-- Implement gamepad input handling including axis deadzones, button mapping, sensitivity curves, and rumble hooks.
-- Normalize gamepad events through input manager, allowing context-aware action dispatch identical to keyboard flow.
-- Provide configuration fields in controls JSON for gamepad-specific bindings and calibration settings.
-- Add tests/simulations verifying deadzone handling, analog navigation, and context switching behavior.
-- Document supported controllers and troubleshooting steps for designers/testers.
-
-## Acceptance Criteria
-
-- Gamepad inputs map to actions across contexts without interfering with keyboard/mouse bindings.
-- Deadzone and sensitivity settings configurable via controls JSON and applied at runtime.
-- Rebinding UI recognizes gamepad inputs and updates configuration accordingly.
-- Tests cover analog stick thresholds, button chords, and combination with keyboard usage.
-- Accessibility/support docs updated with controller guidelines.
-
-## Implementation Notes
-
-- Abstract platform-specific differences (Xbox/PlayStation layouts) via mapping tables in config.
-- Provide optional rumble callbacks for future feedback features (no Arcade coupling in systems layer).
-- Ensure deterministic mapping names for use in localization and analytics.
-- Coordinate with FTUE/tutorial tasks to include controller prompts where applicable.
-
-## Related Documents
-
-- docs/INPUT_AND_REBIND.md
-- docs/CONVENTIONS.md
-- docs/ARCHITECTURE.md
-- docs/TODO/INPUT_AND_REBIND_TD.md
+- [ ] ID: TASK-M1-INPUT-03
+  Title: Gamepad Support (Deadzones, Sensitivity, Mapping)
+  Status: Proposed
+  Priority: P1
+  Owner: Codex Agent
+  Created: 2025-10-26
+  Artifacts: `game/input/gamepad_handler.py`, `tests/input/test_gamepad.py`
+  DependsOn: TASK-M1-INPUT-01, TASK-M1-INPUT-02
+  Notes:
+  Implementiere Gamepad-Input: Axis-Deadzones, Button-Mapping, Sensitivity-Curves, Rumble-Hooks. Gamepad-Events normalisiert durch Input-Manager, context-aware Action-Dispatch identisch zu Keyboard-Flow. Gamepad-spezifische Controls-JSON Felder. Platform-Diffs (Xbox/PlayStation) via Mapping-Tables. Deterministische Mapping-Names für Localization & Analytics. Optional Rumble-Callbacks.
+  Acceptance:
+  - [ ] Gamepad-Inputs mappt zu Actions über Contexts, keine Interference mit Keyboard/Mouse.
+  - [ ] Deadzone & Sensitivity configurable via Controls-JSON, Runtime-Applied.
+  - [ ] Rebinding-UI erkennt Gamepad-Inputs, updated Config.
+  - [ ] Tests: Analog-Stick-Thresholds, Button-Chords, Keyboard-Kombinationen.
+  - [ ] Accessibility/Support-Docs mit Controller-Guidelines.
+  Tests:
+  - [ ] **Deadzone-Test**: Analog-Inputs innerhalb Deadzone → kein Action.
+  - [ ] **Button-Mapping-Test**: Gamepad-Buttons mappt korrekt zu Actions.
+  - [ ] **Sensitivity-Test**: Sensitivity-Curves appliziert auf Analog-Werte.
+  - [ ] **Context-Test**: Gamepad-Input respektiert Context-Blocking.
+  References:
+  - docs/INPUT_AND_REBIND.md
+  - docs/CONVENTIONS.md
+  - docs/ARCHITECTURE.md

@@ -1,36 +1,25 @@
-# TASK-M3-ITEM-04: Uniques & Sets System
-
-**Milestone:** M3 - Skills, Loot & Inventory/Hotbar
-**Priority:** P0 (High)
-**Estimated Effort:** 4d
-**Dependencies:** TASK-M3-ITEM-01-Affix-Generator, TASK-M3-ITEM-02-Affixes-Data-Schema, TASK-M3-ITEM-03-Material-Quality-System
-
-## Objectives
-
-- Define `data/uniques.json` capturing unique item templates, fixed mods, lore keys, and drop sources.
-- Add support for item sets (2-4 pieces) including data representation of bonuses per piece count.
-- Extend loot pipeline to spawn uniques/sets deterministically with seed tracking and drop restrictions.
-- Implement systems logic applying set bonuses when equipped counts reached and removing when unequipped.
-- Provide tests covering unique generation, set bonus activation/deactivation, and save/load persistence.
-
-## Acceptance Criteria
-
-- Unique items spawn with fixed stats plus optional random rolls per design while remaining deterministic per seed.
-- Set bonus calculations trigger correctly across combat stats, resistances, and effects defined in data.
-- Loot tables integrate unique/set entries without breaking existing drop rates; duplicates controlled via data flags.
-- Tests confirm serialization retains unique IDs, set membership, and bonus states.
-- Documentation includes examples for designers and describes integration with affix/material systems.
-
-## Implementation Notes
-
-- Support gating uniques by biome/faction/quest progress through data fields consumed by spawner/economy systems.
-- Provide debug hooks to inspect set bonus status per actor for balancing.
-- Align localization keys with i18n conventions (no inline display text in data files).
-- Ensure generator gracefully handles exhaustion of unique pools (e.g. reroll fallback or skip).
-
-## Related Documents
-
-- docs/ITEMIZATION_DESIGN.md
-- docs/WORLD_BIBLE.md
-- docs/CONVENTIONS.md
-- docs/TODO/ITEMIZATION_DESIGN_TD.md
+- [ ] ID: TASK-M3-ITEM-04
+  Title: Uniques & Sets System (Fixed Mods, Set Bonuses)
+  Status: Proposed
+  Priority: P0
+  Owner: Codex Agent
+  Created: 2025-10-26
+  Artifacts: `data/uniques.json`, `data/sets.json`, `data/schemas/uniques.schema.json`, `game/systems/unique_sets.py`, `tests/systems/test_uniques.py`
+  DependsOn: TASK-M3-ITEM-01, TASK-M3-ITEM-02, TASK-M3-ITEM-03
+  Notes:
+  Definiere `data/uniques.json`: Unique-Item-Templates, Fixed-Mods, Lore-Keys, Drop-Sources. Implement Item-Sets (2-4 Pieces) mit Bonus-per-Piece-Count Dataclass. Extend Loot-Pipeline: Spawn Uniques/Sets Deterministic mit Seed-Tracking & Drop-Restrictions. Systems-Logik: Set-Bonuses applizieren bei Equipment-Count erreicht, Removen bei Unequip. Gating via Data (Biom/Fraktions/Quest-Progress). Debug-Hooks für Set-Bonus-Status. Graceful Handling bei Unique-Pool-Exhaustion.
+  Acceptance:
+  - [ ] Unique-Items spawnen mit Fixed-Stats + Optional-Random-Rolls, Deterministic per Seed.
+  - [ ] Set-Bonus-Calcs triggern korrekt (Stats, Resistances, Effects) definiert in Data.
+  - [ ] Loot-Tables integren Unique/Set Entries, Break nicht Existing-Drop-Rates, Duplicates controlled.
+  - [ ] Tests: Unique-Generation, Set-Bonus-Activation/Deactivation, Save/Load-Persistence.
+  - [ ] Doku: Examples für Designer, Integration mit Affix/Material-Systems.
+  Tests:
+  - [ ] **Unique-Generation-Test**: Fixed-Stats & Optional-Random-Rolls korrekt.
+  - [ ] **Set-Bonus-Activation-Test**: Bonuses trigger bei correct Piece-Count.
+  - [ ] **Gating-Test**: Biom/Fraktions-Gating enforced.
+  - [ ] **Save-Load-Test**: Unique-IDs, Set-Membership, Bonus-States persistent.
+  References:
+  - docs/ITEMIZATION_DESIGN.md
+  - docs/WORLD_BIBLE.md
+  - docs/CONVENTIONS.md
