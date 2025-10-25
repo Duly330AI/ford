@@ -1,0 +1,96 @@
+{
+  "recommendations": [
+    // === CORE PYTHON ===
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "ms-python.black-formatter",
+    "charliermarsh.ruff",
+    "ms-python.debugpy",
+    "ms-python.vscode-python-envs",
+
+    // === TESTING & QUALITY ===
+    "ms-toolsai.jupyter",
+    "ms-toolsai.jupyter-keymap",
+    "ms-toolsai.jupyter-renderers",
+    "ms-toolsai.vscode-jupyter-cell-tags",
+    "ms-toolsai.vscode-jupyter-slideshow",
+    "usernamehw.errorlens",
+    "visualstudioexptteam.vscodeintellicode",
+    "visualstudioexptteam.intellicode-api-usage-examples",
+    "ryanluker.vscode-coverage-gutters",
+
+    // === COPILOT & AI ===
+    "github.copilot",
+    "github.copilot-chat",
+
+    // === GIT ===
+    "eamodio.gitlens",
+    "mhutchie.git-graph",
+    "github.vscode-github-actions",
+
+    // === DOCUMENTATION ===
+    "davidanson.vscode-markdownlint",
+    "gruntfuggly.todo-tree",
+
+    // === CODE QUALITY ===
+    "editorconfig.editorconfig",
+    "aaron-bond.better-comments",
+
+    // === DATA FILES ===
+    "redhat.vscode-yaml",
+    "tamasfe.even-better-toml",
+    "mechatroner.rainbow-csv",
+
+    // === UTILITIES ===
+    "christian-kohler.path-intellisense",
+    "ms-vscode.powershell",
+    "pkief.material-icon-theme",
+
+    // === OPTIONAL (later) ===
+    "ms-ceintl.vscode-language-pack-de"
+  ],
+  "unwantedRecommendations": [
+    // Web Dev (not needed)
+    "bradlc.vscode-tailwindcss",
+    "ecmel.vscode-html-css",
+    "christian-kohler.npm-intellisense",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "vue.volar",
+    "wix.vscode-import-cost",
+    "ms-edgedevtools.vscode-edge-devtools",
+    "ms-playwright.playwright",
+
+    // Database (not primary focus)
+    "ms-mssql.mssql",
+    "ms-mssql.data-workspace-vscode",
+    "ms-mssql.sql-bindings-vscode",
+    "ms-mssql.sql-database-projects-vscode",
+    "mtxr.sqltools",
+    "qwtel.sqlite-viewer",
+
+    // Other frameworks
+    "geequlim.godot-tools",
+    "batisteo.vscode-django",
+    "samuelcolvin.jinjahtml",
+
+    // Containers (later if needed)
+    "ms-azuretools.vscode-containers",
+    "ms-azuretools.vscode-docker",
+    "ms-vscode-remote.remote-containers",
+    "p1c2u.docker-compose",
+
+    // Azure/Remote
+    "ms-azuretools.vscode-azureresourcegroups",
+    "github.codespaces",
+    "github.remotehub",
+    "ms-vscode.remote-repositories",
+    "ms-vscode.azure-repos",
+    "ms-vscode-remote.remote-wsl",
+
+    // Redundant
+    "openai.chatgpt",
+    "mikestead.dotenv",
+    "humao.rest-client"
+  ]
+}
