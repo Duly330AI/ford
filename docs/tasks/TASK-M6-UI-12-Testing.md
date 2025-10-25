@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M6-UI-12
+- [ ] ID: TASK-M6-UI-12-Testing
   Title: Interaction Cursor & Targeting System (Use-Target, ESC Cancel, Hover LOS)
   Status: Proposed
   Priority: P0

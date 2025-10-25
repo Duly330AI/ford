@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M4-QUEST-03
+- [ ] ID: TASK-M4-QUEST-03-Event-Bus-Integration
   Title: Event Bus Integration (Gameplay Events, Pub/Sub)
   Status: Proposed
   Priority: P0

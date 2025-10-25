@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M3-01
+- [ ] ID: TASK-M3-SKILLS-01-Progression
   Title: Daten-Schemas & Validatoren (items/skills/loot_tables)
   Status: Proposed
   Priority: P0

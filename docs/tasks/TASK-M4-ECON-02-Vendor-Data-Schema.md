@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M4-ECON-02
+- [ ] ID: TASK-M4-ECON-02-Vendor-Data-Schema
   Title: Vendor Data Schema & Loader
   Status: Proposed
   Priority: P0

@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M2-08
+- [ ] ID: TASK-M2-PATHFINDING-08-AStar
   Title: Pfadfindung (A*, Kostenfelder, "keep distance")
   Status: Proposed
   Priority: P1

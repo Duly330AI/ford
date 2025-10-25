@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M6-UI-03
+- [ ] ID: TASK-M6-UI-03-Theming
   Title: Initiative Bar (Combat Turn Order, Recovery Indicators)
   Status: Proposed
   Priority: P0

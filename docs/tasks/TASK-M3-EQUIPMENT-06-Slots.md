@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M3-06
+- [ ] ID: TASK-M3-EQUIPMENT-06-Slots
   Title: Skill-System (usage-based XP, Cap, Level-Boni)
   Status: Proposed
   Priority: P0

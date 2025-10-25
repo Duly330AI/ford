@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M7-FTUE-04
+- [ ] ID: TASK-M7-FTUE-04-Scripted-Events-System
   Title: Scripted Events System (Sequencing, Conditionals, Commands)
   Status: Proposed
   Priority: P1

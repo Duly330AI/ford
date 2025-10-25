@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M1-GEN-04
+- [ ] ID: TASK-M1-GEN-04-Biome-Content-Alignment
   Title: Biome Content Alignment (WORLD_BIBLE Integration)
   Status: Proposed
   Priority: P2

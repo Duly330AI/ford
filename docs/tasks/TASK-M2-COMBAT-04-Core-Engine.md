@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M2-04
+- [ ] ID: TASK-M2-COMBAT-04-Core-Engine
   Title: Combat-Core (Intents -> Outcomes)
   Status: Proposed
   Priority: P0

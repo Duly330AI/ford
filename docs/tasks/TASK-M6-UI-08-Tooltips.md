@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M6-UI-08
+- [ ] ID: TASK-M6-UI-08-Tooltips
   Title: Tooltip System (Data-Driven, Formula Hints, Markdown Support)
   Status: Proposed
   Priority: P0

@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M3-15
+- [ ] ID: TASK-M3-CRAFTING-15-Recipes
   Title: Loot-Rarity & Farbkonvention (+SFX Hooks)
   Status: Proposed
   Priority: P2

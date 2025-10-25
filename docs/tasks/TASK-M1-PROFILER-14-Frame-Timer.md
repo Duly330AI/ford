@@ -1,8 +1,9 @@
-- [ ] ID: TASK-M1-14
+- [ ] ID: TASK-M1-PROFILER-14-Frame-Timer
   Title: Frame-Timer & Micro-Profiler (ohne GL)
   Status: Proposed
   Priority: P2
   Owner: Copilot Agent
+  Created: 2025-10-26
   Artifacts: `game/util/prof.py`, `tests/util/test_prof.py`
   DependsOn: TASK-M1-03
   Notes:

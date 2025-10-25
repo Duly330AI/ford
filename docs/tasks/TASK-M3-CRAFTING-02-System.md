@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M3-02
+- [ ] ID: TASK-M3-CRAFTING-02-System
   Title: Items-Datenmodell & Typen (weapon/armor/consumable/material/currency)
   Status: Proposed
   Priority: P0

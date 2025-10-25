@@ -1,10 +1,10 @@
-- [ ] ID: TASK-M2-23
+- [ ] ID: TASK-M2-VALIDATION-23-Rules
   Title: Combat Rules Validation (Load & Validate combat_rules.json at Startup)
   Status: Proposed
   Priority: P1
   Owner: Copilot Agent
   Created: 2025-10-25
-  Artifacts: $_, $_, $_
+  Artifacts: `data/schemas/combat_rules.schema.json`, `game/data_loader/validate_combat_rules.py`, `tests/data/test_combat_rules_validation.py`
   DependsOn: TASK-M2-02, TASK-M2-12
   Notes:
   Create `data/schemas/combat_rules.schema.json` (JSON Schema Draft-07) capturing required sections hit_chance, parry, damage, movement, recovery, ranged, initiative, dodge.

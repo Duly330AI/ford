@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M4-07
+- [ ] ID: TASK-M4-GRAPHICS-07-Quality
   Title: Beruf-Skill-Hooks & Boni (mining/woodcutting/alchemy/smithing)
   Status: Proposed
   Priority: P0

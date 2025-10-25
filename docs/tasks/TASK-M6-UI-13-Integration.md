@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M6-UI-13
+- [ ] ID: TASK-M6-UI-13-Integration
   Title: Hotkey/Keybind System (Remapping, QWERTZ Default, Macro Support)
   Status: Proposed
   Priority: P1

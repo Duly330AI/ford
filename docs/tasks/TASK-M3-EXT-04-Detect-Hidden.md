@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M3-EXT-04
+- [ ] ID: TASK-M3-EXT-04-Detect-Hidden
   Title: Detect Hidden Skill (Passive & Active Search)
   Status: Proposed
   Priority: P1

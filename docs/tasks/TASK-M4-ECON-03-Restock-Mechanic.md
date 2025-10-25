@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M4-ECON-03
+- [ ] ID: TASK-M4-ECON-03-Restock-Mechanic
   Title: Vendor Restock Mechanic (Timekeeper Integration)
   Status: Proposed
   Priority: P0

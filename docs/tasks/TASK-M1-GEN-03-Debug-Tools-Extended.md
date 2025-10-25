@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M1-GEN-03
+- [ ] ID: TASK-M1-GEN-03-Debug-Tools-Extended
   Title: Debug Tools Extended (F4 Heatmap, F5 Spawn Overlay, Ctrl+S Dump)
   Status: Proposed
   Priority: P1

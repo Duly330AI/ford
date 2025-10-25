@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M3-MAGIC-01
+- [ ] ID: TASK-M3-MAGIC-01-Spells-Data-Schema
   Title: Spells Data Schema & Loader
   Status: Proposed
   Priority: P0

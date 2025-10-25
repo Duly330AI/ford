@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M2-MAGIC-02
+- [ ] ID: TASK-M2-MAGIC-02-Fizzle-Resist-Formulas
   Title: Fizzle & Resist Formulas
   Status: Proposed
   Priority: P0

@@ -1,8 +1,9 @@
-- [ ] ID: TASK-M1-07
+- [ ] ID: TASK-M1-LIGHTING-07-Fackel-System
   Title: Light-Layer (Fackel um Spieler, Blocker-Layer)
   Status: Proposed
   Priority: P1
   Owner: Copilot Agent
+  Created: 2025-10-26
   Artifacts: `game/util/lighting.py`, `game/scenes/dungeon.py`, `tests/smoke/test_lighting_import.py`
   DependsOn: TASK-M1-06
   Notes:

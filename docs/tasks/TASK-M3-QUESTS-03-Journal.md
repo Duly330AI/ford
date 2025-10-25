@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M3-03
+- [ ] ID: TASK-M3-QUESTS-03-Journal
   Title: Inventory-Kern (Slots, Stacks, Split/Merge, Capacity)
   Status: Proposed
   Priority: P0

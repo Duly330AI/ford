@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M5-03
+- [ ] ID: TASK-M5-NETWORKING-03-Protocol
   Title: Serializer (JSON/Gzip + MsgPack, Checksummen)
   Status: Proposed
   Priority: P0

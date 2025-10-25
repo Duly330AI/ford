@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M3-ITEM-04
+- [ ] ID: TASK-M3-ITEM-04-Uniques-Sets-System
   Title: Uniques & Sets System (Fixed Mods, Set Bonuses)
   Status: Proposed
   Priority: P0

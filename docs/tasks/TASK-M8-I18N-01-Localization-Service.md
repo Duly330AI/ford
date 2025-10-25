@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M8-I18N-01
+- [ ] ID: TASK-M8-I18N-01-Localization-Service
   Title: Localization Service (Key Resolution, Language Switching)
   Status: Proposed
   Priority: P2

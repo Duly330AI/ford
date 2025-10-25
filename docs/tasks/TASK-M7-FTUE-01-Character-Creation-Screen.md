@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M7-FTUE-01
+- [ ] ID: TASK-M7-FTUE-01-Character-Creation-Screen
   Title: Character Creation Screen (Presets, Custom Allocation)
   Status: Proposed
   Priority: P1

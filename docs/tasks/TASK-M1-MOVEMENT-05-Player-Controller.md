@@ -1,8 +1,9 @@
-- [ ] ID: TASK-M1-05
+- [ ] ID: TASK-M1-MOVEMENT-05-Player-Controller
   Title: Player-Controller (dt-Bewegung, 8-Wege, Diagonalen clampen)
   Status: Proposed
   Priority: P0
   Owner: Copilot Agent
+  Created: 2025-10-26
   Artifacts: `game/entities/player.py`, `game/systems/movement.py`, `tests/systems/test_movement.py`
   DependsOn: TASK-M1-04
   Notes:

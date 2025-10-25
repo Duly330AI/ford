@@ -1,8 +1,9 @@
-- [ ] ID: TASK-M1-04
+- [ ] ID: TASK-M1-COLLISION-04-AABB-System
   Title: AABB-Kollisionen (Wand-Blocking, Slide)
   Status: Proposed
   Priority: P0
   Owner: Copilot Agent
+  Created: 2025-10-26
   Artifacts: `game/systems/collision.py`, `tests/systems/test_collision.py`
   DependsOn: TASK-M1-02
   Notes:

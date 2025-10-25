@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M6-UI-07
+- [ ] ID: TASK-M6-UI-07-Text-Rendering
   Title: Container UI (Lock/Trap Status, Take All, Sort, Respawn Timer)
   Status: Proposed
   Priority: P0

@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M4-14
+- [ ] ID: TASK-M4-DIFFICULTY-14-Testing
   Title: World-Adapter fuer Nodes (Spawn/Despawn, Hitbox, Label)
   Status: Proposed
   Priority: P2

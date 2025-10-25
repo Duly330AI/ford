@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M2-09
+- [ ] ID: TASK-M2-AILOGIC-09-Heuristics
   Title: Combat-KI (Heuristiken fuer Melee/Ranged/Caster)
   Status: Proposed
   Priority: P0

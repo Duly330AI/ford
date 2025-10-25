@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M7-FTUE-03
+- [ ] ID: TASK-M7-FTUE-03-Tutorial-UI-Overlay
   Title: Tutorial UI Overlay (Highlights, Arrows, Prompts)
   Status: Proposed
   Priority: P1

@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M3-04
+- [ ] ID: TASK-M3-HOTSYNC-04-Hotbar
   Title: Equipment-Slots & Stat-Aggregation (weapon/offhand/armor/accessory)
   Status: Proposed
   Priority: P1

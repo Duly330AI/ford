@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M3-EXT-06
+- [ ] ID: TASK-M3-EXT-06-Ownership-Trespass
   Title: Ownership & Trespass System (Crime, Faction Reactions)
   Status: Proposed
   Priority: P1

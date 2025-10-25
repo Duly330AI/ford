@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M8-I18N-03
+- [ ] ID: TASK-M8-I18N-03-CI-Integration
   Title: CI Integration for Localization Checks
   Status: Proposed
   Priority: P2

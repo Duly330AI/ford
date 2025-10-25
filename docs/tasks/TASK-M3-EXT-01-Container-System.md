@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M3-EXT-01
+- [ ] ID: TASK-M3-EXT-01-Container-System
   Title: Container System Core (Data Model, State Machine, Interactions)
   Status: Proposed
   Priority: P0

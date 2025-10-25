@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M4-06
+- [ ] ID: TASK-M4-SETTINGS-06-Config
   Title: Gather-Interaktion (Tool-Checks, Dauer, Stamina, Yield)
   Status: Proposed
   Priority: P0

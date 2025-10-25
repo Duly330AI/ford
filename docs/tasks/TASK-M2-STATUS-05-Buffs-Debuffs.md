@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M2-05
+- [ ] ID: TASK-M2-STATUS-05-Buffs-Debuffs
   Title: Status-Effekte (Buffs/Debuffs/DoT/CC)
   Status: Proposed
   Priority: P1

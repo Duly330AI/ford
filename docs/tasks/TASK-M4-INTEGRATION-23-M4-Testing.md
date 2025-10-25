@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M4-23
+- [ ] ID: TASK-M4-INTEGRATION-23-M4-Testing
   Title: Reading & Lore System (Books, Scrolls, Notes, Lore Flags)
   Status: Proposed
   Priority: P2

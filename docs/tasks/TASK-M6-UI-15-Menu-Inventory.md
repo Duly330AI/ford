@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M6-UI-15
+- [ ] ID: TASK-M6-UI-15-Menu-Inventory
   Title: Accessibility (Font Scaling, Colorblind Modes, Contrast, Labeled Icons)
   Status: Proposed
   Priority: P1

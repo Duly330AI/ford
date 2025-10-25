@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M5-04
+- [ ] ID: TASK-M5-SYNC-04-State
   Title: Atomic File Writer (tmp -> rename -> fsync)
   Status: Proposed
   Priority: P0

@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M3-24
+- [ ] ID: TASK-M3-CRAFTING-24-UI
   Title: Skill Progression Formula (Sweet-Spot, Slowdown, progression_rules.json)
   Status: Proposed
   Priority: P0

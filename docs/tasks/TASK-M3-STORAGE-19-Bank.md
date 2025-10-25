@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M3-19
+- [ ] ID: TASK-M3-STORAGE-19-Bank
   Title: Daten-Basisbestand (10 Items, 2 Tabellen, Skills)
   Status: Proposed
   Priority: P1

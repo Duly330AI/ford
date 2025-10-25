@@ -1,8 +1,9 @@
-- [ ] ID: TASK-M1-02
+- [ ] ID: TASK-M1-TILEMAP-02-Arcade-Adapter
   Title: TileMap-Adapter (Grid → Arcade TileMap/Layers)
   Status: Proposed
   Priority: P1
   Owner: Copilot Agent
+  Created: 2025-10-26
   Artifacts: `game/util/tilemap.py`, `tests/util/test_tilemap_adapter.py`
   DependsOn: TASK-M1-01
   Notes:

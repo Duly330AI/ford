@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M4-QUEST-01
+- [ ] ID: TASK-M4-QUEST-01-Core-Quest-Engine
   Title: Core Quest Engine (FSM, Objectives, Progress Tracking)
   Status: Proposed
   Priority: P0

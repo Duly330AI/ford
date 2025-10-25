@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M6-UI-11
+- [ ] ID: TASK-M6-UI-11-Performance
   Title: Merchant/Trade UI (Buy/Sell Tables, Dynamic Prices, Quick-Sell)
   Status: Proposed
   Priority: P2

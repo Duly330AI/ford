@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M4-05
+- [ ] ID: TASK-M4-SLOTS-05-Management
   Title: Node-Spawner (Platzierung, Seeds, Distanzen, Biome)
   Status: Proposed
   Priority: P1

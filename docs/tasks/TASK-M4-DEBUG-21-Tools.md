@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M4-21
+- [ ] ID: TASK-M4-DEBUG-21-Tools
   Title: Levers, Buttons, Doors, Pressure Plates (Toggle Groups)
   Status: Proposed
   Priority: P1

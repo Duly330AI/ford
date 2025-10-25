@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M4-ECON-01
+- [ ] ID: TASK-M4-ECON-01-Core-Economy-System
   Title: Core Economy System (Price Calculations, Transactions)
   Status: Proposed
   Priority: P0

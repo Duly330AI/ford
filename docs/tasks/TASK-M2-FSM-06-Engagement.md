@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M2-06
+- [ ] ID: TASK-M2-FSM-06-Engagement
   Title: Overworld-FSM (idle/patrol/chase/attack) & Engagement
   Status: Proposed
   Priority: P1

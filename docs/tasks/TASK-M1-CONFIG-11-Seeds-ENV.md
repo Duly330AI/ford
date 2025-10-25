@@ -1,8 +1,9 @@
-- [ ] ID: TASK-M1-11
+- [ ] ID: TASK-M1-CONFIG-11-Seeds-ENV
   Title: Konfiguration & Seeds (INI/JSON + ENV)
   Status: Proposed
   Priority: P2
   Owner: Copilot Agent
+  Created: 2025-10-26
   Artifacts: `game/util/config.py`, `data/config.default.json`, `tests/util/test_config.py`
   DependsOn: TASK-M1-01
   Notes:

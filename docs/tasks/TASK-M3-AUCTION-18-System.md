@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M3-18
+- [ ] ID: TASK-M3-AUCTION-18-System
   Title: Integrationsszenario "Kampf -> Drop -> Pickup -> Equip/Use"
   Status: Proposed
   Priority: P0

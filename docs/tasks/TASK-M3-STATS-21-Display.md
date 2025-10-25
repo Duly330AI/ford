@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M3-21
+- [ ] ID: TASK-M3-STATS-21-Display
   Title: Stat Affinity System (STR/DEX/INT/STAM gains on skill gains)
   Status: Proposed
   Priority: P1

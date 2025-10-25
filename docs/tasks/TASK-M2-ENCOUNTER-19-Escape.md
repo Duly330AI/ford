@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M2-19
+- [ ] ID: TASK-M2-ENCOUNTER-19-Escape
   Title: Encounter Bubble & Escape/Disengage Mechanics
   Status: Proposed
   Priority: P1

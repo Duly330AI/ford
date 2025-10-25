@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M1-INPUT-03
+- [ ] ID: TASK-M1-INPUT-03-Gamepad-Support
   Title: Gamepad Support (Deadzones, Sensitivity, Mapping)
   Status: Proposed
   Priority: P1

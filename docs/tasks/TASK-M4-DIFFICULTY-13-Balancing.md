@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M4-13
+- [ ] ID: TASK-M4-DIFFICULTY-13-Balancing
   Title: Performance: 2 000 Nodes Tick/Respawn + Gather-Load
   Status: Proposed
   Priority: P1

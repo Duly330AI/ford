@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M6-UI-01
+- [ ] ID: TASK-M6-UI-01-Core-Framework
   Title: UI Framework & Architecture (React/TypeScript, Event Bus, State Management)
   Status: Proposed
   Priority: P0

@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M3-EXT-03
+- [ ] ID: TASK-M3-EXT-03-Traps-Disarm
   Title: Trap System & Disarm Mechanics (Tinkering + Detect Hidden)
   Status: Proposed
   Priority: P0

@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M3-20
+- [ ] ID: TASK-M3-PLAYER-20-Customization
   Title: Doku "Wie M3 pruefen" (README Abschnitt)
   Status: Proposed
   Priority: P2

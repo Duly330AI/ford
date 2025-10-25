@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M6-UI-INPUT-01
+- [ ] ID: TASK-M6-UI-INPUT-01-Rebinding-UI
   Title: Rebinding UI (Conflict Detection, Profile Management)
   Status: Proposed
   Priority: P1

@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M4-QUEST-02
+- [ ] ID: TASK-M4-QUEST-02-Quest-Data-Schema
   Title: Quest Data Schema & Loader
   Status: Proposed
   Priority: P0

@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M2-MAGIC-03
+- [ ] ID: TASK-M2-MAGIC-03-Cast-Rounds-Integration
   Title: Cast Rounds Integration
   Status: Proposed
   Priority: P0

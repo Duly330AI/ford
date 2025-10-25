@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M3-25
+- [ ] ID: TASK-M3-INTEGRATION-25-Determinism
   Title: Stat Gain System (on Skill Gain, Affinities, Daily Caps)
   Status: Proposed
   Priority: P1

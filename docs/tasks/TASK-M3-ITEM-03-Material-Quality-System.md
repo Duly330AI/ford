@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M3-ITEM-03
+- [ ] ID: TASK-M3-ITEM-03-Material-Quality-System
   Title: Material & Quality System (Modifier Pipeline)
   Status: Proposed
   Priority: P0

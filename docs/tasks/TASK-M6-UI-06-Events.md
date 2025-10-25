@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M6-UI-06
+- [ ] ID: TASK-M6-UI-06-Events
   Title: Inventory UI (Grid and UO-Freeform Modes, Stack-Split, Drag-Drop)
   Status: Proposed
   Priority: P0

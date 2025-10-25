@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M6-UI-04
+- [ ] ID: TASK-M6-UI-04-Layout
   Title: Character Window (Paperdoll, Attributes, Combat Stats, Resistances)
   Status: Proposed
   Priority: P0

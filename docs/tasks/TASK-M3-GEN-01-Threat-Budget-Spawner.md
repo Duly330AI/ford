@@ -1,43 +1,26 @@
-# TASK-M3-GEN-01: Threat Budget Spawner
-
-**Milestone:** M3 - Skills, Loot & Inventory/Hotbar
-**Priority:** P0 (Critical)
-**Estimated Effort:** 5-6d
-**Dependencies:** TASK-M1-GEN-01-Biome-System, TASK-M1-GEN-02-Room-Tagging-System, TASK-M2-07
-
-## Objectives
-
-- Implement encounter loader for `data/encounters/*.json` including schema validation and faction/threat metadata.
-- Design deterministic threat budget algorithm allocating mobs per room based on depth, biome, and tag rules.
-- Integrate with spawn pass to respect faction weights, elite/boss probabilities, and environmental constraints (LOS, pathing).
-- Provide hooks for future scripted encounters and ensure compatibility with AI faction diplomacy.
-- Build tests covering budget adherence, depth scaling, biome-specific overrides, and deterministic seeded outcomes.
-
-## Acceptance Criteria
-
-- Threat budget distribution matches formulas in DUNGEON_GENERATOR.md with configurable tolerances and elite probabilities.
-- Encounter tables validated for cross-references (mob IDs, required skills) before generation begins.
-- Spawn placements avoid unreachable tiles and respect room tags (e.g. boss rooms, resource nodes).
-- Seeds produce consistent spawn layouts across runs; integration tests capture golden outputs for regression.
-- API exposes spawn summaries for debug overlays (F5) and analytics.
-
-## Implementation Notes
-
-- Separate data parsing from allocation logic to simplify testing and allow offline balancing tools.
-- Support optional weights per biome/tag combination to bias encounters without code changes.
-- Provide instrumentation (e.g. threat budget remaining, picks) to assist designers in tuning tables.
-- Coordinate with loot system to align encounter IDs with loot table selections.
-
-## Related Documents
-
-- docs/DUNGEON_GENERATOR.md
-- docs/TODO/DUNGEON_GENERATOR_TD.md
-- docs/WORLD_BIBLE.md
-- docs/ARCHITECTURE.md
+- [ ] ID: TASK-M3-GEN-01-Threat-Budget-Spawner
+  Title: Threat Budget Spawner (Encounter Loading, Mob Allocation)
+  Status: Proposed
+  Priority: P0
+  Owner: Codex Agent
+  Created: 2025-10-26
+  Artifacts: `game/systems/spawner.py`, `data/encounters/*.json`, `data/schemas/encounters.schema.json`, `tests/systems/test_spawner.py`
+  DependsOn: TASK-M1-GEN-01, TASK-M1-GEN-02, TASK-M2-04
+  Notes:
+  Implementiere Threat-Budget-Spawner: Encounter-Loader für `data/encounters/*.json` mit Schema-Validierung & Fraktions/Threat-Metadaten. Deterministic Threat-Budget-Algorithm: Mobs pro Room basierend auf Depth, Biom, Tag-Rules. Spawn-Respekt: Fraktions-Weights, Elite/Boss-Probabilities, Environmental-Constraints (LOS, Pathing). Hooks für Scripted-Encounters. Data-Parsing separiert von Allocation-Logik. Biom/Tag-Weights optional (data-driven). Instrumentation für Designer-Tuning.
+  Acceptance:
+  - [ ] Threat-Budget-Distribution matcht DUNGEON_GENERATOR.md Formulas, Configurable Tolerances, Elite-Probabilities.
+  - [ ] Encounter-Tables validiert (Mob-IDs, Required-Skills cross-refs).
+  - [ ] Spawn-Placements avoid Unreachable-Tiles, Respekt Room-Tags (Boss-Rooms, Resources).
+  - [ ] Seeds produce Consistent Layouts, Integration-Tests capture Golden-Outputs (Regression).
+  - [ ] API exposes Spawn-Summaries für Debug-Overlays (F5) & Analytics.
+  Tests:
+  - [ ] **Budget-Adherence-Test**: Threat-Budget per Room korrekt.
+  - [ ] **Depth-Scaling-Test**: Difficulty scales mit Tiefe.
+  - [ ] **Biom-Override-Test**: Biom-Specific Rules applied.
+  - [ ] **Determinismus-Test**: gleicher Seed → identische Spawn-Layouts.
   References:
-  - docs/ARCHITECTURE.md
-  - docs/COMBAT_RULES.md
-  - docs/CONVENTIONS.md
   - docs/DUNGEON_GENERATOR.md
-  - docs/ITEMIZATION_DESIGN.md
-  - docs/QUEST_SYSTEM.md
+  - docs/WORLD_BIBLE.md
+  - docs/ARCHITECTURE.md
+  - docs/CONVENTIONS.md

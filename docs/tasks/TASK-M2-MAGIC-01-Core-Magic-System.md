@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M2-MAGIC-01
+- [ ] ID: TASK-M2-MAGIC-01-Core-Magic-System
   Title: Core Magic System
   Status: Proposed
   Priority: P0

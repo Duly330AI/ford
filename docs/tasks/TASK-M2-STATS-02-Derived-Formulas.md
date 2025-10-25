@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M2-02
+- [ ] ID: TASK-M2-STATS-02-Derived-Formulas
   Title: Ableitbare Werte & Formeln (ATK/DEF/CRIT/EVA/RES)
   Status: Proposed
   Priority: P0

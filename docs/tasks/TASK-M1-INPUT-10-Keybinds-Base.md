@@ -1,8 +1,9 @@
-- [ ] ID: TASK-M1-10
+- [ ] ID: TASK-M1-INPUT-10-Keybinds-Base
   Title: Input-System & Keybinds (WASD/Arrows, R, F3, L)
   Status: Proposed
   Priority: P2
   Owner: Copilot Agent
+  Created: 2025-10-26
   Artifacts: `game/util/input.py`, `game/scenes/dungeon.py`, `tests/util/test_input.py`
   DependsOn: TASK-M1-03
   Notes:

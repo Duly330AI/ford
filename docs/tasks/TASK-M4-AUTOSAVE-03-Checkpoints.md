@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M4-03
+- [ ] ID: TASK-M4-AUTOSAVE-03-Checkpoints
   Title: Stationen-Registry & Scene-Adapter (Forge, Alchemy)
   Status: Proposed
   Priority: P1

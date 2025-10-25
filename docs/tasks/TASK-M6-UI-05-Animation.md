@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M6-UI-05
+- [ ] ID: TASK-M6-UI-05-Animation
   Title: Skills Window (0.1 Display, Locks, Caps, Curves, Train/Use)
   Status: Proposed
   Priority: P0

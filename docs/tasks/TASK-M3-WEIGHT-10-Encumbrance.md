@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M3-10
+- [ ] ID: TASK-M3-WEIGHT-10-Encumbrance
   Title: World-Drops & Pickup-Adapter (Scene-Stubs)
   Status: Proposed
   Priority: P2

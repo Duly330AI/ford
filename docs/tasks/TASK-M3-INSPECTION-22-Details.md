@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M3-22
+- [ ] ID: TASK-M3-INSPECTION-22-Details
   Title: Anti-Macro Penalty Detection & Application
   Status: Proposed
   Priority: P1

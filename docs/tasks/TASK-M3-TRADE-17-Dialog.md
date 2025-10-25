@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M3-17
+- [ ] ID: TASK-M3-TRADE-17-Dialog
   Title: Performance: Loot-Monte-Carlo & Inventory-Mikros
   Status: Proposed
   Priority: P1

@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M4-24
+- [ ] ID: TASK-M4-ACCEPTANCE-24-Criteria
   Title: Crafting Queue Pause During Combat (Timekeeper Integration)
   Status: Proposed
   Priority: P1

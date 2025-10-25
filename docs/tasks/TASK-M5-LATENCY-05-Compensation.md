@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M5-05
+- [ ] ID: TASK-M5-LATENCY-05-Compensation
   Title: Save-Metadaten & Manifest (Slots, Versions, History)
   Status: Proposed
   Priority: P1

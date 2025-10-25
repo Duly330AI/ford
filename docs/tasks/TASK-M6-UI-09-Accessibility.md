@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M6-UI-09
+- [ ] ID: TASK-M6-UI-09-Accessibility
   Title: Spellbook UI (Circle Tabs, Mana/Reagents, Cast Rounds, Drag-to-Hotbar)
   Status: Proposed
   Priority: P1

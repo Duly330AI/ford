@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M3-08
+- [ ] ID: TASK-M3-LOOT-08-Tables
   Title: Loot-Tabellen (Gewichte, Mengen, Nested Tables)
   Status: Proposed
   Priority: P0

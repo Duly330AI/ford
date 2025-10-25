@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M4-09
+- [ ] ID: TASK-M4-INPUT-09-Options
   Title: Blueprint-/Rezept-Entdeckung (Drops/Scrolls)
   Status: Proposed
   Priority: P2

@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M2-14
+- [ ] ID: TASK-M2-UI-14-Overlay
   Title: Combat-UI Overlay (Turn Order, Action Bar, Tooltips)
   Status: Proposed
   Priority: P2

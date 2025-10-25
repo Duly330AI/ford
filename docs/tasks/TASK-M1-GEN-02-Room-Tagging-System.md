@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M1-GEN-02
+- [ ] ID: TASK-M1-GEN-02-Room-Tagging-System
   Title: Room Tagging System
   Status: Proposed
   Priority: P0

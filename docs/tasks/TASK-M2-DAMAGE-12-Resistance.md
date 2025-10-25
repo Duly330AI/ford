@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M2-12
+- [ ] ID: TASK-M2-DAMAGE-12-Resistance
   Title: Schadenstypen & Resistenzen
   Status: Proposed
   Priority: P1

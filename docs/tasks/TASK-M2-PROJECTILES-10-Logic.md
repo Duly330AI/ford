@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M2-10
+- [ ] ID: TASK-M2-PROJECTILES-10-Logic
   Title: Projektile (Logik, LOS-Treffer, Block an Waenden)
   Status: Proposed
   Priority: P1

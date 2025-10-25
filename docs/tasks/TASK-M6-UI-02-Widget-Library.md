@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M6-UI-02
+- [ ] ID: TASK-M6-UI-02-Widget-Library
   Title: HUD (HP/Mana/Stamina Bars, Buff/Debuff Pips, Hotbar, Journal, Minimap)
   Status: Proposed
   Priority: P0

@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M7-FTUE-05
+- [ ] ID: TASK-M7-FTUE-05-Tutorial-Content-Data
   Title: Tutorial Content Data (Quests, NPCs, Dialogue, Loot)
   Status: Proposed
   Priority: P1

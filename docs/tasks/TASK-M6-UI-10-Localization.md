@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M6-UI-10
+- [ ] ID: TASK-M6-UI-10-Localization
   Title: Crafting UI (Recipe List, Detail Panel, Queue with Priorities, Success Tooltip)
   Status: Proposed
   Priority: P0

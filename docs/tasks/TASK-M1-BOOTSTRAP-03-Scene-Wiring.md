@@ -1,8 +1,9 @@
-- [ ] ID: TASK-M1-03
+- [ ] ID: TASK-M1-BOOTSTRAP-03-Scene-Wiring
   Title: Level-Bootstrap & Scene-Wiring (DungeonScene)
   Status: Proposed
   Priority: P1
   Owner: Copilot Agent
+  Created: 2025-10-26
   Artifacts: `game/main.py`, `game/scenes/dungeon.py`, `tests/smoke/test_boot.py`
   DependsOn: TASK-M1-02
   Notes:

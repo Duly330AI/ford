@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M5-02
+- [ ] ID: TASK-M5-MULTIPLAYER-02-Foundation
   Title: Save-Contract Implementierung (to_dict/from_dict)
   Status: Proposed
   Priority: P0

@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M2-18
+- [ ] ID: TASK-M2-DOCS-18-Testing-Guide
   Title: Doku "Wie M2 pruefen" (README Abschnitt)
   Status: Proposed
   Priority: P2

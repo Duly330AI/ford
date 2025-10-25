@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M2-07
+- [ ] ID: TASK-M2-ENEMY-07-Archetypes
   Title: Gegner-Archetypen & Daten
   Status: Proposed
   Priority: P0

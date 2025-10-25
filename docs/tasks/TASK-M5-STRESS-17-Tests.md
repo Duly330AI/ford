@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M5-17
+- [ ] ID: TASK-M5-STRESS-17-Tests
   Title: Thumbnail Adapter (optional)
   Status: Proposed
   Priority: P3

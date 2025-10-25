@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M1-BSP-01
+- [ ] ID: TASK-M1-BSP-01-Dungeon-Generator
   Title: BSP-Dungeon-Generator (Räume, Korridore, Seed)
   Status: Proposed
   Priority: P1

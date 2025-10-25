@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M4-04
+- [ ] ID: TASK-M4-VERSION-04-Migration
   Title: Node-Datenmodell (Depletion, Respawn, Yield)
   Status: Proposed
   Priority: P0

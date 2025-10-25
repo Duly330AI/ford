@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M3-12
+- [ ] ID: TASK-M3-COMBAT-12-Integration
   Title: Tooltips & Rarity-UI (Adapter)
   Status: Proposed
   Priority: P2

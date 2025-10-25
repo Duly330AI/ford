@@ -1,8 +1,9 @@
-- [ ] ID: TASK-M1-12
+- [ ] ID: TASK-M1-ASSETS-12-Pixel-Scaling
   Title: Minimal-Assets & Pixel-Skalierung (16→64 px)
   Status: Proposed
   Priority: P1
   Owner: Copilot Agent
+  Created: 2025-10-26
   Artifacts: `assets/tiles/*`, `assets/ui/*`, `ATTRIBUTIONS.md`
   DependsOn: TASK-M1-02
   Notes:

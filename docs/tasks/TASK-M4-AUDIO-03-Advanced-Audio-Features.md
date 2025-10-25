@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M4-AUDIO-03
+- [ ] ID: TASK-M4-AUDIO-03-Advanced-Audio-Features
   Title: Advanced Audio Features (3D Positioning, Snapshots, Streaming)
   Status: Proposed
   Priority: P1

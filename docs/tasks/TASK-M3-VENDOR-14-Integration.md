@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M3-14
+- [ ] ID: TASK-M3-VENDOR-14-Integration
   Title: Pfeilverbrauch & Munition-Handling (Archery)
   Status: Proposed
   Priority: P1

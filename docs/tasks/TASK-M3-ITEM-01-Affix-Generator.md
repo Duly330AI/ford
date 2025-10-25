@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M3-ITEM-01
+- [ ] ID: TASK-M3-ITEM-01-Affix-Generator
   Title: Affix Generator (Budget-Based ARPG Generation)
   Status: Proposed
   Priority: P0

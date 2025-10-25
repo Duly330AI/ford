@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M2-11
+- [ ] ID: TASK-M2-LOS-11-Sight-Range
   Title: Sichtlinie (LOS) & Reichweitenpruefung
   Status: Proposed
   Priority: P0

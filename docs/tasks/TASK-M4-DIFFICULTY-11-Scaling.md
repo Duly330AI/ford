@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M4-11
+- [ ] ID: TASK-M4-DIFFICULTY-11-Scaling
   Title: Persistenz-Hooks (Queues, Node-State) - Vorbereitung M5
   Status: Proposed
   Priority: P1

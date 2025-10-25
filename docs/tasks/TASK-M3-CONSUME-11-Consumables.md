@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M3-11
+- [ ] ID: TASK-M3-CONSUME-11-Consumables
   Title: Hotbar (10 Slots) & Keybinds (1-0) + Quick-Use
   Status: Proposed
   Priority: P0

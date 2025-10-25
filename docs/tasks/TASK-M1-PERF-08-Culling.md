@@ -1,8 +1,9 @@
-- [ ] ID: TASK-M1-08
+- [ ] ID: TASK-M1-PERF-08-Culling
   Title: Performance-Budget & Culling (SpriteList)
   Status: Proposed
   Priority: P1
   Owner: Copilot Agent
+  Created: 2025-10-26
   Artifacts: `game/util/perf.py`, `tests/perf/test_spawn_2000_entities.py`
   DependsOn: TASK-M1-03
   Notes:

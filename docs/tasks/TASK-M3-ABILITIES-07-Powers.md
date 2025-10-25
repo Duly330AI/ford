@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M3-07
+- [ ] ID: TASK-M3-ABILITIES-07-Powers
   Title: Skill-Hooks in Combat & Nodes (Integration)
   Status: Proposed
   Priority: P0

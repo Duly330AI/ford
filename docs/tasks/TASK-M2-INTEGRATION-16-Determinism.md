@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M2-16
+- [ ] ID: TASK-M2-INTEGRATION-16-Determinism
   Title: Integrationsszenario "Spieler vs. Trio" (Determinismus)
   Status: Proposed
   Priority: P0

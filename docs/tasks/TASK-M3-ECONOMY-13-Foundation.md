@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M3-13
+- [ ] ID: TASK-M3-ECONOMY-13-Foundation
   Title: Waehrungsmodell (Gold als Item vs. Konto)
   Status: Proposed
   Priority: P2

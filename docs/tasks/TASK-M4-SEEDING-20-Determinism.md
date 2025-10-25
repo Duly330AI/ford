@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M4-20
+- [ ] ID: TASK-M4-SEEDING-20-Determinism
   Title: Doku "Wie M4 pruefen" (README Abschnitt)
   Status: Proposed
   Priority: P2

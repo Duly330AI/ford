@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M3-05
+- [ ] ID: TASK-M3-INVENTORY-05-System
   Title: Consumables & Use-Effects (Heiltrank, Buff, Cleanse)
   Status: Proposed
   Priority: P1

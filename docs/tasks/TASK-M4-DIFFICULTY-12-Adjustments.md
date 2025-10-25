@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M4-12
+- [ ] ID: TASK-M4-DIFFICULTY-12-Adjustments
   Title: E2E "Erz -> Barren -> Schwert craften -> Equip"
   Status: Proposed
   Priority: P0

@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M7-FTUE-02
+- [ ] ID: TASK-M7-FTUE-02-Tutorial-Manager
   Title: Tutorial Manager (Phase FSM, Event Integration)
   Status: Proposed
   Priority: P1

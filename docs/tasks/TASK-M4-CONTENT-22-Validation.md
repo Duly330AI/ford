@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M4-22
+- [ ] ID: TASK-M4-CONTENT-22-Validation
   Title: Container Respawn System (Daily/Interval/None)
   Status: Proposed
   Priority: P1

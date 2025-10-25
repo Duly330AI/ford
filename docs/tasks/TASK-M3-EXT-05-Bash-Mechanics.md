@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M3-EXT-05
+- [ ] ID: TASK-M3-EXT-05-Bash-Mechanics
   Title: Bash Mechanics (STR Check, Durability, Noise)
   Status: Proposed
   Priority: P1

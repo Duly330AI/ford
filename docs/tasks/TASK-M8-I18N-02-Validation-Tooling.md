@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M8-I18N-02
+- [ ] ID: TASK-M8-I18N-02-Validation-Tooling
   Title: Localization Validation Tooling (Key Diff, Unused Detection)
   Status: Proposed
   Priority: P2

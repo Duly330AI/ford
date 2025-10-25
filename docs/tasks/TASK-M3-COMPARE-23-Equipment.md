@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M3-23
+- [ ] ID: TASK-M3-COMPARE-23-Equipment
   Title: Skill Lock System (Up/Down/Lock, Auto-Drop at Total Cap)
   Status: Proposed
   Priority: P1

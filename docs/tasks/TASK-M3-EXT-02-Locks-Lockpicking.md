@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M3-EXT-02
+- [ ] ID: TASK-M3-EXT-02-Locks-Lockpicking
   Title: Locks & Lockpicking System (Skill Checks, Keys, Failure)
   Status: Proposed
   Priority: P0

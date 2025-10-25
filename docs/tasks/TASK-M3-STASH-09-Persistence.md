@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M3-09
+- [ ] ID: TASK-M3-STASH-09-Persistence
   Title: Drop-Hooks bei Gegner-Death (Integration mit M2)
   Status: Proposed
   Priority: P0

@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M4-08
+- [ ] ID: TASK-M4-AUDIO-08-Settings
   Title: Crafting-UI (Queue, Progress, Input/Output, Fehlerfaelle)
   Status: Proposed
   Priority: P2

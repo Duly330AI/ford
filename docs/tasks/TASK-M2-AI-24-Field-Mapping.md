@@ -1,10 +1,10 @@
-- [ ] ID: TASK-M2-24
+- [ ] ID: TASK-M2-AI-24-Field-Mapping
   Title: Monster AI Field Mapping Extension (Extend M2-07 with ai/faction Fields)
   Status: Proposed
   Priority: P1
   Owner: Copilot Agent
   Created: 2025-10-25
-  Artifacts: $_, $_, $_
+  Artifacts: `data/monsters.json`, `game/systems/enemies.py`, `tests/systems/test_enemies.py`
   DependsOn: TASK-M2-07, TASK-M2-AI-03, TASK-M2-AI-04
   Notes:
   Augment monsters.json with AI metadata (ai archetype, faction id, optional ai_tags, ai_overworld, ai_combat) per AI_DESIGN.md Section 7.

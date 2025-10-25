@@ -1,4 +1,4 @@
-- [ ] ID: TASK-M6-UI-16
+- [ ] ID: TASK-M6-UI-16-Menu-Character
   Title: UI Event Bus & Data Bindings (Game Events to UI Updates)
   Status: Proposed
   Priority: P0
