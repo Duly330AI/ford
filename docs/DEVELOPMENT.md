@@ -172,8 +172,8 @@ deactivate
 
 ### Python Version
 ```powershell
-.\.venv\Scripts\python.exe --version
-# Should show: Python 3.13.5
+conda activate ford && python --version
+# Should show: Python 3.12.x
 ```
 
 ---

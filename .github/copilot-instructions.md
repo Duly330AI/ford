@@ -21,29 +21,31 @@
 
 ## Project Constraints (enforced by Copilot)
 
-- **Python**: 3.13.5+
+- **Python**: 3.12+ (via Conda environment `ford`)
 - **Arcade**: ≥ 3.x
 - **Package**: Poetry
 - **Resolution**: 1920×1080, integer scale (16px tiles upscale 4× → 64px).
 - **Layers**: ground, walls (collidable), decals, light-blockers, entities.
 - **Rendering**: SpriteList per layer + Arcade lights & particles.
 - **Physics**: AABB, dt movement (8-way), no slopes.
-- **Combat**: **Turn-based** resolution (dice-driven attack/defense/effects).
+- **Combat**: **Turn-based** resolution (formula-driven attack/defense/effects).
 - **Systems**: skills (usage-based), professions/nodes, crafting (JSON recipes), loot tables, save/load.
 
 ---
 
-## Local Workflow (VS Code)
+## Local Workflow (VS Code + Conda)
 
+- **Environment**: `conda activate ford` (Python 3.12)
 - Use provided `.vscode`:
   - **Run**: `Run FORD` (launches `python -m game.main`)
   - **Tasks**: `poetry: install`, `run`, `tests`
 - Formatter/linter run on save (Black + Ruff).
 - Tiled is used to edit `.tmx` maps (external app).
 
-### Commands (Poetry)
+### Commands (Poetry with Conda)
 ```bash
-poetry install
+conda activate ford
+poetry install --no-root
 poetry run python -m game.main          # run
 poetry run pytest -q                    # tests
 poetry run pytest -q -m "not slow"      # default fast suite

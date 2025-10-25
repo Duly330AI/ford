@@ -4,7 +4,7 @@
   // Python 2D Dungeon Crawler (Arcade + Pytest + Copilot Agents)
   // ===================================================================
   // === PYTHON ===
-  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+  "python.defaultInterpreterPath": "C:\\Users\\duly3\\.conda\\envs\\ford\\python.exe",
   "python.terminal.activateEnvironment": true,
   "python.terminal.activateEnvInCurrentTerminal": true,
   // === PYLANCE (Type Checking) ===
