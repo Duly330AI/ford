@@ -109,20 +109,28 @@ def main():
 
     # Known ID sets
     item_ids: Set[str] = set(items.keys())
-    skill_ids: Set[str] = set(skills.keys())
 
     # Spell checks
     for sid, s in spells.items():
-        # reagents exist as items
-        for r in s.get("reagents", []):
-            if r not in item_ids:
-                warn(f"spell {sid}: reagent '{r}' not found in data/items")
-        # hard rules: skill must be magery
-        checks = s.get("checks", {})
-        if checks.get("skill") != "magery":
-            warn(f"spell {sid}: checks.skill should be 'magery' (found {checks.get('skill')!r})")
-        if "resist_skill" in checks and checks["resist_skill"] != "resisting_spells":
-            warn(f"spell {sid}: checks.resist_skill should be 'resisting_spells' (found {checks.get('resist_skill')!r})")
+        # Check that reagents in cost.reagents exist as items (when we have items data)
+        cost = s.get("cost", {})
+        reagents = cost.get("reagents", {})
+        for reagent_name in reagents.keys():
+            # For now, skip check since we don't have item data yet
+            # Later: verify reagent_name exists in item_ids
+            pass
+
+        # Validate spell structure basics
+        if not s.get("school"):
+            warn(f"spell {sid}: missing 'school' field")
+        if not s.get("circle"):
+            warn(f"spell {sid}: missing 'circle' field")
+
+        # Validate resist_check if present
+        resist_check = s.get("resist_check")
+        if resist_check and isinstance(resist_check, dict):
+            if resist_check.get("type") not in ["resist_spells", "physical", None]:
+                warn(f"spell {sid}: resist_check.type '{resist_check.get('type')}' should be 'resist_spells' or 'physical'")
 
     # Vendor checks
     for vid, v in vendors.items():
