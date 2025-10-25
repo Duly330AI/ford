@@ -1,105 +1,50 @@
-# FORD • Codex configuration for Documentation Cleanup (project-local)
-# Generated: 2025-10-24
-
 [tool.codex]
 model = "gpt-5-codex"
-model_reasoning_effort = "medium"
+model_reasoning_effort = "high"
 
-# Top-level goal: audit, split and normalize repo docs into per-task files
-# following the project's `docs/tasks/TASK-*.md` schema, create missing
-# task files, update indexes, and produce a change plan for review.
+# MISSION: Fill documentation gaps identified in /docs/TODO/ analysis
+# Create/extend task files to implement missing features while maintaining project consistency
+goal = """
+Fill all documentation gaps identified in /docs/TODO/ by creating or extending task files in /docs/tasks/.
+Ensure all new tasks follow project architecture patterns: data-driven design, testable core systems,
+usage-based skill progression, and formula-parameterized mechanics. Maintain consistency with existing
+Milestones M1-M6 structure and conventions.
+"""
 
 [execution_phases]
 
-  # PHASE 0: Repo inventory & analysis (mandatory, read-only)
-  [execution_phases.phase_0_inventory]
-  name = "Inventory & Analysis"
-  priority = "CRITICAL"
-  estimated_effort = "15-30m"
-  objectives = [
-    "Scan repository for docs, README, cleanup.md and existing TASK files",
-    "Detect duplicated task definitions and index inconsistencies",
-    "Detect files that violate pre-commit rules (docs/ checklists)"
-  ]
-
-  # PHASE 1: Plan generation (dry-run)
-  [execution_phases.phase_1_plan]
-  name = "Plan Generation (Dry-run)"
-  priority = "CRITICAL"
-  estimated_effort = "15-30m"
-  objectives = [
-    "Produce a detailed plan (files to create/modify/delete)",
-    "Map cleanup.md sections to TASK IDs and target files",
-    "Estimate effort (hours) per task group and number of PRs"
-  ]
-
-  # PHASE 2: Safe edits (only after explicit approval)
-  [execution_phases.phase_2_execute]
-  name = "Execute Changes (After Approval)"
-  priority = "HIGH"
-  estimated_effort = "variable"
-  objectives = [
-    "Create docs/tasks/TASK-*.md files per approved plan",
-    "Replace verbose task sections in docs/task.md with index links",
-    "Normalize parent TASK-M#.md files to summary-only where appropriate"
-  ]
-
-  # PHASE 3: QA & pre-commit
-  [execution_phases.phase_3_qa]
-  name = "QA & Pre-commit"
-  priority = "HIGH"
-  estimated_effort = "15-60m"
-  objectives = [
-    "Run local pre-commit checks (if available) and report failures",
-    "Run data validation scripts if present (game.tools.validate_data)",
-    "Produce a short release note & commit log for review"
-  ]
-
-  # PHASE 4: Push & PR (manual opt-in)
-  [execution_phases.phase_4_push]
-  name = "Push & PR"
-  priority = "LOW"
-  estimated_effort = "5-15m"
-  objectives = [
-    "Create a dedicated branch `docs/cleanup/*` for the changes",
-    "Push commits and open a PR with description & checklist"
-  ]
-
-[scope]
-include_patterns = [
-  "docs/**",
-  "cleanup.md",
-  "README.md",
-  "data/**",
-  ".github/**"
+# ============================================================================
+# PHASE 0: Gap Analysis & Task Structure Review
+# ============================================================================
+[execution_phases.phase_0_gap_review]
+name = "Review Gaps & Existing Task Structure"
+priority = "CRITICAL"
+estimated_effort = "15-20m"
+objectives = [
+  "Read all 11 TODO documents in /docs/TODO/ to understand identified gaps",
+  "Read existing task files in /docs/tasks/ to understand current structure",
+  "Read CONVENTIONS.md, ARCHITECTURE.md, COMBAT_RULES.md for design patterns",
+  "Map gaps to potential Milestones",
+  "Identify dependencies between gaps",
+  "Create master gap-filling plan with priority levels",
 ]
-exclude_patterns = ["node_modules", "__pycache__", ".git"]
+outputs = ["codex_outputs/phase0_gap_master_plan.md"]
+human_approval_required = true
 
-[output]
-format = "markdown"
-output_dir = "docs/codex-output"
-include_timestamps = true
-include_change_log = true
+# ============================================================================
+# PHASE 1-11: Gap Filling Phases
+# See full config for all 11 phases covering:
+# - Magic System (Phase 1)
+# - Dungeon Biomes (Phase 2)
+# - Economy & Vendors (Phase 3)
+# - Procedural Itemization (Phase 4)
+# - Quest System (Phase 5)
+# - Input & Rebinding (Phase 6)
+# - Audio System (Phase 7)
+# - Tutorial/FTUE (Phase 8)
+# - Localization (Phase 9)
+# - Documentation (Phase 10)
+# - Master Summary (Phase 11)
+# ============================================================================
 
-[rules]
-# Safety rules the agent must follow
-require_human_approval_before_execute = true
-task_id_format = "TASK-M{milestone}-{seq:02d}"  # default tokenizing; Codex must compute milestone numbers
-create_files_only_under = ["docs/tasks/", "docs/"]
-do_not_modify = ["game/**", "tests/**", "pyproject.toml"]
-
-[reporting]
-deliverables = [
-  "analysis_summary.md",
-  "proposed_plan.md",
-  "file_change_plan.diff",
-  "created_TASK_files_list.md"
-]
-
-[verification]
-checks = [
-  "No '- [ ]' checklist lines remain in top-level docs/task.md unless they include 'ID: TASK-'",
-  "All new TASK files include 'ID: TASK-...' in at least one checklist line",
-  "No changes to code files unless explicitly requested",
-  "Pre-commit hooks (if installed) should pass locally or report failures"
-]
+# See C:\Users\duly3\.codex\config.toml for full phase definitions (file moved to project root)
