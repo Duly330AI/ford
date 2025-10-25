@@ -7,8 +7,12 @@
     {
       "label": "poetry: install",
       "type": "shell",
-      "command": "${workspaceFolder}/.venv/Scripts/poetry.exe",
+      "command": "conda",
       "args": [
+        "run",
+        "-n",
+        "ford",
+        "poetry",
         "install",
         "--no-root"
       ],
@@ -26,8 +30,12 @@
     {
       "label": "poetry: update",
       "type": "shell",
-      "command": "${workspaceFolder}/.venv/Scripts/poetry.exe",
+      "command": "conda",
       "args": [
+        "run",
+        "-n",
+        "ford",
+        "poetry",
         "update"
       ],
       "group": "build",
@@ -43,8 +51,14 @@
     {
       "label": "pytest: run all",
       "type": "shell",
-      "command": "${workspaceFolder}/.venv/Scripts/pytest.exe",
+      "command": "conda",
       "args": [
+        "run",
+        "-n",
+        "ford",
+        "python",
+        "-m",
+        "pytest",
         "-v",
         "--tb=short"
       ],
@@ -75,8 +89,14 @@
     {
       "label": "pytest: run with coverage",
       "type": "shell",
-      "command": "${workspaceFolder}/.venv/Scripts/pytest.exe",
+      "command": "conda",
       "args": [
+        "run",
+        "-n",
+        "ford",
+        "python",
+        "-m",
+        "pytest",
         "--cov=game",
         "--cov-report=html",
         "--cov-report=term",
@@ -94,8 +114,14 @@
     {
       "label": "pytest: run fast (no slow tests)",
       "type": "shell",
-      "command": "${workspaceFolder}/.venv/Scripts/pytest.exe",
+      "command": "conda",
       "args": [
+        "run",
+        "-n",
+        "ford",
+        "python",
+        "-m",
+        "pytest",
         "-v",
         "-m",
         "not slow",
@@ -114,8 +140,12 @@
     {
       "label": "ruff: check all",
       "type": "shell",
-      "command": "${workspaceFolder}/.venv/Scripts/ruff.exe",
+      "command": "conda",
       "args": [
+        "run",
+        "-n",
+        "ford",
+        "ruff",
         "check",
         "."
       ],
@@ -145,8 +175,12 @@
     {
       "label": "ruff: fix all",
       "type": "shell",
-      "command": "${workspaceFolder}/.venv/Scripts/ruff.exe",
+      "command": "conda",
       "args": [
+        "run",
+        "-n",
+        "ford",
+        "ruff",
         "check",
         ".",
         "--fix"
@@ -163,8 +197,12 @@
     {
       "label": "black: format all",
       "type": "shell",
-      "command": "${workspaceFolder}/.venv/Scripts/black.exe",
+      "command": "conda",
       "args": [
+        "run",
+        "-n",
+        "ford",
+        "black",
         "."
       ],
       "group": "build",
@@ -180,8 +218,12 @@
     {
       "label": "pre-commit: run all",
       "type": "shell",
-      "command": "${workspaceFolder}/.venv/Scripts/pre-commit.exe",
+      "command": "conda",
       "args": [
+        "run",
+        "-n",
+        "ford",
+        "pre-commit",
         "run",
         "--all-files"
       ],
@@ -197,8 +239,12 @@
     {
       "label": "pre-commit: install hooks",
       "type": "shell",
-      "command": "${workspaceFolder}/.venv/Scripts/pre-commit.exe",
+      "command": "conda",
       "args": [
+        "run",
+        "-n",
+        "ford",
+        "pre-commit",
         "install"
       ],
       "group": "none",
@@ -214,8 +260,12 @@
     {
       "label": "run: FORD game",
       "type": "shell",
-      "command": "${workspaceFolder}/.venv/Scripts/python.exe",
+      "command": "conda",
       "args": [
+        "run",
+        "-n",
+        "ford",
+        "python",
         "-m",
         "game.main"
       ],

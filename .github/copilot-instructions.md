@@ -42,6 +42,40 @@
 - Formatter/linter run on save (Black + Ruff).
 - Tiled is used to edit `.tmx` maps (external app).
 
+### 🎯 CRITICAL FOR AGENTS: Use Tasks, Not `run_in_terminal`
+
+**All long-running commands MUST use `.vscode/tasks.json` tasks via the `runTasks` tool, NOT raw terminal!**
+
+**Why:** VS Code Shell Integration has known timing/buffering issues. Tasks guarantee proper completion detection and exit-code capture.
+
+**Available tasks:**
+- `pytest: run all` - Full test suite (ALWAYS use this, never raw pytest)
+- `pytest: run fast (no slow tests)` - Quick smoke tests
+- `pytest: run with coverage` - Coverage report
+- `ruff: check all` - Linting (no auto-fix)
+- `ruff: fix all` - Auto-fix lint issues
+- `black: format all` - Format code
+- `pre-commit: run all` - Run all pre-commit hooks
+- `run: FORD game` - Start the game
+- `poetry: install` - Install deps
+- `test: full suite` - Lint + test + coverage (compound)
+
+**USAGE FOR AGENTS:**
+```
+Use: runTasks with label "pytest: run all"
+NOT: run_in_terminal with "pytest tests/"
+
+Use: runTasks with label "ruff: check all"
+NOT: run_in_terminal with "ruff check ."
+```
+
+**Do NOT use raw terminal for:**
+- ❌ pytest/tests
+- ❌ ruff/black/lint
+- ❌ pre-commit hooks
+- ❌ poetry install/update
+- ❌ Long-running builds/servers
+
 ### Commands (Poetry with Conda)
 ```bash
 conda activate ford
