@@ -14,14 +14,14 @@ This document lists **all required sounds** for FORD, organized by functional ca
 - **UI Sounds** (14 sounds)
 - **Foley** (Footsteps, Materials) (28 sounds)
 - **Weapons** (Melee, Ranged) (24 sounds)
-- **Magic & Spells** (32 sounds)
+- **Magic & Spells** (98+ sounds - ALL 40+ spells from spells.json, Circles 1-6!)
 - **Creatures & Interactions** (136+ sounds - ALL 42 enemies from monsters.json!)
 - **Traps & Hazards** (20 sounds)
 - **Environmental** (Ambience, Weather) (11 sounds)
 - **Combat Events** (Impact, Status, Mechanics) (14 sounds)
 - **Music** (Loopable, Adaptive) (12 pieces)
 
-**Total:** ~291+ individual sounds + 12 music tracks
+**Total:** ~363+ individual sounds + 12 music tracks
 
 ---
 
@@ -130,57 +130,230 @@ This document lists **all required sounds** for FORD, organized by functional ca
 
 ## 🔥 **Category 4: Magic & Spells**
 
-### Fire School
+### Circle 1 - Basic Spells
 
+#### Fire School (Circle 1)
+| Sound ID | Spell | Characteristics | Variations |
+|----------|-------|-----------------|------------|
+| `magic/ember_cast` | Ember | Quick fire spark, small ignition | 1 |
+| `magic/ember_impact` | Ember impact | Small fire impact, sizzle | 1 |
+
+#### Cold School (Circle 1)
+| Sound ID | Spell | Characteristics | Variations |
+|----------|-------|-----------------|------------|
+| `magic/frost_nip_cast` | Frost Nip | Quick chill shimmer, crystalline crackle | 1 |
+| `magic/frost_nip_impact` | Frost Nip impact | Icy impact, freeze proc sound | 1 |
+
+#### Energy School (Circle 1)
+| Sound ID | Spell | Characteristics | Variations |
+|----------|-------|-----------------|------------|
+| `magic/spark_cast` | Spark | Quick electrical crackle | 1 |
+| `magic/spark_impact` | Spark impact | Electric zap, light impact | 1 |
+| `magic/illuminate_cast` | Illuminate | Magical glow activation, harmonic tone | 1 |
+
+#### Earth School (Circle 1)
+| Sound ID | Spell | Characteristics | Variations |
+|----------|-------|-----------------|------------|
+| `magic/minor_ward_cast` | Minor Ward | Protective shimmer, soft chime | 1 |
+| `magic/minor_ward_activate` | Minor Ward active | Ambient protective hum (loopable) | 1 |
+| `magic/minor_cure_cast` | Minor Cure | Cleansing chime, light positive tone | 1 |
+
+### Circle 2 - Intermediate Spells
+
+#### Fire School (Circle 2)
+| Sound ID | Spell | Characteristics | Variations |
+|----------|-------|-----------------|------------|
+| `magic/fire_dart_cast` | Fire Dart | Ignition whoosh, dart launch | 1 |
+| `magic/fire_dart_impact` | Fire Dart impact | Fire impact, sizzle and crackle | 2 (impact, burn) |
+
+#### Cold School (Circle 2)
+| Sound ID | Spell | Characteristics | Variations |
+|----------|-------|-----------------|------------|
+| `magic/ice_shards_cast` | Ice Shards | Crystalline shimmer + crackle | 1 |
+| `magic/ice_shards_impact` | Ice Shards impact | Shattering ice, freeze proc | 1 |
+
+#### Toxic School (Circle 2)
+| Sound ID | Spell | Characteristics | Variations |
+|----------|-------|-----------------|------------|
+| `magic/venom_pin_cast` | Venom Pin | Sickly hiss, poison preparation | 1 |
+| `magic/venom_pin_impact` | Venom Pin impact | Toxic injection, DoT indicator | 1 |
+| `magic/venom_pin_dot_loop` | Venom Pin DoT (loopable) | Ongoing poison damage tick | 1 |
+
+#### Earth School (Circle 2)
+| Sound ID | Spell | Characteristics | Variations |
+|----------|-------|-----------------|------------|
+| `magic/stone_skin_cast` | Stone Skin | Hardening sound, rock cracking | 1 |
+| `magic/stone_skin_activate` | Stone Skin active | Ambient stone rumble (loopable) | 1 |
+| `magic/mend_cast` | Mend | Healing chime, energy gathering | 1 |
+| `magic/mend_impact` | Mend impact | Restoration tone, body mending | 1 |
+| `magic/cure_cast` | Cure | Cleansing light chime | 1 |
+
+#### Energy School (Circle 2)
+| Sound ID | Spell | Characteristics | Variations |
+|----------|-------|-----------------|------------|
+| `magic/detect_magic_cast` | Detect Magic | Scanning hum, revelation chime | 1 |
+| `magic/detect_magic_reveal` | Detect Magic reveal | Discovery ping (per object found) | 1 |
+
+### Circle 3 - Advanced Spells
+
+#### Fire School (Circle 3)
 | Sound ID | Spell | Characteristics | Variations |
 |----------|-------|-----------------|------------|
 | `magic/fireball_cast` | Fireball | Powerful ignition whoosh + roar | 1 |
 | `magic/fireball_impact` | Fireball explosion | Boom, crackling, resonant | 2 (small, large area) |
-| `magic/flamewave_cast` | Flame Wave | Sweeping fire rush | 1 |
-| `magic/flamewave_impact` | Flame Wave hits | Crackling sweep, ongoing burn | 1 |
-| `magic/fireblast_cast` | Fire Blast (beam) | High-pitched ignition | 1 |
+| `magic/fireball_burn_loop` | Fireball burn (loopable) | Sustained fire crackle | 1 |
 
-### Cold/Frost School
-
+#### Cold School (Circle 3)
 | Sound ID | Spell | Characteristics | Variations |
 |----------|-------|-----------------|------------|
-| `magic/frost_bolt_cast` | Frost Bolt | Crystalline shimmer + crackle | 1 |
-| `magic/frost_bolt_impact` | Frost Bolt hits | Shattering ice, freeze proc | 1 |
-| `magic/ice_storm_cast` | Ice Storm | Swirling wind + ice crackling | 1 |
-| `magic/ice_storm_impact` | Ice Storm AoE hits | Multiple shatters, sustained cold | 1 |
+| `magic/deep_freeze_cast` | Deep Freeze | Massive chill shimmer + crackle | 1 |
+| `magic/deep_freeze_impact` | Deep Freeze impact | Shattering ice, freeze proc, root effect | 1 |
 
-### Poison/Toxic School
-
+#### Energy School (Circle 3)
 | Sound ID | Spell | Characteristics | Variations |
 |----------|-------|-----------------|------------|
-| `magic/poison_cloud_cast` | Poison Cloud | Sickly hiss, gurgling | 1 |
-| `magic/poison_cloud_impact` | Cloud engulfs | Toxic bubbling, DoT indicator | 1 |
+| `magic/arc_lance_cast` | Arc Lance | Crackling charge-up + arc release | 1 |
+| `magic/arc_lance_impact` | Arc Lance impact | Sharp crack, electrical buzz, piercing | 1 |
+| `magic/blink_cast` | Blink | Teleportation whoosh + pop | 1 |
+| `magic/magic_shield_cast` | Magic Shield | Protective shimmer activation | 1 |
+| `magic/magic_shield_activate` | Magic Shield active | Ambient shield hum (loopable) | 1 |
+| `magic/magic_shield_absorb` | Magic Shield absorb hit | Impact absorption sound | 1 |
 
-### Energy/Lightning School
-
+#### Earth School (Circle 3)
 | Sound ID | Spell | Characteristics | Variations |
 |----------|-------|-----------------|------------|
-| `magic/lightning_bolt_cast` | Lightning Bolt | Crackling charge-up + zap | 1 |
-| `magic/lightning_bolt_impact` | Lightning hits | Sharp crack, electrical buzz | 2 (direct, chain) |
-| `magic/chain_lightning_cast` | Chain Lightning | Multiple crackles, building energy | 1 |
+| `magic/earthen_grasp_cast` | Earthen Grasp | Earth rumble, root eruption | 1 |
+| `magic/earthen_grasp_impact` | Earthen Grasp impact | Grasping/restraining sound | 1 |
 
-### Healing & Support
+### Circle 4 - Major Spells
 
+#### Fire School (Circle 4)
 | Sound ID | Spell | Characteristics | Variations |
 |----------|-------|-----------------|------------|
-| `magic/healing_cast` | Heal/Cure Spell | Gentle shimmer, positive chime | 2 (minor, major) |
-| `magic/healing_complete` | Healing received | Warm glow tone, restoration | 1 |
-| `magic/buff_cast` | Buff spell (str/dex/int) | Empowering chime, ascending note | 3 (physical, agility, intellect) |
-| `magic/dispel_cast` | Dispel Magic | Unraveling shimmer | 1 |
+| `magic/flame_wave_cast` | Flame Wave | Sweeping fire rush preparation | 1 |
+| `magic/flame_wave_release` | Flame Wave release | Massive fire sweep | 1 |
+| `magic/flame_wave_impact` | Flame Wave impact | Crackling sweep, ongoing burn (cone) | 1 |
 
-### Casting Mechanics
+#### Cold School (Circle 4)
+| Sound ID | Spell | Characteristics | Variations |
+|----------|-------|-----------------|------------|
+| `magic/blizzard_cast` | Blizzard | Swirling wind + ice crackling (preparation) | 1 |
+| `magic/blizzard_release` | Blizzard release | Massive wind gust + ice | 1 |
+| `magic/blizzard_impact` | Blizzard impact | Multiple shatters, sustained cold (AoE) | 1 |
+
+#### Toxic School (Circle 4)
+| Sound ID | Spell | Characteristics | Variations |
+|----------|-------|-----------------|------------|
+| `magic/toxic_mist_cast` | Toxic Mist | Sickly hiss, poison cloud preparation | 1 |
+| `magic/toxic_mist_release` | Toxic Mist release | Toxic gas cloud formation | 1 |
+| `magic/toxic_mist_loop` | Toxic Mist active (loopable) | Bubbling poison cloud, ongoing damage | 1 |
+
+#### Energy School (Circle 4)
+| Sound ID | Spell | Characteristics | Variations |
+|----------|-------|-----------------|------------|
+| `magic/chain_bolt_cast` | Chain Bolt | Multiple crackles, building energy | 1 |
+| `magic/chain_bolt_impact` | Chain Bolt impact | Sharp crack, chain jumps + secondary impacts | 2 (direct hit, chain jump) |
+
+#### Earth School (Circle 4)
+| Sound ID | Spell | Characteristics | Variations |
+|----------|-------|-----------------|------------|
+| `magic/earth_spikes_cast` | Earth Spikes | Ground rumble, spike preparation | 1 |
+| `magic/earth_spikes_release` | Earth Spikes release | Massive spike eruption (line) | 1 |
+| `magic/earth_spikes_impact` | Earth Spikes impact | Multiple spike impacts, slow effect | 1 |
+
+#### Utility (Circle 4)
+| Sound ID | Spell | Characteristics | Variations |
+|----------|-------|-----------------|------------|
+| `magic/dispel_magic_cast` | Dispel Magic | Unraveling shimmer, energy dissipation | 1 |
+| `magic/dispel_magic_impact` | Dispel Magic impact | Buff/effect removal sound (per effect) | 1 |
+
+### Circle 5 - Expert Spells
+
+#### Fire School (Circle 5)
+| Sound ID | Spell | Characteristics | Variations |
+|----------|-------|-----------------|------------|
+| `magic/inferno_cast` | Inferno | Massive fire preparation, roar building | 1 |
+| `magic/inferno_release` | Inferno release | Apocalyptic fire eruption (circle AoE) | 1 |
+| `magic/inferno_burn_loop` | Inferno burn (loopable) | Sustained inferno crackle | 1 |
+
+#### Cold School (Circle 5)
+| Sound ID | Spell | Characteristics | Variations |
+|----------|-------|-----------------|------------|
+| `magic/blizzard_cast_c5` | Blizzard (full) | Massive wind + ice preparation | 1 |
+| `magic/blizzard_release_c5` | Blizzard release | Catastrophic winter gust + ice | 1 |
+| `magic/blizzard_impact_c5` | Blizzard impact | Massive shattering, sustained cold | 1 |
+
+#### Toxic School (Circle 5)
+| Sound ID | Spell | Characteristics | Variations |
+|----------|-------|-----------------|------------|
+| `magic/virulent_cloud_cast` | Virulent Cloud | Intense hiss, plague preparation | 1 |
+| `magic/virulent_cloud_release` | Virulent Cloud release | Massive toxic cloud formation | 1 |
+| `magic/virulent_cloud_loop` | Virulent Cloud active (loopable) | Toxic bubbling, pestilent atmosphere | 1 |
+
+#### Energy School (Circle 5)
+| Sound ID | Spell | Characteristics | Variations |
+|----------|-------|-----------------|------------|
+| `magic/mana_drain_cast` | Mana Drain | Energy extraction crackle, draining hum | 1 |
+| `magic/mana_drain_impact` | Mana Drain impact | Energy depletion sound, victim loss | 1 |
+| `magic/silence_field_cast` | Silence Field | Quieting effect, sound dampening | 1 |
+| `magic/silence_field_impact` | Silence Field impact | Casting disabled, silence proc | 1 |
+| `magic/silence_field_active_loop` | Silence Field active (loopable) | Eerie soundless zone | 1 |
+
+#### Earth School (Circle 5)
+| Sound ID | Spell | Characteristics | Variations |
+|----------|-------|-----------------|------------|
+| `magic/stone_ward_major_cast` | Stone Ward (Major) | Massive hardening sound, ground reinforcement | 1 |
+| `magic/stone_ward_major_activate` | Stone Ward active | Powerful protective rumble (loopable) | 1 |
+
+### Circle 6 - Master Spells
+
+#### Fire School (Circle 6)
+| Sound ID | Spell | Characteristics | Variations |
+|----------|-------|-----------------|------------|
+| `magic/meteor_cast` | Meteor | Apocalyptic buildup, earth-shaking rumble | 1 |
+| `magic/meteor_impact` | Meteor impact | Catastrophic explosion, earth shake | 2 (explosion, aftermath) |
+| `magic/meteor_burn_loop` | Meteor burn (loopable) | Massive sustained fire crackle | 1 |
+
+#### Cold School (Circle 6)
+| Sound ID | Spell | Characteristics | Variations |
+|----------|-------|-----------------|------------|
+| `magic/ice_coffin_cast` | Ice Coffin | Freezing preparation, crystalline formation | 1 |
+| `magic/ice_coffin_activate` | Ice Coffin active | Frozen restraint sound, initiative debuff | 1 |
+
+#### Energy School (Circle 6)
+| Sound ID | Spell | Characteristics | Variations |
+|----------|-------|-----------------|------------|
+| `magic/storm_pillar_cast` | Storm Pillar | Massive electrical charge building (line) | 1 |
+| `magic/storm_pillar_release` | Storm Pillar release | Apocalyptic lightning pillar | 1 |
+| `magic/storm_pillar_impact` | Storm Pillar impact | Multiple electrical cracks, sustained storm | 1 |
+| `magic/arcane_cascade_cast` | Arcane Cascade | Building magical cascade, multiple crackles | 1 |
+| `magic/arcane_cascade_release` | Arcane Cascade release | Cascading magical explosions | 1 |
+| `magic/arcane_cascade_impact` | Arcane Cascade impact | Chain reaction impacts, magical echoes | 1 |
+
+#### Earth School (Circle 6)
+| Sound ID | Spell | Characteristics | Variations |
+|----------|-------|-----------------|------------|
+| `magic/quicksand_maw_cast` | Quicksand Maw | Ground destabilization, circle preparation | 1 |
+| `magic/quicksand_maw_release` | Quicksand Maw release | Massive ground sinking, pull-down sound | 1 |
+| `magic/quicksand_maw_impact` | Quicksand Maw impact | Sinking/trapping sound, slow effect | 1 |
+
+#### Toxic School (Circle 6)
+| Sound ID | Spell | Characteristics | Variations |
+|----------|-------|-----------------|------------|
+| `magic/plague_wind_cast` | Plague Wind | Pestilent wind preparation, toxic hiss (cone) | 1 |
+| `magic/plague_wind_release` | Plague Wind release | Plague wind sweep | 1 |
+| `magic/plague_wind_loop` | Plague Wind active (loopable) | Toxic wind buffeting, disease atmosphere | 1 |
+
+### Casting Mechanics & General
 
 | Sound ID | Description | Characteristics | Variations |
 |----------|-------------|-----------------|------------|
 | `magic/spell_fizzle` | Spell fizzled (failed) | Sad trombone, failed energy burst | 1 |
-| `magic/casting_loop` | Casting in progress (loopable) | Humming energy, building tension | 1 |
+| `magic/casting_loop` | Casting in progress (loopable) | Humming energy, building tension | 3 (quick cast, standard, long cast) |
 | `magic/mana_deplete` | Mana exhausted | Sad buzzer, energy cutoff | 1 |
 | `magic/reagent_consumed` | Reagents consumed | Quick whoosh/sparkle | 1 |
+| `magic/resist_proc` | Spell resisted (by target) | Protective shimmer, resistance activation | 1 |
+| `magic/spell_reflect` | Spell reflected (rare effect) | Magical bounce/reflection sound | 1 |
 
 ---
 
@@ -570,13 +743,13 @@ This document lists **all required sounds** for FORD, organized by functional ca
 | UI Sounds | 14 | Menu, inventory, buttons |
 | Foley | 28 | Footsteps (6 surfaces), movement, containers |
 | Weapons | 24 | Melee (10), ranged (6), impacts (4) |
-| Magic | 32 | Fire (5), Frost (4), Poison (2), Energy (4), Healing (4), Casting (4) |
-| Creatures | **136+** | **Player (3), NPCs (2), Undead (9), Spirits (8), Liches (7), Vermin (7), Arachnids (8), Harpies (5), Reptiles (5), Humanoids (21), Gargoyles (8), Giants (12), Gazers (6), Elementals (12), Death creatures (12), Dragons (21), Detection (4)** |
+| Magic | **98+** | **ALL 40+ spells from spells.json: Circle 1-6 organized by school (Fire, Cold, Toxic, Energy, Earth) + casting mechanics** |
+| Creatures | 136+ | Player (3), NPCs (2), Undead (9), Spirits (8), Liches (7), Vermin (7), Arachnids (8), Harpies (5), Reptiles (5), Humanoids (21), Gargoyles (8), Giants (12), Gazers (6), Elementals (12), Death creatures (12), Dragons (21), Detection (4) |
 | Traps | 20 | Mechanisms (9), hazards (4), disarm/detection (3) |
 | Environmental | 11 | Biome ambience (6), weather (2) |
 | Combat Events | 14 | Impacts (4), status (5), flow (5) |
 | **Music** | **12** | **Exploration (3), Combat (3), Special (6)** |
-| **TOTAL** | **~291+ sounds + 12 tracks** | **NEW: 100+ creature sounds added!** |
+| **TOTAL** | **~363+ sounds + 12 tracks** | **NEW: 98+ spell sounds covering ALL 40+ spells from spells.json!** |
 
 ---
 
