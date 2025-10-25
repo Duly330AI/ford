@@ -7,23 +7,31 @@ Python: 3.12
 Requires: pip install jsonschema==4.*
 """
 from __future__ import annotations
-import argparse, json, sys, os, glob
-from typing import Dict, Set, Any
+
+import argparse
+import glob
+import json
+import os
+import sys
+from typing import Any, Dict, Set
 
 try:
     from jsonschema import Draft202012Validator
-except Exception as e:
+except Exception:
     print("ERROR: jsonschema is required. pip install jsonschema", file=sys.stderr)
     sys.exit(2)
+
 
 def load_schema(path: str) -> dict:
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
+
 def iter_json_files(pattern: str):
     for p in glob.glob(pattern):
         if os.path.isfile(p) and p.endswith(".json"):
             yield p
+
 
 def validate_dir(root: str, sub: str, schema: dict) -> Dict[str, Any]:
     validator = Draft202012Validator(schema)
@@ -48,6 +56,7 @@ def validate_dir(root: str, sub: str, schema: dict) -> Dict[str, Any]:
         print(f"[OK]   {sub}: {len(objects)} files")
     return objects
 
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--root", default=".", help="project root (default: current dir)")
@@ -62,7 +71,7 @@ def main():
 
     # Load schemas
     schemas = {}
-    for name in ["item","skill","spell","quest","vendor","biome","encounter"]:
+    for name in ["item", "skill", "spell", "quest", "vendor", "biome", "encounter"]:
         p = os.path.join(schema_dir, f"{name}.schema.json")
         if not os.path.isfile(p):
             print(f"ERROR: missing schema {p}", file=sys.stderr)
@@ -71,8 +80,46 @@ def main():
 
     # Validate content files/folders if they exist
     # Note: Currently data/*.json are in root of data/, not subfolders
-    items = {}  # validate_dir(root, "data/items", schemas["item"])
-    skills = {}  # validate_dir(root, "data/skills", schemas["skill"])
+
+    # Load items.json (array format)
+    items_path = os.path.join(root, "data", "items.json")
+    items = {}
+    if os.path.isfile(items_path):
+        with open(items_path, "r", encoding="utf-8") as f:
+            item_list = json.load(f)
+        validator = Draft202012Validator(schemas["item"])
+        for item in item_list:
+            errors = list(validator.iter_errors(item))
+            if errors:
+                print(f"[FAIL] {items_path} - item {item.get('id', '???')}")
+                for err in errors:
+                    print(f"    - {err.message} @ {list(err.path)}")
+            else:
+                item_id = item.get("id")
+                if item_id:
+                    items[item_id] = item
+        if items:
+            print(f"[OK]   data/items.json: {len(items)} items")
+
+    # Load skills.json (array format)
+    skills_path = os.path.join(root, "data", "skills.json")
+    skills = {}
+    if os.path.isfile(skills_path):
+        with open(skills_path, "r", encoding="utf-8") as f:
+            skill_list = json.load(f)
+        validator = Draft202012Validator(schemas["skill"])
+        for skill in skill_list:
+            errors = list(validator.iter_errors(skill))
+            if errors:
+                print(f"[FAIL] {skills_path} - skill {skill.get('id', '???')}")
+                for err in errors:
+                    print(f"    - {err.message} @ {list(err.path)}")
+            else:
+                skill_id = skill.get("id")
+                if skill_id:
+                    skills[skill_id] = skill
+        if skills:
+            print(f"[OK]   data/skills.json: {len(skills)} skills")
 
     # Special handling for spells.json (array format in root of data/)
     spells_path = os.path.join(root, "data", "spells.json")
@@ -112,13 +159,12 @@ def main():
 
     # Spell checks
     for sid, s in spells.items():
-        # Check that reagents in cost.reagents exist as items (when we have items data)
+        # Check that reagents in cost.reagents exist as items
         cost = s.get("cost", {})
         reagents = cost.get("reagents", {})
-        for reagent_name in reagents.keys():
-            # For now, skip check since we don't have item data yet
-            # Later: verify reagent_name exists in item_ids
-            pass
+        for reagent_id in reagents.keys():
+            if reagent_id not in item_ids:
+                warn(f"spell {sid}: reagent '{reagent_id}' not found in items.json")
 
         # Validate spell structure basics
         if not s.get("school"):
@@ -130,7 +176,9 @@ def main():
         resist_check = s.get("resist_check")
         if resist_check and isinstance(resist_check, dict):
             if resist_check.get("type") not in ["resist_spells", "physical", None]:
-                warn(f"spell {sid}: resist_check.type '{resist_check.get('type')}' should be 'resist_spells' or 'physical'")
+                warn(
+                    f"spell {sid}: resist_check.type '{resist_check.get('type')}' should be 'resist_spells' or 'physical'"
+                )
 
     # Vendor checks
     for vid, v in vendors.items():
@@ -151,7 +199,9 @@ def main():
             if obj.get("type") == "collect":
                 iid = obj.get("item_id")
                 if iid and iid not in item_ids:
-                    warn(f"quest {qid}: objective collect item_id '{iid}' not found in data/items")
+                    warn(
+                        f"quest {qid}: objective collect item_id '{iid}' not found in data/items"
+                    )
 
     if warnings and args.strict:
         print(f"[FAIL] Strict mode: {warnings} warning(s)")
@@ -159,6 +209,7 @@ def main():
 
     print(f"[DONE] Validation complete with {warnings} warning(s).")
     sys.exit(0)
+
 
 if __name__ == "__main__":
     main()

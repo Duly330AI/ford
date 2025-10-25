@@ -1,0 +1,147 @@
+{
+  "ui": {
+    "ok": "OK",
+    "cancel": "Abbrechen",
+    "yes": "Ja",
+    "no": "Nein",
+    "close": "Schließen",
+    "back": "Zurück",
+    "next": "Weiter",
+    "confirm": "Bestätigen",
+    "save": "Speichern",
+    "load": "Laden",
+    "delete": "Löschen",
+    "exit": "Beenden"
+  },
+  "menu": {
+    "main": {
+      "new_game": "Neues Spiel",
+      "continue": "Fortsetzen",
+      "load_game": "Spiel laden",
+      "settings": "Einstellungen",
+      "credits": "Credits",
+      "quit": "Beenden"
+    },
+    "settings": {
+      "title": "Einstellungen",
+      "video": "Video",
+      "audio": "Audio",
+      "controls": "Steuerung",
+      "gameplay": "Gameplay"
+    }
+  },
+  "items": {
+    "reagent_black_pearl": {
+      "name": "Schwarze Perle",
+      "description": "Eine schimmernde schwarze Perle für Zauber."
+    },
+    "reagent_bloodmoss": {
+      "name": "Blutmoos",
+      "description": "Ein purpurrotes Moos mit magischen Eigenschaften."
+    },
+    "reagent_garlic": {
+      "name": "Knoblauch",
+      "description": "Eine scharfe Knolle, die das Böse abwehrt."
+    },
+    "reagent_ginseng": {
+      "name": "Ginseng",
+      "description": "Ein Heilkraut mit wiederherstellenden Eigenschaften."
+    },
+    "reagent_mandrake_root": {
+      "name": "Alraunenwurzel",
+      "description": "Die gewundene Wurzel der Alraune."
+    },
+    "reagent_nightshade": {
+      "name": "Nachtschatten",
+      "description": "Eine giftige Pflanze mit dunklen Eigenschaften."
+    },
+    "reagent_sulfurous_ash": {
+      "name": "Schwefelasche",
+      "description": "Vulkanasche durchsetzt mit Schwefel."
+    },
+    "reagent_spiders_silk": {
+      "name": "Spinnenseide",
+      "description": "Feine Seide, gesponnen von Riesenspinnen."
+    }
+  },
+  "skills": {
+    "magery": {
+      "name": "Magie",
+      "description": "Die Kunst des Zauberns und der magischen Manipulation."
+    },
+    "evaluate_intelligence": {
+      "name": "Intelligenz Einschätzen",
+      "description": "Die Fähigkeit, magische Kraft und Intelligenz zu bewerten."
+    },
+    "meditation": {
+      "name": "Meditation",
+      "description": "Den Geist fokussieren, um Mana schneller zu regenerieren."
+    },
+    "resist_spells": {
+      "name": "Zauberwiderstand",
+      "description": "Die Fähigkeit, magischen Effekten zu widerstehen."
+    },
+    "swords": {
+      "name": "Schwertkunst",
+      "description": "Geschick mit Klingenwaffen."
+    },
+    "archery": {
+      "name": "Bogenschießen",
+      "description": "Fertigkeit mit Bögen und Armbrüsten."
+    },
+    "tactics": {
+      "name": "Taktik",
+      "description": "Kampfstrategie und Schadensoptimierung."
+    },
+    "anatomy": {
+      "name": "Anatomie",
+      "description": "Wissen über Körperstruktur für kritische Treffer."
+    },
+    "healing": {
+      "name": "Heilkunde",
+      "description": "Die Kunst, Wunden zu heilen."
+    },
+    "hiding": {
+      "name": "Verbergen",
+      "description": "Die Fähigkeit, sich zu verstecken."
+    },
+    "stealth": {
+      "name": "Schleichen",
+      "description": "Sich lautlos bewegen während man versteckt ist."
+    }
+  },
+  "spells": {
+    "ember": {
+      "name": "Glut",
+      "description": "Beschwört eine kleine Flamme um Feinde zu versengen."
+    },
+    "fireball": {
+      "name": "Feuerball",
+      "description": "Schleudert eine Feuerkugel auf das Ziel."
+    },
+    "frost_nip": {
+      "name": "Frostbiss",
+      "description": "Eine eisige Berührung, die das Ziel verlangsamt."
+    },
+    "minor_ward": {
+      "name": "Kleiner Schutz",
+      "description": "Erschafft eine schützende Barriere gegen Magie."
+    }
+  },
+  "combat": {
+    "hit": "{attacker} trifft {defender} für {damage} Schaden.",
+    "miss": "{attacker} verfehlt {defender}.",
+    "dodge": "{defender} weicht {attacker}s Angriff aus.",
+    "parry": "{defender} pariert {attacker}s Angriff.",
+    "death": "{actor} wurde erschlagen.",
+    "victory": "Sieg!",
+    "defeat": "Du wurdest besiegt."
+  },
+  "status": {
+    "hp": "LP",
+    "mana": "Mana",
+    "stamina": "Ausdauer",
+    "level": "Stufe",
+    "experience": "Erfahrung"
+  }
+}

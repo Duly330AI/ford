@@ -1,0 +1,147 @@
+{
+  "ui": {
+    "ok": "OK",
+    "cancel": "Cancel",
+    "yes": "Yes",
+    "no": "No",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "confirm": "Confirm",
+    "save": "Save",
+    "load": "Load",
+    "delete": "Delete",
+    "exit": "Exit"
+  },
+  "menu": {
+    "main": {
+      "new_game": "New Game",
+      "continue": "Continue",
+      "load_game": "Load Game",
+      "settings": "Settings",
+      "credits": "Credits",
+      "quit": "Quit"
+    },
+    "settings": {
+      "title": "Settings",
+      "video": "Video",
+      "audio": "Audio",
+      "controls": "Controls",
+      "gameplay": "Gameplay"
+    }
+  },
+  "items": {
+    "reagent_black_pearl": {
+      "name": "Black Pearl",
+      "description": "A lustrous black pearl used in spellcasting."
+    },
+    "reagent_bloodmoss": {
+      "name": "Blood Moss",
+      "description": "A crimson moss with magical properties."
+    },
+    "reagent_garlic": {
+      "name": "Garlic",
+      "description": "A pungent bulb that wards off evil."
+    },
+    "reagent_ginseng": {
+      "name": "Ginseng",
+      "description": "A healing herb with restorative properties."
+    },
+    "reagent_mandrake_root": {
+      "name": "Mandrake Root",
+      "description": "The twisted root of the mandrake plant."
+    },
+    "reagent_nightshade": {
+      "name": "Nightshade",
+      "description": "A poisonous plant with dark properties."
+    },
+    "reagent_sulfurous_ash": {
+      "name": "Sulfurous Ash",
+      "description": "Volcanic ash infused with sulfur."
+    },
+    "reagent_spiders_silk": {
+      "name": "Spider's Silk",
+      "description": "Fine silk spun by giant spiders."
+    }
+  },
+  "skills": {
+    "magery": {
+      "name": "Magery",
+      "description": "The art of spellcasting and magical manipulation."
+    },
+    "evaluate_intelligence": {
+      "name": "Evaluate Intelligence",
+      "description": "The ability to assess magical power and intelligence."
+    },
+    "meditation": {
+      "name": "Meditation",
+      "description": "Focus the mind to regenerate mana faster."
+    },
+    "resist_spells": {
+      "name": "Resisting Spells",
+      "description": "The ability to resist magical effects."
+    },
+    "swords": {
+      "name": "Swordsmanship",
+      "description": "Proficiency with bladed weapons."
+    },
+    "archery": {
+      "name": "Archery",
+      "description": "Skill with bows and crossbows."
+    },
+    "tactics": {
+      "name": "Tactics",
+      "description": "Combat strategy and damage optimization."
+    },
+    "anatomy": {
+      "name": "Anatomy",
+      "description": "Knowledge of body structure for critical hits."
+    },
+    "healing": {
+      "name": "Healing",
+      "description": "The art of healing wounds."
+    },
+    "hiding": {
+      "name": "Hiding",
+      "description": "The ability to conceal oneself."
+    },
+    "stealth": {
+      "name": "Stealth",
+      "description": "Move silently while hidden."
+    }
+  },
+  "spells": {
+    "ember": {
+      "name": "Ember",
+      "description": "Conjures a small flame to scorch your foes."
+    },
+    "fireball": {
+      "name": "Fireball",
+      "description": "Hurls a ball of flame at your target."
+    },
+    "frost_nip": {
+      "name": "Frost Nip",
+      "description": "A chilling touch that slows the target."
+    },
+    "minor_ward": {
+      "name": "Minor Ward",
+      "description": "Creates a protective barrier against magic."
+    }
+  },
+  "combat": {
+    "hit": "{attacker} hits {defender} for {damage} damage.",
+    "miss": "{attacker} misses {defender}.",
+    "dodge": "{defender} dodges {attacker}'s attack.",
+    "parry": "{defender} parries {attacker}'s attack.",
+    "death": "{actor} has been slain.",
+    "victory": "Victory!",
+    "defeat": "You have been defeated."
+  },
+  "status": {
+    "hp": "HP",
+    "mana": "Mana",
+    "stamina": "Stamina",
+    "level": "Level",
+    "experience": "Experience"
+  }
+}

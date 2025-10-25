@@ -12,15 +12,20 @@
       "type": "string",
       "pattern": "^[a-z0-9_]+$"
     },
-    "display_name": {
+    "name": {
       "type": "string"
     },
     "type": {
       "enum": [
         "weapon",
         "armor",
+        "shield",
+        "ammo",
         "reagent",
         "consumable",
+        "material",
+        "tool",
+        "currency",
         "misc"
       ]
     },

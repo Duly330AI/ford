@@ -10,7 +10,9 @@ def flatten(d, prefix=""):
             yield key
 
 def main():
-    root = os.path.dirname(os.path.dirname(__file__))
+    # Get project root (go up 2 levels from scripts/i18n/)
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    root = os.path.dirname(os.path.dirname(script_dir))
     en_path = os.path.join(root, "i18n", "en.json")
     langs = ["de.json"]
     base = json.load(open(en_path, "r", encoding="utf-8"))

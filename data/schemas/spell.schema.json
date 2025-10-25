@@ -19,7 +19,14 @@
     },
     "school": {
       "type": "string",
-      "enum": ["fire", "cold", "toxic", "energy", "earth", "arcanum"]
+      "enum": [
+        "fire",
+        "cold",
+        "toxic",
+        "energy",
+        "earth",
+        "arcanum"
+      ]
     },
     "circle": {
       "type": "integer",
@@ -28,7 +35,9 @@
     },
     "cost": {
       "type": "object",
-      "required": ["mana"],
+      "required": [
+        "mana"
+      ],
       "properties": {
         "mana": {
           "type": "integer",
@@ -71,7 +80,10 @@
       }
     },
     "resist_check": {
-      "type": ["object", "null"],
+      "type": [
+        "object",
+        "null"
+      ],
       "properties": {
         "type": {
           "type": "string"
