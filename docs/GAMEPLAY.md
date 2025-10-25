@@ -10,6 +10,7 @@
 **Kurz:** Erkunde einen prozeduralen Dungeon, sammle Ressourcen, besiege Gegner in **rundenbasierten** Gefechten, crafte Ausrüstung, steigere Skills durch Nutzung, sichere Fortschritt per Save/Load.
 
 **Kern-Loop:**
+
 1. **Erkunden** (Overworld, Echtzeit): Räume aufdecken, Licht & Geräusche beachten.
 2. **Engagement**: Gegner sichten → Wechsel in **Kampfmodus** (Initiative).
 3. **Kampf** (Runden): Aktionen planen (Move/Attack/Shoot/Cast/Use/Wait), Formeln entscheiden Treffer/Schaden.
@@ -22,6 +23,7 @@
 ## 2) Steuerung & UI
 
 ### Tasten (Standard)
+
 - **Bewegung**: `WASD` oder Pfeile (8-Wege mit Diagonalen)
 - **Dodge-Roll (Overworld)**: `Leertaste` (kostet Ausdauer, iFrames kurzzeitig)
 - **Interagieren / Aufheben / Station nutzen**: `E`
@@ -34,6 +36,7 @@
 > **Remapping** geplant über `game/util/input.py`. Standard-Belegung ist datengetrieben.
 
 ### HUD
+
 - **Bars** links oben: HP / Mana / Stamina
 - **Hotbar** unten: 10 Slots mit Stack-Zahl / Cooldown
 - **Tooltip** (Hover): Name, Typ, Rarity, Damage/Defense, Mods, Stack/Value
@@ -99,9 +102,7 @@ slowdown = 1 - (skill/cap)^2 → starkes Abflachen ab ~70+.
 anti_macro (0..1): Strafe, wenn exakt die gleiche Aktion/Entität/Position wiederholt wird (z. B. 0.2 bei hartem Repeat).
 
 Gain-Wkeit: P(gain) = clamp( base * sweet * slowdown * anti_macro, min_gain, max_gain )
-Default: base=0.25, min_gain=0.01, max_gain=0.20.
-
-Skill-Total-Cap optional (z. B. 700.0). Bei Erreichen muss ein anderer Skill droppen (Auto-Lock/Down-Flag).
+Default: base=0.25, min_gain=0.01, max_gain=0.20.Skill-Total-Cap optional (z. B. 700.0). Bei Erreichen muss ein anderer Skill droppen (Auto-Lock/Down-Flag).
 
 5) Kampf (Rundenbasiert, UO-Trefferlogik)
 5.1 Einstieg & Rundenablauf
@@ -135,10 +136,10 @@ ATK = att_skill + floor(DEX/5) + gear_atk + buffs
 DEF = def_skill + floor(DEX/5) + shield_def + buffs
 
 # Baseline 50/50 bei gleichen Werten, leicht durch ATK/DEF verschiebbar
+
 HitChance = clamp( 0.02,
                    0.50 + (att_skill - def_skill)/200 + (ATK - DEF)/200,
                    0.98 )
-
 
 Ergebnis: Selbst bei ~60 vs ~60 liegst du um 50% → spürbar viele Misses, genau wie gewünscht.
 
@@ -152,8 +153,7 @@ Schaden
 base = weapon_base_dmg
 str_bonus = floor(STR/10)
 mult = 1 + 0.003*Tactics + 0.002*Anatomy               # datengetrieben
-final = max(1, floor( (base + str_bonus) * mult * (1 - resist[type]) ))
-
+final = max(1, floor( (base + str_bonus) *mult* (1 - resist[type]) ))
 
 Ranged zieht Munition; ohne Pfeile → Verhalten (fail | fallback_melee) einstellbar.
 
@@ -173,7 +173,6 @@ Jede Waffe hat base_delay (z. B. Dagger 0, Longsword 1, Halberd 2, Heavy Xbow 3)
 Nach einem Attack erhält der Actor:
 
 recovery_rounds = clamp(0, base_delay - floor(DEX/40), max_recovery)
-
 
 Solange recovery > 0, ist Attack gesperrt (du kannst aber Move/UseItem/Cast).
 → Leichte Waffen + hohe DEX = jede Runde angreifen; schwere Waffen fühlen sich träge an.
@@ -202,6 +201,7 @@ Stat-Gain: Wenn Skill gained, separater kleiner Wurf auf die zugehörigen Stats 
 Beispiel: P(stat_gain_STR) = 0.05 * stats_affinity.STR, Cap/Tag in progression_rules.
 
 ### 5.3 Status-Effekte (Auszug)
+
 - **Bleed** (DoT phys), **Poison** (DoT poison): ticken pro Runde
 - **Stun**: blockiert **1 Zug** (oder konfiguriert)
 - **Guard**: +DEF für N Runden
@@ -211,6 +211,7 @@ Beispiel: P(stat_gain_STR) = 0.05 * stats_affinity.STR, Cap/Tag in progression_r
 Effekte definieren **apply/tick/expire** in `data/effects.json`. Stacking-Regeln: `none|add|refresh`.
 
 ### 5.4 Gegnerverhalten (KI)
+
 - **Melee**: ranlaufen, schlagen; bei niedrigem HP **Guard**
 - **Ranged**: hält **Kite-Distanz** (z. B. 4–6 Tiles), schießt, repositioniert
 - **Caster**: priorisiert **CC/DoT**, verwaltet Mana, fallback Nahkampf
@@ -229,6 +230,7 @@ Effekte definieren **apply/tick/expire** in `data/effects.json`. Stacking-Regeln
 ## 7) Skills & Progression (usage-based)
 
 **Skills**: `swords, archery, magery, lockpicking, mining, woodcutting, alchemy, smithing, healing`
+
 - **Anstieg durch Nutzung**:
   - Treffer mit Schwert → `swords` chance auf 0.1 Skill-Gain
   - Bogen → `archery` chance auf 0.1 Skill-Gain   (mit Pfeilverbrauch)
@@ -246,6 +248,7 @@ Skill-Gain-Kurven in `data/skills.json` (z. B. polynomial `a * level^p` oder Tab
 ## 8) Berufe & Nodes
 
 **Nodes**: `ore`, `tree`, `herb`
+
 - **Interaktion**: `E` in Nachbarschaft (1 Tile)
 - **Tool-Check**: z. B. `pickaxe_stone` für `iron_ore_vein`
 - **Dauer**: abhängig von Tier/Skill; **Skill** reduziert Zeit &/oder erhöht Yield
@@ -259,6 +262,7 @@ Parameter in `data/nodes.json` + Balancing in `data/balance.json`.
 ## 9) Crafting & Stationen
 
 **Stationen**: `forge`, `alchemy`
+
 - **Rezepte** in `data/recipes.json` (Inputs → Outputs, `time_sec`, Skill-Min, Tool-Anforderung, Erfolg/Crit, Fail-Returns)
 - **Queue** pro Station, Jobs laufen in Overworld-Zeit (im Combat **pausiert**)
 - **Ergebnis**: ins Inventar (oder World-Drop bei Platzmangel)
@@ -271,18 +275,22 @@ Optional: **Rezept-Freischaltung** über Drops/Scrolls.
 ## 10) Items, Ausrüstung, Hotbar
 
 ### 10.1 Item-Typen
+
 - **Weapon** (Schadenstyp + base_dmg Wert), **Armor** (DEF), **Consumable** (Use-Effekte),
   **Material**, **Currency (`gold`)**, **Ammo (`arrows`)**
 
 ### 10.2 Inventar
+
 - **Slots** (z. B. 30), Stacks (Default max 99), atomare Operationen (add/remove/split/merge/move).
 - Optional **Gewichtslimit** (Balance-Flag).
 
 ### 10.3 Equipment
+
 - Slots: **weapon**, **offhand**, **armor**, **accessory**
 - Stat-Aggregation: Basis + Equip + Effekte + Skills (reproduzierbar)
 
 ### 10.4 Hotbar (10)
+
 - **1–0** aktiviert Slot-Aktionen: Consumable nutzen, z. B. **Heiltrank**;
   für Waffen ggf. **Special** (später).
 - Hotbar referenziert **Inventar-Slots** (kein Doppel-Item-Duplikat).
@@ -292,6 +300,7 @@ Optional: **Rezept-Freischaltung** über Drops/Scrolls.
 ## 11) Loot & Raritäten
 
 **Tabellen** in `data/loot_tables.json` (Gewichte, Mengenbereiche, **nested tables**).
+
 - Gegner ziehen bei Tod aus ihrer **Drop-Tabelle** (`monsters.json`).
 - **Rarity**: `common|rare|epic` (Farb-Codierung in `data/ui.json`)
 - **Gold**: als Item (stackbar), mit Komfort-APIs (`add_gold/remove_gold`).
@@ -301,6 +310,7 @@ Optional: **Rezept-Freischaltung** über Drops/Scrolls.
 ## 12) Gegner
 
 **Archetypen** in `data/monsters.json`:
+
 - **Melee** (HP/ATK hoch, kurze Reichweite, +1% Trefferchance pro 0.1 Wrestling Skill)
 - **Ranged** (Abstand halten, Projektile)
 - **Caster** (Spells, Mana, DoT/CC)
@@ -436,11 +446,9 @@ Details: `SAVELOAD.md` (wenn vorhanden) & `M5`-Tasks.
 
 > Dieses Dokument ist **spielmechanische Referenz**. Änderungen an Regeln passieren **datengetrieben** (JSON) und werden hier kurz dokumentiert.
 
-
 ## GAMEPLAY – UO Addendum (Skill-Progression, Engagement, Dodge) — UO Addendum
 
 # GAMEPLAY – UO Addendum (Skill-Progression, Engagement, Dodge)
-
 
 ## B) Skill-Progression – Wie genau spielen die Dateien zusammen? — UO Addendum
 
@@ -481,7 +489,6 @@ Damit ist klar: **`progression_rules.json` gibt die Formel vor**, `skills.json.x
 
 ---
 
-
 ## C) Echtzeit-Engagement & Runden-Kampf — UO Addendum
 
 ## C) Echtzeit-Engagement & Runden-Kampf
@@ -497,7 +504,6 @@ Damit ist klar: **`progression_rules.json` gibt die Formel vor**, `skills.json.x
 - **Node-Respawn**: **Pausiert** per Default (Anti-Exploit). Umschaltbar in `world_rules.json`.
 
 ---
-
 
 ## D) Die „Dodge-Roll“ — UO Addendum
 

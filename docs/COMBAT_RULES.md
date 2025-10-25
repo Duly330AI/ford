@@ -373,6 +373,7 @@ duration_turns = 1  # Bonus lasts until end of current turn
 ### **Mechanics:**
 
 **Combat Dodge:**
+
 - **Main Action** (consumes turn's primary action)
 - Move **1 tile** in any direction (dash)
 - Gain **+30% evasion** against all attacks until end of turn
@@ -381,6 +382,7 @@ duration_turns = 1  # Bonus lasts until end of current turn
 - Blocked if **immobilized** (stunned, rooted, etc.)
 
 **Overworld Dodge-Roll:**
+
 - Press **Space** for dodge-roll (not in combat)
 - **0.35s iFrames** (invincibility frames)
 - Moderate stamina cost
@@ -389,17 +391,20 @@ duration_turns = 1  # Bonus lasts until end of current turn
 ### **Example Scenario:**
 
 **Turn 1:**
+
 - Knight uses **Dodge** action
 - Moves 1 tile away from enemy
 - Costs 15 stamina
 - Gains +30% evade chance
 
 **Enemy Turn:**
+
 - Orc attacks Knight
 - Base hit chance: 70%
 - After dodge bonus: 70% - 30% = **40% hit chance**
 
 **Turn 2:**
+
 - Evade bonus expires
 - Knight can attack normally (recovery not affected)
 

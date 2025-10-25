@@ -29,8 +29,14 @@
   "recovery": {
     "max_recovery": 3,
     "weapon_base_delay": {
-      "dagger": 0, "short_sword": 0, "long_sword": 1, "halberd": 2,
-      "maul": 1, "heavy_crossbow": 3, "crossbow": 2, "short_bow": 1
+      "dagger": 0,
+      "short_sword": 0,
+      "long_sword": 1,
+      "halberd": 2,
+      "maul": 1,
+      "heavy_crossbow": 3,
+      "crossbow": 2,
+      "short_bow": 1
     },
     "dex_reduction_step": 40
   },
@@ -44,7 +50,11 @@
     "dice": "d100",
     "dex_weight": 0.8,
     "stam_weight": 0.2,
-    "weapon_ready_bonus": {"light": 10, "medium": 0, "heavy": -10}
+    "weapon_ready_bonus": {
+      "light": 10,
+      "medium": 0,
+      "heavy": -10
+    }
   },
   "dodge": {
     "stamina_cost": 15,
@@ -54,5 +64,9 @@
     "blocks_recovery": false,
     "requires_clear_path": true
   },
-  "crit": { "enabled": false, "chance": 0.02, "mult": 1.25 }
+  "crit": {
+    "enabled": false,
+    "chance": 0.02,
+    "mult": 1.25
+  }
 }

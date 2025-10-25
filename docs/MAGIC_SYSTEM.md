@@ -1,12 +1,14 @@
 # MAGIC_SYSTEM (FORD) — Schulen, Kreise, Reagenzien, Casting
 
 ## 1) Ziele
+
 - UO‑nah, aber rundenbasiert: **Cast‑Runden**, **Fizzle**, **Reagenzien**, **Meditation**.
 - Rollen: **DPS**, **CC**, **Support**, **Utility** – nicht nur „Fernkampf in anders“.
 
 ---
 
 ## 2) Kernskills
+
 - **Magery** (Wirkerfolg/Power), **Evaluate Intelligence** (Schadensskalierung),
 - **Meditation** (Mana‑Regeneration; ggf. `cast_rounds −1`, min 0),
 - **Resist Spells** (Dauer/Intensität gegnerischer Effekte ↓).
@@ -14,17 +16,20 @@
 ---
 
 ## 3) Schulen & Kreise
+
 **Schulen:** Feuer, Kälte, Gift, Energie, Erde (optional: Nekromantie).
 **Kreise:** 1–8 (höher = mehr Mana/Reags/Cast‑Runden).
 
 ---
 
 ## 4) Reagenzien (UO‑nah)
+
 Black Pearl • Bloodmoss • Garlic • Ginseng • Mandrake Root • Nightshade • Sulfurous Ash • Spider's Silk
 
 ---
 
 ## 5) Zauber‑Datenmodell
+
 ```json
 {
   "id": "fireball",
@@ -294,6 +299,7 @@ Skill-Gains passieren **unabhängig** vom Erfolg/Fizzle:
 ---
 
 ## 7) Training & Balance
+
 - Sweet‑Spot ≈ 50% Erfolg (inkl. Fizzle); 0.1‑Gains usage‑basiert (progression_rules).
 - Resist‑Decke 75%, 0‑Cast‑Spells schwächer.
 - TTK Mage ≈ Melee in T1/T3 über Szenarien verproben.
