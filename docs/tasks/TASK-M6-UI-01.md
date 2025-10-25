@@ -11,6 +11,7 @@
   Implement a publish and subscribe event bus covering SKILL_GAIN, HIT_RESULT, LOOT_ADDED, CRAFT_DONE, COMBAT_TURN_START, and related signals.
   Provide reactive state management so bindings like `ui.hp.value` track `stats.hp.current`, with deterministic unit update cadence.
   Ship a markdown-capable tooltip renderer plus layout and hotkey persistence stored in `ui_profile.json` per save slot.
+  Integrate Localization-Service (TASK-M8-I18N-01) as the sole source for UI strings when available.
   Acceptance:
   - [ ] UI framework bootstrap renders and responds to resize events.
   - [ ] Event bus publishes and receives subscribed events.

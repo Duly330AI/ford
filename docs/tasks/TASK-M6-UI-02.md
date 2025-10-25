@@ -5,12 +5,14 @@
   Owner: Copilot Agent
   Created: 2025-10-25
   Artifacts: `game/ui/hud.py`, `tests/ui/test_hud.py`
-  DependsOn: TASK-M6-UI-01, TASK-M2-02, TASK-M2-05, TASK-M3-04
+  DependsOn: TASK-M6-UI-01, TASK-M2-02, TASK-M2-05, TASK-M3-04, TASK-M4-QUEST-01, TASK-M4-QUEST-02, TASK-M4-QUEST-03
   Notes:
   Build the HUD elements defined in UI_SPEC_UO_STYLE.md Sections 2.1-2.4 including status bars, buff pips, hotbar, journal, and minimap.
   Display HP, Mana, Stamina, and Weight with numeric and bar readouts tied to stats updates.
   Expose buff and debuff timers with tooltips listing source, effect, and remaining rounds or seconds.
   Implement a 10-slot hotbar with drag and drop from inventory, cooldown overlays, and journal filters plus minimap encounter bubble rendering.
+  Journal consumes quest engine data to show objectives, progress, and localization keys; supports active/complete filters.
+  Alle UI-Labels/Textbausteine werden über Localization-Service (TASK-M8-I18N-01) geladen, keine hartcodierten Strings.
   Acceptance:
   - [ ] Status bars update in real time when player stats change.
   - [ ] Buff and debuff indicators show accurate durations and tooltips.

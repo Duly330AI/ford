@@ -5,11 +5,12 @@
   Owner: Copilot Agent
   Created: 2025-10-25
   Artifacts: `game/ui/merchant.py`, `tests/ui/test_merchant.py`
-  DependsOn: TASK-M6-UI-01, TASK-M3-04
+  DependsOn: TASK-M6-UI-01, TASK-M3-04, TASK-M4-ECON-01, TASK-M4-ECON-02, TASK-M4-ECON-03
   Notes:
   Design the merchant interface from UI_SPEC_UO_STYLE.md Section 8 with buy and sell tables and search filters.
-  Prepare hooks for dynamic pricing and faction modifiers while shipping a static prototype.
+  Bind price/stock data via `systems/economy` and vendor loader APIs; surface faction modifiers from data.
   Implement Ctrl+Click quick-sell with confirmation for rare items and support favorites or wishlist markers.
+  Alle Texte und Tooltips nutzen Localization-Service (TASK-M8-I18N-01) inklusive dynamischer Parameter (Preis, Menge).
   Acceptance:
   - [ ] Buy and sell tables load merchant inventory and player offers.
   - [ ] Ctrl+Click quick-sell works with confirmation for protected items.

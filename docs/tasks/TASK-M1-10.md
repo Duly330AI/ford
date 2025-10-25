@@ -7,6 +7,7 @@
   DependsOn: TASK-M1-03
   Notes:
   Einheitliche Keymap + Rebind-Hooks für spätere Settings.
+  Bereite Umstellung auf Context Input Manager (TASK-M1-INPUT-01) und Controls-Schema (TASK-M1-INPUT-02) mit klaren Adapter-Punkten vor.
   Acceptance:
   - [ ] Keymap als Daten (dict), leicht testbar.
   Tests:

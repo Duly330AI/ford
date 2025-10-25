@@ -7,12 +7,14 @@
 ## ⚠️ THE PROBLEM
 
 LLM agents frequently:
+
 1. Start a long-running command (pytest, npm start, build, etc.)
 2. Return to user BEFORE command finishes
 3. Miss failures/errors that occur after response is sent
 4. User thinks everything is OK, but tests actually failed
 
 **Example:**
+
 ```
 Agent: "Starting tests..."
 [Agent returns response without waiting]
@@ -43,6 +45,7 @@ Invoke-CommandWithCompletion "your command here"
 ## 📋 WHEN TO USE IT
 
 Use wrapper for ANY command that:
+
 - ✅ Takes more than 1-2 seconds
 - ✅ Has test output (pytest, npm test, etc.)
 - ✅ Starts a server (npm start, python -m server, etc.)
@@ -74,6 +77,7 @@ Timestamp: 2025-10-25 14:30:45
 ```
 
 **Key Points:**
+
 - Green START marker: Agent begins execution
 - Full output: You see everything in real-time
 - END marker: **CRITICAL** - Agent waits for this
@@ -85,6 +89,7 @@ Timestamp: 2025-10-25 14:30:45
 ## 🤖 FOR LLM AGENTS
 
 ### Rule 1: Always Wait for End Marker
+
 ```
 After running: invoke-wait "pytest tests/"
 
@@ -97,6 +102,7 @@ ONLY THEN report results. DO NOT leave terminal early.
 ```
 
 ### Rule 2: Handle Exit Codes
+
 ```
 If Exit Code == 0:
   → All good, report success
@@ -107,7 +113,9 @@ If Exit Code != 0:
 ```
 
 ### Rule 3: Output Buffering
+
 Always read the COMPLETE response from the wrapper, including:
+
 - The colored boxes (╔ ╗ ╚ ╝)
 - "COMMAND_END_" marker
 - "Exit Code:" line
@@ -117,6 +125,7 @@ Always read the COMPLETE response from the wrapper, including:
 ## 📝 EXAMPLES
 
 ### Example 1: Running Tests (CORRECT)
+
 ```powershell
 invoke-wait "poetry run pytest tests/ -v"
 
@@ -138,6 +147,7 @@ Exit Code: 1
 ```
 
 ### Example 2: Starting Server (CORRECT)
+
 ```powershell
 invoke-wait "npm start"
 
@@ -156,6 +166,7 @@ Exit Code: 0
 ```
 
 ### Example 3: Git Clone (CORRECT)
+
 ```powershell
 invoke-wait "git clone https://github.com/project/repo.git"
 
@@ -182,6 +193,7 @@ A: Make sure you're running from the project directory where Conda auto-activate
 
 **Q: Agent still leaves early?**
 A: Check if the COMMAND_END marker is visible in the terminal output. If not, increase TimeoutSeconds:
+
 ```powershell
 Invoke-CommandWithCompletion "slow-command" -TimeoutSeconds 600
 ```
@@ -191,6 +203,7 @@ Invoke-CommandWithCompletion "slow-command" -TimeoutSeconds 600
 ## 🚀 FOR NEW PROJECTS
 
 Copy this file to each project's documentation:
+
 - Backend: `docs/LLM_AGENT_GUIDELINES.md`
 - Frontend: `frontend/docs/LLM_GUIDELINES.md`
 

@@ -11,6 +11,7 @@
   Document guiding principles: data-first readability, modular docking windows, localization keys, and accessibility expectations.
   Break down milestone scope into TASK-M6-UI-01 through TASK-M6-UI-17 with links to inventory, skills, crafting, and initiative systems.
   Capture follow-up questions around controller support, theming, and macro defaults in the overview document.
+  Verweis auf TASK-M8-I18N-01..03: alle UI-Bildschirme verwenden künftig Localization-Service statt harter Strings.
   Acceptance:
   - [ ] All subtasks reach Status: Done and are referenced from the overview.
   - [ ] docs/UI_SYSTEM_OVERVIEW.md records the architecture, dependencies, and accessibility notes from the spec.
