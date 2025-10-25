@@ -347,6 +347,64 @@ reload_turns = 2 - floor(60 / 50)
 
 ---
 
+## 🎭 **Dodge Mechanic**
+
+### **Formula:**
+
+```python
+# Combat Dodge (Main Action)
+stamina_cost = 15
+movement_tiles = 1  # Dash movement
+evade_bonus = +0.3  # +30% to avoid attacks until turn end
+duration_turns = 1  # Bonus lasts until end of current turn
+```
+
+### **Parameters** (from `combat_rules.json`)
+
+| Parameter | Value | Description |
+|-----------|-------|-------------|
+| `stamina_cost` | 15 | Stamina consumed per dodge |
+| `movement_tiles` | 1 | Tiles moved during dodge (dash) |
+| `evade_bonus` | 0.3 | Evasion chance increase (+30%) |
+| `duration_turns` | 1 | Turns the evade bonus lasts |
+| `blocks_recovery` | false | Does not interfere with weapon recovery |
+| `requires_clear_path` | true | Cannot dodge into walls/obstacles |
+
+### **Mechanics:**
+
+**Combat Dodge:**
+- **Main Action** (consumes turn's primary action)
+- Move **1 tile** in any direction (dash)
+- Gain **+30% evasion** against all attacks until end of turn
+- Costs **15 stamina**
+- Does **not** affect weapon recovery counter
+- Blocked if **immobilized** (stunned, rooted, etc.)
+
+**Overworld Dodge-Roll:**
+- Press **Space** for dodge-roll (not in combat)
+- **0.35s iFrames** (invincibility frames)
+- Moderate stamina cost
+- Short cooldown
+
+### **Example Scenario:**
+
+**Turn 1:**
+- Knight uses **Dodge** action
+- Moves 1 tile away from enemy
+- Costs 15 stamina
+- Gains +30% evade chance
+
+**Enemy Turn:**
+- Orc attacks Knight
+- Base hit chance: 70%
+- After dodge bonus: 70% - 30% = **40% hit chance**
+
+**Turn 2:**
+- Evade bonus expires
+- Knight can attack normally (recovery not affected)
+
+---
+
 ## ⚡ **Critical Hits**
 
 ### **Status:** Disabled (for MVP)

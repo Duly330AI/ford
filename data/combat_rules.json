@@ -46,5 +46,13 @@
     "stam_weight": 0.2,
     "weapon_ready_bonus": {"light": 10, "medium": 0, "heavy": -10}
   },
+  "dodge": {
+    "stamina_cost": 15,
+    "movement_tiles": 1,
+    "evade_bonus": 0.3,
+    "duration_turns": 1,
+    "blocks_recovery": false,
+    "requires_clear_path": true
+  },
   "crit": { "enabled": false, "chance": 0.02, "mult": 1.25 }
 }
