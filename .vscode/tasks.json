@@ -8,7 +8,10 @@
       "label": "poetry: install",
       "type": "shell",
       "command": "${workspaceFolder}/.venv/Scripts/poetry.exe",
-      "args": ["install", "--no-root"],
+      "args": [
+        "install",
+        "--no-root"
+      ],
       "group": "build",
       "presentation": {
         "echo": true,
@@ -24,7 +27,9 @@
       "label": "poetry: update",
       "type": "shell",
       "command": "${workspaceFolder}/.venv/Scripts/poetry.exe",
-      "args": ["update"],
+      "args": [
+        "update"
+      ],
       "group": "build",
       "presentation": {
         "echo": true,
@@ -39,7 +44,10 @@
       "label": "pytest: run all",
       "type": "shell",
       "command": "${workspaceFolder}/.venv/Scripts/pytest.exe",
-      "args": ["-v", "--tb=short"],
+      "args": [
+        "-v",
+        "--tb=short"
+      ],
       "group": {
         "kind": "test",
         "isDefault": true
@@ -52,7 +60,10 @@
       },
       "problemMatcher": {
         "owner": "python",
-        "fileLocation": ["relative", "${workspaceFolder}"],
+        "fileLocation": [
+          "relative",
+          "${workspaceFolder}"
+        ],
         "pattern": {
           "regexp": "^(.*):(\\d+): (.*)$",
           "file": 1,
@@ -65,7 +76,12 @@
       "label": "pytest: run with coverage",
       "type": "shell",
       "command": "${workspaceFolder}/.venv/Scripts/pytest.exe",
-      "args": ["--cov=game", "--cov-report=html", "--cov-report=term", "-v"],
+      "args": [
+        "--cov=game",
+        "--cov-report=html",
+        "--cov-report=term",
+        "-v"
+      ],
       "group": "test",
       "presentation": {
         "echo": true,
@@ -79,7 +95,12 @@
       "label": "pytest: run fast (no slow tests)",
       "type": "shell",
       "command": "${workspaceFolder}/.venv/Scripts/pytest.exe",
-      "args": ["-v", "-m", "not slow", "--tb=short"],
+      "args": [
+        "-v",
+        "-m",
+        "not slow",
+        "--tb=short"
+      ],
       "group": "test",
       "presentation": {
         "echo": true,
@@ -94,7 +115,10 @@
       "label": "ruff: check all",
       "type": "shell",
       "command": "${workspaceFolder}/.venv/Scripts/ruff.exe",
-      "args": ["check", "."],
+      "args": [
+        "check",
+        "."
+      ],
       "group": "build",
       "presentation": {
         "echo": true,
@@ -104,7 +128,10 @@
       },
       "problemMatcher": {
         "owner": "python",
-        "fileLocation": ["relative", "${workspaceFolder}"],
+        "fileLocation": [
+          "relative",
+          "${workspaceFolder}"
+        ],
         "pattern": {
           "regexp": "^(.*):(\\d+):(\\d+): (\\w+): (.*)$",
           "file": 1,
@@ -119,7 +146,11 @@
       "label": "ruff: fix all",
       "type": "shell",
       "command": "${workspaceFolder}/.venv/Scripts/ruff.exe",
-      "args": ["check", ".", "--fix"],
+      "args": [
+        "check",
+        ".",
+        "--fix"
+      ],
       "group": "build",
       "presentation": {
         "echo": true,
@@ -133,7 +164,9 @@
       "label": "black: format all",
       "type": "shell",
       "command": "${workspaceFolder}/.venv/Scripts/black.exe",
-      "args": ["."],
+      "args": [
+        "."
+      ],
       "group": "build",
       "presentation": {
         "echo": true,
@@ -148,7 +181,10 @@
       "label": "pre-commit: run all",
       "type": "shell",
       "command": "${workspaceFolder}/.venv/Scripts/pre-commit.exe",
-      "args": ["run", "--all-files"],
+      "args": [
+        "run",
+        "--all-files"
+      ],
       "group": "build",
       "presentation": {
         "echo": true,
@@ -162,7 +198,9 @@
       "label": "pre-commit: install hooks",
       "type": "shell",
       "command": "${workspaceFolder}/.venv/Scripts/pre-commit.exe",
-      "args": ["install"],
+      "args": [
+        "install"
+      ],
       "group": "none",
       "presentation": {
         "echo": true,
@@ -177,7 +215,10 @@
       "label": "run: FORD game",
       "type": "shell",
       "command": "${workspaceFolder}/.venv/Scripts/python.exe",
-      "args": ["-m", "game.main"],
+      "args": [
+        "-m",
+        "game.main"
+      ],
       "group": {
         "kind": "build",
         "isDefault": true
@@ -193,7 +234,11 @@
     // === COMPOUND TASKS ===
     {
       "label": "lint: all (ruff + black + pre-commit)",
-      "dependsOn": ["ruff: check all", "black: format all", "pre-commit: run all"],
+      "dependsOn": [
+        "ruff: check all",
+        "black: format all",
+        "pre-commit: run all"
+      ],
       "dependsOrder": "sequence",
       "group": "build",
       "presentation": {
@@ -206,7 +251,10 @@
     },
     {
       "label": "test: full suite (lint + test + coverage)",
-      "dependsOn": ["ruff: check all", "pytest: run with coverage"],
+      "dependsOn": [
+        "ruff: check all",
+        "pytest: run with coverage"
+      ],
       "dependsOrder": "sequence",
       "group": "test",
       "presentation": {

@@ -20,9 +20,9 @@ Ziel: Eine **klare, datengetriebene** UI, die sich **an Ultima Online anlehnt**,
 ## 2) HUD (Overworld & Kampf)
 
 ### 2.1 Statusleisten (oben links, stapelbar)
-- **HP / Mana / Stamina / Weight** (Balken + Zahlen).  
-  - HP = `current / max` (aus Stats).  
-  - Mana, Stamina analog.  
+- **HP / Mana / Stamina / Weight** (Balken + Zahlen).
+  - HP = `current / max` (aus Stats).
+  - Mana, Stamina analog.
   - **Gewicht**: `carried / max` (aus Items + STR‑Mod).
 - **Buff/Debuff‑Pips**: Icons mit Restdauer (Runden oder Sekunden). Tooltip: Quelle, Effekt, Formelhinweis.
 
@@ -31,8 +31,8 @@ Ziel: Eine **klare, datengetriebene** UI, die sich **an Ultima Online anlehnt**,
 - **Kontext‑Slot**: zeigt letzte „Use‑Target“‑Aktion (z. B. Bandage, Entschärfen).
 
 ### 2.3 Journal / Combat‑Log (links unten, einklappbar)
-- Meldungen im UO‑Stil:  
-  - „**+0.1** in *Tinkering* (57.3)“  
+- Meldungen im UO‑Stil:
+  - „**+0.1** in *Tinkering* (57.3)“
   - „You miss the orc.“ / „Parried!“ / „Trap disarmed.“
 - Filter: **All / System / Loot / Craft / Combat / Quests**.
 
@@ -84,7 +84,7 @@ Zweiteilung: **Paperdoll** links, **Werte‑Tabs** rechts.
 
 ## 5) Inventar & Taschen – Taste **I**
 Zwei Modi (umschaltbar):
-1. **Grid‑Inventar** (komfortabel, tooltipreich).  
+1. **Grid‑Inventar** (komfortabel, tooltipreich).
 2. **UO‑Freeform‑Container** als Skin („Gump‑Look“), Items frei verschiebbar; Snap‑Raster optional.
 
 ### 5.1 Backpack (Standard)
@@ -100,39 +100,39 @@ Zwei Modi (umschaltbar):
   - **Respawn‑Timer** Anzeige (wenn bekannt).
 
 ### 5.3 Item‑Tooltip (datengetrieben)
-- **Name**, **Seltenheit**, **Gewicht**, **Wert**.  
-- **Waffentyp** (slash/pierce/blunt), **Basis‑Schaden**, **Base‑Delay‑Klasse** (light/medium/heavy), erwartete **Recovery** (mit DEX).  
-- **Resist‑Werte** (bei Rüstungen), **Durability** (z. B. 36/60).  
-- **Benötigte Skills** (z. B. Magierstab → „Magery 30+“).  
+- **Name**, **Seltenheit**, **Gewicht**, **Wert**.
+- **Waffentyp** (slash/pierce/blunt), **Basis‑Schaden**, **Base‑Delay‑Klasse** (light/medium/heavy), erwartete **Recovery** (mit DEX).
+- **Resist‑Werte** (bei Rüstungen), **Durability** (z. B. 36/60).
+- **Benötigte Skills** (z. B. Magierstab → „Magery 30+“).
 - **Set‑/Unique‑Marker** (später für Named Items).
 
 ---
 
 ## 6) Spellbook – Taste **L** (oder **B**)
-- Reiter pro Schule (z. B. **Circle 1–8** oder thematisch).  
-- Liste der Sprüche, Kosten (Mana + Reagenzien), **Cast‑Runden** (mit INT/Meditation‑Reduktion), Reichweite, Effekte.  
+- Reiter pro Schule (z. B. **Circle 1–8** oder thematisch).
+- Liste der Sprüche, Kosten (Mana + Reagenzien), **Cast‑Runden** (mit INT/Meditation‑Reduktion), Reichweite, Effekte.
 - **Drag‑&‑Drop** auf Hotbar; Rechtsklick: „Als Macro“ (Auto‑Target‑Self/Last).
 
 ---
 
 ## 7) Crafting – Taste **J**
 - **Rezept‑Liste** links (Filter: Kategorie, Station, Skill‑Req).
-- **Detail‑Panel** rechts: Inputs (mit Inventar‑Zahl), Tool/Station, **Erfolgs‑Wkeit** (Sweet‑Spot‑Tooltip!), Zeit in Sekunden/Runden, **XP‑Hinweis** (Gain‑Chance).  
+- **Detail‑Panel** rechts: Inputs (mit Inventar‑Zahl), Tool/Station, **Erfolgs‑Wkeit** (Sweet‑Spot‑Tooltip!), Zeit in Sekunden/Runden, **XP‑Hinweis** (Gain‑Chance).
 - **Queue** mit Prioritäten; im Kampf **gesperrt** (läuft in Rundenzeit weiter, UI nur Hinweis).
 
 ---
 
 ## 8) Händler & Handel
-- Kauf/Verkauf‑Tabelle; dynamische Preise (Economy‑Hooks).  
-- **Schnellverkauf** per Ctrl+Click (mit Bestätigungs‑Guard ab „rare“).  
+- Kauf/Verkauf‑Tabelle; dynamische Preise (Economy‑Hooks).
+- **Schnellverkauf** per Ctrl+Click (mit Bestätigungs‑Guard ab „rare“).
 - **Favoriten** & **Wunschliste** (zeigt Marker, wenn Container/Händler Item führt).
 
 ---
 
 ## 9) Interaktion & Zielsystem
-- **Double‑Click** = Benutzen/Interagieren (UO‑like).  
-- **Rechtsklick** = Kontextmenü (Use, Equip, Compare, Split, Drop, Lockpick, Disarm).  
-- **Use‑Target‑Cursor** (klassischer UO‑Cursor) für Items/Spells/Skills, mit **ESC** abbrechbar.  
+- **Double‑Click** = Benutzen/Interagieren (UO‑like).
+- **Rechtsklick** = Kontextmenü (Use, Equip, Compare, Split, Drop, Lockpick, Disarm).
+- **Use‑Target‑Cursor** (klassischer UO‑Cursor) für Items/Spells/Skills, mit **ESC** abbrechbar.
 - **Hover** zeigt LOS & Reichweite (Kampf) sowie Traps/Lock‑Hints (mit Detect Hidden).
 
 ---
@@ -140,22 +140,22 @@ Zwei Modi (umschaltbar):
 ## 10) Shortcuts (QWERTZ Default)
 - **C** Charakter, **K** Skills, **I** Inventar, **M** Map, **J** Journal / **G** Crafting, **B** Spellbook.
 - **Leertaste**: Overworld **Dodge‑Roll** / im Kampf **Dodge‑Aktion** (Hauptaktion).
-- **R** „Letzte Aktion“ wiederholen (z. B. Bandage auf dich selbst).  
-- **Tab** Zielwechsel, **Shift** Multi‑Select/Stack‑Split, **Ctrl** Schnell‑Transfer.  
+- **R** „Letzte Aktion“ wiederholen (z. B. Bandage auf dich selbst).
+- **Tab** Zielwechsel, **Shift** Multi‑Select/Stack‑Split, **Ctrl** Schnell‑Transfer.
 - **F1–F12**: Makros/Hotbar‑Reiter. **Alt**: Tooltips erweitern (Formeldetails).
 
 ---
 
 ## 11) Fenster‑Management
-- **Andocken**, **Größe** & **Transparenz** je Fenster speicherbar (pro Profil).  
-- **Layouts**: Overworld, Kampf, Handwerk (3 Profile, per Taste umschaltbar).  
+- **Andocken**, **Größe** & **Transparenz** je Fenster speicherbar (pro Profil).
+- **Layouts**: Overworld, Kampf, Handwerk (3 Profile, per Taste umschaltbar).
 - **Reset** & **UI‑Skalierung** (80–150%).
 
 ---
 
 ## 12) Barrierefreiheit & Optionen
-- **Schriftgröße** (S/M/L/XL), **Farbenblind‑Profile**, **Kontrast‑Boost**.  
-- **Beschriftete Icons** (Labels), **Tooltips zeitverzögert**.  
+- **Schriftgröße** (S/M/L/XL), **Farbenblind‑Profile**, **Kontrast‑Boost**.
+- **Beschriftete Icons** (Labels), **Tooltips zeitverzögert**.
 - **Tastatur‑Remapping**, **Controller** (Radial‑Menüs für Kontext/Hotbar).
 
 ---
@@ -163,36 +163,36 @@ Zwei Modi (umschaltbar):
 ## 13) Daten‑Bindings & Events (Engine‑Hooks)
 
 ### 13.1 Bindings (Beispiele)
-- `ui.hp.value ← stats.hp.current`  
-- `ui.resists.fire ← derivedResists.fire`  
-- `ui.skills["swords"].value ← skills.swords.value` (0.1‑Auflösung)  
-- `ui.weapon.recoveryPred ← fRecovery(DEX, weapon.base_delay, combat_rules)`  
+- `ui.hp.value ← stats.hp.current`
+- `ui.resists.fire ← derivedResists.fire`
+- `ui.skills["swords"].value ← skills.swords.value` (0.1‑Auflösung)
+- `ui.weapon.recoveryPred ← fRecovery(DEX, weapon.base_delay, combat_rules)`
 - `ui.inventory.weight ← inventory.totalWeight()`
 
 ### 13.2 Event‑Bus (Namen vorgeschlagen)
-- `SKILL_GAIN` { id, delta:0.1, newValue }  
-- `STAT_GAIN` { id, delta:0.1, newValue }  
-- `HIT_RESULT` { target, hit:boolean, parried:boolean, damage }  
-- `LOOT_ADDED` { containerId, items:[…] }  
-- `CRAFT_DONE` { recipeId, outputs }  
-- `COMBAT_TURN_START` { actorId, round } / `COMBAT_TURN_END`  
-- `UI_TOAST` { textKey, params }  
+- `SKILL_GAIN` { id, delta:0.1, newValue }
+- `STAT_GAIN` { id, delta:0.1, newValue }
+- `HIT_RESULT` { target, hit:boolean, parried:boolean, damage }
+- `LOOT_ADDED` { containerId, items:[…] }
+- `CRAFT_DONE` { recipeId, outputs }
+- `COMBAT_TURN_START` { actorId, round } / `COMBAT_TURN_END`
+- `UI_TOAST` { textKey, params }
 - `CONTAINER_RESPAWNED` { placementId }
 
 ---
 
 ## 14) Fehler‑ & Zustandsmeldungen
-- **Inventar voll** (zeigt `+x/x kg`, rote Zahl).  
-- **Keine Munition** (Bogen‑Icon blinkt).  
-- **Recovery aktiv** (Angriff‑Button grau + Tooltip „Erholung: 1 Runde“).  
-- **Skill gelockt** (Pfeil‑Icon wechselt auf „■“).  
+- **Inventar voll** (zeigt `+x/x kg`, rote Zahl).
+- **Keine Munition** (Bogen‑Icon blinkt).
+- **Recovery aktiv** (Angriff‑Button grau + Tooltip „Erholung: 1 Runde“).
+- **Skill gelockt** (Pfeil‑Icon wechselt auf „■“).
 - **Diebstahlwarnung** (Ownership).
 
 ---
 
 ## 15) Beispiel‑Wireframes (ASCII)
 
-**Paperdoll & Werte**  
+**Paperdoll & Werte**
 ```
 +----------------------+  +----------------------------------+
 |   [ Kopf ]           |  | Attribute   STR 62/100   ▲       |
@@ -204,7 +204,7 @@ Zwei Modi (umschaltbar):
 +----------------------+  +----------------------------------+
 ```
 
-**Skills**  
+**Skills**
 ```
 +---------------------------+  +------------------------------+
 | Suche...  [Combat][Craft] |  | SWORDS  62.7  ▲ (Linear)     |
@@ -215,7 +215,7 @@ Zwei Modi (umschaltbar):
 +---------------------------+  +------------------------------+
 ```
 
-**Runden‑HUD**  
+**Runden‑HUD**
 ```
 [ Orc ]-[ You ]-[ Skeleton ]-[ Archer ]-[ Ogre ]
          ^ Dein Zug   Recovery: 1 Runde  Dodge: verfügbar
@@ -225,26 +225,26 @@ Zwei Modi (umschaltbar):
 
 ## 16) Umsetzungshinweise (Frontend)
 
-- **Technik**: React/TypeScript o.ä.; UI‑State via Zustand/Recoil/Redux; Event‑Bus (mittels mittlerem Pub/Sub).  
-- **Perf**: Batched Updates (requestAnimationFrame), Memoization für Listen (Skills/Inventar).  
-- **Tooltip‑Engine**: Markdown‑fähig, Lazy Load (bei Hover).  
+- **Technik**: React/TypeScript o.ä.; UI‑State via Zustand/Recoil/Redux; Event‑Bus (mittels mittlerem Pub/Sub).
+- **Perf**: Batched Updates (requestAnimationFrame), Memoization für Listen (Skills/Inventar).
+- **Tooltip‑Engine**: Markdown‑fähig, Lazy Load (bei Hover).
 - **Persistenz**: Layout & Hotkeys in `ui_profile.json` (pro Save Slot).
 
 ---
 
 ## 17) Mapping zu Dateien
 - `skills.json` → Liste, Werte, **Lock‑Status** (Up/Down/Locked; Flag per Save), `xp_curve`‑Icon.
-- `progression_rules.json` → Tooltips zu Sweet‑Spot/Slowdown; Journal‑Meldungen (0.1).  
-- `combat_rules.json` → HitChance‑Tooltip, Recovery/Move‑Anzeige.  
-- `items.json` → Tooltips (Schaden/Delay/Resists/Weight/Ammo/Regs).  
-- `ai/*.json` → Minimap/KI‑Pings (Aggro‑Radius, Call‑for‑Help).  
+- `progression_rules.json` → Tooltips zu Sweet‑Spot/Slowdown; Journal‑Meldungen (0.1).
+- `combat_rules.json` → HitChance‑Tooltip, Recovery/Move‑Anzeige.
+- `items.json` → Tooltips (Schaden/Delay/Resists/Weight/Ammo/Regs).
+- `ai/*.json` → Minimap/KI‑Pings (Aggro‑Radius, Call‑for‑Help).
 - `usables/*.json` → Container/Trap‑Icons, Lockpick/Disarm‑Buttons.
 
 ---
 
 ## 18) QA‑Checkliste
-- 0.1‑Skillgain wird **immer** korrekt angezeigt (+Journal).  
-- Skill‑Locks verhindern Anstieg/Senkung wie vorgesehen.  
-- Recovery blockiert **nur** Attacke, nicht Move/Use (UI spiegelt).  
-- Split‑Stacks, Schnell‑Transfer, Hotbar‑Drag funktionieren.  
+- 0.1‑Skillgain wird **immer** korrekt angezeigt (+Journal).
+- Skill‑Locks verhindern Anstieg/Senkung wie vorgesehen.
+- Recovery blockiert **nur** Attacke, nicht Move/Use (UI spiegelt).
+- Split‑Stacks, Schnell‑Transfer, Hotbar‑Drag funktionieren.
 - Container‑Respawn‑Timer konsistent (Save/Load).

@@ -133,17 +133,17 @@ Score(target) =
    - `Dodge` (wenn stark bedroht, s. `combat_rules.json.dodge`)
    - `UseItem` (Trank, Scroll), `Flee` (unter HP‑Schwelle), `Taunt` (Aggro‑Manipulation)
 
-4. **Aktion ausführen** → Engine nutzt `combat_rules.json` (Hit/Parry/Schaden/Recovery).  
+4. **Aktion ausführen** → Engine nutzt `combat_rules.json` (Hit/Parry/Schaden/Recovery).
 5. **Koordination**: Falls konfiguriert, **Events** senden (z. B. „Guard me!“, „Focus Target!“).
 
 ---
 
 ## 6) Bewegung & Pfadfindung
 
-- **Grid‑Pfad**: A* (Manhattan/Diagonal), Kosten: Geländetyp + Gefahren (Feuer/Spikes).  
-- **Leash**: Distanz zur Spawn‑Zone begrenzen, sonst **Leash‑State** (Rückzug).  
-- **Kiten** (Ranged): Zielkreis [min,max] Distanz anstreben, Pfad am Ziel vorbei.  
-- **Flanken**: Suche Position mit gleicher Distanz aber **besserem Winkel** (falls Richtung relevant).  
+- **Grid‑Pfad**: A* (Manhattan/Diagonal), Kosten: Geländetyp + Gefahren (Feuer/Spikes).
+- **Leash**: Distanz zur Spawn‑Zone begrenzen, sonst **Leash‑State** (Rückzug).
+- **Kiten** (Ranged): Zielkreis [min,max] Distanz anstreben, Pfad am Ziel vorbei.
+- **Flanken**: Suche Position mit gleicher Distanz aber **besserem Winkel** (falls Richtung relevant).
 - **Kollisionsvermeidung**: einfache **Reservation** pro Tile für die aktuelle Runde.
 
 ---

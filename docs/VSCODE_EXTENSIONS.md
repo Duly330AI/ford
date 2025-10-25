@@ -3,6 +3,7 @@
 ## ✅ Essential (Already Installed)
 
 ### Python Development
+
 - ✅ `ms-python.python` - Python language support
 - ✅ `ms-python.vscode-pylance` - Fast type checking & IntelliSense
 - ✅ `ms-python.black-formatter` - Black code formatter
@@ -11,33 +12,41 @@
 - ✅ `ms-python.vscode-python-envs` - Environment management
 
 ### Testing & Quality
+
 - ✅ `ms-toolsai.jupyter` - Jupyter notebook support
 - ✅ `usernamehw.errorlens` - Inline error display
 - ✅ `visualstudioexptteam.vscodeintellicode` - AI-assisted IntelliSense
 
 ### Copilot & AI
+
 - ✅ `github.copilot` - AI coding assistant
 - ✅ `github.copilot-chat` - Chat interface for Copilot
+- ✅ `openai.chatgpt` - **Codex** (ChatGPT/Genie AI for automated task generation)
 
 ### Git
+
 - ✅ `eamodio.gitlens` - Git supercharged
 - ✅ `mhutchie.git-graph` - Visual git history
 - ✅ `github.vscode-github-actions` - GitHub Actions workflows
 
 ### Documentation
+
 - ✅ `davidanson.vscode-markdownlint` - Markdown linting
 - ✅ `gruntfuggly.todo-tree` - TODO tracking across project
 
 ### Code Quality
+
 - ✅ `editorconfig.editorconfig` - EditorConfig support
 - ✅ `aaron-bond.better-comments` - Highlighted comments
 
 ### Data Files
+
 - ✅ `redhat.vscode-yaml` - YAML language support
 - ✅ `tamasfe.even-better-toml` - TOML language support
 - ✅ `mechatroner.rainbow-csv` - CSV file viewer
 
 ### Utilities
+
 - ✅ `christian-kohler.path-intellisense` - Path autocomplete
 - ✅ `ms-vscode.powershell` - PowerShell support
 - ✅ `pkief.material-icon-theme` - Material icon theme
@@ -47,6 +56,7 @@
 ## 🆕 Recommended to Install
 
 ### Testing
+
 ```bash
 # Test Explorer for better test visualization
 code --install-extension hbenl.vscode-test-explorer
@@ -54,6 +64,7 @@ code --install-extension littlefoxteam.vscode-python-test-adapter
 ```
 
 ### Coverage
+
 ```bash
 # Coverage visualization in gutters
 code --install-extension ryanluker.vscode-coverage-gutters
@@ -66,6 +77,7 @@ code --install-extension ryanluker.vscode-coverage-gutters
 These extensions are not needed for the FORD project:
 
 ### Web Development (not needed)
+
 ```bash
 code --uninstall-extension bradlc.vscode-tailwindcss
 code --uninstall-extension ecmel.vscode-html-css
@@ -79,6 +91,7 @@ code --uninstall-extension ms-playwright.playwright
 ```
 
 ### Database Tools (not primary focus)
+
 ```bash
 code --uninstall-extension ms-mssql.mssql
 code --uninstall-extension ms-mssql.data-workspace-vscode
@@ -89,6 +102,7 @@ code --uninstall-extension qwtel.sqlite-viewer
 ```
 
 ### Other Frameworks
+
 ```bash
 code --uninstall-extension geequlim.godot-tools
 code --uninstall-extension batisteo.vscode-django
@@ -96,6 +110,7 @@ code --uninstall-extension samuelcolvin.jinjahtml
 ```
 
 ### Containers (later if needed)
+
 ```bash
 code --uninstall-extension ms-azuretools.vscode-containers
 code --uninstall-extension ms-azuretools.vscode-docker
@@ -104,6 +119,7 @@ code --uninstall-extension p1c2u.docker-compose
 ```
 
 ### Azure/Remote (not needed)
+
 ```bash
 code --uninstall-extension ms-azuretools.vscode-azureresourcegroups
 code --uninstall-extension github.codespaces
@@ -114,6 +130,7 @@ code --uninstall-extension ms-vscode-remote.remote-wsl
 ```
 
 ### Redundant
+
 ```bash
 code --uninstall-extension openai.chatgpt  # Use Copilot Chat instead
 code --uninstall-extension mikestead.dotenv
@@ -127,6 +144,7 @@ code --uninstall-extension streetsidesoftware.code-spell-checker-german
 ## 🔧 Extension Settings
 
 All extension settings are configured in `.vscode/settings.json`:
+
 - Python interpreter: `.venv/Scripts/python.exe`
 - Formatter: Black (88 char line length)
 - Linter: Ruff (on save)
@@ -137,13 +155,12 @@ All extension settings are configured in `.vscode/settings.json`:
 
 ## 📦 Batch Commands
 
-### Uninstall all unnecessary extensions:
+### Uninstall all unnecessary extensions
+
 ```powershell
 # Copy this entire block and run in PowerShell
 $toRemove = @(
-  "bradlc.vscode-tailwindcss",
   "ecmel.vscode-html-css",
-  "christian-kohler.npm-intellisense",
   "dbaeumer.vscode-eslint",
   "esbenp.prettier-vscode",
   "vue.volar",
@@ -162,14 +179,9 @@ $toRemove = @(
   "ms-azuretools.vscode-containers",
   "ms-azuretools.vscode-docker",
   "ms-vscode-remote.remote-containers",
-  "p1c2u.docker-compose",
-  "ms-azuretools.vscode-azureresourcegroups",
-  "github.codespaces",
-  "github.remotehub",
   "ms-vscode.remote-repositories",
   "ms-vscode.azure-repos",
   "ms-vscode-remote.remote-wsl",
-  "openai.chatgpt",
   "mikestead.dotenv",
   "humao.rest-client",
   "streetsidesoftware.code-spell-checker",
@@ -184,7 +196,8 @@ foreach ($ext in $toRemove) {
 Write-Host "`n✅ Cleanup complete!" -ForegroundColor Green
 ```
 
-### Install recommended extensions:
+### Install recommended extensions
+
 ```powershell
 # Test Explorer
 code --install-extension hbenl.vscode-test-explorer
@@ -201,6 +214,7 @@ Write-Host "`n✅ Recommended extensions installed!" -ForegroundColor Green
 ## 🚀 Quick Verification
 
 After cleanup, verify your setup:
+
 ```powershell
 # List currently installed extensions
 code --list-extensions | Sort-Object
@@ -209,6 +223,7 @@ code --list-extensions | Sort-Object
 ```
 
 Expected core extensions:
+
 - Python ecosystem (6)
 - Testing & Jupyter (5)
 - Copilot & AI (2)

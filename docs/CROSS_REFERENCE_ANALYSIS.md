@@ -1,6 +1,6 @@
 # Cross-Reference Analysis: Documentation & Data Files vs. Tasks
 
-**Date:** 2025-10-24  
+**Date:** 2025-10-24
 **Purpose:** Systematic review of all 22 specified files (11 docs + 11 data JSONs) against all TASK-*.md files to identify missing cross-references and gaps in task coverage.
 
 ---
@@ -32,7 +32,7 @@
   - Overworld AI FSM (idle/patrol/chase/engage/leash)
   - Call-for-help & pack tactics
   - Boss phase logic
-  
+
 **Recommended Actions:**
 - Create **TASK-M2-AI** umbrella covering AI Design
 - Add subtasks: TASK-M2-AI-01 (Perception/Threat), TASK-M2-AI-02 (Utility Scoring), TASK-M2-AI-03 (Tactics Integration), TASK-M2-AI-04 (Factions/Diplomacy), TASK-M2-AI-05 (Blackboard), TASK-M2-AI-06 (Overworld FSM), TASK-M2-AI-07 (AI-vs-AI)
@@ -46,7 +46,7 @@
   - M1 tasks follow architecture (BSP, TileMap, Collision, Movement all separated)
   - M2-M5 tasks respect `systems/*` vs `scenes/*` separation
   - RNG streams mentioned (M5)
-  
+
 **Gaps:**
 - No explicit task validates "all systems/* have zero Arcade imports" (architectural test)
 - Missing: TASK-ARCH-01 "Validate architecture compliance (imports, separation, determinism tests)"
@@ -64,7 +64,7 @@
   - Dodge mechanics in combat (Space = dash + evade bonus)
   - Crafting pause during combat
   - Node respawn pause policy
-  
+
 **Recommended Actions:**
 - Add **TASK-M2-19**: Encounter Bubble & Escape Mechanics
 - Add **TASK-M2-20**: Dodge Action (Combat)
@@ -84,7 +84,7 @@
 - **Content:** Setup, coding standards, PR process, branch strategy, conventional commits
 - **Gaps:**
   - No explicit task for "Enforce CONTRIBUTING.md compliance in CI" (e.g., commit message linting)
-  
+
 **Recommended Actions:**
 - Optional: TASK-QUALITY-3 "Commit Message Linting (Conventional Commits)"
 
@@ -98,7 +98,7 @@
   - M3: Skills/Inventory/Loot align
   - M4: Crafting/Nodes align
   - M5: Save/Load policy aligns
-  
+
 **Gaps:**
 - Missing: **Stat-Affinities** system (STR/DEX/INT/STAM gains on skill gains) — hinted in GAMEPLAY.md but no dedicated task
 - Missing: **Anti-Macro** penalty implementation
@@ -113,7 +113,7 @@
 
 ### 7. **GAMEPLAY_ADDENDUM_UO.md** ⚠️ **CRITICAL GAP**
 - **Current Task Coverage:** NONE (completely unaddressed)
-- **Content:** 
+- **Content:**
   - **Skill progression mechanics** (0.1 increments, sweet-spot formula, slowdown, anti-macro, curves)
   - **Engagement & Zeit** (encounter bubble, rundenzeit=3s, escape conditions, flee action)
   - **Dodge-Roll** (overworld iFrames vs combat dash+evade)
@@ -165,7 +165,7 @@
   - Search action (main action in combat)
   - Movable/pickup containers
   - Reading (books/notes, lore_id)
-  
+
 **Missing Tasks (ENTIRE SYSTEM):**
 - Container system architecture
 - Lock/Key mechanics
@@ -214,7 +214,7 @@
   - Accessibility (font scaling, colorblind modes, contrast, labeled icons)
   - Data bindings & events
   - Error/state messages
-  
+
 **Missing Tasks (ENTIRE UI SYSTEM):**
 - UI architecture & framework setup
 - HUD components (all of them)

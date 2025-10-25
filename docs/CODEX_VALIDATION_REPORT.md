@@ -1,8 +1,8 @@
 # Codex Task Generation - Validation Report
 
-**Date:** 2025-10-25  
-**Executor:** Codex (gpt-4o)  
-**Reviewer:** GitHub Copilot  
+**Date:** 2025-10-25
+**Executor:** Codex (gpt-4o)
+**Reviewer:** GitHub Copilot
 **Duration:** ~2-3 hours (4 phases completed)
 
 ---
@@ -154,7 +154,7 @@ Sample chains verified:
 ### Content Quality ✅
 **Spot-checked:** 6 representative tasks
 
-- ✅ **TASK-M2-AI-01** (Perception): 
+- ✅ **TASK-M2-AI-01** (Perception):
   - Detailed notes on Bresenham LOS, threat memory with decay/caps, last-seen tracking
   - Cross-refs AI_DESIGN.md § 3, blackboard_keys.json
   - 3 acceptance criteria (LOS respects walls, threat decays deterministically, last-seen tracked)
@@ -237,7 +237,7 @@ Sample chains verified:
 ### After Codex Run
 - **Total Tasks:** 142 (95 + 47)
 - **Coverage:** 95% (22/22 files covered)
-- **Critical Gaps Closed:** 
+- **Critical Gaps Closed:**
   - ✅ AI_DESIGN.md: 7 tasks (M2-AI-01..07)
   - ✅ GAMEPLAY_ADDENDUM_UO.md: 7 tasks (M3-21..25, M2-19, M2-20)
   - ✅ USABLES_AND_CONTAINERS.md: 6 tasks (M3-EXT-01..06)
@@ -268,13 +268,13 @@ Sample chains verified:
 
 ## Success Metrics
 
-✅ **All 5 phases completed successfully**  
-✅ **47 tasks generated** (target: 47)  
-✅ **48 task files created** (3 umbrellas + 45 subtasks)  
-✅ **1 index updated** (docs/task.md)  
-✅ **Schema compliance: 100%** (all tasks follow template)  
-✅ **Cross-reference accuracy: 100%** (spot-checked 6 representative tasks)  
-✅ **DependsOn validity: 100%** (no cycles, logical chains)  
+✅ **All 5 phases completed successfully**
+✅ **47 tasks generated** (target: 47)
+✅ **48 task files created** (3 umbrellas + 45 subtasks)
+✅ **1 index updated** (docs/task.md)
+✅ **Schema compliance: 100%** (all tasks follow template)
+✅ **Cross-reference accuracy: 100%** (spot-checked 6 representative tasks)
+✅ **DependsOn validity: 100%** (no cycles, logical chains)
 ✅ **Coverage improvement: 45% → 95%** ✅
 
 ---
@@ -354,6 +354,6 @@ git push origin main
 
 ---
 
-**Report Generated:** 2025-10-25  
-**Validated By:** GitHub Copilot  
+**Report Generated:** 2025-10-25
+**Validated By:** GitHub Copilot
 **Status:** READY TO COMMIT ✅

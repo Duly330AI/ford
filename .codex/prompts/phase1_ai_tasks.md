@@ -39,7 +39,7 @@ You are creating **7 AI system tasks** for the FORD project based on `docs/CROSS
 - **Priority**: P0
 - **Artifacts**: Overview document
 - **DependsOn**: TASK-M2-06 (Overworld FSM), TASK-M2-09 (Combat KI basics)
-- **Notes**: 
+- **Notes**:
   - Reference **AI_DESIGN.md** sections 1-14
   - Explain Utility-AI approach (vs behavior trees)
   - List 7 subtasks (M2-AI-01..07)
@@ -204,7 +204,7 @@ You are creating **7 AI system tasks** for the FORD project based on `docs/CROSS
    - Link to **AI_DESIGN.md** sections explicitly (e.g., "Reference AI_DESIGN.md § 3")
    - Link to data files (e.g., "Load behaviors.json, tactics.json")
    - Link to existing tasks (e.g., "DependsOn: TASK-M2-06")
-7. **Artifacts**: 
+7. **Artifacts**:
    - Always include implementation file (`game/systems/ai_*.py`)
    - Always include test file (`tests/systems/test_ai_*.py`)
 8. **Acceptance criteria**: Concrete, testable, no vague language

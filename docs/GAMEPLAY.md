@@ -1,6 +1,6 @@
 # FORD • GAMEPLAY.md
 
-> Single-Player 2D-Dungeon-Crawler in **Python + Arcade**.  
+> Single-Player 2D-Dungeon-Crawler in **Python + Arcade**.
 > Kern: **Erkunden in Echtzeit**, **Kämpfe rundenbasiert**, **Progression über Skills**, **datengetrieben** (Items, Rezepte, Gegner, Regeln liegen in `data/*.json`).
 
 ---
@@ -46,7 +46,7 @@
 - **Tile-Größe**: 16×16 px (gerendert in **64 px** via integer Scale 4×, Pixel-Perfect).
 - **Prozedural** (BSP): Räume + Korridore, Wände kollidierbar.
 - **Sichtlinie (LOS)**: Bresenham-Ray. Wände/Light-Blocker stoppen Sicht & Projektile.
-- **Licht**: Spieler trägt Fackel (Radius konfigurierbar). Wände werfen Schatten.  
+- **Licht**: Spieler trägt Fackel (Radius konfigurierbar). Wände werfen Schatten.
   Licht ist **stilistisch**, **nicht** stealth-relevant (später optional).
 
 ---
@@ -202,10 +202,10 @@ Stat-Gain: Wenn Skill gained, separater kleiner Wurf auf die zugehörigen Stats 
 Beispiel: P(stat_gain_STR) = 0.05 * stats_affinity.STR, Cap/Tag in progression_rules.
 
 ### 5.3 Status-Effekte (Auszug)
-- **Bleed** (DoT phys), **Poison** (DoT poison): ticken pro Runde  
-- **Stun**: blockiert **1 Zug** (oder konfiguriert)  
-- **Guard**: +DEF für N Runden  
-- **Haste**: +1 Move-Tile pro Zug  
+- **Bleed** (DoT phys), **Poison** (DoT poison): ticken pro Runde
+- **Stun**: blockiert **1 Zug** (oder konfiguriert)
+- **Guard**: +DEF für N Runden
+- **Haste**: +1 Move-Tile pro Zug
 - **Evade**: erhöhte Ausweichchance
 
 Effekte definieren **apply/tick/expire** in `data/effects.json`. Stacking-Regeln: `none|add|refresh`.
@@ -219,24 +219,24 @@ Effekte definieren **apply/tick/expire** in `data/effects.json`. Stacking-Regeln
 
 ## 6) Bewegung & Kollision (Erkunden)
 
-- **Echtzeit** (`dt`-basiert), **8-Wege**.  
-- **Diagonal-Clamp**: diagonale Geschwindigkeit = orthogonal (normierter Input).  
-- **AABB-Kollision** gegen **Walls** mit separater Achsenauflösung → sauberes **Slide** an Wänden.  
+- **Echtzeit** (`dt`-basiert), **8-Wege**.
+- **Diagonal-Clamp**: diagonale Geschwindigkeit = orthogonal (normierter Input).
+- **AABB-Kollision** gegen **Walls** mit separater Achsenauflösung → sauberes **Slide** an Wänden.
 - **Dodge-Roll** (Overworld): kurze **iFrames**, verbraucht **Stamina**; Cooldown kurz.
 
 ---
 
 ## 7) Skills & Progression (usage-based)
 
-**Skills**: `swords, archery, magery, lockpicking, mining, woodcutting, alchemy, smithing, healing`  
-- **Anstieg durch Nutzung**:  
-  - Treffer mit Schwert → `swords` chance auf 0.1 Skill-Gain  
-  - Bogen → `archery` chance auf 0.1 Skill-Gain   (mit Pfeilverbrauch)  
-  - Zauber → `magery` chance auf 0.1 Skill-Gain    
-  - Trank nutzen → `healing` chance auf 0.1 Skill-Gain    
-  - Abbau/Ernte → `mining/woodcutting` chance auf 0.1 Skill-Gain  
+**Skills**: `swords, archery, magery, lockpicking, mining, woodcutting, alchemy, smithing, healing`
+- **Anstieg durch Nutzung**:
+  - Treffer mit Schwert → `swords` chance auf 0.1 Skill-Gain
+  - Bogen → `archery` chance auf 0.1 Skill-Gain   (mit Pfeilverbrauch)
+  - Zauber → `magery` chance auf 0.1 Skill-Gain
+  - Trank nutzen → `healing` chance auf 0.1 Skill-Gain
+  - Abbau/Ernte → `mining/woodcutting` chance auf 0.1 Skill-Gain
   - Crafting → `smithing/alchemy` chance auf 0.1 Skill-Gain
-- **Cap**: standard **100** (datengetrieben).  
+- **Cap**: standard **100** (datengetrieben).
 - **Boni**: je Skill (z. B. `+1% Trefferchance pro 0.1 swords-Skill`, `archery: +Crit`, `+1% Trefferchance pro 0.1 archery Skill`, `alchemy: Potency+`).
 
 Skill-Gain-Kurven in `data/skills.json` (z. B. polynomial `a * level^p` oder Tabellen).
@@ -245,11 +245,11 @@ Skill-Gain-Kurven in `data/skills.json` (z. B. polynomial `a * level^p` oder Tab
 
 ## 8) Berufe & Nodes
 
-**Nodes**: `ore`, `tree`, `herb`  
-- **Interaktion**: `E` in Nachbarschaft (1 Tile)  
-- **Tool-Check**: z. B. `pickaxe_stone` für `iron_ore_vein`  
-- **Dauer**: abhängig von Tier/Skill; **Skill** reduziert Zeit &/oder erhöht Yield  
-- **Yield**: feste Item-Range oder **Loot-Tabelle**  
+**Nodes**: `ore`, `tree`, `herb`
+- **Interaktion**: `E` in Nachbarschaft (1 Tile)
+- **Tool-Check**: z. B. `pickaxe_stone` für `iron_ore_vein`
+- **Dauer**: abhängig von Tier/Skill; **Skill** reduziert Zeit &/oder erhöht Yield
+- **Yield**: feste Item-Range oder **Loot-Tabelle**
 - **Depletion/Respawn**: Node verschwindet, respawnt nach `respawn_sec`
 
 Parameter in `data/nodes.json` + Balancing in `data/balance.json`.
@@ -258,10 +258,10 @@ Parameter in `data/nodes.json` + Balancing in `data/balance.json`.
 
 ## 9) Crafting & Stationen
 
-**Stationen**: `forge`, `alchemy`  
-- **Rezepte** in `data/recipes.json` (Inputs → Outputs, `time_sec`, Skill-Min, Tool-Anforderung, Erfolg/Crit, Fail-Returns)  
-- **Queue** pro Station, Jobs laufen in Overworld-Zeit (im Combat **pausiert**)  
-- **Ergebnis**: ins Inventar (oder World-Drop bei Platzmangel)  
+**Stationen**: `forge`, `alchemy`
+- **Rezepte** in `data/recipes.json` (Inputs → Outputs, `time_sec`, Skill-Min, Tool-Anforderung, Erfolg/Crit, Fail-Returns)
+- **Queue** pro Station, Jobs laufen in Overworld-Zeit (im Combat **pausiert**)
+- **Ergebnis**: ins Inventar (oder World-Drop bei Platzmangel)
 - **Skill-Hooks**: `smithing/alchemy` Boni (Crit-Chance, Output+)
 
 Optional: **Rezept-Freischaltung** über Drops/Scrolls.
@@ -271,47 +271,47 @@ Optional: **Rezept-Freischaltung** über Drops/Scrolls.
 ## 10) Items, Ausrüstung, Hotbar
 
 ### 10.1 Item-Typen
-- **Weapon** (Schadenstyp + Dice), **Armor** (DEF), **Consumable** (Use-Effekte),  
+- **Weapon** (Schadenstyp + Dice), **Armor** (DEF), **Consumable** (Use-Effekte),
   **Material**, **Currency (`gold`)**, **Ammo (`arrows`)**
 
 ### 10.2 Inventar
-- **Slots** (z. B. 30), Stacks (Default max 99), atomare Operationen (add/remove/split/merge/move).  
+- **Slots** (z. B. 30), Stacks (Default max 99), atomare Operationen (add/remove/split/merge/move).
 - Optional **Gewichtslimit** (Balance-Flag).
 
 ### 10.3 Equipment
-- Slots: **weapon**, **offhand**, **armor**, **accessory**  
+- Slots: **weapon**, **offhand**, **armor**, **accessory**
 - Stat-Aggregation: Basis + Equip + Effekte + Skills (reproduzierbar)
 
 ### 10.4 Hotbar (10)
-- **1–0** aktiviert Slot-Aktionen: Consumable nutzen, z. B. **Heiltrank**;  
-  für Waffen ggf. **Special** (später).  
+- **1–0** aktiviert Slot-Aktionen: Consumable nutzen, z. B. **Heiltrank**;
+  für Waffen ggf. **Special** (später).
 - Hotbar referenziert **Inventar-Slots** (kein Doppel-Item-Duplikat).
 
 ---
 
 ## 11) Loot & Raritäten
 
-**Tabellen** in `data/loot_tables.json` (Gewichte, Mengenbereiche, **nested tables**).  
-- Gegner ziehen bei Tod aus ihrer **Drop-Tabelle** (`monsters.json`).  
-- **Rarity**: `common|rare|epic` (Farb-Codierung in `data/ui.json`)  
+**Tabellen** in `data/loot_tables.json` (Gewichte, Mengenbereiche, **nested tables**).
+- Gegner ziehen bei Tod aus ihrer **Drop-Tabelle** (`monsters.json`).
+- **Rarity**: `common|rare|epic` (Farb-Codierung in `data/ui.json`)
 - **Gold**: als Item (stackbar), mit Komfort-APIs (`add_gold/remove_gold`).
 
 ---
 
 ## 12) Gegner
 
-**Archetypen** in `data/monsters.json`:  
-- **Melee** (HP/ATK hoch, kurze Reichweite, +1% Trefferchance pro 0.1 Wrestling Skill)  
-- **Ranged** (Abstand halten, Projektile)  
-- **Caster** (Spells, Mana, DoT/CC)  
+**Archetypen** in `data/monsters.json`:
+- **Melee** (HP/ATK hoch, kurze Reichweite, +1% Trefferchance pro 0.1 Wrestling Skill)
+- **Ranged** (Abstand halten, Projektile)
+- **Caster** (Spells, Mana, DoT/CC)
 Felder: `hp, atk, def, speed, resist, drop_table_id, spells?, projectile?`
 
 ---
 
 ## 13) Schwierigkeitsgrad & Balance
 
-- **Standardwerte** in `data/combat_rules.json` & `data/balance.json`.  
-- Balancing erfolgt **datengetrieben** (keine Hardcodes).  
+- **Standardwerte** in `data/combat_rules.json` & `data/balance.json`.
+- Balancing erfolgt **datengetrieben** (keine Hardcodes).
 - Beispiele:
   - **Kampf**: Crit 5%, Block 50% Reduktion, MinDamage 1
   - **Overworld**: Node-Respawn T1 Erz 120 s, Baum 180 s, Kraut 90 s
@@ -322,17 +322,17 @@ Felder: `hp, atk, def, speed, resist, drop_table_id, spells?, projectile?`
 
 ## 14) Audio & Feedback
 
-- **SFX**: Schritt, Schlag, Treffer, Pickup, Craft-Complete (Platzhalter).  
-- **Trefferfeedback**: Particles, Screen-Shake (Intensität nach Crit/Schaden).  
+- **SFX**: Schritt, Schlag, Treffer, Pickup, Craft-Complete (Platzhalter).
+- **Trefferfeedback**: Particles, Screen-Shake (Intensität nach Crit/Schaden).
 - **UI**: Farb-Codes für Rarity & Schadenstypen; Tooltips konsistent.
 
 ---
 
 ## 15) Speichern/Laden (Kurz)
 
-- **Slots**: `saves/slot-#/last.save`, `auto-###.save`, `quick.save`  
-- **Autosave**: Raumwechsel, Craft-Abschluss, Elite-Kill (gedrosselt)  
-- **Policy**: kein Save während aktiver Kampf-Auflösung/Animation (zwischen Zügen ok)  
+- **Slots**: `saves/slot-#/last.save`, `auto-###.save`, `quick.save`
+- **Autosave**: Raumwechsel, Craft-Abschluss, Elite-Kill (gedrosselt)
+- **Policy**: kein Save während aktiver Kampf-Auflösung/Animation (zwischen Zügen ok)
 - **Integrität**: SHA-256-Checksumme (Korruption → Recovery auf letzte gültige Datei)
 
 Details: `SAVELOAD.md` (wenn vorhanden) & `M5`-Tasks.
@@ -341,9 +341,9 @@ Details: `SAVELOAD.md` (wenn vorhanden) & `M5`-Tasks.
 
 ## 16) Accessibility & Optionen (geplant)
 
-- **Textgröße/UI-Skalierung**  
-- **Farbenblind-Modi** (alternative Rarity-Farben, Schadenstyp-Icons)  
-- **Key-Remap** (Input-JSON)  
+- **Textgröße/UI-Skalierung**
+- **Farbenblind-Modi** (alternative Rarity-Farben, Schadenstyp-Icons)
+- **Key-Remap** (Input-JSON)
 - **An-/Abschaltung von Screen-Shake** und Partikelgrenzen
 
 ---
@@ -358,15 +358,15 @@ Details: `SAVELOAD.md` (wenn vorhanden) & `M5`-Tasks.
   5. **Forge** nutzen: `iron_ingot` craften → **Iron Sword** herstellen & ausrüsten.
   6. Skills steigen automatisch mit (Swords/Mining/Smithing).
 
-- **Kampf-Hinweis**: **Position** ist König – Ecke/Engpass nutzen, Ranged auf Distanz halten.  
+- **Kampf-Hinweis**: **Position** ist König – Ecke/Engpass nutzen, Ranged auf Distanz halten.
 - **Ressourcen**: Pfeile nicht verschwenden; Caster sparen Mana für CC.
 
 ---
 
 ## 18) Debug/Dev (nur in Non-Release-Builds)
 
-- `F3` Overlay (FPS/Seed/Coords/Profiler)  
-- `R` reseeded Dungeon  
+- `F3` Overlay (FPS/Seed/Coords/Profiler)
+- `R` reseeded Dungeon
 - Optional: Log-Ausgabe von Würfen/Outcomes (Combat-Log)
 
 ---
@@ -390,48 +390,48 @@ Details: `SAVELOAD.md` (wenn vorhanden) & `M5`-Tasks.
 
 ## 20) Akzeptanzkriterien (Gameplay)
 
-- **Erkunden**: Begehbarer Dungeon, Kollisionen korrekt, Kamera Pixel-Perfect.  
-- **Engagement**: Sichtkontakt → Kampfmodus; Ende des Kampfes → Overworld.  
-- **Kampf**: Eine Runde mit Spieler + 3 Gegnern läuft stabil; invalid actions werden abgelehnt (Reichweite/LOS/Ammo).  
-- **Effekte**: DoT/Buffs/Stun wirken und ticken korrekt; Stun skippt genau 1 Zug (oder wie konfiguriert).  
-- **Loot**: Drop-Tabellen liefern erwartete Items/Mengen (stochastisch plausibel).  
-- **Berufe**: Node-Interaktion prüft Tools/Skill, respawned korrekt.  
-- **Crafting**: Queue/Reservierungen atomar; Erfolg/Fail/Crit gemäß Rezepten.  
-- **Hotbar**: Consumables nutzbar, Stacks sinken; Fehlpfade (leer) reagieren sauber.  
-- **Progression**: Skills steigen bei Nutzung; Boni greifen in Formeln.  
-- **Saves**: Quick/Auto/Manual arbeiten, Save-Policy wird respektiert.  
+- **Erkunden**: Begehbarer Dungeon, Kollisionen korrekt, Kamera Pixel-Perfect.
+- **Engagement**: Sichtkontakt → Kampfmodus; Ende des Kampfes → Overworld.
+- **Kampf**: Eine Runde mit Spieler + 3 Gegnern läuft stabil; invalid actions werden abgelehnt (Reichweite/LOS/Ammo).
+- **Effekte**: DoT/Buffs/Stun wirken und ticken korrekt; Stun skippt genau 1 Zug (oder wie konfiguriert).
+- **Loot**: Drop-Tabellen liefern erwartete Items/Mengen (stochastisch plausibel).
+- **Berufe**: Node-Interaktion prüft Tools/Skill, respawned korrekt.
+- **Crafting**: Queue/Reservierungen atomar; Erfolg/Fail/Crit gemäß Rezepten.
+- **Hotbar**: Consumables nutzbar, Stacks sinken; Fehlpfade (leer) reagieren sauber.
+- **Progression**: Skills steigen bei Nutzung; Boni greifen in Formeln.
+- **Saves**: Quick/Auto/Manual arbeiten, Save-Policy wird respektiert.
 - **Performance**: Zielwerte aus ARCHITECTURE/TOOLING eingehalten.
 
 ---
 
 ## 21) Glossar
 
-- **Intent**: beabsichtigte Aktion (Move/Attack/Shoot/Cast/Use/Wait).  
-- **Outcome**: Ergebnis-Event (Hit, Damage, ApplyEffect, Death, Drop).  
-- **LOS**: Line of Sight – Sichtlinie.  
-- **Kite-Distanz**: Abstand, den Ranged-Gegner halten wollen.  
-- **Node**: Sammelstelle (Erz/Baum/Kraut).  
-- **Station**: Crafting-Ort (Forge/Alchemy).  
+- **Intent**: beabsichtigte Aktion (Move/Attack/Shoot/Cast/Use/Wait).
+- **Outcome**: Ergebnis-Event (Hit, Damage, ApplyEffect, Death, Drop).
+- **LOS**: Line of Sight – Sichtlinie.
+- **Kite-Distanz**: Abstand, den Ranged-Gegner halten wollen.
+- **Node**: Sammelstelle (Erz/Baum/Kraut).
+- **Station**: Crafting-Ort (Forge/Alchemy).
 - **Rarity**: Seltenheit (common/rare/epic).
 
 ---
 
 ## 22) Roadmap-Hinweise (optional/future)
 
-- **Traits/Perks**: permanente Verbesserungen außerhalb Skills  
-- **Bossräume**: spezielle Muster/Mechaniken  
-- **Events**: Raumfallen, Schalter, Türen/Schlösser (`lockpicking`)  
-- **Handel**: NPC-Shop, Preise aus `value` Feldern der Items  
+- **Traits/Perks**: permanente Verbesserungen außerhalb Skills
+- **Bossräume**: spezielle Muster/Mechaniken
+- **Events**: Raumfallen, Schalter, Türen/Schlösser (`lockpicking`)
+- **Handel**: NPC-Shop, Preise aus `value` Feldern der Items
 - **Shader-Polish**: Vignette/Scanlines, UI-Animations
 
 ---
 
 ## 23) Verweise
 
-- **Architektur**: `ARCHITECTURE.md`  
-- **Tooling/CI**: `TOOLING.md`  
-- **Datenformate**: `data.md`  
-- **Tasks**: `task.md` + `tasks/M1..M5.md`  
+- **Architektur**: `ARCHITECTURE.md`
+- **Tooling/CI**: `TOOLING.md`
+- **Datenformate**: `data.md`
+- **Tasks**: `task.md` + `tasks/M1..M5.md`
 - **Save/Load**: `M5` + `SAVELOAD.md` (falls vorhanden)
 
 > Dieses Dokument ist **spielmechanische Referenz**. Änderungen an Regeln passieren **datengetrieben** (JSON) und werden hier kurz dokumentiert.

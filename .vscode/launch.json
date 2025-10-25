@@ -43,7 +43,11 @@
       "type": "debugpy",
       "request": "launch",
       "module": "pytest",
-      "args": ["${file}", "-v", "--tb=short"],
+      "args": [
+        "${file}",
+        "-v",
+        "--tb=short"
+      ],
       "console": "integratedTerminal",
       "cwd": "${workspaceFolder}",
       "env": {
@@ -59,7 +63,10 @@
       "type": "debugpy",
       "request": "launch",
       "module": "pytest",
-      "args": ["-v", "--tb=short"],
+      "args": [
+        "-v",
+        "--tb=short"
+      ],
       "console": "integratedTerminal",
       "cwd": "${workspaceFolder}",
       "env": {
@@ -75,7 +82,12 @@
       "type": "debugpy",
       "request": "launch",
       "module": "pytest",
-      "args": ["-v", "-m", "not slow", "--tb=short"],
+      "args": [
+        "-v",
+        "-m",
+        "not slow",
+        "--tb=short"
+      ],
       "console": "integratedTerminal",
       "cwd": "${workspaceFolder}",
       "env": {
@@ -91,7 +103,12 @@
       "type": "debugpy",
       "request": "launch",
       "module": "pytest",
-      "args": ["--cov=game", "--cov-report=html", "--cov-report=term", "-v"],
+      "args": [
+        "--cov=game",
+        "--cov-report=html",
+        "--cov-report=term",
+        "-v"
+      ],
       "console": "integratedTerminal",
       "cwd": "${workspaceFolder}",
       "env": {

@@ -3,12 +3,10 @@
   // FORD PROJECT - VS Code Settings
   // Python 2D Dungeon Crawler (Arcade + Pytest + Copilot Agents)
   // ===================================================================
-
   // === PYTHON ===
   "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
   "python.terminal.activateEnvironment": true,
   "python.terminal.activateEnvInCurrentTerminal": true,
-
   // === PYLANCE (Type Checking) ===
   "python.analysis.typeCheckingMode": "standard",
   "python.analysis.diagnosticMode": "workspace",
@@ -18,7 +16,6 @@
   "python.analysis.inlayHints.variableTypes": true,
   "python.analysis.inlayHints.pytestParameters": true,
   "python.analysis.aiHoverSummaries": true,
-
   // === FORMATTING (Black + Ruff) ===
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter",
@@ -27,15 +24,18 @@
       "source.organizeImports": "explicit",
       "source.fixAll": "explicit"
     },
-    "editor.rulers": [88, 120]
+    "editor.rulers": [
+      88,
+      120
+    ]
   },
-  "black-formatter.args": ["--line-length=88"],
-
+  "black-formatter.args": [
+    "--line-length=88"
+  ],
   // === LINTING (Ruff) ===
   "ruff.enable": true,
   "ruff.lint.enable": true,
   "ruff.format.enable": false,
-
   // === TESTING (Pytest) ===
   "python.testing.pytestEnabled": true,
   "python.testing.unittestEnabled": false,
@@ -45,7 +45,6 @@
     "--tb=short"
   ],
   "python.testing.autoTestDiscoverOnSaveEnabled": true,
-
   // === JUPYTER NOTEBOOKS ===
   "notebook.output.textLineLimit": 500,
   "notebook.formatOnSave.enabled": true,
@@ -53,7 +52,6 @@
     "source.organizeImports": "explicit"
   },
   "jupyter.askForKernelRestart": false,
-
   // === FILES ===
   "files.associations": {
     "*.tmx": "xml",
@@ -79,7 +77,6 @@
     "**/.mypy_cache/**": true,
     "**/htmlcov/**": true
   },
-
   // === SEARCH ===
   "search.exclude": {
     "**/__pycache__": true,
@@ -90,11 +87,13 @@
     "**/poetry.lock": true,
     "**/*.egg-info": true
   },
-
   // === EDITOR ===
   "editor.formatOnSave": true,
   "editor.formatOnPaste": false,
-  "editor.rulers": [88, 120],
+  "editor.rulers": [
+    88,
+    120
+  ],
   "editor.minimap.enabled": true,
   "editor.minimap.maxColumn": 120,
   "editor.bracketPairColorization.enabled": true,
@@ -111,7 +110,6 @@
   "editor.insertSpaces": true,
   "editor.trimAutoWhitespace": true,
   "editor.wordWrap": "off",
-
   // === ERROR LENS (Inline Errors) ===
   "errorLens.enabled": true,
   "errorLens.enabledDiagnosticLevels": [
@@ -121,14 +119,12 @@
   "errorLens.excludeBySource": [
     "cSpell"
   ],
-
   // === GITLENS ===
   "gitlens.ai.model": "vscode",
   "gitlens.ai.vscode.model": "copilot:gpt-4.1",
   "gitlens.codeLens.enabled": true,
   "gitlens.currentLine.enabled": true,
   "gitlens.hovers.enabled": true,
-
   // === TODO TREE ===
   "todo-tree.highlights.enabled": true,
   "todo-tree.general.tags": [
@@ -176,20 +172,20 @@
       "background": "#00FF00"
     }
   },
-
   // === MARKDOWN ===
   "[markdown]": {
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
     "editor.formatOnSave": true,
     "editor.wordWrap": "on",
-    "editor.rulers": [120]
+    "editor.rulers": [
+      120
+    ]
   },
   "markdownlint.config": {
     "MD013": false,
     "MD033": false,
     "MD041": false
   },
-
   // === YAML (Data Files) ===
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml",
@@ -200,13 +196,11 @@
   "yaml.schemas": {
     "https://json.schemastore.org/github-workflow.json": ".github/workflows/*.yml"
   },
-
   // === TOML (pyproject.toml) ===
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml",
     "editor.formatOnSave": true
   },
-
   // === JSON/JSONC ===
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features",
@@ -218,7 +212,6 @@
     "editor.formatOnSave": true,
     "editor.tabSize": 2
   },
-
   // === TERMINAL ===
   "terminal.integrated.defaultProfile.windows": "PowerShell",
   "terminal.integrated.env.windows": {
@@ -226,7 +219,6 @@
   },
   "terminal.integrated.cwd": "${workspaceFolder}",
   "terminal.integrated.scrollback": 10000,
-
   // === COPILOT AGENTS (CRITICAL FOR LLM WORKFLOW) ===
   "github.copilot.enable": {
     "*": true,
@@ -239,7 +231,6 @@
   },
   "github.copilot.chat.summarizeAgentConversationHistory.enabled": false,
   "github.copilot.nextEditSuggestions.enabled": true,
-
   // === CHAT TOOLS (Agent Workflows) ===
   "chat.agent.maxRequests": 1000,
   "chat.emptyChatState.enabled": false,
@@ -261,7 +252,6 @@
     "**/*.md": false,
     "**/*.py": false
   },
-
   // === BETTER COMMENTS ===
   "better-comments.tags": [
     {
@@ -310,7 +300,6 @@
       "italic": false
     }
   ],
-
   // === COVERAGE GUTTERS ===
   "coverage-gutters.coverageFileNames": [
     "coverage.xml",
@@ -320,14 +309,11 @@
   ],
   "coverage-gutters.showLineCoverage": true,
   "coverage-gutters.showRulerCoverage": true,
-
   // === SPELL CHECKER (Disabled per user preference) ===
   "cSpell.enabled": false,
-
   // === TELEMETRY ===
   "redhat.telemetry.enabled": false,
   "telemetry.telemetryLevel": "off",
-
   // === MISC ===
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "Default Dark Modern",
@@ -337,7 +323,6 @@
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "security.workspace.trust.untrustedFiles": "open",
-
   // === PYTHON INLAY HINTS (Show Type Info) ===
   "python.analysis.inlayHints.callArgumentNames": "partial"
 }

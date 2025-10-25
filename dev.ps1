@@ -67,25 +67,25 @@ function install-hooks {
 function dev-status {
     Write-Host "`n📦 FORD Development Environment Status" -ForegroundColor Cyan
     Write-Host "=======================================" -ForegroundColor Cyan
-    
+
     Write-Host "`nPoetry: " -NoNewline
     & .\.venv\Scripts\poetry.exe --version
-    
+
     Write-Host "Pre-commit: " -NoNewline
     & .\.venv\Scripts\pre-commit.exe --version
-    
+
     Write-Host "Python: " -NoNewline
     & .\.venv\Scripts\python.exe --version
-    
+
     Write-Host "Ruff: " -NoNewline
     & .\.venv\Scripts\ruff.exe --version
-    
+
     Write-Host "Black: " -NoNewline
     & .\.venv\Scripts\black.exe --version
-    
+
     Write-Host "`nGit Status:" -ForegroundColor Yellow
     git status --short
-    
+
     Write-Host "`n✅ All tools ready!" -ForegroundColor Green
 }
 

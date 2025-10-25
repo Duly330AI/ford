@@ -1,6 +1,6 @@
 # Usables & Containers – Datengetriebene Interaktionen (UO‑Style)
 
-**Ziel**: Einheitliches, datengetriebenes System für **bedienbare Weltobjekte** (Hebel, Knöpfe, Türen, Druckplatten, Kisten/Truhen/Regale/Fässer/Körbe/Schränke/Schreibtische/Bücherregale).  
+**Ziel**: Einheitliches, datengetriebenes System für **bedienbare Weltobjekte** (Hebel, Knöpfe, Türen, Druckplatten, Kisten/Truhen/Regale/Fässer/Körbe/Schränke/Schreibtische/Bücherregale).
 Fokus: **Rundenkampf‑kompatibel**, **Skill‑Hooks** (Lockpicking/Detect Hidden/Tinkering/Strength), **Loot‑Tables**, **Traps**, **Ownership** (Diebstahl), **Persistenz**.
 
 ---
@@ -82,25 +82,25 @@ Fokus: **Rundenkampf‑kompatibel**, **Skill‑Hooks** (Lockpicking/Detect Hidde
 
 ## 4) Würfe & Formeln (UO‑Feeling)
 
-**Lockpicking‑Erfolg** (0.02..0.98):  
+**Lockpicking‑Erfolg** (0.02..0.98):
 ```
 P = clamp(0.02, 0.5 + (skill - difficulty) / 200, 0.98)
 ```
 On‑Use → **Skill‑Gain‑Check** (0.1) über `progression_rules.json` (Sweet‑Spot ~50%).
 
-**Disarm Trap** (Tinkering/Detect Hidden Hybrid):  
+**Disarm Trap** (Tinkering/Detect Hidden Hybrid):
 ```
 skill = 0.7 * tinkering + 0.3 * detect_hidden
 P     = clamp(0.02, 0.5 + (skill - difficulty) / 200, 0.98)
 ```
 Miss bei `trap.on_fail_disarm == true` → Trap löst aus.
 
-**Trap‑Schaden** (nutzt `combat_rules.json`):  
+**Trap‑Schaden** (nutzt `combat_rules.json`):
 `final = floor( base * (1 - resist[type]) )`, min 1. `type` gemäß Trap‑Typ → `poison|fire|energy|pierce`.
 
 **Detect Hidden (Search/Passiv)**: erhöht **Erkennungs‑Stufe** → schaltet Tooltips (Kratzer, Zündschnur), gibt **+Disarm‑Hint** (+0.05..+0.15 auf P).
 
-**Bash**:  
+**Bash**:
 ```
 atk = STR + weapon_dmg + tactics*0.2
 P   = clamp(0.02, 0.5 + (atk - bash_dc)/200, 0.95)
@@ -112,11 +112,11 @@ on fail: noise += 0.2
 
 ## 5) Container‑Loot & Respawn
 
-- **Spawn‑Moment**: Standard bei **erstem Öffnen** → erzeugt Items aus `loot_table`.  
-- **Seed**: `seed = hash(placement_id) ^ world_seed` → deterministisch.  
+- **Spawn‑Moment**: Standard bei **erstem Öffnen** → erzeugt Items aus `loot_table`.
+- **Seed**: `seed = hash(placement_id) ^ world_seed` → deterministisch.
 - **Respawn**:
   - `none` – einmalige Beute.
-  - `daily|interval` – Timer beginnt **nach dem Leeren** (oder nach Öffnen, konfigurierbar).  
+  - `daily|interval` – Timer beginnt **nach dem Leeren** (oder nach Öffnen, konfigurierbar).
   - Bei Respawn erzeugt System **neue Items** (alte Reste bleiben, falls `preserve_unlooted: true`).
 
 **Spezialcontainer**
@@ -197,7 +197,7 @@ on fail: noise += 0.2
 
 ## 7) Ownership & Crime (optional Zukunft)
 
-- **Stehlen** aus `ownership.trespass == true` markierten Containern erzeugt **Crime‑Event** (Fraktion/Guards).  
+- **Stehlen** aus `ownership.trespass == true` markierten Containern erzeugt **Crime‑Event** (Fraktion/Guards).
 - **Lärm** (Bash/Explosion) weckt nahe Gegner; **call_for_help** kann ausgelöst werden (`ai/factions.json.defaults.call_for_help_radius`).
 
 ---
