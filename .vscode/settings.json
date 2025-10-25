@@ -239,6 +239,7 @@
   "chat.fontSize": 12,
   "chat.tools.global.autoApprove": true,
   "chat.tools.terminal.autoReplyToPrompts": true,
+  "chat.tools.terminal.shellIntegrationTimeout": 5000,
   "chat.tools.terminal.autoApprove": {
     "pytest": true,
     "poetry": true,
