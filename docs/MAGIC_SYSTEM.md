@@ -42,9 +42,68 @@ Black Pearl • Bloodmoss • Garlic • Ginseng • Mandrake Root • Nightshad
 ```
 
 **Regeln:**
+
 - **Fizzle** vor Wirkung; Magery senkt Fizzle. Meditation kann Castingdauer um 1 reduzieren (min 0).
 - **Resist**: verteidigungsseitig über `resist_spells` & Element‑Resists (combat_rules).
-- **Scrolls**: einmalige Casts ohne Magery‑Check (gut zum „Probefliegen“ höherer Kreise).
+- **Scrolls**: einmalige Casts ohne Magery‑Check (gut zum „Probefliegen" höherer Kreise).
+
+---
+
+## 5.1) Fizzle-Mechanik
+
+**Fizzle** = Zauberfehlschlag. Der Zauber schlägt fehl, verbraucht aber **Mana & Reagenzien**.
+
+### Formel
+
+```python
+fizzle_chance = base - (magery_skill * magery_factor)
+fizzle_chance = clamp(fizzle_chance, 0.01, 0.50)  # Min 1%, Max 50%
+```
+
+### Parameter (aus `spells.json`)
+
+| Parameter | Typical Value | Description |
+|-----------|---------------|-------------|
+| `base` | 0.08–0.20 | Base fizzle chance (varies by spell circle) |
+| `magery_factor` | -0.001 | Magery skill reduction per point |
+
+### Beispiel-Berechnung
+
+**Szenario:** Fireball (Circle 3)
+
+- **Base Fizzle:** 0.15 (15%)
+- **Magery Skill:** 60.0
+- **Magery Factor:** -0.001
+
+```python
+fizzle_chance = 0.15 - (60.0 * 0.001)
+              = 0.15 - 0.06
+              = 0.09  # 9% fizzle chance
+```
+
+**Ergebnis:** Bei **Magery 60** hat Fireball **9% Fehlschlag-Chance**.
+
+### Einflüsse auf Fizzle
+
+**Erhöhen Fizzle-Chance:**
+
+- Niedrige Magery-Skill (< 50)
+- Höhere Kreise (8. Kreis: base ~0.20)
+- Rüstung tragen (optional: `armor_penalty` in späteren Versionen)
+
+**Senken Fizzle-Chance:**
+
+- Hohe Magery-Skill (≥ 80)
+- Meditation-Bonus (optional: `-0.05` bei meditating)
+- Zauber-Fokus-Items (optional)
+
+### Sweet-Spot für Skill-Gains
+
+Skill-Gains passieren **unabhängig** vom Erfolg/Fizzle:
+
+- **Best Gain-Rate:** bei ~50% Erfolg (d.h. moderate Fizzle)
+- Zu niedrige Magery → zu viele Fizzles, frustrierend
+- Zu hohe Magery → kaum Fizzles, kaum Skill-Gains
 
 ---
 
