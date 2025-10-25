@@ -36,16 +36,21 @@ This file is an index. Detailed task descriptions live in `docs/tasks/*.md` per 
 
 Active tasks (quick links):
 
-- [TASK-M1 — M1: Prozeduraler Dungeon, Spielerbewegung & Licht](./tasks/TASK-M1.md)
-- [TASK-M2 — M2: Gegner & Kampfgrundlagen](./tasks/TASK-M2.md)
-- [TASK-M3 — M3: Skills, Loot & Inventory/Hotbar](./tasks/TASK-M3.md)
-- [TASK-M4 — M4: Nodes, Berufe & Crafting](./tasks/TASK-M4.md)
-- [TASK-M5 — M5: Save & Load](./tasks/TASK-M5.md)
-- [TASK-DATA-1 — Create initial data schemas and sample files](./tasks/TASK-DATA-1.md)
-- [TASK-SCAFFOLD-1 — Project scaffolding & run/test commands](./tasks/TASK-SCAFFOLD-1.md)
-- [TASK-TOOLING-1 — Developer tooling (formatters, tests, CI)](./tasks/TASK-TOOLING-1.md)
-- [TASK-QUALITY-1 — Performance budgeting & SpriteList culling](./tasks/TASK-QUALITY-1.md)
-- [TASK-BONUS-1 — Visual polish (vignette, scanlines, crit popups)](./tasks/TASK-BONUS-1.md)
+- [TASK-M1 - M1: Prozeduraler Dungeon, Spielerbewegung & Licht](./tasks/TASK-M1.md)
+- [TASK-M2 - M2: Gegner & Kampfgrundlagen](./tasks/TASK-M2.md)
+- [TASK-M2-AI - AI System (Utility-AI, Factions, Behaviors, Overworld FSM)](./tasks/TASK-M2-AI.md)
+- [TASK-M3 - M3: Skills, Loot & Inventory/Hotbar](./tasks/TASK-M3.md)
+- [TASK-M3-EXT - Usables & Containers System (Locks, Traps, Ownership, Interactions)](./tasks/TASK-M3-EXT.md)
+- [TASK-M4 - M4: Nodes, Berufe & Crafting](./tasks/TASK-M4.md)
+- [TASK-M5 - M5: Save & Load](./tasks/TASK-M5.md)
+- [TASK-DATA-1 - Create initial data schemas and sample files](./tasks/TASK-DATA-1.md)
+- [TASK-SCAFFOLD-1 - Project scaffolding & run/test commands](./tasks/TASK-SCAFFOLD-1.md)
+- [TASK-TOOLING-1 - Developer tooling (formatters, tests, CI)](./tasks/TASK-TOOLING-1.md)
+- [TASK-QUALITY-1 - Performance budgeting & SpriteList culling](./tasks/TASK-QUALITY-1.md)
+- [TASK-QUALITY-2 - Architectural Compliance Tests (systems/* Zero Arcade Imports)](./tasks/TASK-QUALITY-2.md)
+- [TASK-QUALITY-3 - Commit Message Linting (Conventional Commits Enforcement)](./tasks/TASK-QUALITY-3.md)
+- [TASK-BONUS-1 - Visual polish (vignette, scanlines, crit popups)](./tasks/TASK-BONUS-1.md)
+- [TASK-M6-UI - Complete UI System (UO-Style HUD, Paperdoll, Skills, Inventory, Tooltips)](./tasks/TASK-M6-UI.md)
 
 Completed tasks:
 
