@@ -127,7 +127,7 @@ Overworld-Dodge bleibt außerhalb des Kampfes. Optional gibt es im Kampf eine �
 5.2 UO-Treffer, Parry & Schaden
 Trefferchance (UO-Gefühl – oft verfehlt bei ~60 Wrestling)
 
-Statt d20 verwenden wir eine Skill-vs-Skill-Formel (50% bei gleich guten Kämpfern):
+Statt klassischer Tabletop-Würfel verwenden wir eine Skill-vs-Skill-Formel (50% bei gleich guten Kämpfern):
 
 att_skill = relevanter Angriffs-Skill (z. B. swords/fencing/macefighting, unarmed: wrestling)
 def_skill = max(defender.parrying, defender.relevanter_Abwehrskill)   # z. B. wrestling oder gleiche Waffengattung

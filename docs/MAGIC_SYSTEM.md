@@ -49,7 +49,8 @@ Black Pearl • Bloodmoss • Garlic • Ginseng • Mandrake Root • Nightshad
 ---
 
 ## 6) Beispiele
-- **Fireball** (Fire‑3): 2d6 + INT*0.2, 1 Runde, AoE‑Splash klein (optional).
+
+- **Fireball** (Fire‑3): base 18 dmg (±20% variance) + INT*0.15, 1 Runde, AoE‑Splash klein (optional).
 - **Ice Shackles** (Cold‑4): Root 1 Runde, Move‑Tiles −1 (resistierbar).
 - **Poison Cloud** (Toxic‑5): 3×3‑AoE, DoT 3 Runden, Sichtschleier.
 - **Blink** (Arcanum‑3): Teleport 3 Tiles, Cast 0, interagiert mit Dodge/Recovery nicht.
