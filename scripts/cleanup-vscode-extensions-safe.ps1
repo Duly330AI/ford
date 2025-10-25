@@ -55,6 +55,7 @@ Write-Host "  code --list-extensions | Select-String -Pattern 'openai.chatgpt'" 
 $codex = code --list-extensions | Select-String -Pattern "openai.chatgpt"
 if ($codex) {
     Write-Host "  ✅ Codex found: $codex`n" -ForegroundColor Green
-} else {
+}
+else {
     Write-Host "  ❌ Codex MISSING! Re-install: code --install-extension openai.chatgpt`n" -ForegroundColor Red
 }

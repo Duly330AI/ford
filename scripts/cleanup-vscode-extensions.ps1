@@ -54,7 +54,8 @@ foreach ($ext in $toRemove) {
     $installed = code --list-extensions | Select-String -Pattern "^$ext$"
     if ($installed) {
         Write-Host "  ⚠️  Failed to remove (might be in use)" -ForegroundColor Red
-    } else {
+    }
+    else {
         Write-Host "  ✅ Removed" -ForegroundColor Green
     }
 }
