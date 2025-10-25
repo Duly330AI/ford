@@ -101,7 +101,7 @@ slowdown = 1 - (skill/cap)^2 → starkes Abflachen ab ~70+.
 
 anti_macro (0..1): Strafe, wenn exakt die gleiche Aktion/Entität/Position wiederholt wird (z. B. 0.2 bei hartem Repeat).
 
-Gain-Wkeit: P(gain) = clamp( base * sweet * slowdown * anti_macro, min_gain, max_gain )
+Gain-Wkeit: P(gain) = clamp( base *sweet* slowdown * anti_macro, min_gain, max_gain )
 Default: base=0.25, min_gain=0.01, max_gain=0.20.Skill-Total-Cap optional (z. B. 700.0). Bei Erreichen muss ein anderer Skill droppen (Auto-Lock/Down-Flag).
 
 5) Kampf (Rundenbasiert, UO-Trefferlogik)

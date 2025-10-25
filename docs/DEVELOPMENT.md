@@ -3,6 +3,7 @@
 ## Quick Start
 
 ### 1. Load Development Environment
+
 ```powershell
 # In PowerShell (project root):
 . .\dev.ps1
@@ -11,16 +12,19 @@
 This loads helper functions like `poetry`, `pre-commit`, `lint-all`, etc.
 
 ### 2. Install Dependencies (First Time)
+
 ```powershell
 install-deps
 ```
 
 ### 3. Install Pre-Commit Hooks (First Time)
+
 ```powershell
 install-hooks
 ```
 
 ### 4. Check Status
+
 ```powershell
 dev-status
 ```
@@ -30,10 +34,12 @@ dev-status
 ## Available Commands
 
 ### Setup Commands
+
 - `install-deps` - Install all dependencies from poetry.lock
 - `install-hooks` - Install pre-commit git hooks
 
 ### Development Commands
+
 - `poetry <cmd>` - Run poetry commands (e.g., `poetry add <package>`)
 - `pre-commit <cmd>` - Run pre-commit commands
 - `ruff <cmd>` - Run ruff linter
@@ -42,10 +48,12 @@ dev-status
 - `run-game` - Run the FORD game
 
 ### Linting Commands
+
 - `lint-all` - Run pre-commit on all files
 - `lint-staged` - Run pre-commit on staged files only
 
 ### Utility Commands
+
 - `dev-status` - Show development environment status
 - `dev-help` - Show available commands
 
@@ -77,26 +85,34 @@ If you haven't loaded `dev.ps1`, use full paths:
 ## Troubleshooting
 
 ### "poetry is not recognized"
+
 **Solution:** Load `dev.ps1` first:
+
 ```powershell
 . .\dev.ps1
 ```
 
 ### "pre-commit.exe is not recognized"
+
 **Solution:** Install dependencies:
+
 ```powershell
 . .\dev.ps1
 install-deps
 ```
 
 ### "poetry.lock not found"
+
 **Solution:** Generate lock file:
+
 ```powershell
 .\.venv\Scripts\poetry.exe lock
 ```
 
 ### "Dependencies out of sync"
+
 **Solution:** Reinstall:
+
 ```powershell
 . .\dev.ps1
 poetry install --no-root
@@ -107,6 +123,7 @@ poetry install --no-root
 ## Dependency Management
 
 ### Add a New Dependency
+
 ```powershell
 # Production dependency:
 poetry add <package>
@@ -116,6 +133,7 @@ poetry add --group dev <package>
 ```
 
 ### Update Dependencies
+
 ```powershell
 # Update all:
 poetry update
@@ -125,6 +143,7 @@ poetry update <package>
 ```
 
 ### Show Installed Packages
+
 ```powershell
 poetry show --tree
 ```
@@ -134,12 +153,14 @@ poetry show --tree
 ## Pre-Commit Hooks
 
 Pre-commit hooks run automatically on `git commit` and check:
+
 - Markdown linting (docs/)
 - YAML syntax (data/)
 - Black formatting (game/)
 - Ruff linting (game/)
 
 ### Run Manually
+
 ```powershell
 # All files:
 lint-all
@@ -152,6 +173,7 @@ pre-commit run --files file1.py file2.py
 ```
 
 ### Skip Hooks (Emergency)
+
 ```powershell
 git commit --no-verify
 ```
@@ -161,16 +183,19 @@ git commit --no-verify
 ## Python Environment
 
 ### Activate Virtual Environment
+
 ```powershell
 .\.venv\Scripts\Activate.ps1
 ```
 
 ### Deactivate
+
 ```powershell
 deactivate
 ```
 
 ### Python Version
+
 ```powershell
 conda activate ford && python --version
 # Should show: Python 3.12.x
@@ -181,6 +206,7 @@ conda activate ford && python --version
 ## Common Workflows
 
 ### Daily Development
+
 ```powershell
 # 1. Load helpers
 . .\dev.ps1
@@ -198,6 +224,7 @@ git commit -m "feat: your changes"
 ```
 
 ### After Pulling Changes
+
 ```powershell
 # Update dependencies if poetry.lock changed:
 . .\dev.ps1
@@ -205,6 +232,7 @@ install-deps
 ```
 
 ### Running Tests
+
 ```powershell
 # All tests:
 pytest
@@ -221,11 +249,13 @@ pytest --cov=game --cov-report=html
 ## Editor Integration
 
 ### VS Code
+
 1. Install Python extension (Microsoft)
 2. Select interpreter: `Ctrl+Shift+P` → "Python: Select Interpreter" → `.venv\Scripts\python.exe`
 3. Install recommended extensions (prompts on open)
 
 ### PyCharm
+
 1. File → Settings → Project: ford → Python Interpreter
 2. Add → Existing Environment → `.venv\Scripts\python.exe`
 
@@ -234,6 +264,7 @@ pytest --cov=game --cov-report=html
 ## CI/CD
 
 GitHub Actions runs on every push:
+
 - Linting (ruff, black)
 - Tests (pytest)
 - Pre-commit checks
