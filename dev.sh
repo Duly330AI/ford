@@ -93,6 +93,55 @@ install-hooks() {
     echo -e "${GREEN}✅ Pre-commit hooks installed${NC}"
 }
 
+# ===== PACKAGE MANAGEMENT COMMANDS =====
+
+install-pkg() {
+    # Safe package installation using python -m pip
+    if [[ -z "$1" ]]; then
+        echo -e "${RED}❌ Usage: install-pkg <package-name>${NC}"
+        return 1
+    fi
+    echo -e "${BLUE}📦 Installing $1...${NC}"
+    python -m pip install "$1" -q || {
+        echo -e "${RED}❌ Failed to install $1${NC}"
+        echo -e "  Try: ${BLUE}python -m pip install $1${NC} (with output)"
+        return 1
+    }
+    echo -e "${GREEN}✅ $1 installed${NC}"
+}
+
+check-pkg() {
+    # Check if package is installed
+    if [[ -z "$1" ]]; then
+        echo -e "${RED}❌ Usage: check-pkg <package-name>${NC}"
+        return 1
+    fi
+    python -c "import $1" 2>/dev/null && {
+        echo -e "${GREEN}✅ $1 is installed${NC}"
+        return 0
+    } || {
+        echo -e "${RED}❌ $1 not found${NC}"
+        echo -e "  Install with: ${BLUE}install-pkg $1${NC}"
+        return 1
+    }
+}
+
+upgrade-pip() {
+    # Upgrade pip safely
+    echo -e "${BLUE}📦 Upgrading pip...${NC}"
+    python -m pip install --upgrade pip -q || {
+        echo -e "${RED}❌ Failed to upgrade pip${NC}"
+        return 1
+    }
+    echo -e "${GREEN}✅ pip upgraded${NC}"
+}
+
+list-packages() {
+    # List all installed packages
+    echo -e "${BLUE}📦 Installed packages:${NC}"
+    python -m pip list
+}
+
 # ===== WRAPPER COMMANDS =====
 
 # Poetry wrapper
@@ -254,6 +303,13 @@ dev-help() {
     echo -e "${GREEN}Setup Commands:${NC}"
     echo "  install-deps        Install dependencies from poetry.lock"
     echo "  install-hooks       Install pre-commit git hooks"
+    echo ""
+
+    echo -e "${GREEN}Package Management:${NC}"
+    echo "  install-pkg PKG     Install a Python package safely"
+    echo "  check-pkg PKG       Check if package is installed"
+    echo "  upgrade-pip         Upgrade pip to latest version"
+    echo "  list-packages       List all installed packages"
     echo ""
 
     echo -e "${GREEN}Linting Commands:${NC}"
