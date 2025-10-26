@@ -133,18 +133,21 @@ This document lists **all required sounds** for FORD, organized by functional ca
 ### Circle 1 - Basic Spells
 
 #### Fire School (Circle 1)
+
 | Sound ID | Spell | Characteristics | Variations |
 |----------|-------|-----------------|------------|
 | `magic/ember_cast` | Ember | Quick fire spark, small ignition | 1 |
 | `magic/ember_impact` | Ember impact | Small fire impact, sizzle | 1 |
 
 #### Cold School (Circle 1)
+
 | Sound ID | Spell | Characteristics | Variations |
 |----------|-------|-----------------|------------|
 | `magic/frost_nip_cast` | Frost Nip | Quick chill shimmer, crystalline crackle | 1 |
 | `magic/frost_nip_impact` | Frost Nip impact | Icy impact, freeze proc sound | 1 |
 
 #### Energy School (Circle 1)
+
 | Sound ID | Spell | Characteristics | Variations |
 |----------|-------|-----------------|------------|
 | `magic/spark_cast` | Spark | Quick electrical crackle | 1 |
@@ -152,6 +155,7 @@ This document lists **all required sounds** for FORD, organized by functional ca
 | `magic/illuminate_cast` | Illuminate | Magical glow activation, harmonic tone | 1 |
 
 #### Earth School (Circle 1)
+
 | Sound ID | Spell | Characteristics | Variations |
 |----------|-------|-----------------|------------|
 | `magic/minor_ward_cast` | Minor Ward | Protective shimmer, soft chime | 1 |
@@ -161,18 +165,21 @@ This document lists **all required sounds** for FORD, organized by functional ca
 ### Circle 2 - Intermediate Spells
 
 #### Fire School (Circle 2)
+
 | Sound ID | Spell | Characteristics | Variations |
 |----------|-------|-----------------|------------|
 | `magic/fire_dart_cast` | Fire Dart | Ignition whoosh, dart launch | 1 |
 | `magic/fire_dart_impact` | Fire Dart impact | Fire impact, sizzle and crackle | 2 (impact, burn) |
 
 #### Cold School (Circle 2)
+
 | Sound ID | Spell | Characteristics | Variations |
 |----------|-------|-----------------|------------|
 | `magic/ice_shards_cast` | Ice Shards | Crystalline shimmer + crackle | 1 |
 | `magic/ice_shards_impact` | Ice Shards impact | Shattering ice, freeze proc | 1 |
 
 #### Toxic School (Circle 2)
+
 | Sound ID | Spell | Characteristics | Variations |
 |----------|-------|-----------------|------------|
 | `magic/venom_pin_cast` | Venom Pin | Sickly hiss, poison preparation | 1 |
@@ -180,6 +187,7 @@ This document lists **all required sounds** for FORD, organized by functional ca
 | `magic/venom_pin_dot_loop` | Venom Pin DoT (loopable) | Ongoing poison damage tick | 1 |
 
 #### Earth School (Circle 2)
+
 | Sound ID | Spell | Characteristics | Variations |
 |----------|-------|-----------------|------------|
 | `magic/stone_skin_cast` | Stone Skin | Hardening sound, rock cracking | 1 |
@@ -189,6 +197,7 @@ This document lists **all required sounds** for FORD, organized by functional ca
 | `magic/cure_cast` | Cure | Cleansing light chime | 1 |
 
 #### Energy School (Circle 2)
+
 | Sound ID | Spell | Characteristics | Variations |
 |----------|-------|-----------------|------------|
 | `magic/detect_magic_cast` | Detect Magic | Scanning hum, revelation chime | 1 |
@@ -197,6 +206,7 @@ This document lists **all required sounds** for FORD, organized by functional ca
 ### Circle 3 - Advanced Spells
 
 #### Fire School (Circle 3)
+
 | Sound ID | Spell | Characteristics | Variations |
 |----------|-------|-----------------|------------|
 | `magic/fireball_cast` | Fireball | Powerful ignition whoosh + roar | 1 |
@@ -204,12 +214,14 @@ This document lists **all required sounds** for FORD, organized by functional ca
 | `magic/fireball_burn_loop` | Fireball burn (loopable) | Sustained fire crackle | 1 |
 
 #### Cold School (Circle 3)
+
 | Sound ID | Spell | Characteristics | Variations |
 |----------|-------|-----------------|------------|
 | `magic/deep_freeze_cast` | Deep Freeze | Massive chill shimmer + crackle | 1 |
 | `magic/deep_freeze_impact` | Deep Freeze impact | Shattering ice, freeze proc, root effect | 1 |
 
 #### Energy School (Circle 3)
+
 | Sound ID | Spell | Characteristics | Variations |
 |----------|-------|-----------------|------------|
 | `magic/arc_lance_cast` | Arc Lance | Crackling charge-up + arc release | 1 |
@@ -220,6 +232,7 @@ This document lists **all required sounds** for FORD, organized by functional ca
 | `magic/magic_shield_absorb` | Magic Shield absorb hit | Impact absorption sound | 1 |
 
 #### Earth School (Circle 3)
+
 | Sound ID | Spell | Characteristics | Variations |
 |----------|-------|-----------------|------------|
 | `magic/earthen_grasp_cast` | Earthen Grasp | Earth rumble, root eruption | 1 |
@@ -228,6 +241,7 @@ This document lists **all required sounds** for FORD, organized by functional ca
 ### Circle 4 - Major Spells
 
 #### Fire School (Circle 4)
+
 | Sound ID | Spell | Characteristics | Variations |
 |----------|-------|-----------------|------------|
 | `magic/flame_wave_cast` | Flame Wave | Sweeping fire rush preparation | 1 |
@@ -235,6 +249,7 @@ This document lists **all required sounds** for FORD, organized by functional ca
 | `magic/flame_wave_impact` | Flame Wave impact | Crackling sweep, ongoing burn (cone) | 1 |
 
 #### Cold School (Circle 4)
+
 | Sound ID | Spell | Characteristics | Variations |
 |----------|-------|-----------------|------------|
 | `magic/blizzard_cast` | Blizzard | Swirling wind + ice crackling (preparation) | 1 |
@@ -242,6 +257,7 @@ This document lists **all required sounds** for FORD, organized by functional ca
 | `magic/blizzard_impact` | Blizzard impact | Multiple shatters, sustained cold (AoE) | 1 |
 
 #### Toxic School (Circle 4)
+
 | Sound ID | Spell | Characteristics | Variations |
 |----------|-------|-----------------|------------|
 | `magic/toxic_mist_cast` | Toxic Mist | Sickly hiss, poison cloud preparation | 1 |
@@ -249,12 +265,14 @@ This document lists **all required sounds** for FORD, organized by functional ca
 | `magic/toxic_mist_loop` | Toxic Mist active (loopable) | Bubbling poison cloud, ongoing damage | 1 |
 
 #### Energy School (Circle 4)
+
 | Sound ID | Spell | Characteristics | Variations |
 |----------|-------|-----------------|------------|
 | `magic/chain_bolt_cast` | Chain Bolt | Multiple crackles, building energy | 1 |
 | `magic/chain_bolt_impact` | Chain Bolt impact | Sharp crack, chain jumps + secondary impacts | 2 (direct hit, chain jump) |
 
 #### Earth School (Circle 4)
+
 | Sound ID | Spell | Characteristics | Variations |
 |----------|-------|-----------------|------------|
 | `magic/earth_spikes_cast` | Earth Spikes | Ground rumble, spike preparation | 1 |
@@ -262,6 +280,7 @@ This document lists **all required sounds** for FORD, organized by functional ca
 | `magic/earth_spikes_impact` | Earth Spikes impact | Multiple spike impacts, slow effect | 1 |
 
 #### Utility (Circle 4)
+
 | Sound ID | Spell | Characteristics | Variations |
 |----------|-------|-----------------|------------|
 | `magic/dispel_magic_cast` | Dispel Magic | Unraveling shimmer, energy dissipation | 1 |
@@ -270,6 +289,7 @@ This document lists **all required sounds** for FORD, organized by functional ca
 ### Circle 5 - Expert Spells
 
 #### Fire School (Circle 5)
+
 | Sound ID | Spell | Characteristics | Variations |
 |----------|-------|-----------------|------------|
 | `magic/inferno_cast` | Inferno | Massive fire preparation, roar building | 1 |
@@ -277,6 +297,7 @@ This document lists **all required sounds** for FORD, organized by functional ca
 | `magic/inferno_burn_loop` | Inferno burn (loopable) | Sustained inferno crackle | 1 |
 
 #### Cold School (Circle 5)
+
 | Sound ID | Spell | Characteristics | Variations |
 |----------|-------|-----------------|------------|
 | `magic/blizzard_cast_c5` | Blizzard (full) | Massive wind + ice preparation | 1 |
@@ -284,6 +305,7 @@ This document lists **all required sounds** for FORD, organized by functional ca
 | `magic/blizzard_impact_c5` | Blizzard impact | Massive shattering, sustained cold | 1 |
 
 #### Toxic School (Circle 5)
+
 | Sound ID | Spell | Characteristics | Variations |
 |----------|-------|-----------------|------------|
 | `magic/virulent_cloud_cast` | Virulent Cloud | Intense hiss, plague preparation | 1 |
@@ -291,6 +313,7 @@ This document lists **all required sounds** for FORD, organized by functional ca
 | `magic/virulent_cloud_loop` | Virulent Cloud active (loopable) | Toxic bubbling, pestilent atmosphere | 1 |
 
 #### Energy School (Circle 5)
+
 | Sound ID | Spell | Characteristics | Variations |
 |----------|-------|-----------------|------------|
 | `magic/mana_drain_cast` | Mana Drain | Energy extraction crackle, draining hum | 1 |
@@ -300,6 +323,7 @@ This document lists **all required sounds** for FORD, organized by functional ca
 | `magic/silence_field_active_loop` | Silence Field active (loopable) | Eerie soundless zone | 1 |
 
 #### Earth School (Circle 5)
+
 | Sound ID | Spell | Characteristics | Variations |
 |----------|-------|-----------------|------------|
 | `magic/stone_ward_major_cast` | Stone Ward (Major) | Massive hardening sound, ground reinforcement | 1 |
@@ -308,6 +332,7 @@ This document lists **all required sounds** for FORD, organized by functional ca
 ### Circle 6 - Master Spells
 
 #### Fire School (Circle 6)
+
 | Sound ID | Spell | Characteristics | Variations |
 |----------|-------|-----------------|------------|
 | `magic/meteor_cast` | Meteor | Apocalyptic buildup, earth-shaking rumble | 1 |
@@ -315,12 +340,14 @@ This document lists **all required sounds** for FORD, organized by functional ca
 | `magic/meteor_burn_loop` | Meteor burn (loopable) | Massive sustained fire crackle | 1 |
 
 #### Cold School (Circle 6)
+
 | Sound ID | Spell | Characteristics | Variations |
 |----------|-------|-----------------|------------|
 | `magic/ice_coffin_cast` | Ice Coffin | Freezing preparation, crystalline formation | 1 |
 | `magic/ice_coffin_activate` | Ice Coffin active | Frozen restraint sound, initiative debuff | 1 |
 
 #### Energy School (Circle 6)
+
 | Sound ID | Spell | Characteristics | Variations |
 |----------|-------|-----------------|------------|
 | `magic/storm_pillar_cast` | Storm Pillar | Massive electrical charge building (line) | 1 |
@@ -331,6 +358,7 @@ This document lists **all required sounds** for FORD, organized by functional ca
 | `magic/arcane_cascade_impact` | Arcane Cascade impact | Chain reaction impacts, magical echoes | 1 |
 
 #### Earth School (Circle 6)
+
 | Sound ID | Spell | Characteristics | Variations |
 |----------|-------|-----------------|------------|
 | `magic/quicksand_maw_cast` | Quicksand Maw | Ground destabilization, circle preparation | 1 |
@@ -338,6 +366,7 @@ This document lists **all required sounds** for FORD, organized by functional ca
 | `magic/quicksand_maw_impact` | Quicksand Maw impact | Sinking/trapping sound, slow effect | 1 |
 
 #### Toxic School (Circle 6)
+
 | Sound ID | Spell | Characteristics | Variations |
 |----------|-------|-----------------|------------|
 | `magic/plague_wind_cast` | Plague Wind | Pestilent wind preparation, toxic hiss (cone) | 1 |

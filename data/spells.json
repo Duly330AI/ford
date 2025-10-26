@@ -34,7 +34,11 @@
     },
     "ai_tags": [
       "nuke"
-    ]
+    ],
+    "sounds": {
+      "cast": "magic/ember_cast_v01.wav",
+      "impact": "magic/ember_impact_v01.wav"
+    }
   },
   {
     "id": "frost_nip",
@@ -77,7 +81,11 @@
     "ai_tags": [
       "control",
       "nuke"
-    ]
+    ],
+    "sounds": {
+      "cast": "magic/frost_nip_cast_v01.wav",
+      "impact": "magic/frost_nip_impact_v01.wav"
+    }
   },
   {
     "id": "spark",
@@ -114,7 +122,11 @@
     },
     "ai_tags": [
       "nuke"
-    ]
+    ],
+    "sounds": {
+      "cast": "magic/spark_cast_v01.wav",
+      "impact": "magic/spark_impact_v01.wav"
+    }
   },
   {
     "id": "minor_ward",
@@ -152,7 +164,11 @@
     "resist_check": null,
     "ai_tags": [
       "buff"
-    ]
+    ],
+    "sounds": {
+      "cast": "magic/minor_ward_cast_v01.wav",
+      "loop": "magic/minor_ward_activate_loop_v01.wav"
+    }
   },
   {
     "id": "minor_cure",
@@ -185,7 +201,10 @@
     "ai_tags": [
       "utility",
       "heal"
-    ]
+    ],
+    "sounds": {
+      "cast": "magic/minor_cure_cast_v01.wav"
+    }
   },
   {
     "id": "illuminate",
@@ -214,7 +233,10 @@
     "resist_check": null,
     "ai_tags": [
       "utility"
-    ]
+    ],
+    "sounds": {
+      "cast": "magic/illuminate_cast_v01.wav"
+    }
   },
   {
     "id": "fire_dart",
@@ -251,7 +273,11 @@
     },
     "ai_tags": [
       "nuke"
-    ]
+    ],
+    "sounds": {
+      "cast": "magic/fire_dart_cast_v01.wav",
+      "impact": "magic/fire_dart_impact_hit_v01.wav"
+    }
   },
   {
     "id": "ice_shards",
@@ -294,7 +320,11 @@
     "ai_tags": [
       "nuke",
       "control"
-    ]
+    ],
+    "sounds": {
+      "cast": "magic/ice_shards_cast_v01.wav",
+      "impact": "magic/ice_shards_impact_v01.wav"
+    }
   },
   {
     "id": "venom_pin",
@@ -333,7 +363,12 @@
     "ai_tags": [
       "debuff",
       "dot"
-    ]
+    ],
+    "sounds": {
+      "cast": "magic/venom_pin_cast_v01.wav",
+      "impact": "magic/venom_pin_impact_v01.wav",
+      "loop": "magic/venom_pin_dot_loop_v01.wav"
+    }
   },
   {
     "id": "stone_skin",
@@ -371,7 +406,11 @@
     "resist_check": null,
     "ai_tags": [
       "buff"
-    ]
+    ],
+    "sounds": {
+      "cast": "magic/stone_skin_cast_v01.wav",
+      "loop": "magic/stone_skin_activate_loop_v01.wav"
+    }
   },
   {
     "id": "mend",
@@ -404,7 +443,11 @@
     "resist_check": null,
     "ai_tags": [
       "heal"
-    ]
+    ],
+    "sounds": {
+      "cast": "magic/mend_cast_v01.wav",
+      "impact": "magic/mend_impact_v01.wav"
+    }
   },
   {
     "id": "detect_magic",
@@ -439,7 +482,11 @@
     "resist_check": null,
     "ai_tags": [
       "utility"
-    ]
+    ],
+    "sounds": {
+      "cast": "magic/detect_magic_cast_v01.wav",
+      "reveal": "magic/detect_magic_reveal_v01.wav"
+    }
   },
   {
     "id": "fireball",
@@ -477,7 +524,12 @@
     },
     "ai_tags": [
       "nuke"
-    ]
+    ],
+    "sounds": {
+      "cast": "magic/fireball_cast_v01.wav",
+      "impact": "magic/fireball_impact_small_v01.wav",
+      "loop": "magic/fireball_burn_loop_v01.wav"
+    }
   },
   {
     "id": "blink",
@@ -507,7 +559,10 @@
     "ai_tags": [
       "escape",
       "utility"
-    ]
+    ],
+    "sounds": {
+      "cast": "magic/blink_cast_v01.wav"
+    }
   },
   {
     "id": "arc_lance",
@@ -548,7 +603,11 @@
     },
     "ai_tags": [
       "nuke"
-    ]
+    ],
+    "sounds": {
+      "cast": "magic/arc_lance_cast_v01.wav",
+      "impact": "magic/arc_lance_impact_v01.wav"
+    }
   },
   {
     "id": "earthen_grasp",
@@ -580,7 +639,11 @@
     },
     "ai_tags": [
       "control"
-    ]
+    ],
+    "sounds": {
+      "cast": "magic/earthen_grasp_cast_v01.wav",
+      "impact": "magic/earthen_grasp_impact_v01.wav"
+    }
   },
   {
     "id": "magic_shield",
@@ -615,7 +678,12 @@
     "resist_check": null,
     "ai_tags": [
       "buff"
-    ]
+    ],
+    "sounds": {
+      "cast": "magic/magic_shield_cast_v01.wav",
+      "loop": "magic/magic_shield_activate_loop_v01.wav",
+      "absorb": "magic/magic_shield_absorb_v01.wav"
+    }
   },
   {
     "id": "cure",
@@ -649,7 +717,10 @@
     "ai_tags": [
       "utility",
       "heal"
-    ]
+    ],
+    "sounds": {
+      "cast": "magic/cure_cast_v01.wav"
+    }
   },
   {
     "id": "flame_wave",
@@ -688,7 +759,12 @@
     "ai_tags": [
       "aoe",
       "nuke"
-    ]
+    ],
+    "sounds": {
+      "cast": "magic/flame_wave_cast_v01.wav",
+      "release": "magic/flame_wave_release_v01.wav",
+      "impact": "magic/flame_wave_impact_v01.wav"
+    }
   },
   {
     "id": "deep_freeze",
@@ -730,7 +806,11 @@
     "ai_tags": [
       "control",
       "nuke"
-    ]
+    ],
+    "sounds": {
+      "cast": "magic/deep_freeze_cast_v01.wav",
+      "impact": "magic/deep_freeze_impact_v01.wav"
+    }
   },
   {
     "id": "toxic_mist",
@@ -775,7 +855,12 @@
       "aoe",
       "dot",
       "debuff"
-    ]
+    ],
+    "sounds": {
+      "cast": "magic/toxic_mist_cast_v01.wav",
+      "release": "magic/toxic_mist_release_v01.wav",
+      "loop": "magic/toxic_mist_loop_v01.wav"
+    }
   },
   {
     "id": "chain_bolt",
@@ -818,7 +903,12 @@
     "ai_tags": [
       "nuke",
       "aoe"
-    ]
+    ],
+    "sounds": {
+      "cast": "magic/chain_bolt_cast_v01.wav",
+      "impact_direct": "magic/chain_bolt_impact_direct_v01.wav",
+      "impact_chain": "magic/chain_bolt_impact_chain_v01.wav"
+    }
   },
   {
     "id": "earth_spikes",
@@ -862,7 +952,12 @@
     "ai_tags": [
       "aoe",
       "control"
-    ]
+    ],
+    "sounds": {
+      "cast": "magic/earth_spikes_cast_v01.wav",
+      "release": "magic/earth_spikes_release_v01.wav",
+      "impact": "magic/earth_spikes_impact_v01.wav"
+    }
   },
   {
     "id": "dispel_magic",
@@ -900,7 +995,11 @@
     "ai_tags": [
       "utility",
       "debuff"
-    ]
+    ],
+    "sounds": {
+      "cast": "magic/dispel_magic_cast_v01.wav",
+      "impact": "magic/dispel_magic_impact_v01.wav"
+    }
   },
   {
     "id": "inferno",
@@ -941,7 +1040,12 @@
     "ai_tags": [
       "aoe",
       "nuke"
-    ]
+    ],
+    "sounds": {
+      "cast": "magic/inferno_cast_v01.wav",
+      "release": "magic/inferno_release_v01.wav",
+      "loop": "magic/inferno_burn_loop_v01.wav"
+    }
   },
   {
     "id": "blizzard",
@@ -986,7 +1090,12 @@
     "ai_tags": [
       "aoe",
       "control"
-    ]
+    ],
+    "sounds": {
+      "cast": "magic/blizzard_cast_v01.wav",
+      "release": "magic/blizzard_release_v01.wav",
+      "impact": "magic/blizzard_impact_v01.wav"
+    }
   },
   {
     "id": "virulent_cloud",
@@ -1031,7 +1140,12 @@
       "aoe",
       "dot",
       "debuff"
-    ]
+    ],
+    "sounds": {
+      "cast": "magic/virulent_cloud_cast_v01.wav",
+      "release": "magic/virulent_cloud_release_v01.wav",
+      "loop": "magic/virulent_cloud_loop_v01.wav"
+    }
   },
   {
     "id": "mana_drain",
@@ -1069,7 +1183,11 @@
     "ai_tags": [
       "debuff",
       "utility"
-    ]
+    ],
+    "sounds": {
+      "cast": "magic/mana_drain_cast_v01.wav",
+      "impact": "magic/mana_drain_impact_v01.wav"
+    }
   },
   {
     "id": "stone_ward_major",
@@ -1108,7 +1226,11 @@
     "resist_check": null,
     "ai_tags": [
       "buff"
-    ]
+    ],
+    "sounds": {
+      "cast": "magic/stone_ward_major_cast_v01.wav",
+      "loop": "magic/stone_ward_major_activate_loop_v01.wav"
+    }
   },
   {
     "id": "silence_field",
@@ -1151,7 +1273,12 @@
     "ai_tags": [
       "control",
       "debuff"
-    ]
+    ],
+    "sounds": {
+      "cast": "magic/silence_field_cast_v01.wav",
+      "impact": "magic/silence_field_impact_v01.wav",
+      "loop": "magic/silence_field_active_loop_v01.wav"
+    }
   },
   {
     "id": "meteor",
@@ -1192,7 +1319,12 @@
     "ai_tags": [
       "aoe",
       "nuke"
-    ]
+    ],
+    "sounds": {
+      "cast": "magic/meteor_cast_v01.wav",
+      "impact": "magic/meteor_impact_explosion_v01.wav",
+      "loop": "magic/meteor_burn_loop_v01.wav"
+    }
   },
   {
     "id": "ice_coffin",
@@ -1230,7 +1362,11 @@
     },
     "ai_tags": [
       "control"
-    ]
+    ],
+    "sounds": {
+      "cast": "magic/ice_coffin_cast_v01.wav",
+      "activate": "magic/ice_coffin_activate_v01.wav"
+    }
   },
   {
     "id": "storm_pillar",
@@ -1271,7 +1407,12 @@
     "ai_tags": [
       "aoe",
       "nuke"
-    ]
+    ],
+    "sounds": {
+      "cast": "magic/storm_pillar_cast_v01.wav",
+      "release": "magic/storm_pillar_release_v01.wav",
+      "impact": "magic/storm_pillar_impact_v01.wav"
+    }
   },
   {
     "id": "quicksand_maw",
@@ -1316,7 +1457,12 @@
     "ai_tags": [
       "aoe",
       "control"
-    ]
+    ],
+    "sounds": {
+      "cast": "magic/quicksand_maw_cast_v01.wav",
+      "release": "magic/quicksand_maw_release_v01.wav",
+      "impact": "magic/quicksand_maw_impact_v01.wav"
+    }
   },
   {
     "id": "plague_wind",
@@ -1360,7 +1506,12 @@
       "aoe",
       "dot",
       "debuff"
-    ]
+    ],
+    "sounds": {
+      "cast": "magic/plague_wind_cast_v01.wav",
+      "release": "magic/plague_wind_release_v01.wav",
+      "loop": "magic/plague_wind_loop_v01.wav"
+    }
   },
   {
     "id": "arcane_cascade",
@@ -1403,6 +1554,11 @@
     "ai_tags": [
       "aoe",
       "nuke"
-    ]
+    ],
+    "sounds": {
+      "cast": "magic/arcane_cascade_cast_v01.wav",
+      "release": "magic/arcane_cascade_release_v01.wav",
+      "impact": "magic/arcane_cascade_impact_v01.wav"
+    }
   }
 ]

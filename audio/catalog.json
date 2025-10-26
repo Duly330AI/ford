@@ -1,0 +1,553 @@
+{
+  "creature/player_hurt": [
+    "creature_player_hurt_light_v01.wav",
+    "creature_player_hurt_medium_v01.wav",
+    "creature_player_hurt_heavy_v01.wav"
+  ],
+  "creature/player_heal": [
+    "creature_player_heal_v01.wav"
+  ],
+  "creature/player_death": [
+    "creature_player_death_v01.wav"
+  ],
+  "creature/npc_greet": [
+    "creature_npc_greet_friendly_v01.wav",
+    "creature_npc_greet_neutral_v01.wav"
+  ],
+  "creature/npc_hostile": [
+    "creature_npc_hostile_v01.wav"
+  ],
+  "creature/skeleton_attack": [
+    "creature_skeleton_attack_sword_v01.wav",
+    "creature_skeleton_attack_punch_v01.wav"
+  ],
+  "creature/skeleton_hurt": [
+    "creature_skeleton_hurt_v01.wav"
+  ],
+  "creature/skeleton_death": [
+    "creature_skeleton_death_v01.wav"
+  ],
+  "creature/zombie_attack": [
+    "creature_zombie_attack_v01.wav"
+  ],
+  "creature/zombie_hurt": [
+    "creature_zombie_hurt_v01.wav"
+  ],
+  "creature/zombie_death": [
+    "creature_zombie_death_v01.wav"
+  ],
+  "creature/headless_one_attack": [
+    "creature_headless_one_attack_v01.wav"
+  ],
+  "creature/headless_one_hurt": [
+    "creature_headless_one_hurt_v01.wav"
+  ],
+  "creature/headless_one_death": [
+    "creature_headless_one_death_v01.wav"
+  ],
+  "creature/wraith_attack": [
+    "creature_wraith_attack_spell_v01.wav",
+    "creature_wraith_attack_touch_v01.wav"
+  ],
+  "creature/wraith_hurt": [
+    "creature_wraith_hurt_v01.wav"
+  ],
+  "creature/wraith_death": [
+    "creature_wraith_death_v01.wav"
+  ],
+  "creature/wraith_appear": [
+    "creature_wraith_appear_v01.wav"
+  ],
+  "creature/spectre_attack": [
+    "creature_spectre_attack_ranged_v01.wav",
+    "creature_spectre_attack_close_v01.wav"
+  ],
+  "creature/spectre_hurt": [
+    "creature_spectre_hurt_v01.wav"
+  ],
+  "creature/spectre_death": [
+    "creature_spectre_death_v01.wav"
+  ],
+  "creature/spectre_appear": [
+    "creature_spectre_appear_v01.wav"
+  ],
+  "creature/lich_attack": [
+    "creature_lich_attack_spell_v01.wav",
+    "creature_lich_attack_touch_v01.wav"
+  ],
+  "creature/lich_hurt": [
+    "creature_lich_hurt_v01.wav"
+  ],
+  "creature/lich_death": [
+    "creature_lich_death_v01.wav"
+  ],
+  "creature/lich_spell_prep": [
+    "creature_lich_spell_prep_loop_v01.wav"
+  ],
+  "creature/lich_lord_attack": [
+    "creature_lich_lord_attack_spell_v01.wav",
+    "creature_lich_lord_attack_touch_v01.wav"
+  ],
+  "creature/lich_lord_hurt": [
+    "creature_lich_lord_hurt_v01.wav"
+  ],
+  "creature/lich_lord_death": [
+    "creature_lich_lord_death_v01.wav"
+  ],
+  "creature/mongbat_attack": [
+    "creature_mongbat_attack_v01.wav"
+  ],
+  "creature/mongbat_hurt": [
+    "creature_mongbat_hurt_v01.wav"
+  ],
+  "creature/mongbat_death": [
+    "creature_mongbat_death_v01.wav"
+  ],
+  "creature/mongbat_fly_loop": [
+    "creature_mongbat_fly_loop_v01.wav"
+  ],
+  "creature/giant_rat_attack": [
+    "creature_giant_rat_attack_v01.wav"
+  ],
+  "creature/giant_rat_hurt": [
+    "creature_giant_rat_hurt_v01.wav"
+  ],
+  "creature/giant_rat_death": [
+    "creature_giant_rat_death_v01.wav"
+  ],
+  "creature/giant_spider_attack": [
+    "creature_giant_spider_attack_bite_v01.wav",
+    "creature_giant_spider_attack_web_v01.wav"
+  ],
+  "creature/giant_spider_hurt": [
+    "creature_giant_spider_hurt_v01.wav"
+  ],
+  "creature/giant_spider_death": [
+    "creature_giant_spider_death_v01.wav"
+  ],
+  "creature/giant_spider_crawl_loop": [
+    "creature_giant_spider_crawl_loop_v01.wav"
+  ],
+  "creature/scorpion_attack": [
+    "creature_scorpion_attack_tail_v01.wav",
+    "creature_scorpion_attack_claw_v01.wav"
+  ],
+  "creature/scorpion_hurt": [
+    "creature_scorpion_hurt_v01.wav"
+  ],
+  "creature/scorpion_death": [
+    "creature_scorpion_death_v01.wav"
+  ],
+  "creature/scorpion_venom_apply": [
+    "creature_scorpion_venom_apply_v01.wav"
+  ],
+  "creature/harpy_attack": [
+    "creature_harpy_attack_claw_v01.wav",
+    "creature_harpy_attack_aerial_v01.wav"
+  ],
+  "creature/harpy_hurt": [
+    "creature_harpy_hurt_v01.wav"
+  ],
+  "creature/harpy_death": [
+    "creature_harpy_death_v01.wav"
+  ],
+  "creature/harpy_fly_loop": [
+    "creature_harpy_fly_loop_v01.wav"
+  ],
+  "creature/harpy_vocalize": [
+    "creature_harpy_vocalize_v01.wav"
+  ],
+  "creature/giant_serpent_attack": [
+    "creature_giant_serpent_attack_bite_v01.wav",
+    "creature_giant_serpent_attack_constrict_v01.wav"
+  ],
+  "creature/giant_serpent_hurt": [
+    "creature_giant_serpent_hurt_v01.wav"
+  ],
+  "creature/giant_serpent_death": [
+    "creature_giant_serpent_death_v01.wav"
+  ],
+  "creature/giant_serpent_slither_loop": [
+    "creature_giant_serpent_slither_loop_v01.wav"
+  ],
+  "creature/lizardman_attack": [
+    "creature_lizardman_attack_melee_v01.wav",
+    "creature_lizardman_attack_roar_v01.wav"
+  ],
+  "creature/lizardman_hurt": [
+    "creature_lizardman_hurt_v01.wav"
+  ],
+  "creature/lizardman_death": [
+    "creature_lizardman_death_v01.wav"
+  ],
+  "creature/orc_attack": [
+    "creature_orc_attack_sword_v01.wav",
+    "creature_orc_attack_club_v01.wav"
+  ],
+  "creature/orc_hurt": [
+    "creature_orc_hurt_v01.wav"
+  ],
+  "creature/orc_death": [
+    "creature_orc_death_v01.wav"
+  ],
+  "creature/orc_vocalize": [
+    "creature_orc_vocalize_v01.wav"
+  ],
+  "creature/orc_mage_attack": [
+    "creature_orc_mage_attack_v01.wav"
+  ],
+  "creature/orc_mage_hurt": [
+    "creature_orc_mage_hurt_v01.wav"
+  ],
+  "creature/orc_mage_death": [
+    "creature_orc_mage_death_v01.wav"
+  ],
+  "creature/orc_lord_attack": [
+    "creature_orc_lord_attack_charge_v01.wav",
+    "creature_orc_lord_attack_crush_v01.wav"
+  ],
+  "creature/orc_lord_hurt": [
+    "creature_orc_lord_hurt_v01.wav"
+  ],
+  "creature/orc_lord_death": [
+    "creature_orc_lord_death_v01.wav"
+  ],
+  "creature/ratman_attack": [
+    "creature_ratman_attack_v01.wav"
+  ],
+  "creature/ratman_hurt": [
+    "creature_ratman_hurt_v01.wav"
+  ],
+  "creature/ratman_death": [
+    "creature_ratman_death_v01.wav"
+  ],
+  "creature/ratman_archer_attack": [
+    "creature_ratman_archer_attack_v01.wav"
+  ],
+  "creature/ratman_archer_hurt": [
+    "creature_ratman_archer_hurt_v01.wav"
+  ],
+  "creature/ratman_archer_death": [
+    "creature_ratman_archer_death_v01.wav"
+  ],
+  "creature/ratman_mage_attack": [
+    "creature_ratman_mage_attack_v01.wav"
+  ],
+  "creature/ratman_mage_hurt": [
+    "creature_ratman_mage_hurt_v01.wav"
+  ],
+  "creature/ratman_mage_death": [
+    "creature_ratman_mage_death_v01.wav"
+  ],
+  "creature/goblin_attack": [
+    "creature_goblin_attack_v01.wav"
+  ],
+  "creature/goblin_hurt": [
+    "creature_goblin_hurt_v01.wav"
+  ],
+  "creature/goblin_death": [
+    "creature_goblin_death_v01.wav"
+  ],
+  "creature/gargoyle_attack": [
+    "creature_gargoyle_attack_ranged_v01.wav",
+    "creature_gargoyle_attack_melee_v01.wav"
+  ],
+  "creature/gargoyle_hurt": [
+    "creature_gargoyle_hurt_v01.wav"
+  ],
+  "creature/gargoyle_death": [
+    "creature_gargoyle_death_v01.wav"
+  ],
+  "creature/gargoyle_vocalize": [
+    "creature_gargoyle_vocalize_v01.wav"
+  ],
+  "creature/stone_gargoyle_attack": [
+    "creature_stone_gargoyle_attack_ranged_v01.wav",
+    "creature_stone_gargoyle_attack_crush_v01.wav"
+  ],
+  "creature/stone_gargoyle_hurt": [
+    "creature_stone_gargoyle_hurt_v01.wav"
+  ],
+  "creature/stone_gargoyle_death": [
+    "creature_stone_gargoyle_death_v01.wav"
+  ],
+  "creature/stone_gargoyle_stomp": [
+    "creature_stone_gargoyle_stomp_v01.wav"
+  ],
+  "creature/troll_attack": [
+    "creature_troll_attack_melee_v01.wav",
+    "creature_troll_attack_grab_v01.wav"
+  ],
+  "creature/troll_hurt": [
+    "creature_troll_hurt_v01.wav"
+  ],
+  "creature/troll_death": [
+    "creature_troll_death_v01.wav"
+  ],
+  "creature/troll_regenerate": [
+    "creature_troll_regenerate_v01.wav"
+  ],
+  "creature/ogre_attack": [
+    "creature_ogre_attack_crush_v01.wav",
+    "creature_ogre_attack_sweep_v01.wav"
+  ],
+  "creature/ogre_hurt": [
+    "creature_ogre_hurt_v01.wav"
+  ],
+  "creature/ogre_death": [
+    "creature_ogre_death_v01.wav"
+  ],
+  "creature/ogre_lord_attack": [
+    "creature_ogre_lord_attack_charge_v01.wav",
+    "creature_ogre_lord_attack_crush_v01.wav"
+  ],
+  "creature/ogre_lord_hurt": [
+    "creature_ogre_lord_hurt_v01.wav"
+  ],
+  "creature/ogre_lord_death": [
+    "creature_ogre_lord_death_v01.wav"
+  ],
+  "creature/ettin_attack": [
+    "creature_ettin_attack_charge_v01.wav",
+    "creature_ettin_attack_club_v01.wav"
+  ],
+  "creature/ettin_hurt": [
+    "creature_ettin_hurt_v01.wav"
+  ],
+  "creature/ettin_death": [
+    "creature_ettin_death_v01.wav"
+  ],
+  "creature/ettin_vocalize": [
+    "creature_ettin_vocalize_v01.wav"
+  ],
+  "creature/cyclops_attack": [
+    "creature_cyclops_attack_melee_v01.wav",
+    "creature_cyclops_attack_throw_v01.wav"
+  ],
+  "creature/cyclops_hurt": [
+    "creature_cyclops_hurt_v01.wav"
+  ],
+  "creature/cyclops_death": [
+    "creature_cyclops_death_v01.wav"
+  ],
+  "creature/cyclops_stomp": [
+    "creature_cyclops_stomp_v01.wav"
+  ],
+  "creature/cyclops_eye_attack": [
+    "creature_cyclops_eye_attack_v01.wav"
+  ],
+  "creature/titan_attack": [
+    "creature_titan_attack_melee_v01.wav",
+    "creature_titan_attack_spell_v01.wav"
+  ],
+  "creature/titan_hurt": [
+    "creature_titan_hurt_v01.wav"
+  ],
+  "creature/titan_death": [
+    "creature_titan_death_v01.wav"
+  ],
+  "creature/titan_stomp": [
+    "creature_titan_stomp_v01.wav"
+  ],
+  "creature/gazer_attack": [
+    "creature_gazer_attack_gaze_v01.wav",
+    "creature_gazer_attack_spell_v01.wav"
+  ],
+  "creature/gazer_hurt": [
+    "creature_gazer_hurt_v01.wav"
+  ],
+  "creature/gazer_death": [
+    "creature_gazer_death_v01.wav"
+  ],
+  "creature/gazer_vocalize": [
+    "creature_gazer_vocalize_v01.wav"
+  ],
+  "creature/elder_gazer_attack": [
+    "creature_elder_gazer_attack_gaze_v01.wav",
+    "creature_elder_gazer_attack_spell_v01.wav"
+  ],
+  "creature/elder_gazer_hurt": [
+    "creature_elder_gazer_hurt_v01.wav"
+  ],
+  "creature/elder_gazer_death": [
+    "creature_elder_gazer_death_v01.wav"
+  ],
+  "creature/earth_elemental_attack": [
+    "creature_earth_elemental_attack_stomp_v01.wav",
+    "creature_earth_elemental_attack_throw_v01.wav"
+  ],
+  "creature/earth_elemental_hurt": [
+    "creature_earth_elemental_hurt_v01.wav"
+  ],
+  "creature/earth_elemental_death": [
+    "creature_earth_elemental_death_v01.wav"
+  ],
+  "creature/earth_elemental_move_loop": [
+    "creature_earth_elemental_move_loop_v01.wav"
+  ],
+  "creature/fire_elemental_attack": [
+    "creature_fire_elemental_attack_melee_v01.wav",
+    "creature_fire_elemental_attack_ranged_v01.wav"
+  ],
+  "creature/fire_elemental_hurt": [
+    "creature_fire_elemental_hurt_v01.wav"
+  ],
+  "creature/fire_elemental_death": [
+    "creature_fire_elemental_death_v01.wav"
+  ],
+  "creature/fire_elemental_ambient_loop": [
+    "creature_fire_elemental_ambient_loop_v01.wav"
+  ],
+  "creature/air_elemental_attack": [
+    "creature_air_elemental_attack_ranged_v01.wav",
+    "creature_air_elemental_attack_close_v01.wav"
+  ],
+  "creature/air_elemental_hurt": [
+    "creature_air_elemental_hurt_v01.wav"
+  ],
+  "creature/air_elemental_death": [
+    "creature_air_elemental_death_v01.wav"
+  ],
+  "creature/air_elemental_move_loop": [
+    "creature_air_elemental_move_loop_v01.wav"
+  ],
+  "creature/water_elemental_attack": [
+    "creature_water_elemental_attack_melee_v01.wav",
+    "creature_water_elemental_attack_ranged_v01.wav"
+  ],
+  "creature/water_elemental_hurt": [
+    "creature_water_elemental_hurt_v01.wav"
+  ],
+  "creature/water_elemental_death": [
+    "creature_water_elemental_death_v01.wav"
+  ],
+  "creature/water_elemental_move_loop": [
+    "creature_water_elemental_move_loop_v01.wav"
+  ],
+  "creature/reaper_attack": [
+    "creature_reaper_attack_melee_v01.wav",
+    "creature_reaper_attack_instant_death_v01.wav"
+  ],
+  "creature/reaper_hurt": [
+    "creature_reaper_hurt_v01.wav"
+  ],
+  "creature/reaper_death": [
+    "creature_reaper_death_v01.wav"
+  ],
+  "creature/reaper_vocalize": [
+    "creature_reaper_vocalize_v01.wav"
+  ],
+  "creature/daemon_attack": [
+    "creature_daemon_attack_melee_v01.wav",
+    "creature_daemon_attack_spell_v01.wav"
+  ],
+  "creature/daemon_hurt": [
+    "creature_daemon_hurt_v01.wav"
+  ],
+  "creature/daemon_death": [
+    "creature_daemon_death_v01.wav"
+  ],
+  "creature/daemon_laugh": [
+    "creature_daemon_laugh_v01.wav"
+  ],
+  "creature/balron_attack": [
+    "creature_balron_attack_melee_v01.wav",
+    "creature_balron_attack_spell_v01.wav",
+    "creature_balron_attack_world_v01.wav"
+  ],
+  "creature/balron_hurt": [
+    "creature_balron_hurt_v01.wav"
+  ],
+  "creature/balron_death": [
+    "creature_balron_death_v01.wav"
+  ],
+  "creature/balron_summon": [
+    "creature_balron_summon_v01.wav"
+  ],
+  "creature/drake_attack": [
+    "creature_drake_attack_ranged_v01.wav",
+    "creature_drake_attack_close_v01.wav"
+  ],
+  "creature/drake_hurt": [
+    "creature_drake_hurt_v01.wav"
+  ],
+  "creature/drake_death": [
+    "creature_drake_death_v01.wav"
+  ],
+  "creature/drake_fly_loop": [
+    "creature_drake_fly_loop_v01.wav"
+  ],
+  "creature/drake_breath": [
+    "creature_drake_breath_v01.wav"
+  ],
+  "creature/wyvern_attack": [
+    "creature_wyvern_attack_melee_v01.wav",
+    "creature_wyvern_attack_aerial_v01.wav"
+  ],
+  "creature/wyvern_hurt": [
+    "creature_wyvern_hurt_v01.wav"
+  ],
+  "creature/wyvern_death": [
+    "creature_wyvern_death_v01.wav"
+  ],
+  "creature/wyvern_fly_loop": [
+    "creature_wyvern_fly_loop_v01.wav"
+  ],
+  "creature/dragon_attack": [
+    "creature_dragon_attack_fire_breath_v01.wav",
+    "creature_dragon_attack_melee_v01.wav"
+  ],
+  "creature/dragon_hurt": [
+    "creature_dragon_hurt_v01.wav"
+  ],
+  "creature/dragon_death": [
+    "creature_dragon_death_v01.wav"
+  ],
+  "creature/dragon_fly_loop": [
+    "creature_dragon_fly_loop_v01.wav"
+  ],
+  "creature/dragon_breath": [
+    "creature_dragon_breath_v01.wav"
+  ],
+  "creature/dragon_roar_warning": [
+    "creature_dragon_roar_warning_v01.wav",
+    "creature_dragon_roar_attack_v01.wav"
+  ],
+  "creature/ancient_wyrm_attack": [
+    "creature_ancient_wyrm_attack_breath_v01.wav",
+    "creature_ancient_wyrm_attack_melee_v01.wav",
+    "creature_ancient_wyrm_attack_world_v01.wav"
+  ],
+  "creature/ancient_wyrm_hurt": [
+    "creature_ancient_wyrm_hurt_v01.wav"
+  ],
+  "creature/ancient_wyrm_death": [
+    "creature_ancient_wyrm_death_v01.wav"
+  ],
+  "creature/ancient_wyrm_fly_loop": [
+    "creature_ancient_wyrm_fly_loop_v01.wav"
+  ],
+  "creature/ancient_wyrm_breath": [
+    "creature_ancient_wyrm_breath_v01.wav"
+  ],
+  "creature/ancient_wyrm_roar": [
+    "creature_ancient_wyrm_roar_v01.wav"
+  ],
+  "creature/enemy_notice": [
+    "creature_enemy_notice_aggressive_v01.wav",
+    "creature_enemy_notice_cautious_v01.wav"
+  ],
+  "creature/enemy_lose_sight": [
+    "creature_enemy_lose_sight_v01.wav"
+  ],
+  "creature/enemy_aggro": [
+    "creature_enemy_aggro_melee_v01.wav",
+    "creature_enemy_aggro_caster_v01.wav",
+    "creature_enemy_aggro_boss_v01.wav"
+  ],
+  "creature/taunt": [
+    "creature_taunt_laugh_v01.wav",
+    "creature_taunt_roar_v01.wav",
+    "creature_taunt_shriek_v01.wav"
+  ]
+}

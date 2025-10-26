@@ -4,293 +4,505 @@
     "hp": 10,
     "speed": 1.2,
     "ai": "melee",
-    "loot_table": "goblins_common"
+    "loot_table": "goblins_common",
+    "sounds": {
+      "attack": "creature/creature_goblin_attack_v01.wav",
+      "hurt": "creature/creature_goblin_hurt_v01.wav",
+      "death": "creature/creature_goblin_death_v01.wav"
+    }
   },
   {
     "id": "skeleton",
     "hp": 20,
     "speed": 1.0,
     "ai": "melee",
-    "loot_table": "skeleton_common"
+    "loot_table": "skeleton_common",
+    "sounds": {
+      "attack_sword": "creature/creature_skeleton_attack_sword_v01.wav",
+      "attack_punch": "creature/creature_skeleton_attack_punch_v01.wav",
+      "hurt": "creature/creature_skeleton_hurt_v01.wav",
+      "death": "creature/creature_skeleton_death_v01.wav"
+    }
   },
   {
     "id": "zombie",
     "hp": 30,
     "speed": 0.8,
     "ai": "melee",
-    "loot_table": "skeleton_common"
+    "loot_table": "skeleton_common",
+    "sounds": {
+      "attack": "creature/creature_zombie_attack_v01.wav",
+      "hurt": "creature/creature_zombie_hurt_v01.wav",
+      "death": "creature/creature_zombie_death_v01.wav"
+    }
   },
   {
     "id": "headless_one",
     "hp": 18,
     "speed": 1.1,
     "ai": "melee",
-    "loot_table": "skeleton_common"
+    "loot_table": "skeleton_common",
+    "sounds": {
+      "attack": "creature/creature_headless_one_attack_v01.wav",
+      "hurt": "creature/creature_headless_one_hurt_v01.wav",
+      "death": "creature/creature_headless_one_death_v01.wav"
+    }
   },
   {
     "id": "wraith",
     "hp": 55,
     "speed": 1.0,
     "ai": "caster",
-    "loot_table": "undead_mage"
+    "loot_table": "undead_mage",
+    "sounds": {
+      "attack_spell": "creature/creature_wraith_attack_spell_v01.wav",
+      "hurt": "creature/creature_wraith_hurt_v01.wav",
+      "death": "creature/creature_wraith_death_v01.wav"
+    }
   },
   {
     "id": "spectre",
     "hp": 50,
     "speed": 1.0,
     "ai": "caster",
-    "loot_table": "undead_mage"
+    "loot_table": "undead_mage",
+    "sounds": {
+      "attack_close": "creature/creature_spectre_attack_close_v01.wav",
+      "attack_ranged": "creature/creature_spectre_attack_ranged_v01.wav",
+      "hurt": "creature/creature_spectre_hurt_v01.wav",
+      "death": "creature/creature_spectre_death_v01.wav"
+    }
   },
   {
     "id": "lich",
     "hp": 100,
     "speed": 0.9,
     "ai": "caster",
-    "loot_table": "lich"
+    "loot_table": "lich",
+    "sounds": {
+      "attack": "creature/creature_lich_attack_spell_v01.wav",
+      "hurt": "creature/creature_lich_hurt_v01.wav",
+      "death": "creature/creature_lich_death_v01.wav"
+    }
   },
   {
     "id": "lich_lord",
     "hp": 160,
     "speed": 0.9,
     "ai": "caster",
-    "loot_table": "lich_lord"
+    "loot_table": "lich_lord",
+    "sounds": {
+      "attack": "creature/creature_lich_lord_attack_spell_v01.wav",
+      "hurt": "creature/creature_lich_lord_hurt_v01.wav",
+      "death": "creature/creature_lich_lord_death_v01.wav"
+    }
   },
   {
     "id": "mongbat",
     "hp": 6,
     "speed": 1.6,
     "ai": "melee",
-    "loot_table": "vermin_minor"
+    "loot_table": "vermin_minor",
+    "sounds": {
+      "attack": "creature/creature_mongbat_attack_v01.wav",
+      "hurt": "creature/creature_mongbat_hurt_v01.wav",
+      "death": "creature/creature_mongbat_death_v01.wav"
+    }
   },
   {
     "id": "giant_rat",
     "hp": 5,
     "speed": 1.4,
     "ai": "melee",
-    "loot_table": "vermin_minor"
+    "loot_table": "vermin_minor",
+    "sounds": {
+      "attack": "creature/creature_giant_rat_attack_v01.wav",
+      "hurt": "creature/creature_giant_rat_hurt_v01.wav",
+      "death": "creature/creature_giant_rat_death_v01.wav"
+    }
   },
   {
     "id": "giant_spider",
     "hp": 35,
     "speed": 1.1,
     "ai": "melee",
-    "loot_table": "arachnid"
+    "loot_table": "arachnid",
+    "sounds": {
+      "attack": "creature/creature_giant_spider_attack_bite_v01.wav",
+      "hurt": "creature/creature_giant_spider_hurt_v01.wav",
+      "death": "creature/creature_giant_spider_death_v01.wav"
+    }
   },
   {
     "id": "scorpion",
     "hp": 30,
     "speed": 1.2,
     "ai": "melee",
-    "loot_table": "arachnid"
+    "loot_table": "arachnid",
+    "sounds": {
+      "attack": "creature/creature_scorpion_attack_tail_v01.wav",
+      "hurt": "creature/creature_scorpion_hurt_v01.wav",
+      "death": "creature/creature_scorpion_death_v01.wav"
+    }
   },
   {
     "id": "harpy",
     "hp": 28,
     "speed": 1.2,
     "ai": "melee",
-    "loot_table": "harpy_common"
+    "loot_table": "harpy_common",
+    "sounds": {
+      "attack": "creature/creature_harpy_attack_claw_v01.wav",
+      "hurt": "creature/creature_harpy_hurt_v01.wav",
+      "death": "creature/creature_harpy_death_v01.wav"
+    }
   },
   {
     "id": "giant_serpent",
     "hp": 65,
     "speed": 1.0,
     "ai": "melee",
-    "loot_table": "serpent_common"
+    "loot_table": "serpent_common",
+    "sounds": {
+      "attack": "creature/creature_giant_serpent_attack_bite_v01.wav",
+      "hurt": "creature/creature_giant_serpent_hurt_v01.wav",
+      "death": "creature/creature_giant_serpent_death_v01.wav"
+    }
   },
   {
     "id": "orc",
     "hp": 20,
     "speed": 1.1,
     "ai": "melee",
-    "loot_table": "orc_common"
+    "loot_table": "orc_common",
+    "sounds": {
+      "attack": "creature/creature_orc_attack_sword_v01.wav",
+      "hurt": "creature/creature_orc_hurt_v01.wav",
+      "death": "creature/creature_orc_death_v01.wav"
+    }
   },
   {
     "id": "orc_mage",
     "hp": 22,
     "speed": 1.0,
     "ai": "caster",
-    "loot_table": "orc_mage"
+    "loot_table": "orc_mage",
+    "sounds": {
+      "attack": "creature/creature_orc_mage_attack_v01.wav",
+      "hurt": "creature/creature_orc_mage_hurt_v01.wav",
+      "death": "creature/creature_orc_mage_death_v01.wav"
+    }
   },
   {
     "id": "orc_lord",
     "hp": 45,
     "speed": 1.0,
     "ai": "melee",
-    "loot_table": "orc_lord"
+    "loot_table": "orc_lord",
+    "sounds": {
+      "attack": "creature/creature_orc_lord_attack_crush_v01.wav",
+      "hurt": "creature/creature_orc_lord_hurt_v01.wav",
+      "death": "creature/creature_orc_lord_death_v01.wav"
+    }
   },
   {
     "id": "ratman",
     "hp": 18,
     "speed": 1.1,
     "ai": "melee",
-    "loot_table": "ratman_common"
+    "loot_table": "ratman_common",
+    "sounds": {
+      "attack": "creature/creature_ratman_attack_v01.wav",
+      "hurt": "creature/creature_ratman_hurt_v01.wav",
+      "death": "creature/creature_ratman_death_v01.wav"
+    }
   },
   {
     "id": "ratman_archer",
     "hp": 20,
     "speed": 1.1,
     "ai": "ranged",
-    "loot_table": "ratman_archer"
+    "loot_table": "ratman_archer",
+    "sounds": {
+      "attack": "creature/creature_ratman_archer_attack_v01.wav",
+      "hurt": "creature/creature_ratman_archer_hurt_v01.wav",
+      "death": "creature/creature_ratman_archer_death_v01.wav"
+    }
   },
   {
     "id": "ratman_mage",
     "hp": 22,
     "speed": 1.0,
     "ai": "caster",
-    "loot_table": "ratman_mage"
+    "loot_table": "ratman_mage",
+    "sounds": {
+      "attack": "creature/creature_ratman_mage_attack_v01.wav",
+      "hurt": "creature/creature_ratman_mage_hurt_v01.wav",
+      "death": "creature/creature_ratman_mage_death_v01.wav"
+    }
   },
   {
     "id": "lizardman",
     "hp": 22,
     "speed": 1.1,
     "ai": "melee",
-    "loot_table": "lizardman_common"
+    "loot_table": "lizardman_common",
+    "sounds": {
+      "attack": "creature/creature_lizardman_attack_melee_v01.wav",
+      "hurt": "creature/creature_lizardman_hurt_v01.wav",
+      "death": "creature/creature_lizardman_death_v01.wav"
+    }
   },
   {
     "id": "gargoyle",
     "hp": 55,
     "speed": 1.1,
     "ai": "ranged",
-    "loot_table": "gargoyle_common"
+    "loot_table": "gargoyle_common",
+    "sounds": {
+      "attack": "creature/creature_gargoyle_attack_melee_v01.wav",
+      "hurt": "creature/creature_gargoyle_hurt_v01.wav",
+      "death": "creature/creature_gargoyle_death_v01.wav"
+    }
   },
   {
     "id": "stone_gargoyle",
     "hp": 70,
     "speed": 0.9,
     "ai": "ranged",
-    "loot_table": "stone_gargoyle"
+    "loot_table": "stone_gargoyle",
+    "sounds": {
+      "attack": "creature/creature_stone_gargoyle_attack_crush_v01.wav",
+      "hurt": "creature/creature_stone_gargoyle_hurt_v01.wav",
+      "death": "creature/creature_stone_gargoyle_death_v01.wav"
+    }
   },
   {
     "id": "troll",
     "hp": 55,
     "speed": 1.0,
     "ai": "melee",
-    "loot_table": "brute_common"
+    "loot_table": "brute_common",
+    "sounds": {
+      "attack": "creature/creature_troll_attack_melee_v01.wav",
+      "hurt": "creature/creature_troll_hurt_v01.wav",
+      "death": "creature/creature_troll_death_v01.wav"
+    }
   },
   {
     "id": "ogre",
     "hp": 80,
     "speed": 0.8,
     "ai": "melee",
-    "loot_table": "brute_common"
+    "loot_table": "brute_common",
+    "sounds": {
+      "attack": "creature/creature_ogre_attack_crush_v01.wav",
+      "hurt": "creature/creature_ogre_hurt_v01.wav",
+      "death": "creature/creature_ogre_death_v01.wav"
+    }
   },
   {
     "id": "ogre_lord",
     "hp": 120,
     "speed": 0.8,
     "ai": "melee",
-    "loot_table": "ogre_lord"
+    "loot_table": "ogre_lord",
+    "sounds": {
+      "attack": "creature/creature_ogre_lord_attack_crush_v01.wav",
+      "hurt": "creature/creature_ogre_lord_hurt_v01.wav",
+      "death": "creature/creature_ogre_lord_death_v01.wav"
+    }
   },
   {
     "id": "ettin",
     "hp": 65,
     "speed": 0.8,
     "ai": "melee",
-    "loot_table": "brute_common"
+    "loot_table": "brute_common",
+    "sounds": {
+      "attack": "creature/creature_ettin_attack_club_v01.wav",
+      "hurt": "creature/creature_ettin_hurt_v01.wav",
+      "death": "creature/creature_ettin_death_v01.wav"
+    }
   },
   {
     "id": "cyclops",
     "hp": 140,
     "speed": 0.9,
     "ai": "melee",
-    "loot_table": "cyclops_elite"
+    "loot_table": "cyclops_elite",
+    "sounds": {
+      "attack": "creature/creature_cyclops_attack_melee_v01.wav",
+      "hurt": "creature/creature_cyclops_hurt_v01.wav",
+      "death": "creature/creature_cyclops_death_v01.wav"
+    }
   },
   {
     "id": "titan",
     "hp": 180,
     "speed": 0.9,
     "ai": "caster",
-    "loot_table": "titan_elite"
+    "loot_table": "titan_elite",
+    "sounds": {
+      "attack": "creature/creature_titan_attack_melee_v01.wav",
+      "hurt": "creature/creature_titan_hurt_v01.wav",
+      "death": "creature/creature_titan_death_v01.wav"
+    }
   },
   {
     "id": "gazer",
     "hp": 45,
     "speed": 0.9,
     "ai": "caster",
-    "loot_table": "gazer_common"
+    "loot_table": "gazer_common",
+    "sounds": {
+      "attack": "creature/creature_gazer_attack_gaze_v01.wav",
+      "hurt": "creature/creature_gazer_hurt_v01.wav",
+      "death": "creature/creature_gazer_death_v01.wav"
+    }
   },
   {
     "id": "elder_gazer",
     "hp": 90,
     "speed": 0.9,
     "ai": "caster",
-    "loot_table": "elder_gazer"
+    "loot_table": "elder_gazer",
+    "sounds": {
+      "attack": "creature/creature_elder_gazer_attack_gaze_v01.wav",
+      "hurt": "creature/creature_elder_gazer_hurt_v01.wav",
+      "death": "creature/creature_elder_gazer_death_v01.wav"
+    }
   },
   {
     "id": "earth_elemental",
     "hp": 75,
     "speed": 0.9,
     "ai": "melee",
-    "loot_table": "elemental_earth"
+    "loot_table": "elemental_earth",
+    "sounds": {
+      "attack": "creature/creature_earth_elemental_attack_stomp_v01.wav",
+      "hurt": "creature/creature_earth_elemental_hurt_v01.wav",
+      "death": "creature/creature_earth_elemental_death_v01.wav"
+    }
   },
   {
     "id": "fire_elemental",
     "hp": 85,
     "speed": 1.0,
     "ai": "caster",
-    "loot_table": "elemental_fire"
+    "loot_table": "elemental_fire",
+    "sounds": {
+      "attack": "creature/creature_fire_elemental_attack_melee_v01.wav",
+      "hurt": "creature/creature_fire_elemental_hurt_v01.wav",
+      "death": "creature/creature_fire_elemental_death_v01.wav"
+    }
   },
   {
     "id": "air_elemental",
     "hp": 70,
     "speed": 1.2,
     "ai": "caster",
-    "loot_table": "elemental_air"
+    "loot_table": "elemental_air",
+    "sounds": {
+      "attack": "creature/creature_air_elemental_attack_close_v01.wav",
+      "hurt": "creature/creature_air_elemental_hurt_v01.wav",
+      "death": "creature/creature_air_elemental_death_v01.wav"
+    }
   },
   {
     "id": "water_elemental",
     "hp": 80,
     "speed": 1.0,
     "ai": "melee",
-    "loot_table": "elemental_water"
+    "loot_table": "elemental_water",
+    "sounds": {
+      "attack": "creature/creature_water_elemental_attack_melee_v01.wav",
+      "hurt": "creature/creature_water_elemental_hurt_v01.wav",
+      "death": "creature/creature_water_elemental_death_v01.wav"
+    }
   },
   {
     "id": "reaper",
     "hp": 90,
     "speed": 0.0,
     "ai": "caster",
-    "loot_table": "reaper_node"
+    "loot_table": "reaper_node",
+    "sounds": {
+      "attack": "creature/creature_reaper_attack_melee_v01.wav",
+      "hurt": "creature/creature_reaper_hurt_v01.wav",
+      "death": "creature/creature_reaper_death_v01.wav"
+    }
   },
   {
     "id": "daemon",
     "hp": 150,
     "speed": 0.9,
     "ai": "caster",
-    "loot_table": "daemon_elite"
+    "loot_table": "daemon_elite",
+    "sounds": {
+      "attack": "creature/creature_daemon_attack_melee_v01.wav",
+      "hurt": "creature/creature_daemon_hurt_v01.wav",
+      "death": "creature/creature_daemon_death_v01.wav"
+    }
   },
   {
     "id": "balron",
     "hp": 240,
     "speed": 0.85,
     "ai": "caster",
-    "loot_table": "balron_boss"
+    "loot_table": "balron_boss",
+    "sounds": {
+      "attack": "creature/creature_balron_attack_melee_v01.wav",
+      "hurt": "creature/creature_balron_hurt_v01.wav",
+      "death": "creature/creature_balron_death_v01.wav"
+    }
   },
   {
     "id": "drake",
     "hp": 110,
     "speed": 0.9,
     "ai": "caster",
-    "loot_table": "drake_common"
+    "loot_table": "drake_common",
+    "sounds": {
+      "attack": "creature/creature_drake_attack_close_v01.wav",
+      "hurt": "creature/creature_drake_hurt_v01.wav",
+      "death": "creature/creature_drake_death_v01.wav"
+    }
   },
   {
     "id": "wyvern",
     "hp": 110,
     "speed": 1.1,
     "ai": "melee",
-    "loot_table": "wyvern_common"
+    "loot_table": "wyvern_common",
+    "sounds": {
+      "attack": "creature/creature_wyvern_attack_melee_v01.wav",
+      "hurt": "creature/creature_wyvern_hurt_v01.wav",
+      "death": "creature/creature_wyvern_death_v01.wav"
+    }
   },
   {
     "id": "dragon",
     "hp": 200,
     "speed": 0.8,
     "ai": "caster",
-    "loot_table": "dragon_boss"
+    "loot_table": "dragon_boss",
+    "sounds": {
+      "attack": "creature/creature_dragon_attack_melee_v01.wav",
+      "hurt": "creature/creature_dragon_hurt_v01.wav",
+      "death": "creature/creature_dragon_death_v01.wav"
+    }
   },
   {
     "id": "ancient_wyrm",
     "hp": 260,
     "speed": 0.75,
     "ai": "caster",
-    "loot_table": "ancient_wyrm_mythic"
+    "loot_table": "ancient_wyrm_mythic",
+    "sounds": {
+      "attack": "creature/creature_ancient_wyrm_attack_melee_v01.wav",
+      "hurt": "creature/creature_ancient_wyrm_hurt_v01.wav",
+      "death": "creature/creature_ancient_wyrm_death_v01.wav"
+    }
   }
 ]
