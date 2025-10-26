@@ -58,11 +58,13 @@ audio/
 Linked sounds to game data files:
 
 **data/spells.json** (36 spells updated)
+
 - Added `sounds` field to each spell
 - Maps: cast, impact, loop, ambient, release phases
 - Example: `"sounds": {"cast": "audio/sfx/magic/fireball_cast_v01.wav", ...}`
 
 **data/monsters.json** (42 monsters updated)
+
 - Added `sounds` field to each monster
 - Maps: notice, aggro, attack variants, hurt, death, ambient_loop
 - Example: `"sounds": {"attack": "audio/sfx/creature/dragon_attack_melee_v01.wav", ...}`
@@ -124,6 +126,7 @@ Created comprehensive documentation:
 ## Files Modified/Created
 
 ### New Files
+
 - `audio/sfx/` - 436 WAV files (8 categories)
 - `audio/catalog.json`
 - `audio/LICENSE.txt`
@@ -134,6 +137,7 @@ Created comprehensive documentation:
 - `dev.sh`
 
 ### Modified Files
+
 - `data/spells.json` - Added 36 `sounds` fields
 - `data/monsters.json` - Added 42 `sounds` fields
 - `.vscode/settings.json` - Git Bash default
@@ -143,6 +147,7 @@ Created comprehensive documentation:
 - `docs/task.md` - Updated task index
 
 ### Git Commits
+
 1. **a862f36** - `feat: integrate 436 ChatGPT-generated sound assets`
 2. **3a6d005** - `docs: add comprehensive audio integration summary`
 3. **e1a41d9** - `docs & scripts: comprehensive shell support & audio documentation`

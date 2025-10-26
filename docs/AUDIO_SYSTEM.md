@@ -149,6 +149,7 @@ audio/
 **Format:** `{category}_{type}_{descriptor}_v{version}.wav`
 
 **Examples:**
+
 ```
 magic_fireball_cast_v01.wav          # Spell casting phase
 magic_fireball_impact_small_v01.wav  # Impact on one target
@@ -620,7 +621,7 @@ pytest tests/test_audio_data_integration.py -v
 
 - **Audio Files:** `audio/sfx/` (436 files)
 - **Data Schemas:** `data/schemas/`
-- **Arcade Docs:** https://arcade.academy/
+- **Arcade Docs:** <https://arcade.academy/>
 - **Audio Theory:** See `.codex/` for research notes
 
 ---

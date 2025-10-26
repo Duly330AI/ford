@@ -127,7 +127,7 @@ poetry run pytest -m "not slow" -q
 - **Magic System:** `docs/AUDIO_SYSTEM.md`
 - **Audio System:** `docs/AUDIO_SYSTEM.md`
 - **Project Tasks:** `docs/task.md`
-- **Contributing:** `CONTRIBUTING.md`
+- **Contributing:** `docs/CONTRIBUTING.md`
 - **For LLM Agents:** `docs/LLM_AGENT_GUIDELINES.md`
 
 ## License

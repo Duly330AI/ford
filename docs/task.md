@@ -11,22 +11,19 @@
 
 ---
 
-
 ## 🔧 Task Management
 
-## Critical: Use the templates below to ensure consistency.
+## Critical: Use the templates below to ensure consistency
 
-## Mark [D] ID: TASK-### for done tasks.
+## Mark [D] ID: TASK-### for done tasks
 
-## Mark [A] for active/in-progress tasks.
+## Mark [A] for active/in-progress tasks
 
-## Mark [D] for done subtasks.
+## Mark [D] for done subtasks
 
-## Move done tasks to the bottom of the list only if all subtasks are done.
+## Move done tasks to the bottom of the list only if all subtasks are done
 
 ## Completed Tasks
-
-
 
 ---
 
@@ -133,7 +130,6 @@ Completed tasks:
 Usage:
 
 - Add new detailed tasks under `docs/tasks/` as `TASK-<id>.md` and link them here.
-
 
 - Task Template (for done tasks):
 - [D] ID: TASK-###

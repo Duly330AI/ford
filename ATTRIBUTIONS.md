@@ -14,6 +14,7 @@ This document lists all assets used in FORD and their sources.
 **Date Generated:** October 2025
 
 **Categories:**
+
 - Creature Sounds (213 files) - All 42 enemies
 - Magic Spell Effects (101 files) - All 36+ spells
 - Foley Sounds (39 files) - Movement, doors, containers
@@ -26,6 +27,7 @@ This document lists all assets used in FORD and their sources.
 **Organization:** `audio/sfx/{ui,foley,weapon,magic,creature,trap,ambient,combat}/`
 
 **Generated Prompts Used:**
+
 - "Generate a high-quality WAV sound of [description]"
 - "Create a fantasy RPG sound effect for [action]"
 - "Synthesize a 44.1kHz mono audio file of [creature/spell/action]"
@@ -41,6 +43,7 @@ This document lists all assets used in FORD and their sources.
 **Location:** `game/` (Python source code)
 
 All game systems, mechanics, and architecture are custom-built:
+
 - Combat system
 - Magic system
 - Dungeon generation
@@ -58,6 +61,7 @@ All game systems, mechanics, and architecture are custom-built:
 **Location:** `data/` (JSON definitions)
 
 All game data is custom-created:
+
 - `data/items.json` - Weapon/armor definitions
 - `data/spells.json` - Magic spell definitions
 - `data/monsters.json` - Enemy definitions
@@ -71,11 +75,12 @@ All game data is custom-created:
 
 ### Arcade Library
 
-**Source:** https://arcade.academy/  
+**Source:** <https://arcade.academy/>  
 **License:** MIT License  
 **Author:** Benjamin Kaehler and contributors
 
 Python library for game development. Used for:
+
 - Rendering and sprite management
 - Collision detection
 - Input handling
@@ -87,37 +92,37 @@ Python library for game development. Used for:
 
 ### Poetry
 
-**Source:** https://python-poetry.org/  
+**Source:** <https://python-poetry.org/>  
 **License:** MIT License  
 **Purpose:** Python dependency management
 
 ### Pytest
 
-**Source:** https://pytest.org/  
+**Source:** <https://pytest.org/>  
 **License:** MIT License  
 **Purpose:** Python unit testing framework
 
 ### Black
 
-**Source:** https://github.com/psf/black  
+**Source:** <https://github.com/psf/black>  
 **License:** MIT License  
 **Purpose:** Python code formatter
 
 ### Ruff
 
-**Source:** https://github.com/astral-sh/ruff  
+**Source:** <https://github.com/astral-sh/ruff>  
 **License:** MIT License  
 **Purpose:** Python linter
 
 ### Pre-commit
 
-**Source:** https://pre-commit.com/  
+**Source:** <https://pre-commit.com/>  
 **License:** MIT License  
 **Purpose:** Git pre-commit hooks framework
 
 ### Markdownlint
 
-**Source:** https://github.com/DavidAnson/markdownlint  
+**Source:** <https://github.com/DavidAnson/markdownlint>  
 **License:** MIT License  
 **Purpose:** Markdown file linter
 
@@ -198,6 +203,7 @@ When adding new assets:
 ## Questions?
 
 For attribution questions or clarifications, see:
+
 - Individual README files in asset directories
 - `audio/LICENSE.txt` for audio specifics
 - `docs/AUDIO_SYSTEM.md` for audio details

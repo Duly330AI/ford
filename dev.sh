@@ -13,6 +13,34 @@ NC='\033[0m' # No Color
 # Project root
 FORD_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+# ===== AUTO-INITIALIZE CONDA =====
+# This ensures conda is available and ford env is activated
+if [[ -z "$CONDA_DEFAULT_ENV" ]]; then
+    # Conda not initialized yet, try to initialize
+    if [[ -f "$(conda info --base)/etc/profile.d/conda.sh" ]]; then
+        source "$(conda info --base)/etc/profile.d/conda.sh"
+    elif [[ -f "${MINICONDA3_HOME}/etc/profile.d/conda.sh" ]]; then
+        source "${MINICONDA3_HOME}/etc/profile.d/conda.sh"
+    else
+        # Try common Windows paths
+        for conda_path in \
+            /c/ProgramData/miniconda3 \
+            /c/ProgramData/anaconda3 \
+            ~/miniconda3 \
+            ~/anaconda3; do
+            if [[ -f "$conda_path/etc/profile.d/conda.sh" ]]; then
+                source "$conda_path/etc/profile.d/conda.sh"
+                break
+            fi
+        done
+    fi
+
+    # Now activate ford environment
+    if [[ -n "$(command -v conda)" ]]; then
+        conda activate ford 2>/dev/null || true
+    fi
+fi
+
 # Check if conda environment is active
 check_conda() {
     if [[ -z "$CONDA_DEFAULT_ENV" ]]; then
@@ -240,6 +268,9 @@ dev-help() {
 if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
     # Script was sourced
     echo -e "${GREEN}✅ FORD development environment loaded${NC}"
+    if [[ -n "$CONDA_DEFAULT_ENV" ]]; then
+        echo -e "   ${GREEN}Conda:${NC} $CONDA_DEFAULT_ENV (active)"
+    fi
     echo -e "   Type ${BLUE}dev-help${NC} for available commands"
 else
     # Script was executed directly

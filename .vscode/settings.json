@@ -222,7 +222,10 @@
         "--login",
         "-i"
       ],
-      "icon": "terminal-bash"
+      "icon": "terminal-bash",
+      "env": {
+        "CONDA_AUTO_ACTIVATE": "true"
+      }
     },
     "PowerShell": {
       "path": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
@@ -230,10 +233,15 @@
     }
   },
   "terminal.integrated.env.windows": {
-    "PYTHONPATH": "${workspaceFolder}"
+    "PYTHONPATH": "${workspaceFolder}",
+    "CONDA_AUTO_ACTIVATE": "true"
   },
   "terminal.integrated.cwd": "${workspaceFolder}",
   "terminal.integrated.scrollback": 10000,
+  // === SHELL INITIALIZATION ===
+  // Auto-source dev.sh on terminal open (Git Bash only)
+  "terminal.integrated.shellArgs.linux": [],
+  "terminal.integrated.shellArgs.osx": [],
   // === COPILOT AGENTS (CRITICAL FOR LLM WORKFLOW) ===
   "github.copilot.enable": {
     "*": true,
