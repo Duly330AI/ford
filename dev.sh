@@ -18,12 +18,12 @@ FORD_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 if [[ -z "$CONDA_DEFAULT_ENV" ]]; then
     # Conda not initialized yet, try to initialize
     CONDA_BASE=""
-    
+
     # First try to find conda via 'conda info --base'
     if command -v conda &>/dev/null; then
         CONDA_BASE=$(conda info --base)
     fi
-    
+
     # If not found, try common paths
     if [[ -z "$CONDA_BASE" ]] || [[ ! -d "$CONDA_BASE" ]]; then
         for conda_path in \
@@ -39,7 +39,7 @@ if [[ -z "$CONDA_DEFAULT_ENV" ]]; then
             fi
         done
     fi
-    
+
     # Source conda initialization script
     if [[ -n "$CONDA_BASE" ]] && [[ -f "$CONDA_BASE/etc/profile.d/conda.sh" ]]; then
         source "$CONDA_BASE/etc/profile.d/conda.sh"
@@ -48,9 +48,23 @@ if [[ -z "$CONDA_DEFAULT_ENV" ]]; then
     fi
 fi
 
-# If still not in ford (fallback)
+# If still not in ford (fallback - direct activation)
 if [[ "$CONDA_DEFAULT_ENV" != "ford" ]] && command -v conda &>/dev/null; then
-    conda activate ford || true
+    # Try direct conda activate
+    conda activate ford 2>/dev/null || {
+        # If that fails, try direct path activation
+        if [[ -d "$HOME/.conda/envs/ford" ]]; then
+            source "$HOME/.conda/envs/ford/etc/activate.d/conda_hook.sh" 2>/dev/null
+            export CONDA_DEFAULT_ENV=ford
+            export CONDA_PREFIX="$HOME/.conda/envs/ford"
+            export PATH="$HOME/.conda/envs/ford/bin:$PATH"
+        elif [[ -d "C:/Users/duly3/.conda/envs/ford" ]]; then
+            source "C:/Users/duly3/.conda/envs/ford/etc/activate.d/conda_hook.sh" 2>/dev/null
+            export CONDA_DEFAULT_ENV=ford
+            export CONDA_PREFIX="C:/Users/duly3/.conda/envs/ford"
+            export PATH="C:/Users/duly3/.conda/envs/ford/bin:$PATH"
+        fi
+    }
 fi
 
 # Check if conda environment is active
@@ -281,7 +295,18 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
     # Script was sourced
     echo -e "${GREEN}✅ FORD development environment loaded${NC}"
     if [[ -n "$CONDA_DEFAULT_ENV" ]]; then
-        echo -e "   ${GREEN}Conda:${NC} $CONDA_DEFAULT_ENV (active)"
+        if [[ "$CONDA_DEFAULT_ENV" == "ford" ]]; then
+            echo -e "   ${GREEN}Conda:${NC} $CONDA_DEFAULT_ENV (active)"
+        else
+            echo -e "   ${YELLOW}Conda:${NC} $CONDA_DEFAULT_ENV (active, but not ford)"
+            echo -e "   ${YELLOW}⚠ Tip:${NC} Run ${BLUE}conda activate ford${NC} to switch"
+        fi
+    else
+        echo -e "   ${RED}❌ Conda not initialized in this shell${NC}"
+        echo -e "   ${YELLOW}One-time fix:${NC}"
+        echo -e "     1. Run: ${BLUE}conda init bash${NC}"
+        echo -e "     2. Close and reopen this terminal"
+        echo -e "     3. Run: ${BLUE}source dev.sh${NC} again"
     fi
     echo -e "   Type ${BLUE}dev-help${NC} for available commands"
 else
