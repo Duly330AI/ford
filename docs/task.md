@@ -74,9 +74,7 @@ Active tasks (quick links):
 - [TASK-M1-INPUT-02 - Controls JSON Schema & Loader](./tasks/TASK-M1-INPUT-02-Controls-JSON-Schema.md)
 - [TASK-M1-INPUT-03 - Gamepad Support](./tasks/TASK-M1-INPUT-03-Gamepad-Support.md)
 - [TASK-M6-UI-INPUT-01 - Rebinding UI](./tasks/TASK-M6-UI-INPUT-01-Rebinding-UI.md)
-- [TASK-M4-AUDIO-01 - Audio Mixer Engine](./tasks/TASK-M4-AUDIO-01-Audio-Mixer-Engine.md)
-- [TASK-M4-AUDIO-02 - Context Sound Selection](./tasks/TASK-M4-AUDIO-02-Context-Sound-Selection.md)
-- [TASK-M4-AUDIO-03 - Advanced Audio Features](./tasks/TASK-M4-AUDIO-03-Advanced-Audio-Features.md)
+
 - [TASK-M7-FTUE-01 - Character Creation Screen](./tasks/TASK-M7-FTUE-01-Character-Creation-Screen.md)
 - [TASK-M7-FTUE-02 - Tutorial Manager](./tasks/TASK-M7-FTUE-02-Tutorial-Manager.md)
 - [TASK-M7-FTUE-03 - Tutorial UI Overlay](./tasks/TASK-M7-FTUE-03-Tutorial-UI-Overlay.md)
@@ -87,6 +85,37 @@ Active tasks (quick links):
 - [TASK-M8-I18N-03 - CI Integration for Localization Checks](./tasks/TASK-M8-I18N-03-CI-Integration.md)
 
 Completed tasks:
+
+- [D] ID: TASK-AUDIO-ASSETS
+                  Title: Audio Assets Integration (436 WAV files)
+                  Status: Done
+                  Created: 2025-10-26
+                  Milestone: M4 – Audio System
+                  Commit: a862f36, 3a6d005, e1a41d9
+                  Notes: Integrated 436 ChatGPT-generated CC0 audio files organized by category (creature, magic, foley, weapon, UI, trap, ambient, combat). Linked sounds to data/spells.json (36 spells) and data/monsters.json (42 enemies). Created comprehensive documentation. 174% coverage of expected sounds.
+                  Artifacts: audio/sfx/, data/spells.json, data/monsters.json, docs/AUDIO_SYSTEM.md, AUDIO_INTEGRATION_COMPLETE.md
+                  - [D] Generate/curate 436 sound files
+                  - [D] Organize by category in audio/sfx/
+                  - [D] Link sounds to spell definitions
+                  - [D] Link sounds to monster definitions
+                  - [D] Create comprehensive AUDIO_SYSTEM.md documentation
+                  - [D] Validate JSON linkages
+                  - [D] Commit to git with proper attribution
+
+- [D] ID: TASK-SHELL-SETUP
+                  Title: Git Bash Terminal Setup & LLM Agent Support
+                  Status: Done
+                  Created: 2025-10-26
+                  Milestone: Tooling
+                  Commit: a2d0fa2, e1a41d9
+                  Notes: Configured VS Code to use Git Bash as default terminal for LLM agent workflows. Created dev.sh (Bash equivalent to dev.ps1). Updated documentation for both Bash and PowerShell. All Unix tools (grep, wc, tail, sed, etc.) now fully functional.
+                  Artifacts: .vscode/settings.json, dev.sh, README.md, DEVELOPMENT.md, CONTRIBUTING.md, docs/LLM_AGENT_GUIDELINES.md
+                  - [D] Configure .vscode/settings.json for Git Bash
+                  - [D] Create dev.sh helper script
+                  - [D] Update README.md with multi-shell support
+                  - [D] Rewrite DEVELOPMENT.md for Bash-first
+                  - [D] Create CONTRIBUTING.md guide
+                  - [D] Test Unix tool availability
 
 - [D] ID: TASK-DOC-AUDIT
                   Title: Documentation audit & recommendations
