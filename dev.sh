@@ -17,28 +17,40 @@ FORD_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # This ensures conda is available and ford env is activated
 if [[ -z "$CONDA_DEFAULT_ENV" ]]; then
     # Conda not initialized yet, try to initialize
-    if [[ -f "$(conda info --base)/etc/profile.d/conda.sh" ]]; then
-        source "$(conda info --base)/etc/profile.d/conda.sh"
-    elif [[ -f "${MINICONDA3_HOME}/etc/profile.d/conda.sh" ]]; then
-        source "${MINICONDA3_HOME}/etc/profile.d/conda.sh"
-    else
-        # Try common Windows paths
+    CONDA_BASE=""
+    
+    # First try to find conda via 'conda info --base'
+    if command -v conda &>/dev/null; then
+        CONDA_BASE=$(conda info --base)
+    fi
+    
+    # If not found, try common paths
+    if [[ -z "$CONDA_BASE" ]] || [[ ! -d "$CONDA_BASE" ]]; then
         for conda_path in \
             /c/ProgramData/miniconda3 \
             /c/ProgramData/anaconda3 \
             ~/miniconda3 \
-            ~/anaconda3; do
-            if [[ -f "$conda_path/etc/profile.d/conda.sh" ]]; then
-                source "$conda_path/etc/profile.d/conda.sh"
+            ~/anaconda3 \
+            $MINICONDA3_HOME \
+            $ANACONDA_HOME; do
+            if [[ -d "$conda_path" ]] && [[ -f "$conda_path/etc/profile.d/conda.sh" ]]; then
+                CONDA_BASE="$conda_path"
                 break
             fi
         done
     fi
-
-    # Now activate ford environment
-    if [[ -n "$(command -v conda)" ]]; then
-        conda activate ford 2>/dev/null || true
+    
+    # Source conda initialization script
+    if [[ -n "$CONDA_BASE" ]] && [[ -f "$CONDA_BASE/etc/profile.d/conda.sh" ]]; then
+        source "$CONDA_BASE/etc/profile.d/conda.sh"
+        # Now activate ford environment (allow errors to show for debugging)
+        conda activate ford || true
     fi
+fi
+
+# If still not in ford (fallback)
+if [[ "$CONDA_DEFAULT_ENV" != "ford" ]] && command -v conda &>/dev/null; then
+    conda activate ford || true
 fi
 
 # Check if conda environment is active
