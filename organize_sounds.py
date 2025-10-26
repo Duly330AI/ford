@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """Organize generated sounds into proper audio/ structure."""
 
-import os
 import shutil
 from pathlib import Path
 
@@ -77,7 +76,7 @@ for special_file in ["catalog.json", "README.md", "LICENSE.txt"]:
         shutil.copy2(str(src), str(dst))
         print(f"✓ root: {special_file}")
 
-print(f"\n=== SUMMARY ===")
+print("\n=== SUMMARY ===")
 print(f"Moved: {moved} files")
 print(f"Skipped: {skipped} files")
 if errors:
