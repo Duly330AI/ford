@@ -213,7 +213,19 @@
     "editor.tabSize": 2
   },
   // === TERMINAL ===
-  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  // Git Bash as default for LLM Agents (Unix tools support)
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.profiles.windows": {
+    "Git Bash": {
+      "path": "C:\\Program Files\\Git\\bin\\bash.exe",
+      "args": ["--login", "-i"],
+      "icon": "terminal-bash"
+    },
+    "PowerShell": {
+      "path": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+      "args": []
+    }
+  },
   "terminal.integrated.env.windows": {
     "PYTHONPATH": "${workspaceFolder}"
   },
